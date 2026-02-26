@@ -1,0 +1,12 @@
+.card--bling-string {
+  padding: 4px 0;
+  margin: 0 12px;
+
+  .bling-container {
+    display: flex;
+
+    button {
+      color: var(--text-medium-color);
+    }
+  }
+}

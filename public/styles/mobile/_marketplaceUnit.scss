@@ -1,0 +1,294 @@
+.marketplace-unit {
+  background: var(--surface-background, #ffffff);
+  padding-bottom: 0;
+  margin-bottom: 4px; // Spacing between units
+
+  &__header {
+    padding: var(--medium, 12px) var(--global-margin, 12px);
+    padding-bottom: 12px;  // Space between header and grid
+
+    &--with-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    // Headline 3 Emphasized - matches RelatedAnswers and ReelsUnit exactly
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0;
+    color: #080809;
+    margin: 0;
+
+    // Matches "Others searched for" title style for content-forward page
+    &--link {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0;
+      color: #080809;
+    }
+  }
+
+  &__see-more {
+    // Body 3 link style
+    background: none;
+    border: none;
+    padding: 0;
+    color: #0866ff;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    cursor: pointer;
+  }
+
+  &__see-all {
+    // Body 3
+    background: none;
+    border: none;
+    padding: 0;
+    color: #0866ff;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    cursor: pointer;
+  }
+
+  // Horizontal scroll filters
+  &__filters-scroll {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 8px var(--global-margin, 12px);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    min-height: 28px;
+    background: var(--secondary-button-background, #e2e5e9);
+    border: none;
+    border-radius: 6px; // Square pills with 6px radius
+    cursor: pointer;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    &--active {
+      background: var(--primary-button-background, #0866ff);
+      
+      .marketplace-unit__filter-label {
+        color: var(--primary-button-text, #ffffff);
+      }
+
+      svg {
+        fill: var(--primary-button-text, #ffffff);
+      }
+    }
+  }
+
+  &__filter-label {
+    font-family: var(--font-family-text, 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: normal;
+    color: var(--secondary-button-text, #080809);
+    white-space: nowrap;
+  }
+
+  // Original Product Grid (2x2) with cards
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 var(--global-margin, 12px);
+    padding-bottom: 12px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--surface-background, #ffffff);
+    border: 1px solid rgba(0, 0, 0, 0.1);  // Outline around each card
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+      opacity: 0.9;
+    }
+  }
+
+  &__card-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+
+  &__card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // FDS: Small Info Chip Secondary Emphasized on Media
+  &__card-price {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    font-family: var(--font-family-text, 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0px;
+    color: #ffffff;
+  }
+
+  &__card-title {
+    // Blueprint: Headline 4 Emphasized
+    font-family: var(--font-family-text, 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: normal;
+    color: var(--primary-text, #080809);
+    margin: 0;
+    padding: 8px 12px 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  // ==========================================================================
+  // Media Tile Grid - matching product details page "Similar listings"
+  // ==========================================================================
+  &--media-tile {
+    overflow: hidden; // Prevent any horizontal overflow
+    
+    .marketplace-unit__header {
+      padding-bottom: 12px;
+    }
+  }
+
+  // 2x2 Grid layout - fits max width of screen
+  &__media-tile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__media-tile {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    min-width: 0; // Prevent flex items from overflowing
+    overflow: hidden;
+
+    &:active {
+      opacity: 0.9;
+    }
+  }
+
+  &__media-tile-image-wrapper {
+    width: 100%;
+    padding-top: 100%; // 1:1 aspect ratio
+    position: relative;
+    overflow: hidden;
+    // No border radius - matching product details page
+  }
+
+  &__media-tile-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__media-tile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 12px 12px;
+    min-width: 0; // Allow text truncation
+  }
+
+  &__media-tile-price {
+    // Headline 4: 15px, 500 weight
+    font-family: var(--font-family-text, 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--primary-text, #080809);
+    margin: 0;
+    line-height: 20px;
+    letter-spacing: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__media-tile-title {
+    // Body 4: 13px, 400 weight
+    font-family: var(--font-family-text, 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--primary-text, #080809);
+    margin: 0;
+    line-height: 18px;
+    letter-spacing: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__media-tile-location {
+    // Meta 4: 12px, 400 weight, secondary text
+    font-family: var(--font-family-text, 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--secondary-text, #65686c);
+    margin: 0;
+    line-height: 16px;
+    letter-spacing: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

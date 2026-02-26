@@ -1,0 +1,367 @@
+/**
+ * FDSProfilePhoto Styles
+ * Based on Facebook Design System
+ * Supports: sizes (24, 32, 40, 48, 56, 60), shapes, story rings, add-ons
+ */
+
+.fds-profile-photo {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  
+  // Base transition for interactions
+  transition: transform 0.1s ease-out;
+
+  // Sizes - includes ring padding
+  &--size-24 {
+    width: 24px;
+    height: 24px;
+
+    &.fds-profile-photo--has-story-ring {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &--size-32 {
+    width: 32px;
+    height: 32px;
+
+    &.fds-profile-photo--has-story-ring {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &--size-40 {
+    width: 40px;
+    height: 40px;
+
+    &.fds-profile-photo--has-story-ring {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  &--size-48 {
+    width: 48px;
+    height: 48px;
+
+    &.fds-profile-photo--has-story-ring {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  &--size-56 {
+    width: 56px;
+    height: 56px;
+
+    &.fds-profile-photo--has-story-ring {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &--size-60 {
+    width: 60px;
+    height: 60px;
+
+    &.fds-profile-photo--has-story-ring {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  // Pressed state for pressable photos
+  &--pressable:active:not(&--disabled) {
+    transform: scale(0.96);
+  }
+
+  // Story Ring
+  &__ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid;
+    border-color: var(--story-ring, var(--decorative-icon-blue));
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  // Image Container
+  &__image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--background-deemphasized);
+
+    // When has story ring, add padding
+    .fds-profile-photo--has-story-ring & {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+    }
+  }
+
+  // Preview (loading state)
+  &__preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  // Main Image
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
+
+  // Hover/Press Overlay
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--always-transparent);
+    transition: background-color var(--duration-xx-short-in) ease-out;
+    pointer-events: none;
+    z-index: 2;
+
+    .fds-profile-photo--pressable:hover:not(.fds-profile-photo--disabled) & {
+      background-color: var(--black-alpha-05);
+    }
+
+    .fds-profile-photo--pressable:active:not(.fds-profile-photo--disabled) & {
+      background-color: var(--black-alpha-10);
+    }
+  }
+
+  // Add-ons (Badges)
+  &__addon {
+    position: absolute;
+    z-index: 3;
+    border: 2px solid var(--always-white);
+    border-radius: var(--profile-photo-actor-radius);
+    box-shadow: 0 1px 2px var(--shadow-text-and-icon-on-media);
+
+    // Bottom-end position (availability/activity badge)
+    &--bottom-end {
+      bottom: 0;
+      right: 0;
+    }
+
+    // Top-end position (notification badge)
+    &--top-end {
+      top: -2px;
+      right: -2px;
+    }
+
+    // Availability Badge
+    &--availability {
+      width: 12px;
+      height: 12px;
+      background-color: var(--positive);
+
+      &.fds-profile-photo__addon--inactive {
+        background-color: var(--secondary-icon);
+      }
+
+      // Size adjustments
+      .fds-profile-photo--size-24 & {
+        width: 8px;
+        height: 8px;
+        border-width: 1.5px;
+      }
+
+      .fds-profile-photo--size-32 & {
+        width: 10px;
+        height: 10px;
+        border-width: 1.5px;
+      }
+
+      .fds-profile-photo--size-56 &,
+      .fds-profile-photo--size-60 & {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    // Activity Badge
+    &--activity {
+      width: 16px;
+      height: 16px;
+      background-color: var(--always-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .fds-profile-photo--size-24 & {
+        width: 12px;
+        height: 12px;
+      }
+
+      .fds-profile-photo--size-60 & {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__addon-icon {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent);
+      border-radius: var(--profile-photo-actor-radius);
+
+      .fds-profile-photo__addon--inactive & {
+        background-color: var(--secondary-icon);
+      }
+
+      .fds-profile-photo--size-24 & {
+        width: 6px;
+        height: 6px;
+      }
+
+      .fds-profile-photo--size-60 & {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    // Notification Badge
+    &--notification {
+      min-width: 18px;
+      height: 18px;
+      padding: 0 var(--spacing-small);
+      background-color: var(--notification-badge);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .fds-profile-photo--size-24 & {
+        min-width: 14px;
+        height: 14px;
+        padding: 0 3px;
+      }
+
+      .fds-profile-photo--size-56 &,
+      .fds-profile-photo--size-60 & {
+        min-width: 20px;
+        height: 20px;
+        padding: 0 5px;
+      }
+    }
+
+    &__addon-number {
+      font-size: 11px;
+      font-weight: var(--meta-1-weight);
+      color: var(--always-white);
+      line-height: 1;
+
+      .fds-profile-photo--size-24 & {
+        font-size: 9px;
+      }
+
+      .fds-profile-photo--size-56 &,
+      .fds-profile-photo--size-60 & {
+        font-size: 12px;
+      }
+    }
+  }
+
+  // Shape modifiers
+  &--shape-circle {
+    .fds-profile-photo__ring,
+    .fds-profile-photo__image-container,
+    .fds-profile-photo__image {
+      border-radius: var(--profile-photo-actor-radius);
+    }
+  }
+
+  &--shape-square {
+    .fds-profile-photo__ring,
+    .fds-profile-photo__image-container,
+    .fds-profile-photo__image {
+      border-radius: 0;
+    }
+  }
+
+  &--shape-roundedRect {
+    .fds-profile-photo__ring,
+    .fds-profile-photo__image-container,
+    .fds-profile-photo__image {
+      border-radius: var(--profile-photo-entity-radius);
+    }
+  }
+
+  &--shape-roundedRectLarge {
+    .fds-profile-photo__ring,
+    .fds-profile-photo__image-container,
+    .fds-profile-photo__image {
+      border-radius: var(--bottom-sheet-container-radius);
+    }
+  }
+
+  // Overlapped state (for facepiles)
+  &--overlapped {
+    margin-left: -8px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    .fds-profile-photo__ring,
+    .fds-profile-photo__image-container {
+      border-left: none;
+    }
+  }
+
+  // Disabled state
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+  }
+}
+
+// Profile Photo Menu Button (for navigation bar)
+.profile-photo-menu-button {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--profile-photo-actor-radius);
+  background-color: var(--always-white);
+  border: 2px solid var(--always-white);
+  box-shadow: 0 1px 2px var(--shadow-text-and-icon-on-media);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 4;
+  transition: background-color var(--duration-xx-short-in) ease-out;
+
+  &:hover {
+    background-color: var(--background-deemphasized);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+

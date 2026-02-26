@@ -1,0 +1,104 @@
+.pivot-link {
+  background: none;
+  border: none;
+  border-radius: var(--button-medium-radius);
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  transform: scale(1);
+  transition:
+    background var(--duration-x-short-in) var(--curve-fade-in),
+    color var(--duration-x-short-in) var(--curve-fade-in),
+    transform var(--duration-short-in) var(--curve-expand-collapse-in);
+
+  &:hover {
+    transition:
+      background var(--duration-x-short-out) var(--curve-fade-out),
+      color var(--duration-x-short-out) var(--curve-fade-out),
+      transform var(--duration-short-out) var(--curve-expand-collapse-out);
+  }
+
+  &:active {
+    transform: scale(0.975);
+  }
+
+  &.primary {
+    background: var(--primary-button-background);
+    color: var(--primary-button-text);
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:active {
+      color: var(--border-ui-emphasis);
+    }
+  }
+
+  &.secondary {
+    background: var(--background-deemphasized);
+    border-radius: 18px;
+    color: var(--primary-text);
+    padding: var(--spacing-medium) var(--spacing-large);
+    font-size: var(--button-2-font-size);
+    font-weight: var(--button-2-weight);
+    line-height: var(--button-2-line-height);
+    letter-spacing: var(--button-2-letter-spacing);
+    text-align: center;
+    height: var(--button-medium-height);
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:active {
+      color: var(--primary-text);
+    }
+
+  }
+
+  &.selected {
+    background: var(--hosted-view-selected-state);
+    color: var(--decorative-icon-blue);
+
+    &:hover {
+      opacity: 0.95;
+    }
+  }
+
+  &.dropdown {
+    .label {
+      display: flex;
+
+      &:after {
+        background-image: url('/images/glyphs/triangle-down.png');
+        background-size: 9px 6px;
+        background-repeat: no-repeat;
+        background-position: center;
+        content: "";
+        display: block;
+        height: 20px;
+        width: 18px;
+      }
+    }
+  }
+
+  .glyph {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .glyphIcon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    margin-right: var(--button-icon-label-spacing);
+    height: var(--spacing-x-large);
+    width: var(--spacing-x-large);
+
+    &.plus {
+      background-image: url('/images/glyphs/plus.png');
+    }
+  }
+}

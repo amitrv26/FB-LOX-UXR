@@ -1,0 +1,192 @@
+// FDS List Cell
+.fds-list-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--list-element-horizontal-spacing);
+  padding: var(--spacing-medium) var(--spacing-large);
+  background: transparent;
+  border: none;
+  border-radius: var(--card-radius);
+  width: 100%;
+  text-align: left;
+  cursor: default;
+  position: relative;
+  transition: background-color var(--duration-x-short-in) ease;
+  box-sizing: border-box;
+
+  &--interactive {
+    cursor: pointer;
+
+    &:hover:not(.fds-list-cell--disabled) {
+      background: var(--white-alpha-10);
+    }
+
+    &:active:not(.fds-list-cell--disabled) {
+      background: var(--white-alpha-15);
+      transform: scale(0.98);
+    }
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &--inset {
+    margin: 0 var(--spacing-medium);
+  }
+
+  &--center-aligned {
+    justify-content: center;
+  }
+}
+
+// Left Add-on
+.fds-list-cell__left-addon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+// Content
+.fds-list-cell__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  flex: 1;
+  min-width: 0;
+}
+
+.fds-list-cell__headline {
+  font-family: var(--font-family-text);
+  font-size: var(--headline-4-deemphasized-font-size);
+  font-weight: var(--headline-4-deemphasized-weight);
+  line-height: var(--headline-4-deemphasized-line-height);
+  letter-spacing: var(--headline-4-deemphasized-letter-spacing);
+  color: var(--primary-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fds-list-cell__meta {
+  font-family: var(--font-family-text);
+  font-size: var(--body-4-font-size);
+  font-weight: var(--body-4-weight);
+  line-height: var(--body-4-line-height);
+  letter-spacing: var(--body-4-letter-spacing);
+  color: var(--white-alpha-60);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Right Add-on
+.fds-list-cell__right-addon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+// Hierarchy Levels
+.fds-list-cell--level-1 {
+  padding: var(--spacing-large) var(--spacing-x-large);
+  
+  .fds-list-cell__headline {
+    font-size: var(--headline-3-deemphasized-font-size);
+    line-height: var(--headline-3-deemphasized-line-height);
+    letter-spacing: var(--headline-3-deemphasized-letter-spacing);
+  }
+}
+
+.fds-list-cell--level-2 {
+  padding: 10px 14px;
+  
+  .fds-list-cell__headline {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+.fds-list-cell--level-3 {
+  padding: 9px 13px;
+  
+  .fds-list-cell__headline {
+    font-size: var(--headline-4-deemphasized-font-size);
+    line-height: var(--headline-4-deemphasized-line-height);
+    letter-spacing: var(--headline-4-deemphasized-letter-spacing);
+  }
+}
+
+.fds-list-cell--level-4 {
+  padding: var(--spacing-medium) var(--spacing-large);
+  
+  .fds-list-cell__headline {
+    font-size: var(--headline-4-deemphasized-font-size);
+    line-height: var(--headline-4-deemphasized-line-height);
+    letter-spacing: var(--headline-4-deemphasized-letter-spacing);
+  }
+}
+
+// Dark theme adjustments (for use in Reels left nav)
+.reels-left-nav {
+  .fds-list-cell {
+    &--interactive:hover:not(.fds-list-cell--disabled) {
+      background: var(--white-alpha-10);
+    }
+
+    &--selected {
+      .fds-list-cell__headline {
+        color: var(--primary-text-on-media);
+        font-weight: var(--headline-4-emphasized-weight);
+      }
+    }
+    
+    &:not(.fds-list-cell--selected) {
+      .fds-list-cell__headline {
+        color: var(--secondary-text-on-media);
+        font-weight: var(--headline-4-deemphasized-weight);
+      }
+    }
+  }
+
+  .fds-list-cell__left-addon {
+    svg {
+      width: 24px !important;
+      height: 24px !important;
+    }
+  }
+  
+  .fds-list-cell__content {
+    // Hide text in icon-only mode
+    .reels-left-nav--icon-only & {
+      display: none;
+    }
+  }
+  
+  // Icon-only mode adjustments
+  .reels-left-nav--icon-only {
+    .fds-list-cell {
+      justify-content: center;
+      padding: var(--spacing-large);
+    }
+  }
+
+  .fds-list-cell__meta {
+    color: var(--white-alpha-60);
+  }
+  
+  // Show overlay only when enabled
+  &--show-overlay {
+    .fds-list-cell {
+      &--selected {
+        background: var(--white-alpha-15);
+      }
+    }
+  }
+}

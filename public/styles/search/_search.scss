@@ -1,0 +1,112 @@
+.search-container {
+  border-radius: 20px;
+  height: var(--button-large-height);
+  overflow: hidden;
+  position: relative;
+
+  input {
+    background: var(--text-input-bar-background);
+    border: none;
+    border-radius: 20px;
+    font-size: var(--body-3-font-size);
+    font-weight: var(--body-3-weight);
+    color: var(--placeholder-text);
+    letter-spacing: var(--body-3-letter-spacing);
+    line-height: var(--body-3-line-height);
+    padding: 0 0 0 36px;
+    outline: none;
+    height: var(--button-large-height);
+    width: var(--button-large-height);
+    transition:
+      width var(--duration-short-in) var(--curve-expand-collapse-in),
+      padding var(--duration-short-in) var(--curve-expand-collapse-in);
+
+    &::placeholder {
+      color: var(--secondary-text);
+    }
+
+    &:focus {
+      padding: var(--spacing-medium) 10px 10px var(--spacing-x-large);
+      transition:
+        width var(--duration-short-out) var(--curve-expand-collapse-out),
+        padding var(--duration-short-out) var(--curve-expand-collapse-out);
+
+      & + .glyph {
+        left: -20px;
+      }
+    }
+
+    .LG & {
+      padding: 10px 10px 10px 37px;
+      width: 100%;
+
+      &:focus {
+        padding: 10px 10px 10px var(--spacing-x-large);
+        width: 100%;
+
+        & + .glyph {
+          left: -20px;
+          transition: left var(--duration-short-out) var(--curve-move-out);
+        }
+      }
+    }
+  }
+
+  .glyph {
+    position: absolute;
+    pointer-events: none;
+    top: var(--spacing-large);
+    left: var(--spacing-large);
+    height: var(--spacing-x-large);
+    width: var(--spacing-x-large);
+    opacity: 0.7;
+    transition: left var(--duration-short-in) var(--curve-move-in);
+  }
+
+  &.collapsed {
+    width: var(--button-large-height);
+
+    input {
+      width: var(--button-large-height);
+      padding: 0;
+      cursor: pointer;
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      &:focus {
+        width: 240px;
+        padding: 10px 10px 10px 37px;
+        cursor: text;
+
+        &::placeholder {
+          color: var(--secondary-text);
+        }
+
+        & + .glyph {
+          left: var(--spacing-large);
+        }
+      }
+
+      .LG & {
+        &:focus {
+          width: 240px;
+          padding: 10px 10px 10px 37px;
+
+          &::placeholder {
+            color: var(--secondary-text);
+          }
+
+          & + .glyph {
+            left: var(--spacing-large);
+          }
+        }
+      }
+    }
+
+    .glyph {
+      left: var(--spacing-large);
+    }
+  }
+}

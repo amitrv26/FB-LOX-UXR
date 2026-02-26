@@ -1,0 +1,18 @@
+
+<svg width="24px" height="23px" viewBox="0 0 24 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation-Bar-/-Feed" transform="translate(-624.000000, -19.000000)">
+            <g id="Actions" transform="translate(428.000000, 0.000000)">
+                <g id="Watch" transform="translate(168.000000, 0.000000)">
+                    <g transform="translate(24.000000, 14.000000)" id="ic3_ol---Watch">
+                        <g transform="translate(5.000000, 5.500000)">
+                            <path d="M5.75,21.25 L16.25,21.25" id="Stroke-2" stroke="rgba(255,255,255,.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M14.16335,9.59595 L9.05485,12.67345 C8.59085,12.95245 7.99985,12.61895 7.99985,12.07745 L7.99985,5.92245 C7.99985,5.38095 8.59085,5.04745 9.05485,5.32645 L14.16335,8.40395 C14.61235,8.67445 14.61235,9.32545 14.16335,9.59595" id="Fill-3" fill="rgba(255,255,255,.6)"></path>
+                            <path d="M18.75,17.75 L3.25,17.75 C1.5935,17.75 0.25,16.4065 0.25,14.75 L0.25,3.25 C0.25,1.5935 1.5935,0.25 3.25,0.25 L18.75,0.25 C20.4065,0.25 21.75,1.5935 21.75,3.25 L21.75,14.75 C21.75,16.4065 20.4065,17.75 18.75,17.75 Z" id="Stroke-5" stroke="rgba(255,255,255,.6)" stroke-width="1.5"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,35 @@
+/**
+ * Design System Tokens - Converted from StyleX to CSS
+ */
+
+:root {
+  --primary-text: #080809;
+  --primary-icon: #080809;
+  --secondary-text: #65686c;
+  --secondary-icon: #65686c;
+  --accent-color: #0866ff;
+  --active-icon: #0064d1;
+  --disabled-icon: #b0b3b8;
+  --placeholder-icon: #65686c;
+  --meta-icon: #65686c;
+  --device-icon: #000000;
+  --on-media-icon: #ffffff;
+  --secondary-on-media: rgba(255, 255, 255, 0.9);
+  --decorative-icon-red: #fb3c44;
+  --decorative-icon-green: #3fbb46;
+  --decorative-icon-yellow: #f9cf00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-text: #f2f4f7;
+    --primary-icon: #f2f4f7;
+    --secondary-text: #b0b3b8;
+    --secondary-icon: #b0b3b8;
+    --active-icon: #ffffff;
+    --disabled-icon: #6f7276;
+    --placeholder-icon: #b0b3b8;
+    --meta-icon: #b0b3b8;
+    --device-icon: #ffffff;
+  }
+}

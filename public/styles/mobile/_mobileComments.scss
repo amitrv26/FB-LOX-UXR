@@ -1,0 +1,339 @@
+// Wrapper for scroll targeting
+.mobile-comments-wrapper {
+  scroll-margin-top: 52px; // Account for fixed header (48px) + buffer
+}
+
+// Mobile Comments Section
+.mobile-comments {
+  background: var(--background-color, #ffffff); // White background
+  padding-top: 2px; // Space between UFI and first comment
+  margin-bottom: 4px; // Spacing between units
+  overflow-x: hidden; // Prevent horizontal scroll from animations
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; // Prevent horizontal scroll from animations
+  }
+
+  &__load-more {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    // Body 4 Link typography with primary text
+    font-size: var(--body-4-link-font-size, 13px);
+    font-weight: var(--body-4-link-weight, 600);
+    line-height: var(--body-4-link-line-height, 16px);
+    letter-spacing: var(--body-4-link-letter-spacing, -0.08px);
+    color: var(--primary-text, #080809);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Comment Composer
+  &__composer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px 12px; // 4px top, 12px sides, 12px bottom (8px + 4px white space)
+    background: var(--surface-background, #ffffff);
+  }
+
+  &__composer-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+  &__composer-input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 8px 12px;
+    background: var(--text-input-bar-background, #f0f2f5);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: left;
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+      background: #e4e6e9;
+    }
+  }
+
+  &__composer-placeholder {
+    // Body 3 typography
+    font-family: var(--font-family-text, 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: var(--secondary-text, #65676b);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// Mobile Comment - Modern style matching Figma
+.mobile-comment {
+  display: flex;
+  gap: 8px;
+  padding: 4px 12px;
+  -webkit-tap-highlight-color: transparent; // Remove tap highlight on mobile
+  max-width: 100%;
+  overflow-x: hidden;
+
+  &--reply {
+    .mobile-comment__threading {
+      width: 24px;
+    }
+    .mobile-comment__avatar {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__threading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32px;
+    flex-shrink: 0;
+  }
+
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    // 1px media inner border stroke
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      pointer-events: none;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Header row: Author · Time · Author badge
+  &__header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    height: 16px;
+    margin-bottom: 2px; // 2px spacing before comment text
+    // Meta 4 typography
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: var(--text-medium-color, #65686c);
+  }
+
+  &__author {
+    // Meta 4 Link typography
+    font-weight: 600;
+  }
+
+  &__separator {
+    font-weight: 400;
+  }
+
+  &__time {
+    font-weight: 400;
+  }
+
+  &__author-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--fb-blue, #0866FF);
+
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: var(--fb-blue, #0866FF);
+    }
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  // Comment text - Body 3 typography (match post title kerning)
+  &__text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.09px; // Looser kerning to match post title
+    color: var(--text-dark-color, #080809);
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
+  }
+
+  // Action bar: Reply + reactions on left, thumbs up on right
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    height: 32px;
+  }
+
+  &__actions-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__actions-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__reply-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    // Meta 4 Link typography
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.2px; // Slightly looser kerning
+    color: var(--text-medium-color, #65686c);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Inline reactions next to Reply
+  &__reactions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    img {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+
+    span {
+      // Meta 4 Link typography
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+      letter-spacing: 0;
+      color: var(--text-medium-color, #65686c);
+    }
+  }
+
+  &__like-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--text-medium-color, #65686c);
+    }
+
+    &:hover svg {
+      fill: var(--text-dark-color, #080809);
+    }
+  }
+
+  // Nested Replies - avatar aligns with parent comment text
+  &__replies {
+    margin-top: 4px;
+    margin-left: -8px; // Pull replies left to align better
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__view-replies {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    cursor: pointer;
+
+    img, svg {
+      width: 20px;
+      height: 20px;
+      opacity: 0.6; // Secondary color effect
+    }
+
+    span {
+      // Meta 4 Link typography
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+      letter-spacing: 0;
+      color: var(--text-medium-color, #65686c);
+    }
+
+    &:hover span {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Enlarge-then-shrink animation for highlighting referenced comments
+@keyframes commentPop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+.mobile-comments__highlight-pulse {
+  animation: commentPop 0.6s ease-out;
+  transform-origin: left center;
+}
+

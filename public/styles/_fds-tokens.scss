@@ -1,0 +1,432 @@
+// =============================================================================
+// FDS (Facebook Design System) Design Tokens
+// Based on Blueprint Design System
+// https://www.internalfb.com/dimsum/blueprint/tokens
+// =============================================================================
+
+:root {
+  // ===========================================================================
+  // SPACING TOKENS
+  // ===========================================================================
+  
+  --spacing-x-small: 2px;
+  --spacing-small: 4px;
+  --spacing-medium: 8px;
+  --spacing-large: 12px;
+  --spacing-x-large: 16px;
+  --spacing-xx-large: 20px;
+  --spacing-xxx-large: 28px;
+  --spacing-xxxx-large: 36px;
+  
+  // Button Spacing
+  --button-border: 0;
+  --button-group-spacing: 8px;
+  --button-horizontal-padding: 12px;
+  --button-icon-label-spacing: 6px;
+  --button-large-height: 40px;
+  --button-medium-height: 36px;
+  --button-ufi-height: 44px;
+  
+  // Card Spacing
+  --card-spacing: 8px;
+  
+  // Chip Spacing
+  --chip-large-height: 44px;
+  --chip-medium-height: 32px;
+  --chip-small-height: 24px;
+  
+  // Other Spacing
+  --contextual-message-horizontal-padding: 16px;
+  --element-horizontal-spacing: 8px;
+  --element-vertical-spacing: 8px;
+  --facepile-face-spacing: 4px;
+  --facepile-overlapping-face-spacing: -4px;
+  --feed-post-spacing: 8px;
+  --gutter: 8px;
+  --icon-button-horizontal-padding: 16px;
+  --instant-feedback-screen-inset: 8px;
+  --instant-feedback-screen-inset-horizontal: 8px;
+  --instant-feedback-screen-inset-vertical: 12px;
+  --list-addon-vertical-margin: 8px;
+  --list-element-horizontal-spacing: 12px;
+  --list-element-vertical-spacing: 12px;
+  --margin: 16px;
+  --row-horizontal-padding: 16px;
+  --row-vertical-margin: 8px;
+  --row-vertical-padding: 12px;
+  --text-pairing-level-1: 14px;
+  --text-pairing-level-2: 12px;
+  --text-pairing-level-3: 10px;
+  --text-pairing-level-4: 10px;
+  --text-pairing-vertical-padding: 4px;
+  --unit: 20px;
+  --unit-footer-spacing: 20px;
+  --unit-header-bottom-padding: 12px;
+  --unit-header-top-padding: 20px;
+  --unit-vertical-content-spacing: 16px;
+  
+  // ===========================================================================
+  // SIZE TOKENS
+  // ===========================================================================
+  
+  --button-large: 40px;
+  --button-medium: 36px;
+  --button-small: 32px;
+  
+  // ===========================================================================
+  // CORNER RADIUS TOKENS
+  // ===========================================================================
+  
+  --bottom-sheet-container-radius: 16px;
+  --bottom-sheet-handle-radius: 1000px;
+  --button-large-radius: 6px;
+  --button-medium-radius: 6px;
+  --card-radius: 8px;
+  --instant-feedback-radius: 8px;
+  --profile-photo-actor-radius: 1000px;
+  --profile-photo-badge-radius: 1000px;
+  --profile-photo-entity-radius: 8px;
+  --text-input-radius: 6px;
+  --tooltip-radius: 12px;
+  
+  // ===========================================================================
+  // TYPOGRAPHY TOKENS
+  // ===========================================================================
+  
+  // Font Family
+  --font-family-display: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-text: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  
+  // Headline 0 Emphasized
+  --headline-0-emphasized-font-size: 28px;
+  --headline-0-emphasized-line-height: 32px;
+  --headline-0-emphasized-letter-spacing: 0.36px;
+  --headline-0-emphasized-weight: 700;
+  
+  // Headline 1 Emphasized
+  --headline-1-emphasized-font-size: 24px;
+  --headline-1-emphasized-line-height: 28px;
+  --headline-1-emphasized-letter-spacing: 0.36px;
+  --headline-1-emphasized-weight: 700;
+  
+  // Headline 2 Emphasized
+  --headline-2-emphasized-font-size: 20px;
+  --headline-2-emphasized-line-height: 24px;
+  --headline-2-emphasized-letter-spacing: 0.38px;
+  --headline-2-emphasized-weight: 700;
+  
+  // Headline 3 Emphasized
+  --headline-3-emphasized-font-size: 17px;
+  --headline-3-emphasized-line-height: 22px;
+  --headline-3-emphasized-letter-spacing: normal;
+  --headline-3-emphasized-weight: 700;
+  
+  // Headline 4 Emphasized
+  --headline-4-emphasized-font-size: 15px;
+  --headline-4-emphasized-line-height: 20px;
+  --headline-4-emphasized-letter-spacing: normal;
+  --headline-4-emphasized-weight: 700;
+  
+  // Headline 3
+  --headline-3-font-size: 17px;
+  --headline-3-line-height: 22px;
+  --headline-3-letter-spacing: normal;
+  --headline-3-weight: 500;
+  
+  // Headline 4
+  --headline-4-font-size: 15px;
+  --headline-4-line-height: 20px;
+  --headline-4-letter-spacing: normal;
+  --headline-4-weight: 500;
+  
+  // Headline 3 Deemphasized
+  --headline-3-deemphasized-font-size: 17px;
+  --headline-3-deemphasized-line-height: 22px;
+  --headline-3-deemphasized-letter-spacing: normal;
+  --headline-3-deemphasized-weight: 400;
+  
+  // Headline 4 Deemphasized
+  --headline-4-deemphasized-font-size: 15px;
+  --headline-4-deemphasized-line-height: 20px;
+  --headline-4-deemphasized-letter-spacing: normal;
+  --headline-4-deemphasized-weight: 400;
+  
+  // Button 1
+  --button-1-font-size: 17px;
+  --button-1-letter-spacing: normal;
+  --button-1-line-height: 22px;
+  --button-1-weight: 600;
+  
+  // Button 2
+  --button-2-font-size: 15px;
+  --button-2-letter-spacing: normal;
+  --button-2-line-height: 20px;
+  --button-2-weight: 600;
+  
+  // Body 1
+  --body-1-font-size: 20px;
+  --body-1-letter-spacing: 0.38px;
+  --body-1-line-height: 24px;
+  --body-1-weight: 400;
+  
+  // Body 1 Link
+  --body-1-link-font-size: 20px;
+  --body-1-link-letter-spacing: 0.38px;
+  --body-1-link-line-height: 24px;
+  --body-1-link-weight: 600;
+  
+  // Body 2
+  --body-2-font-size: 17px;
+  --body-2-letter-spacing: normal;
+  --body-2-line-height: 20px;
+  --body-2-weight: 400;
+  
+  // Body 2 Link
+  --body-2-link-font-size: 17px;
+  --body-2-link-letter-spacing: normal;
+  --body-2-link-line-height: 20px;
+  --body-2-link-weight: 600;
+  
+  // Body 3
+  --body-3-font-size: 15px;
+  --body-3-letter-spacing: normal;
+  --body-3-line-height: 20px;
+  --body-3-weight: 400;
+  
+  // Body 3 Link
+  --body-3-link-font-size: 15px;
+  --body-3-link-letter-spacing: normal;
+  --body-3-link-line-height: 20px;
+  --body-3-link-weight: 600;
+  
+  // Body 4
+  --body-4-font-size: 13px;
+  --body-4-letter-spacing: normal;
+  --body-4-line-height: 18px;
+  --body-4-weight: 400;
+  
+  // Body 4 Link
+  --body-4-link-font-size: 13px;
+  --body-4-link-letter-spacing: normal;
+  --body-4-link-line-height: 18px;
+  --body-4-link-weight: 600;
+  
+  // Meta 1
+  --meta-1-font-size: 15px;
+  --meta-1-letter-spacing: normal;
+  --meta-1-line-height: 20px;
+  --meta-1-weight: 600;
+  
+  // Meta 2
+  --meta-2-font-size: 14px;
+  --meta-2-letter-spacing: normal;
+  --meta-2-line-height: 18px;
+  --meta-2-weight: 600;
+  
+  // Meta 3
+  --meta-3-font-size: 13px;
+  --meta-3-letter-spacing: normal;
+  --meta-3-line-height: 16px;
+  --meta-3-weight: 500;
+  
+  // Meta 4
+  --meta-4-font-size: 12px;
+  --meta-4-letter-spacing: 0;
+  --meta-4-line-height: 16px;
+  --meta-4-weight: 500;
+  
+  // Live Badge
+  --live-badge-font-size: 4.5px;
+  --live-badge-letter-spacing: 0;
+  --live-badge-weight: 700;
+  
+  // ===========================================================================
+  // COLOR TOKENS - LIGHT MODE
+  // ===========================================================================
+  
+  --accent: #2D88FF;
+  --accent-deemphasized: #E7F3FF;
+  --always-transparent: rgba(0, 0, 0, 0);
+  --always-white: #FFFFFF;
+  --attachment-footer-background: #F0F2F5;
+  --background-deemphasized: #F0F2F5;
+  --blue-link: #216FDB;
+  --border-persistent-ui: rgba(0, 0, 0, 0.05);
+  --border-responsive-ui: rgba(0, 0, 0, 0.1);
+  --border-ui-emphasis: #E4E6EB;
+  --bottom-sheet-handle: #C9CCD1;
+  --card-background: #FFFFFF;
+  --card-background-flat: #F7F8FA;
+  --comment-background: #F0F2F5;
+  --decorative-icon-blue: #1877F2;
+  --decorative-icon-green: #2A9142;
+  --decorative-icon-purple: #9360F7;
+  --decorative-icon-red: #F3425F;
+  --decorative-icon-teal: #2ABBA7;
+  --disabled-button-background: #E4E6EB;
+  --disabled-button-border: #E4E6EB;
+  --disabled-icon: #BCC0C4;
+  --disabled-text: #BCC0C4;
+  --divider: #C9CCD1;
+  --event-date: #F02849;
+  --fb-wordmark: #1877F2;
+  --hosted-view-selected-state: #E7F3FF;
+  --instant-feedback-background-color: #323436;
+  --media-inner-border: rgba(0, 0, 0, 0.1);
+  --media-pressed: rgba(75, 76, 79, 0.35);
+  --nav-bar-background: #FFFFFF;
+  --nav-bar-blur: rgba(255, 255, 255, 0.9);
+  --negative: #F02849;
+  --new-notification-background: #E7F3FF;
+  --non-media-pressed: rgba(75, 76, 79, 0.15);
+  --non-media-pressed-on-dark: rgba(255, 255, 255, 0.3);
+  --notification-badge: #F02849;
+  --overlay-on-media: rgba(0, 0, 0, 0.8);
+  --overlay-on-surface: rgba(0, 0, 0, 0.4);
+  --placeholder-icon: #8A8D91;
+  --placeholder-image: #A4A7AB;
+  --placeholder-text: #8A8D91;
+  --placeholder-text-on-media: rgba(255, 255, 255, 0.5);
+  --popover-background: #FFFFFF;
+  --positive: #31A24C;
+  
+  // Primary Button
+  --primary-button-background: #1877F2;
+  --primary-button-background-on-media: #FFFFFF;
+  --primary-button-border: #1877F2;
+  --primary-button-border-on-media: #FFFFFF;
+  --primary-button-icon: #FFFFFF;
+  --primary-button-text: #FFFFFF;
+  --primary-button-text-on-media: #050505;
+  
+  // Primary Deemphasized Button
+  --primary-deemphasized-button-background: #E7F3FF;
+  --primary-deemphasized-button-text: #1877F2;
+  
+  // Primary Icon & Text
+  --primary-icon: #050505;
+  --primary-icon-on-media: #FFFFFF;
+  --primary-text: #050505;
+  --primary-text-on-media: #FFFFFF;
+  
+  // Progress Ring
+  --progress-ring-blue-background: rgba(24, 119, 242, 0.2);
+  --progress-ring-blue-foreground: #1877F2;
+  --progress-ring-disabled-foreground: #BCC0C4;
+  --progress-ring-neutral-background: rgba(0, 0, 0, 0.2);
+  --progress-ring-neutral-foreground: #000000;
+  --progress-ring-on-media-background: rgba(255, 255, 255, 0.2);
+  --progress-ring-on-media-foreground: #FFFFFF;
+  
+  --receiver-side-bubbles-background: #F0F2F5;
+  
+  // Secondary Button
+  --secondary-button-background: #E4E6EB;
+  --secondary-button-background-on-color: rgba(0, 0, 0, 0.05);
+  --secondary-button-background-on-media: rgba(0, 0, 0, 0.6);
+  --secondary-button-border: #E4E6EB;
+  --secondary-button-border-on-color: rgba(0, 0, 0, 0.05);
+  --secondary-button-border-on-media: rgba(0, 0, 0, 0.6);
+  --secondary-button-icon: #050505;
+  --secondary-button-pressed: rgba(0, 0, 0, 0.05);
+  --secondary-button-text: #050505;
+  --secondary-button-text-on-media: #FFFFFF;
+  
+  // Secondary Icon & Text
+  --secondary-icon: #65676B;
+  --secondary-text: #65676B;
+  --secondary-text-on-media: rgba(255, 255, 255, 0.8);
+  
+  // Shadows
+  --shadow-persistent-ui: rgba(0, 0, 0, 0.1);
+  --shadow-responsive-ui: rgba(0, 0, 0, 0.1);
+  --shadow-text-and-icon-on-media: rgba(0, 0, 0, 0.3);
+  --shadow-ui-emphasis: rgba(0, 0, 0, 0.1);
+  
+  // Stepper
+  --stepper-active: #1877F2;
+  --stepper-inactive: #E4E6EB;
+  
+  --surface-background: #FFFFFF;
+  --text-highlight: rgba(24, 119, 242, 0.2);
+  --text-input-bar-background: #F0F2F5;
+  
+  // Toggle
+  --toggle-active-background: #E7F3FF;
+  --toggle-active-icon: #1877F2;
+  --toggle-active-text: #1877F2;
+  
+  --warning: #FCC12B;
+  --wash: #C9CCD1;
+  --web-wash: #F0F2F5;
+  --white-alpha-60: rgba(255, 255, 255, 0.6);
+  --white-alpha-80: rgba(255, 255, 255, 0.8);
+  --white-alpha-50: rgba(255, 255, 255, 0.5);
+  --white-alpha-30: rgba(255, 255, 255, 0.3);
+  --white-alpha-15: rgba(255, 255, 255, 0.15);
+  --white-alpha-10: rgba(255, 255, 255, 0.1);
+  --white-alpha-05: rgba(255, 255, 255, 0.05);
+  --black-alpha-80: rgba(0, 0, 0, 0.8);
+  --black-alpha-60: rgba(0, 0, 0, 0.6);
+  --black-alpha-40: rgba(0, 0, 0, 0.4);
+  --black-alpha-10: rgba(0, 0, 0, 0.1);
+  --black-alpha-05: rgba(0, 0, 0, 0.05);
+  
+  // ===========================================================================
+  // MOTION TOKENS
+  // ===========================================================================
+  
+  // Curves
+  --curve-enter-exit-in: cubic-bezier(0.14, 1, 0.34, 1);
+  --curve-enter-exit-out: cubic-bezier(0.45, 0.1, 0.2, 1);
+  --curve-swap-shuffle-in: cubic-bezier(0.14, 1, 0.34, 1);
+  --curve-swap-shuffle-out: cubic-bezier(0.45, 0.1, 0.2, 1);
+  --curve-move-in: cubic-bezier(0.17, 0.17, 0, 1);
+  --curve-move-out: cubic-bezier(0.17, 0.17, 0, 1);
+  --curve-expand-collapse-in: cubic-bezier(0.17, 0.17, 0, 1);
+  --curve-expand-collapse-out: cubic-bezier(0.17, 0.17, 0, 1);
+  --curve-passive-change-in: cubic-bezier(0.5, 0, 0.1, 1);
+  --curve-passive-change-out: cubic-bezier(0.5, 0, 0.1, 1);
+  --curve-fade-in: cubic-bezier(0, 0, 1, 1);
+  --curve-fade-out: cubic-bezier(0, 0, 1, 1);
+  
+  // Durations
+  --duration-xx-short-in: 0.1s;
+  --duration-xx-short-out: 0.1s;
+  --duration-x-short-in: 0.2s;
+  --duration-x-short-out: 0.15s;
+  --duration-short-in: 0.28s;
+  --duration-short-out: 0.2s;
+  --duration-medium-in: 0.4s;
+  --duration-medium-out: 0.35s;
+  --duration-long-in: 0.5s;
+  --duration-long-out: 0.35s;
+  --duration-x-long-in: 1s;
+  --duration-x-long-out: 1s;
+  
+  // ===========================================================================
+  // SHADOW TOKENS
+  // ===========================================================================
+  
+  --shadow-persistent-cta: 0 0 12px var(--shadow-persistent-ui);
+  --shadow-tooltip: 0px 8px 16px var(--shadow-responsive-ui);
+  --shadow-instant-feedback: 0 4px 12px var(--shadow-responsive-ui);
+  --shadow-card: 0 4px 12px var(--shadow-responsive-ui);
+  
+  // ===========================================================================
+  // LEGACY TOKEN ALIASES (for backwards compatibility)
+  // ===========================================================================
+  
+  --typography-font-family: var(--font-family-text);
+  --typography-display-font-family: var(--font-family-display);
+  --text-dark-color: var(--primary-text);
+  --background-color: var(--surface-background);
+  --background-alt-color: var(--background-deemphasized);
+  --border-color: var(--border-ui-emphasis);
+  --accent-color: var(--accent);
+  --fb-blue: var(--decorative-icon-blue);
+  --error-color: var(--negative);
+  --color-white: var(--always-white);
+  --secondary-button-background: var(--secondary-button-background);
+}
+

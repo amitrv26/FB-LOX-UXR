@@ -1,0 +1,476 @@
+// Related Answers Section
+.related-answers {
+  background: var(--background-color, #ffffff);
+  padding-bottom: 4px;
+  margin-bottom: 4px; // Spacing between units
+
+  // Header
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 12px;
+    padding-bottom: 4px; // 4px spacing before first question
+  }
+
+  &__header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px; // Reduced by 2px
+  }
+
+  &__title {
+    // Headline 3 Emphasized - matches Marketplace title exactly
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0;
+    color: #080809;
+    margin: 0;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    // Meta 3 typography
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: var(--text-medium-color, #65686c);
+  }
+
+  &__ai-icon {
+    width: 12px;
+    height: 12px;
+    fill: var(--text-medium-color, #65686c);
+    flex-shrink: 0;
+  }
+
+  &__feedback-btn {
+    background: transparent;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--text-medium-color, #65686c);
+    }
+
+    &:hover svg {
+      fill: var(--text-dark-color, #080809);
+    }
+  }
+
+  // Questions List
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Question Row (clickable)
+  &__question-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 12px; // Vertical padding
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent; // Remove tap highlight on mobile
+
+    @media (hover: hover) {
+      &:hover {
+        background: var(--hover-overlay, rgba(0, 0, 0, 0.03));
+      }
+    }
+
+    &:active {
+      background: var(--hover-overlay, rgba(0, 0, 0, 0.05));
+    }
+  }
+
+  &__question {
+    // Headline 3 typography - matches marketplace exactly
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0;
+    color: #080809;
+    margin: 0;
+    flex: 1;
+  }
+
+  &__chevron {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    fill: var(--text-dark-color, #080809);
+  }
+
+  // Expanded Content
+  &__content {
+    padding: 0 12px 12px;
+    // Set Body 3 typography as base for inheritance - matches marketplace exactly
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
+
+  &__answer {
+    // Body 3 typography - matches marketplace exactly
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #080809;
+    margin: 0 0 8px;
+  }
+
+  // Horizontal scroll quote cards
+  &__cards-scroll {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 0 4px; // Reduced top padding to 0
+    margin: 0 -12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline-start: 12px; // Cards snap with 12px from left edge
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  // Stacked vertical cards layout (for qa-2)
+  &__cards-stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+  }
+
+  &__quote-card {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 200px;
+    height: 184px;
+    padding: 12px;
+    background: var(--surface-background, #ffffff);
+    border: 1px solid var(--media-inner-border, rgba(0, 0, 0, 0.1));
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+    -webkit-tap-highlight-color: transparent;
+    scroll-snap-align: start;
+    // Reset button font defaults to inherit from parent
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+
+    @media (hover: hover) {
+      &:hover {
+        background: var(--web-wash, #f0f2f5);
+      }
+    }
+
+    &:active {
+      background: var(--web-wash, #f0f2f5);
+    }
+
+    // Full-width modifier for stacked layout
+    &--full-width {
+      width: 100%;
+      height: auto;
+      flex-shrink: 1;
+
+      .related-answers__card-quote {
+        min-height: 60px; // 3 lines × 20px line-height
+        -webkit-line-clamp: 3;
+      }
+    }
+  }
+
+  // Card header with group avatar and name
+  &__card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  &__card-group-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__card-group-name {
+    // Meta 3 typography
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: #080809;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__card-quote {
+    // Body 3 typography
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #080809;
+    margin: 0;
+    flex: 1;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4 !important;
+    line-clamp: 4 !important;
+    -webkit-box-orient: vertical !important;
+    box-orient: vertical;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+  }
+
+  &__card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 12px;
+  }
+
+  &__card-action {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__card-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--secondary-icon, #65676b);
+    flex-shrink: 0;
+  }
+
+  &__card-count {
+    // Meta 3 typography
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: #65676b;
+  }
+
+  // Divider between questions
+  &__divider {
+    height: 1px;
+    background: var(--divider-color, #e4e6eb);
+    margin: 0 12px;
+  }
+
+  // Hide divider on last item
+  &__item:last-child &__divider {
+    display: none;
+  }
+
+  // Ask a Question Composer
+  &__composer {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 4px 12px 12px;
+  }
+
+  &__composer-input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: var(--text-input-bar-background, #f0f2f5);
+    border-radius: 24px;
+    padding: 8px 12px;
+    min-height: 40px;
+    cursor: pointer;
+  }
+
+  &__composer-placeholder {
+    // Body 3 typography - matches marketplace exactly
+    flex: 1;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #65686c;
+  }
+
+  &__composer-send {
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+      fill: var(--disabled-icon, #bcc0c4);
+    }
+  }
+}
+
+// Sources Bottom Sheet
+.sources-sheet-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sources-sheet {
+  background: var(--background-color, #ffffff);
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  max-width: 500px;
+  max-height: 70vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s var(--fds-animation-enter-exit-in, ease-out);
+  margin-bottom: 0;
+
+  &__handle {
+    width: 40px;
+    height: 4px;
+    background: #CED0D4;
+    border-radius: 2px;
+    margin: 12px auto;
+  }
+
+  &__content {
+    padding: 0 16px 24px;
+  }
+
+  &__title {
+    // Headline 3 Emphasized - matches marketplace exactly
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0;
+    color: #080809;
+    margin: 0 0 4px;
+  }
+
+  &__subtitle {
+    // Meta 3 typography
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: var(--text-medium-color, #65686c);
+    margin: 0 0 16px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    background: var(--web-wash, #f0f2f5);
+    border-radius: 12px;
+  }
+
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__quote {
+    // Body 3 typography - matches marketplace exactly
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #080809;
+    margin: 0;
+  }
+
+  &__close {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 14px 20px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-medium-color, #65686c);
+    cursor: pointer;
+
+    &:hover {
+      background: var(--web-wash, #f0f2f5);
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+

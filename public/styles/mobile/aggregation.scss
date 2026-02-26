@@ -1,0 +1,8573 @@
+// ============================================
+// AGGREGATION PAGE STYLES
+// ============================================
+
+// Variables
+$primary-blue: #0866ff;
+$primary-purple: #9334E6;
+$text-primary: #080809;
+$text-secondary: #65686c;
+$text-tertiary: #8a8d91;
+$border-color: #dadce0;
+$background-light: #f0f2f5;
+$background-white: #ffffff;
+$card-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+// ============================================
+// EXPERIENCE SWITCHER (Demo Only)
+// ============================================
+.experience-switcher {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  &__label {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 8px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__btn {
+    flex: 1;
+    padding: 10px 12px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    &--active {
+      color: #fff;
+      background: $primary-blue;
+      border-color: $primary-blue;
+    }
+  }
+}
+
+// ============================================
+// EXPLORE PAGE CONTAINER
+// ============================================
+.explore-page {
+  min-height: 100vh;
+  background: $background-white;
+
+  &__content {
+    // Content container - no extra padding since experiences handle their own
+  }
+}
+
+// ============================================
+// AGGREGATION HEADER
+// ============================================
+.aggregation-header {
+  background: $background-white;
+  padding: 16px;
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  // Topic button - clickable to open experience picker
+  &__topic-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 4px;
+    text-align: left;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  // Topic title - Blueprint: Headline 2 Emphasized
+  &__topic {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.41px;
+    color: $text-primary;
+    margin: 0;
+  }
+
+  &__social-proof {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    color: $text-secondary;
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+}
+
+// ============================================
+// CONTENT-FORWARD EXPERIENCE
+// ============================================
+.content-forward-experience {
+  &__ai-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 16px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    color: $primary-purple;
+    background: rgba($primary-purple, 0.08);
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__buckets {
+    // Container for content buckets
+  }
+
+  &__groups {
+    padding: 16px;
+    background: $background-white;
+    border-top: 8px solid $background-light;
+  }
+
+  &__section-title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0 0 12px;
+  }
+
+  &__groups-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__group-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  &__group-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__group-name {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: $text-primary;
+    margin: 0 0 2px;
+  }
+
+  &__group-members {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    color: $text-secondary;
+  }
+
+  &__join-btn {
+    padding: 8px 16px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: $primary-blue;
+    background: rgba($primary-blue, 0.1);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba($primary-blue, 0.15);
+    }
+  }
+
+  &__related {
+    padding: 16px;
+    background: $background-white;
+    border-top: 8px solid $background-light;
+  }
+
+  &__queries {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__query {
+    padding: 10px 16px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    color: $text-primary;
+    background: $background-light;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background: darken($background-light, 5%);
+    }
+  }
+}
+
+// ============================================
+// CONTENT BUCKET
+// ============================================
+.content-bucket {
+  border-top: 8px solid $background-light;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.02);
+    }
+  }
+
+  &__header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__icon {
+    font-size: 20px;
+  }
+
+  &__category {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0;
+  }
+
+  &__chevron {
+    color: $text-secondary;
+  }
+
+  &__content {
+    padding: 0 16px 16px;
+  }
+
+  &__discussions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__discussion {
+    background: $background-white;
+    border: 1px solid $border-color;
+    border-radius: 12px;
+    padding: 12px;
+  }
+
+  &__discussion-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  &__group-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+
+  &__discussion-meta {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+  }
+
+  &__group-name {
+    color: $text-primary;
+    font-weight: 600;
+  }
+
+  &__time {
+    color: $text-secondary;
+  }
+
+  &__question {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: $text-primary;
+    margin: 0 0 8px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__answer {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    color: $text-secondary;
+    line-height: 1.5;
+    margin: 0 0 12px;
+  }
+
+  &__snippets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px;
+
+    li {
+      position: relative;
+      padding-left: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 14px;
+      color: $text-primary;
+      line-height: 1.5;
+      margin-bottom: 8px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 6px;
+        height: 6px;
+        background: $primary-blue;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__see-more {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: $primary-blue;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-bottom: 12px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__engagement {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 12px;
+    border-top: 1px solid $border-color;
+  }
+
+  &__reactions,
+  &__comments {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    color: $text-secondary;
+  }
+
+  &__reply {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: $primary-blue;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  // Marketplace section within bucket
+  &__marketplace {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid $border-color;
+  }
+
+  &__section-title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: $text-primary;
+    margin: 0 0 12px;
+  }
+
+  &__marketplace-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  &__marketplace-item {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  &__marketplace-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  &__marketplace-price {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0 0 2px;
+  }
+
+  &__marketplace-title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    color: $text-secondary;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  // Events section within bucket
+  &__events {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__event {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background: $background-light;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+
+    &:hover {
+      background: darken($background-light, 3%);
+    }
+  }
+
+  &__event-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  &__event-details {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__event-date {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #e74c3c;
+    text-transform: uppercase;
+  }
+
+  &__event-title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: $text-primary;
+    margin: 4px 0;
+  }
+
+  &__event-venue {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    color: $text-secondary;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__event-price {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__event-attending {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    color: $text-secondary;
+    display: block;
+    margin-top: 4px;
+  }
+}
+
+// ============================================
+// AI-FORWARD EXPERIENCE - Matches Figma 167:100232
+// Blueprint typography: Body 2 Link (17px/600), Body 3 (15px/400), Body 4 (13px)
+// ============================================
+.ai-forward-experience {
+  background: $background-white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-forward {
+  // Main content area
+  &__main {
+    flex: 1;
+    padding: 12px 12px 100px;
+  }
+
+  // Topic button - clickable to open experience picker
+  &__topic-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 8px;
+    text-align: left;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  // Topic title - Blueprint: Headline 2 Emphasized
+  &__topic {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.41px;
+    color: $text-primary;
+    margin: 0;
+  }
+
+  // Action chip with facepile - "32 people talking about this"
+  &__action-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;  // Reduced by 2px
+    height: 32px;  // Reduced by 4px more (2px top + 2px bottom)
+    padding: 0px 12px 0px 6px;  // Reduced by 2px more on all sides
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    color: $text-secondary;
+    background: $background-white;
+    border: none;  // Removed outline per design
+    border-radius: 18px;  // Slightly reduced to match new height
+    cursor: pointer;
+    margin-bottom: 16px;
+
+    &:hover {
+      background: $background-light;
+    }
+  }
+
+  // Facepile for action chip
+  &__facepile {
+    display: flex;
+    align-items: center;
+    margin-left: -4px;  // Move facepile left by 4px
+  }
+
+  &__facepile-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid $background-white;
+    object-fit: cover;
+    margin-left: -8px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  // Main intro paragraph - Body 3 (15px)
+  &__intro {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: $text-primary;
+    margin: 0 0 20px; // Reduced by 12px (was 32px)
+  }
+
+  // AI Sections container - 20px gap between sections (reduced by 12px)
+  &__sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  // Section header wrapper - title + info icon
+  &__section-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  // Section title - Body 2 Link (17px semibold)
+  &__section-title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.41px;
+    color: $text-primary;
+    margin: 0;
+    flex: 1;
+  }
+
+  // Section info icon
+  &__section-icon {
+    flex-shrink: 0;
+    margin-top: 4px;  // Align with first line of text
+  }
+
+  // Bulleted list for section content
+  &__section-bullets {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0 0 16px;
+  }
+
+  &__section-bullet {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: $text-primary;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Blue Quote - inline highlighted excerpt
+  &__blue-quote {
+    color: $primary-blue;
+    font-style: italic;
+  }
+
+  &__bullet-label {
+    font-weight: 600;
+  }
+
+  &__bullet-text {
+    font-weight: 400;
+  }
+
+  // Horizontal scroll for responsive post cards
+  &__posts-scroll {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    margin: 0 -12px;
+    padding: 0 12px 8px;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  // Responsive Post Card - matches Figma
+  &__post-card {
+    flex: 0 0 auto;
+    width: 186px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: left;
+    background: $background-white;
+
+    &:hover {
+      background: $background-light;
+    }
+
+    // Text-only variant
+    &--text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 280px;
+      padding: 0;
+    }
+
+    // Media variant (with image background)
+    &--media {
+      height: 280px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.2) 100%);
+      }
+    }
+
+    // Placeholder variant (dark grey background)
+    &--placeholder {
+      background: #65686c;
+    }
+  }
+
+  &__post-content {
+    flex: 1;
+    padding: 12px;
+  }
+
+  &__post-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  &__post-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    &--on-media {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__post-author {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: -0.08px;
+    color: $text-primary;
+
+    &--on-media {
+      color: white;
+      text-shadow: 0 0 1.5px rgba(0,0,0,0.6), 0 0 1px rgba(0,0,0,0.5);
+    }
+  }
+
+  &__post-quote {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: $text-primary;
+    margin: 0;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  // UFI container for post footer
+  &__post-ufi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    height: 16px;
+    box-sizing: content-box;
+  }
+
+  &__post-media-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__post-media-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  // Blueprint UFI - Inline reactions with stacked reaction images
+  &__ufi-reactions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &--on-media {
+      filter: drop-shadow(0 0 1.5px rgba(0,0,0,0.6)) drop-shadow(0 0 1px rgba(0,0,0,0.5));
+    }
+  }
+
+  &__ufi-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  // Stacked reaction icons (like facepile)
+  &__ufi-reaction-wrapper {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1.5px solid $background-white;
+    margin-left: -4px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: content-box;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__ufi-reaction-icon {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &__ufi-reactions--on-media &__ufi-reaction-wrapper {
+    border-color: transparent;
+  }
+
+  &__ufi-count {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.08px;
+    color: $text-secondary;
+
+    &--on-media {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  // Blueprint UFI - Comments (right side)
+  &__ufi-comments {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    
+    span {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: -0.08px;
+      color: $text-secondary;
+    }
+
+    &--on-media {
+      filter: drop-shadow(0 0 1.5px rgba(0,0,0,0.6)) drop-shadow(0 0 1px rgba(0,0,0,0.5));
+      
+      span {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  &__reaction-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__reaction-icon {
+    font-size: 14px;
+    line-height: 1;
+
+    &--overlap {
+      margin-left: -4px;
+    }
+  }
+
+  &__reaction-count {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.08px;
+    color: $text-secondary;
+  }
+
+  &__post-comments {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.08px;
+    color: $text-secondary;
+
+    &--on-media {
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: 0 0 1.5px rgba(0,0,0,0.6);
+
+      svg {
+        fill: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  // Related groups section - Entity Collections style
+  &__groups-section {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  // Unit header style - Headline 3 Emphasized (17px/700)
+  &__unit-header {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+    color: $text-primary;
+    margin: 0;
+    padding: 12px 0 8px;
+  }
+
+  &__groups-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: -4px; // Reduce space above first group
+  }
+
+  // Group item - FDS List Cell style
+  &__group-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+  }
+
+  &__group-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    &--placeholder {
+      background: #65686c;
+      border: none;
+    }
+  }
+
+  &__group-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__group-headline {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 2px;
+  }
+
+  &__group-name {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: $text-primary;
+  }
+
+  &__group-dot {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    color: $text-secondary;
+  }
+
+  &__group-join-link {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: $primary-blue;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__group-meta {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.16px;
+    color: $text-secondary;
+  }
+
+  // Related topics section
+  &__topics-section {
+    margin-top: 0;
+    padding-top: 0;
+
+    .ai-forward__unit-header {
+      margin-bottom: 0;
+    }
+  }
+
+  &__topics-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__topic-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 8px 0;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 12px;
+    }
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: $text-primary;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+
+    &:hover {
+      background: $background-light;
+      margin: 0 -12px;
+      padding: 8px 12px;
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+
+  &__topic-text {
+    flex: 1;
+  }
+
+  // Fixed input at bottom
+  &__input-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $background-white;
+    padding: 12px 16px 16px;
+    border-top: 1px solid $border-color;
+    z-index: 100;
+  }
+
+  &__input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__input-placeholder-container {
+    position: absolute;
+    left: 16px;
+    right: 52px; // Space for the 28px button + 16px padding + 8px gap
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    height: 20px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &__input-placeholder {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    color: $text-tertiary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+
+  // Exit animation: current text slides up and out
+  &__input-placeholder-container--animating &__input-placeholder {
+    animation: slideUpOut 0.3s ease-out forwards;
+  }
+
+  // Enter animation: new text slides up from below
+  &__input-placeholder-container--entering &__input-placeholder {
+    animation: slideUpIn 0.3s ease-out forwards;
+  }
+
+  @keyframes slideUpOut {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideUpIn {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &__input {
+    background: transparent !important;
+    
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &__input-meta {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $text-secondary;
+    text-align: center;
+    margin: 8px 0 0;
+  }
+
+  &__input-meta-link {
+    color: $primary-blue;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background: $background-light;
+    border-radius: 24px;
+  }
+
+  &__input {
+    flex: 1;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $text-primary;
+    background: transparent;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: $text-secondary;
+    }
+  }
+}
+
+// ============================================
+// BALANCED EXPERIENCE
+// ============================================
+.balanced-experience {
+  background: $background-white;
+}
+
+.balanced {
+  &__main {
+    padding: 16px;
+  }
+
+  &__ai-intro {
+    margin-bottom: 20px;
+  }
+
+  &__ai-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    color: $primary-purple;
+    margin-bottom: 8px;
+  }
+
+  &__ai-text {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    color: $text-primary;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  &__inline-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    color: $primary-blue;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__reels-section {
+    margin-bottom: 16px;
+  }
+
+  &__see-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: $primary-blue;
+    background: none;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background: $background-light;
+    }
+  }
+
+  &__divider {
+    height: 8px;
+    background: $background-light;
+    margin: 20px -16px;
+  }
+
+  &__ai-section {
+    margin-bottom: 20px;
+  }
+
+  &__ai-section-title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0 0 8px;
+  }
+
+  &__ai-section-text {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    color: $text-primary;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  &__marketplace-section {
+    margin-bottom: 20px;
+  }
+
+  &__party-reels {
+    margin-bottom: 20px;
+  }
+
+  &__related {
+    margin-bottom: 24px;
+  }
+
+  &__related-title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0 0 12px;
+  }
+
+  &__related-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__related-chip {
+    padding: 10px 16px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    color: $text-primary;
+    background: $background-light;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background: darken($background-light, 5%);
+    }
+  }
+
+  &__groups {
+    margin-bottom: 24px;
+  }
+
+  &__groups-title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0 0 12px;
+  }
+
+  &__groups-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    margin: 0 -16px;
+    padding: 0 16px;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__group-card {
+    flex: 0 0 auto;
+    width: 140px;
+    padding: 16px 12px;
+    background: $background-light;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  &__group-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 8px;
+  }
+
+  &__group-name {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: $text-primary;
+    margin: 0 0 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__group-members {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    color: $text-secondary;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &__group-join {
+    width: 100%;
+    padding: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: $background-white;
+    background: $primary-blue;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+      background: darken($primary-blue, 5%);
+    }
+  }
+}
+
+// ============================================
+// REELS GRID
+// ============================================
+.reels-grid {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0;
+  }
+
+  &__see-more {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: $primary-blue;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__container {
+    display: grid;
+    gap: 12px;
+  }
+
+  &__item {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  &__thumbnail-wrapper {
+    position: relative;
+    aspect-ratio: 9/16;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+
+  &__thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.6) 100%);
+  }
+
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+  }
+
+  &__duration {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 2px 6px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+  }
+
+  &__views {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+  }
+
+  &__item-title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: $text-primary;
+    margin: 0 0 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__author-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__author-name {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    color: $text-secondary;
+  }
+}
+
+// ============================================
+// MARKETPLACE GRID
+// ============================================
+.marketplace-grid {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0;
+  }
+
+  &__see-more {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: $primary-blue;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__container {
+    display: grid;
+    gap: 12px;
+  }
+
+  &__scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    margin: 0 -16px;
+    padding: 0 16px;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+
+    &--horizontal {
+      flex: 0 0 auto;
+      width: 140px;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    margin-bottom: 8px;
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 4px 8px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    background: #e74c3c;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  &__details {
+    // Details container
+  }
+
+  &__price {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0 0 4px;
+  }
+
+  &__original-price {
+    font-size: 13px;
+    font-weight: 400;
+    color: $text-secondary;
+    text-decoration: line-through;
+    margin-left: 6px;
+  }
+
+  &__item-title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    color: $text-primary;
+    margin: 0 0 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    color: $text-secondary;
+    margin-bottom: 4px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    color: $text-primary;
+  }
+
+  &__reviews {
+    color: $text-secondary;
+  }
+}
+
+// ============================================
+// LOCAL EVENTS SECTION
+// ============================================
+.local-events {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0;
+  }
+
+  &__see-more {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: $primary-blue;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background: $background-light;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+
+    &:hover {
+      background: darken($background-light, 3%);
+    }
+  }
+
+  &__image-wrapper {
+    flex-shrink: 0;
+  }
+
+  &__image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__event-title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: $text-primary;
+    margin: 0 0 4px;
+  }
+
+  &__venue {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    color: $text-primary;
+    margin: 0 0 4px;
+  }
+
+  &__business-type {
+    color: $text-secondary;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+
+  &__meta-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    color: $text-secondary;
+  }
+
+  &__distance {
+    // Distance styling
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  &__price {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__attending {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    color: $text-secondary;
+  }
+
+  &__chevron {
+    flex-shrink: 0;
+    align-self: center;
+    color: $text-secondary;
+  }
+}
+
+// ============================================
+// CONTENT-FORWARD EXPERIENCE V2 (CFE)
+// Blueprint Design System Implementation
+// Uses FDS tokens for typography, spacing, colors, motion
+// ============================================
+.content-forward-experience-v2 {
+  background: var(--surface-background);
+  min-height: 100vh;
+  padding-bottom: var(--spacing-xxxx-large);
+  overflow-x: hidden;  // Prevent horizontal scrolling on the page
+  max-width: 100vw;    // Ensure page doesn't exceed viewport width
+}
+
+// ============================================
+// CFE V2 - Page Header (AI-forward style)
+// Topic title + action chip with facepile
+// ============================================
+.cfe-page-header {
+  padding: 12px 12px 0 12px;
+
+  &__title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  &__topic-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+    flex: 1;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__info-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    transition: background 0.15s ease;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    &:active {
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__title {
+    // Blueprint: Headline 3 Emphasized
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: normal;
+    color: var(--primary-text, #080809);
+    margin: 0;
+  }
+
+  &__social-proof {
+    margin-top: 4px;
+  }
+
+  &__talking-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    // Blueprint: Body 3
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--secondary-text, #65676B);
+  }
+
+  &__description {
+    // Blueprint: Body 3
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: normal;
+    color: var(--primary-text, #080809);
+    margin: 4px 0 0 0;
+  }
+
+  &__chip-wrapper {
+    padding-left: 0;
+    margin-bottom: 16px;
+  }
+}
+
+// ============================================
+// CFE V2 - Action Chip (AI-forward style)
+// Blueprint: Medium chip with facepile, border style
+// ============================================
+.cfe-action-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 4px 16px 4px 10px;
+  font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--secondary-text, #65676B);
+  background: var(--surface-background, #ffffff);
+  border: 1px solid var(--media-inner-border, rgba(0, 0, 0, 0.1));
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.1s ease;
+
+  &:hover {
+    background: var(--background-deemphasized, #F0F2F5);
+  }
+
+  &__label {
+    white-space: nowrap;
+  }
+}
+
+// ============================================
+// CFE V2 - Facepile
+// Blueprint: Overlapping avatar stack
+// ============================================
+.cfe-facepile {
+  display: flex;
+  align-items: center;
+
+  &__avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    position: relative;
+  }
+}
+
+// ============================================
+// CFE V2 - Unit Header
+// Blueprint: Headline 3 Emphasized + Body 3 + Chevron
+// ============================================
+.cfe-unit-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+    padding-right: 16px;
+  }
+
+  &__title {
+    // Blueprint: Headline 3 Emphasized
+    font-family: var(--font-family-text);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: var(--primary-text);
+    margin: 0 0 8px;  // 4px more space between header and subtext
+  }
+
+  &__body {
+    // Blueprint: Body 3
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.08px;
+    color: var(--secondary-text);
+    margin: 0;
+  }
+
+  &__chevron {
+    flex-shrink: 0;
+    color: var(--secondary-icon);
+    margin-top: 2px;
+  }
+
+  &__right-addon {
+    flex-shrink: 0;
+    color: var(--secondary-icon, #65686c);
+    margin-top: 4px;  // Align with first line of title text
+    margin-left: 12px;
+  }
+}
+
+// ============================================
+// CFE V2 - Section
+// ============================================
+.cfe-section {
+  &__content {
+    padding-bottom: var(--spacing-medium);
+  }
+}
+
+// ============================================
+// CFE V2 - Content Preview Cell
+// Blueprint: Headline 4 for question, Meta 4 for meta (no dots menu)
+// ============================================
+.cfe-content-preview {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 8px 8px 8px;  // Reduced left/right padding by 4px
+
+  &__text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__headline {
+    // Blueprint: Headline 4
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.23px;
+    color: var(--primary-text);
+    margin: 0 0 4px;
+  }
+
+  &__meta {
+    // Blueprint: Meta 4
+    font-family: var(--font-family-text);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--secondary-text);
+  }
+}
+
+// ============================================
+// CFE V2 - Discussion Comment
+// Blueprint: Comment with avatar - tighter spacing
+// ============================================
+.cfe-comment {
+  display: flex;
+  gap: 10px;  // Increased gap by 4px
+  padding: 4px 8px 12px 8px;
+
+  &__avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__author {
+    // Blueprint: Meta 4 Link
+    display: block;
+    font-family: var(--font-family-text);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: var(--secondary-text);
+    margin-bottom: 2px;
+  }
+
+  &__text {
+    // Blueprint: Body 3
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.08px;
+    color: var(--primary-text);
+    margin: 0;
+  }
+}
+
+// ============================================
+// CFE V2 - Responsive Post
+// ============================================
+.cfe-responsive-post {
+  background: var(--surface-background);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 0 12px 8px 12px;
+  overflow: hidden;
+}
+
+// ============================================
+// CFE V2 - Media Post (M1)
+// Blueprint: Large post card spanning full width minus margins
+// ============================================
+.cfe-media-post {
+  margin: 0 12px 8px 12px;  // Same margins as responsive post
+
+  &__card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;  // Same border-radius as responsive post
+    overflow: hidden;
+  }
+
+  &__media {
+    position: relative;
+    aspect-ratio: 1;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    z-index: 1;
+  }
+
+  &__author-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__author-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+  }
+
+  &__author-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__author-name {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    // Blueprint: Body 4 Link on media
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  &__author-meta {
+    // Blueprint: Meta 4 on media
+    font-family: var(--font-family-text);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 4px;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4px 8px;
+    border-radius: 12px;
+  }
+
+  &__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+
+    &--active {
+      background: white;
+    }
+  }
+
+  // Footer below image with white background (not overlaid)
+  &__footer {
+    padding: 12px;
+    background: var(--surface-background);
+  }
+
+  &__caption {
+    // Blueprint: Body 3
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.08px;
+    color: var(--primary-text);
+    margin: 0 0 12px;
+  }
+
+  &__ufi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__ufi-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__ufi-action {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    // Blueprint: Body 4
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--secondary-text);
+  }
+}
+
+// ============================================
+// CFE V2 - Inline Reactions
+// ============================================
+.cfe-inline-reactions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+
+  &__icons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    position: relative;
+
+    &--overlap {
+      margin-left: -4px;
+    }
+  }
+
+  &__count {
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--secondary-text);
+
+    &--on-media {
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// ============================================
+// CFE V2 - Unit Header (simple heading)
+// Blueprint: Headline 4 Emphasized for title, Body 3 for description
+// ============================================
+.cfe-unit-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 12px 4px 12px;  // 16px above section headers (increased by 8px)
+  background: none;
+  border: none;
+  text-align: left;
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__title {
+    // Blueprint: Headline 4 Emphasized
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: normal;
+    color: var(--primary-text);
+    margin: 0;
+  }
+
+  &__description {
+    // Blueprint: Body 3
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: normal;
+    color: var(--primary-text);
+    margin: 2px 0 0 0;
+  }
+
+  &__link {
+    // Blueprint: Body 3 Link
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: normal;
+    color: #0064D1;
+    cursor: pointer;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+    
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__chevron {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+
+  &--clickable {
+    cursor: pointer;
+  }
+}
+
+// ============================================
+// CFE V2 - Content Bucket Section
+// ============================================
+.cfe-bucket {
+  margin-bottom: 0;  // Set to 0 for testing
+  
+  &:first-of-type {
+    .cfe-unit-header {
+      margin-top: 0;
+    }
+  }
+  
+  // Space above non-first sub-headers
+  &:not(:first-of-type) {
+    .cfe-unit-header {
+      padding-top: 0;  // Set to 0 for testing
+    }
+  }
+}
+
+// Add more space above subheader when section has been expanded (non-first sections only)
+.cfe-bucket--expanded {
+  .cfe-unit-header {
+    padding-top: 24px;  // Extra padding above subheader when expanded
+  }
+}
+
+// ============================================
+// CFE V2 - Horizontal Scroll (snap scroll)
+// ============================================
+.cfe-hscroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-left: 12px;  // Snap with 12px offset
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__track {
+    display: flex;
+    gap: 8px;
+    padding: 4px 12px 12px 12px;  // 12px left padding for first card
+    
+    // Spacer after last card for right padding
+    &::after {
+      content: '';
+      flex-shrink: 0;
+      width: 1px;
+    }
+  }
+}
+
+// ============================================
+// CFE V2 - Grid Layouts (for Grid View Experience)
+// ============================================
+
+// Post Grid - 2 column layout, no scroll
+.cfe-post-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 4px 12px 0 12px;  // No bottom padding, See more has margin-top: 8px
+  overflow: hidden;  // No scrolling
+}
+
+// Reels Grid - 2 column layout, no scroll
+.cfe-reels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 4px 12px 0 12px;  // No bottom padding, See more has margin-top: 8px
+  overflow: hidden;  // No scrolling
+}
+
+// Grid variant modifiers for cards
+.cfe-post-card--grid {
+  width: 100% !important;  // Override fixed width
+  min-width: 0;  // Allow shrinking
+  flex-shrink: 1;
+  height: 281px;  // Fixed height
+  
+  .cfe-post-card__text {
+    -webkit-line-clamp: 6;  // Show more lines for taller card
+    flex: 1;
+  }
+  
+  // Group header with avatar stack
+  .cfe-post-card__header--group {
+    display: flex;
+    align-items: center;
+    gap: 6px; // Match regular header gap
+  }
+  
+  // Squircle avatar for group posts (override circle)
+  .cfe-post-card__avatar.cfe-post-card__avatar--squircle {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px !important; // Override 50% circle
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Grid Post Card with Media variant
+.cfe-post-card--with-media {
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;  // Remove all default padding
+  overflow: hidden;
+  
+  .cfe-post-card__media {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    min-height: 160px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .cfe-post-card__media-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .cfe-post-card__media-overlay-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+  }
+  
+  .cfe-post-card__media-header {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    
+    .cfe-post-card__avatar {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .cfe-post-card__author-name {
+      font-family: var(--font-family-text);
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 16px;
+      color: white;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  
+  .cfe-post-card__content {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    padding: 8px 12px 11px 12px;
+    overflow: hidden;
+  }
+  
+  .cfe-post-card__footer--media {
+    margin-top: 8px;
+    padding: 0;
+    border-top: none;
+    flex-shrink: 0;
+  }
+  
+  .cfe-post-card__author-row {
+    gap: 8px;
+  }
+  
+  .cfe-post-card__avatar--small {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .cfe-post-card__avatar--squircle {
+    border-radius: 6px; // Squircle shape like group icons
+  }
+  
+  .cfe-post-card__author-name--standalone {
+    // Match base author-text font styling exactly
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: -0.08px;
+    color: var(--primary-text);  // Match base card author-name color
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    flex: 1;
+    min-width: 0;  // Allow truncation
+  }
+  
+  .cfe-post-card__author-row {
+    flex: 1;
+    min-width: 0;  // Allow truncation
+    margin-right: 4px;  // 4px gap before likes
+  }
+  
+  .cfe-post-card__ufi-item {
+    margin-right: 0;  // No right margin on likes
+    flex-shrink: 0;  // Don't shrink likes
+  }
+}
+
+.cfe-reel-card--grid {
+  width: 100% !important;  // Override fixed width
+  min-width: 0;  // Allow shrinking
+  flex-shrink: 1;
+  height: 281px;  // Fixed height
+  
+  .cfe-reel-card__media {
+    height: 100%;
+    aspect-ratio: unset;  // Use fixed height instead of aspect ratio
+  }
+}
+
+// Snap scrolling for cards
+.cfe-post-card,
+.cfe-reel-card {
+  scroll-snap-align: start;
+}
+
+// ============================================
+// CFE V2 - Post Card (for h-scroll)
+// Blueprint: 261px wide card with author at bottom left, like count at bottom right
+// ============================================
+.cfe-post-card {
+  flex-shrink: 0;
+  width: 261px;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-align: left;
+  scroll-snap-align: start;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+    
+    .cfe-post-card__avatar {
+      flex-shrink: 0;
+    }
+    
+    .cfe-post-card__author-name {
+      font-family: var(--font-family-text);
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 16px;
+      color: var(--primary-text);
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__text {
+    flex: 1;
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: var(--primary-text);
+    margin: 0 0 12px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 80px;  // 4 lines
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-top: auto;
+    
+    &--split {
+      justify-content: space-between;
+    }
+  }
+
+  &__author-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__author-text {
+    flex: 1;
+    min-width: 0;
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.08px;
+    color: var(--secondary-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__author-name {
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    color: var(--primary-text);
+  }
+
+  &__ufi-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--secondary-text);
+    flex-shrink: 0;
+  }
+}
+
+// Override for media card - must come after base styles
+.cfe-post-card.cfe-post-card--with-media {
+  .cfe-post-card__text {
+    -webkit-line-clamp: 2 !important;
+    max-height: 40px !important;
+    min-height: 0 !important;
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  
+  .cfe-post-card__footer {
+    flex-shrink: 0;
+  }
+}
+
+// Full media card - image fills entire card with overlay
+.cfe-post-card.cfe-post-card--full-media {
+  position: relative;
+  padding: 0 !important;
+  overflow: hidden;
+  
+  .cfe-post-card__full-media-image,
+  .cfe-post-card__full-media-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .cfe-post-card__overlay-gradient-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 12px 12px 0 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .cfe-post-card__overlay-gradient-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 0 0 12px 12px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .cfe-post-card__overlay-header {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 2;
+  }
+  
+  .cfe-post-card__overlay-footer {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+    
+    &--split {
+      justify-content: space-between;
+    }
+  }
+  
+  .cfe-post-card__avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .cfe-post-card__overlay-name {
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .cfe-post-card__overlay-ufi {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    
+    span {
+      font-family: var(--font-family-text);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+      color: white;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// ============================================
+// GRID VIEW - Comment Card
+// Comment-style card with reply context
+// ============================================
+.cfe-comment-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  
+  &--grid {
+    min-height: 140px;
+  }
+  
+  &__reply-context {
+    background: #f0f2f5;
+    border-radius: 8px;
+    padding: 8px 10px;
+    border-left: 3px solid #0866ff;
+  }
+  
+  &__reply-label {
+    font-family: var(--font-family-text);
+    font-size: 11px;
+    font-weight: 500;
+    color: #65686c;
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  &__reply-text {
+    font-family: var(--font-family-text);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #65686c;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  &__main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  
+  &__avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  &__author {
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 600;
+    color: #050505;
+  }
+  
+  &__text {
+    font-family: var(--font-family-text);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #050505;
+    margin: 0;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  &__footer {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  &__ufi-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    
+    span {
+      font-family: var(--font-family-text);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+      color: var(--secondary-text);
+    }
+  }
+}
+
+// ============================================
+// GRID VIEW - Marketplace Section
+// Contained cards in 2x2 grid
+// ============================================
+.gve-marketplace-section {
+  padding: 0 12px;
+  margin-top: 12px;  // Extra space above section
+  
+  &__title {
+    // Blueprint: Headline 3 Emphasized (same as Related Topics)
+    font-family: var(--font-family-text);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.41px;
+    color: var(--primary-text);
+    margin: 0 0 8px 0;  // Tighter spacing - matches video upsell
+  }
+}
+
+.gve-marketplace-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+.gve-marketplace-card {
+  // Reset button styles
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  text-align: left;
+  // Card styles
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);  // Grey 1px divider outline
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  
+  &__media {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+  
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  &__content {
+    padding: 8px 8px 8px 8px;
+  }
+  
+  &__title {
+    // Blueprint: Headline 4 Emphasized
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.24px;  // Match codebase standard for 15px
+    color: var(--primary-text);
+    margin: 0 0 2px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  &__price {
+    // Blueprint: Body 4
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.08px;  // Match codebase standard for 13px
+    color: var(--secondary-text);
+  }
+}
+
+// ============================================
+// CFE V2 - Reels H-Scroll (center snap behavior)
+// ============================================
+.cfe-reels-hscroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cfe-hscroll__track {
+    display: flex;
+    gap: 8px;
+    // 12px left padding for first card, extra right padding so last card can center
+    padding: 4px calc(50vw - 130px) 12px 12px;
+  }
+}
+
+// ============================================
+// CFE V2 - Reel Card (for h-scroll per Figma 441:16544)
+// Blueprint: 261px wide, 3:5 aspect ratio media with overlay
+// ============================================
+.cfe-reel-card {
+  flex-shrink: 0;
+  width: 261px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  scroll-snap-align: center;  // Snap to center of viewport
+  background: #000;
+
+  &__media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/5;  // 3:5 ratio per Figma
+    overflow: hidden;
+  }
+
+  &__video,
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // Top overlay gradient
+  &__overlay-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  // Bottom overlay gradient
+  &__overlay-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  // Header with profile photo and name
+  &__header {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 2;
+  }
+
+  &__avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  &__author-name {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  // Footer left - likes
+  &__footer-left {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 2;
+  }
+
+  // Footer right - comments
+  &__footer-right {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 2;
+  }
+
+  &__ufi-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: white;
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  // Footer - positioned at bottom, spans full width
+  &__footer {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+    
+    &--split {
+      justify-content: space-between;
+    }
+  }
+}
+
+// ============================================
+// CFE V2 - Event Post Card
+// Blueprint: Full width event with "Interested" button
+// ============================================
+.cfe-event-post {
+  margin: 0 12px;
+  background: var(--surface-background);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+
+  &__media {
+    position: relative;
+    aspect-ratio: 1;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    z-index: 1;
+  }
+
+  &__author-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__author-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+  }
+
+  &__author-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__author-name {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  &__author-meta {
+    font-family: var(--font-family-text);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 12px;
+    background: var(--surface-background);
+  }
+
+  &__event-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__date {
+    font-family: var(--font-family-text);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--secondary-text);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__title {
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: var(--primary-text);
+    margin: 0 0 4px;
+  }
+
+  &__venue {
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--secondary-text);
+  }
+
+  &__interested-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: var(--surface-background);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    color: var(--primary-text);
+    cursor: pointer;
+    flex-shrink: 0;
+
+    &:hover {
+      background: var(--background-deemphasized);
+    }
+  }
+
+  &__ufi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  &__ufi-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--secondary-text);
+  }
+}
+
+// ============================================
+// CFE V2 - Related Topics Section
+// ============================================
+.cfe-related-topics {
+  padding: 24px 12px 100px 12px;  // 24px top, 100px bottom for floating search bar
+
+  &__title {
+    // Blueprint: Headline 3 Emphasized
+    font-family: var(--font-family-text);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.41px;
+    color: var(--primary-text);
+    margin: 0 0 8px;  // Tighter spacing - matches video upsell
+  }
+
+  &__question {
+    // Blueprint: Body 3
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: normal;
+    color: var(--primary-text);
+    margin: 0 0 12px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  // Pills wrap to content width
+    gap: 12px;
+  }
+}
+
+// ============================================
+// FDS Action Chip - Primary Medium on Surface
+// ============================================
+.fds-action-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;  // 6px + 2px = 8px top/bottom
+  background: var(--surface-background, #ffffff);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 100px;  // Pill shape
+  cursor: pointer;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  &:active {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  &__label {
+    // FDS: Body 3
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.23px;
+    color: var(--primary-text, #050505);
+  }
+}
+
+// ============================================
+// GVE - Suggested Search Pills Section
+// ============================================
+.gve-suggested-pills {
+  padding: 12px 0 4px;
+  
+  &__scroll {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 0 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    
+    // Prevent pills from shrinking
+    .fds-action-chip {
+      flex-shrink: 0;
+    }
+  }
+}
+
+// ============================================
+// CFE V2 - Sticky Search Bar
+// Blueprint: Fixed bottom input for follow-up questions
+// ============================================
+.cfe-search-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--surface-background);
+  padding: 12px 16px 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 100;
+
+  &__input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #F0F2F5;
+    border-radius: 20px;
+    padding: 8px 8px 8px 16px;
+  }
+
+  &__input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--primary-text);
+    outline: none;
+
+    &::placeholder {
+      color: var(--secondary-text);
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #0866FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+}
+
+// Add bottom padding to main container for sticky search bar
+.content-forward-experience-v2 {
+  padding-bottom: 80px;  // Space for sticky search bar
+}
+
+// ============================================
+// CFE V2 - See More Button
+// Blueprint: Text button, no border
+// ============================================
+.cfe-see-more {
+  padding: 0 12px 8px 12px;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    padding: 12px 16px;
+    // Blueprint: Button 3
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    color: var(--primary-text);
+    background: var(--surface-background);
+    border: none;  // No border
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--background-deemphasized);
+    }
+  }
+}
+
+// ============================================
+// CFE V2 - Media Grid (Marketplace style from permalink)
+// Blueprint: 2-column grid with 8px gap
+// ============================================
+.cfe-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 0 12px 8px 12px;
+}
+
+// ============================================
+// CFE V2 - Media Card (Marketplace style from permalink)
+// Blueprint: Card with 4:3 image, rounded corners, price badge
+// ============================================
+.cfe-media-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+
+  &__image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__price-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    // Blueprint: Meta 4 Link
+    font-family: var(--font-family-text);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: white;
+  }
+
+  &__title {
+    // Blueprint: Headline 4 Emphasized
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.23px;
+    color: var(--primary-text);
+    margin: 8px 0 0;  // Match permalink spacing
+    padding: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// ============================================
+// CFE V2 - Event List
+// ============================================
+.cfe-event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 12px 12px 12px;
+}
+
+// ============================================
+// CFE V2 - Event Card (Full Width)
+// Blueprint: Horizontal card with image and text
+// ============================================
+.cfe-event-card {
+  display: flex;
+  gap: 12px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+
+  &__image-wrapper {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  &__meta {
+    // Blueprint: Meta 4
+    font-family: var(--font-family-text);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--secondary-text);
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  &__title {
+    // Blueprint: Headline 4
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.23px;
+    color: var(--primary-text);
+    margin: 0 0 2px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__subtitle {
+    // Blueprint: Body 4
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--secondary-text);
+  }
+}
+
+// ============================================
+// CFE - Content Preview Cell
+// Blueprint: Headline 4 Emphasized for headline, Body 4 for body
+// ============================================
+.cfe-content-preview {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--spacing-large) var(--margin);
+  background: var(--surface-background);
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+    padding-right: var(--spacing-medium);
+  }
+
+  &__headline {
+    // Blueprint: Headline 4 Emphasized
+    font-family: var(--font-family-text);
+    font-size: var(--headline-4-emphasized-font-size);
+    font-weight: var(--headline-4-emphasized-weight);
+    line-height: var(--headline-4-emphasized-line-height);
+    letter-spacing: var(--headline-4-emphasized-letter-spacing);
+    color: var(--primary-text);
+    margin: 0 0 var(--spacing-small);
+  }
+
+  &__body {
+    // Blueprint: Body 4
+    font-family: var(--font-family-text);
+    font-size: var(--body-4-font-size);
+    font-weight: var(--body-4-weight);
+    line-height: var(--body-4-line-height);
+    letter-spacing: var(--body-4-letter-spacing);
+    color: var(--secondary-text);
+  }
+
+  &__menu {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--button-small);
+    height: var(--button-small);
+    background: none;
+    border: none;
+    border-radius: var(--profile-photo-actor-radius);
+    cursor: pointer;
+    color: var(--secondary-icon);
+    transition: background var(--duration-xx-short-in) var(--curve-fade-in);
+
+    &:hover {
+      background: var(--background-deemphasized);
+    }
+  }
+}
+
+// ============================================
+// CFE - Horizontal Scroll Container
+// Blueprint: Standard horizontal scroll pattern with snap scroll and left padding
+// ============================================
+.cfe-hscroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-left: 12px;  // Snap with 12px offset
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__track {
+    display: flex;
+    gap: 8px;
+    padding: 4px 12px 12px 12px;  // 12px left padding for first card
+    
+    // Spacer after last card for right padding
+    &::after {
+      content: '';
+      flex-shrink: 0;
+      width: 1px;
+    }
+  }
+}
+
+// ============================================
+// CFE - Quote Card
+// Blueprint: Card with Body 3 for author, Body 3 for quote
+// ============================================
+.cfe-quote-card {
+  flex: 0 0 auto;
+  width: 186px;  // Blueprint: Responsive post card width per Figma
+  padding: var(--spacing-large);
+  background: var(--surface-background);
+  border: 1px solid var(--border-responsive-ui);
+  border-radius: var(--card-radius);
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-medium);
+    margin-bottom: var(--spacing-large);
+  }
+
+  &__avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: var(--profile-photo-actor-radius);
+    object-fit: cover;
+  }
+
+  &__author {
+    // Blueprint: Body 4 Link
+    font-family: var(--font-family-text);
+    font-size: var(--body-4-link-font-size);
+    font-weight: var(--body-4-link-weight);
+    line-height: var(--body-4-link-line-height);
+    letter-spacing: var(--body-4-link-letter-spacing);
+    color: var(--primary-text);
+  }
+
+  &__text {
+    // Blueprint: Body 3
+    font-family: var(--font-family-text);
+    font-size: var(--body-3-font-size);
+    font-weight: var(--body-3-weight);
+    line-height: var(--body-3-line-height);
+    letter-spacing: var(--body-3-letter-spacing);
+    color: var(--primary-text);
+    margin: 0;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  // Keywords should be bold but NOT blue
+  &__keyword {
+    font-weight: var(--body-3-link-weight);
+    color: var(--primary-text);  // Same as text, not accent color
+  }
+
+  &__ufi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--spacing-large);
+    padding-top: var(--spacing-large);
+    border-top: 1px solid var(--border-persistent-ui);
+  }
+}
+
+// ============================================
+// CFE - Large Media Post
+// Blueprint: Card styling with on-media text treatment
+// ============================================
+.cfe-media-post {
+  margin: 0 var(--margin) var(--margin);
+
+  &__container {
+    border-radius: var(--bottom-sheet-container-radius);
+    overflow: hidden;
+    background: var(--surface-background);
+    // No drop shadow per design request
+  }
+
+  &__media {
+    position: relative;
+    height: 320px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        var(--overlay-on-surface) 0%,
+        var(--always-transparent) 25%,
+        var(--always-transparent) 75%,
+        var(--overlay-on-media) 100%
+      );
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-large) var(--margin);
+    position: relative;
+    z-index: 1;
+  }
+
+  &__author-info {
+    display: flex;
+    align-items: center;
+    gap: var(--list-element-horizontal-spacing);
+  }
+
+  &__author-avatar {
+    width: var(--button-medium);
+    height: var(--button-medium);
+    border-radius: var(--profile-photo-actor-radius);
+    border: 2px solid var(--always-white);
+    object-fit: cover;
+  }
+
+  &__author-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__author-name {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+    // Blueprint: Body 4 Link on Media
+    font-family: var(--font-family-text);
+    font-size: var(--body-4-link-font-size);
+    font-weight: var(--body-4-link-weight);
+    line-height: var(--body-4-link-line-height);
+    letter-spacing: var(--body-4-link-letter-spacing);
+    color: var(--primary-text-on-media);
+    text-shadow: 0 1px 2px var(--shadow-text-and-icon-on-media);
+  }
+
+  &__author-meta {
+    // Blueprint: Meta 4 on Media
+    font-family: var(--font-family-text);
+    font-size: var(--meta-4-font-size);
+    font-weight: var(--meta-4-weight);
+    line-height: var(--meta-4-line-height);
+    color: var(--secondary-text-on-media);
+    text-shadow: 0 1px 2px var(--shadow-text-and-icon-on-media);
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--button-medium);
+    height: var(--button-medium);
+    background: var(--secondary-button-background-on-media);
+    border: none;
+    border-radius: var(--profile-photo-actor-radius);
+    cursor: pointer;
+    color: var(--primary-icon-on-media);
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-small);
+    padding: var(--spacing-medium);
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  &__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: var(--profile-photo-actor-radius);
+    background: var(--white-alpha-50);
+
+    &--active {
+      background: var(--always-white);
+    }
+  }
+
+  &__footer {
+    padding: var(--margin);
+    background: var(--surface-background);
+  }
+
+  &__caption {
+    margin-bottom: var(--spacing-large);
+
+    p {
+      // Blueprint: Body 3
+      font-family: var(--font-family-text);
+      font-size: var(--body-3-font-size);
+      font-weight: var(--body-3-weight);
+      line-height: var(--body-3-line-height);
+      letter-spacing: var(--body-3-letter-spacing);
+      color: var(--primary-text);
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  &__ufi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--spacing-large);
+    border-top: 1px solid var(--border-ui-emphasis);
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xx-large);
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+    // Blueprint: Body 4 Link
+    font-family: var(--font-family-text);
+    font-size: var(--body-4-link-font-size);
+    font-weight: var(--body-4-link-weight);
+    line-height: var(--body-4-link-line-height);
+    letter-spacing: var(--body-4-link-letter-spacing);
+    color: var(--secondary-icon);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: color var(--duration-xx-short-in) var(--curve-fade-in);
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  &__reactions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+  }
+
+  &__reaction-icon {
+    font-size: var(--margin);
+    line-height: 1;
+  }
+
+  &__reaction-count {
+    // Blueprint: Body 4
+    font-family: var(--font-family-text);
+    font-size: var(--body-4-font-size);
+    font-weight: var(--body-4-weight);
+    line-height: var(--body-4-line-height);
+    letter-spacing: var(--body-4-letter-spacing);
+    color: var(--secondary-text);
+  }
+}
+
+// ============================================
+// CFE - See More Button
+// Blueprint: Button 2 typography
+// ============================================
+.cfe-see-more-container {
+  padding: 0 var(--margin) var(--margin);
+}
+
+.cfe-see-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-small);
+  width: 100%;
+  padding: var(--spacing-large);
+  // Blueprint: Button 2
+  font-family: var(--font-family-text);
+  font-size: var(--button-2-font-size);
+  font-weight: var(--button-2-weight);
+  line-height: var(--button-2-line-height);
+  letter-spacing: var(--button-2-letter-spacing);
+  color: var(--primary-text);
+  background: var(--surface-background);
+  border: 1px solid var(--border-ui-emphasis);
+  border-radius: var(--card-radius);
+  cursor: pointer;
+  transition: background var(--duration-xx-short-in) var(--curve-fade-in);
+
+  &:hover {
+    background: var(--background-deemphasized);
+  }
+}
+
+// ============================================
+// CFE - Media Card Grid
+// Blueprint: Standard grid layout with Headline 3 Emphasized title
+// ============================================
+.cfe-media-grid {
+  padding: 0 var(--margin) var(--margin);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-medium);
+    margin-bottom: var(--margin);
+  }
+
+  &__title {
+    // Blueprint: Headline 3 Emphasized
+    font-family: var(--font-family-text);
+    font-size: var(--headline-3-emphasized-font-size);
+    font-weight: var(--headline-3-emphasized-weight);
+    line-height: var(--headline-3-emphasized-line-height);
+    letter-spacing: var(--headline-3-emphasized-letter-spacing);
+    color: var(--primary-text);
+    margin: 0;
+  }
+
+  &__grid {
+    display: grid;
+    gap: var(--spacing-large);
+
+    &--cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// ============================================
+// CFE - Media Card
+// Blueprint: Card with Body 4 typography
+// ============================================
+.cfe-media-card {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+
+  &__image-container {
+    position: relative;
+    margin-bottom: var(--spacing-medium);
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--card-radius);
+  }
+
+  &__badge {
+    position: absolute;
+    top: var(--spacing-medium);
+    left: var(--spacing-medium);
+    padding: var(--spacing-small) var(--spacing-medium);
+    // Blueprint: Live Badge style
+    font-family: var(--font-family-text);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--always-white);
+    background: var(--negative);
+    border-radius: var(--spacing-small);
+    text-transform: uppercase;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-x-small);
+  }
+
+  &__title {
+    // Blueprint: Body 4
+    font-family: var(--font-family-text);
+    font-size: var(--body-4-font-size);
+    font-weight: var(--body-4-weight);
+    line-height: var(--body-4-line-height);
+    letter-spacing: var(--body-4-letter-spacing);
+    color: var(--primary-text);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__price {
+    // Blueprint: Headline 4 Emphasized
+    font-family: var(--font-family-text);
+    font-size: var(--headline-4-emphasized-font-size);
+    font-weight: var(--headline-4-emphasized-weight);
+    line-height: var(--headline-4-emphasized-line-height);
+    letter-spacing: var(--headline-4-emphasized-letter-spacing);
+    color: var(--primary-text);
+  }
+
+  &__venue {
+    // Blueprint: Body 4
+    font-family: var(--font-family-text);
+    font-size: var(--body-4-font-size);
+    font-weight: var(--body-4-weight);
+    line-height: var(--body-4-line-height);
+    letter-spacing: var(--body-4-letter-spacing);
+    color: var(--secondary-text);
+  }
+}
+
+// ============================================
+// CFE - Content Section
+// ============================================
+.cfe-content-section {
+  &__content {
+    padding: 0;
+  }
+}
+
+.cfe-section-posts {
+  padding: 0 0 var(--spacing-medium);
+}
+
+.cfe-media-posts {
+  padding: 0 0 var(--spacing-medium);
+}
+
+// ============================================
+// CFE - Responsive Post Section
+// ============================================
+.cfe-responsive-post {
+  margin-bottom: var(--spacing-medium);
+}
+
+// ============================================
+// CFE - Quotes Container (for grouping first two posts)
+// ============================================
+.cfe-quotes-container {
+  border: 1px solid var(--border-responsive-ui);
+  border-radius: var(--card-radius);
+  margin: 0 var(--margin) var(--margin);
+  overflow: hidden;
+
+  .cfe-responsive-post {
+    margin-bottom: 0;
+    
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--border-persistent-ui);
+    }
+  }
+
+  .cfe-content-preview {
+    padding: var(--spacing-large) var(--margin);
+  }
+}
+
+// ============================================
+// CFE - Related Groups Section
+// Blueprint: List Cell styling
+// ============================================
+.cfe-related-groups {
+  padding: var(--margin);
+  border-top: var(--spacing-medium) solid var(--background-deemphasized);
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin);
+  }
+}
+
+.cfe-related-group {
+  display: flex;
+  align-items: center;
+  gap: var(--list-element-horizontal-spacing);
+
+  &__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--profile-photo-entity-radius);
+    object-fit: cover;
+  }
+
+  &__info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__name {
+    // Blueprint: Body 3 Link
+    font-family: var(--font-family-text);
+    font-size: var(--body-3-link-font-size);
+    font-weight: var(--body-3-link-weight);
+    line-height: var(--body-3-line-height);
+    letter-spacing: var(--body-3-link-letter-spacing);
+    color: var(--primary-text);
+    margin: 0 0 var(--spacing-small);
+  }
+
+  &__meta {
+    // Blueprint: Body 4
+    font-family: var(--font-family-text);
+    font-size: var(--body-4-font-size);
+    font-weight: var(--body-4-weight);
+    line-height: var(--body-4-line-height);
+    letter-spacing: var(--body-4-letter-spacing);
+    color: var(--secondary-text);
+  }
+
+  &__join {
+    padding: var(--spacing-medium) var(--spacing-xx-large);
+    // Blueprint: Button 2
+    font-family: var(--font-family-text);
+    font-size: var(--button-2-font-size);
+    font-weight: var(--button-2-weight);
+    line-height: var(--button-2-line-height);
+    letter-spacing: var(--button-2-letter-spacing);
+    color: var(--primary-deemphasized-button-text);
+    background: var(--primary-deemphasized-button-background);
+    border: none;
+    border-radius: var(--button-medium-radius);
+    cursor: pointer;
+    transition: background var(--duration-xx-short-in) var(--curve-fade-in);
+
+    &:hover {
+      background: var(--accent-deemphasized);
+    }
+  }
+}
+
+// ============================================
+// CFE - Related Queries Section
+// Blueprint: Chip/pill styling
+// ============================================
+.cfe-related-queries {
+  padding: var(--margin);
+  border-top: var(--spacing-medium) solid var(--background-deemphasized);
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-medium);
+  }
+}
+
+.cfe-query-chip {
+  padding: var(--spacing-large) var(--margin);
+  // Blueprint: Body 4 Link
+  font-family: var(--font-family-text);
+  font-size: var(--body-4-link-font-size);
+  font-weight: var(--body-4-link-weight);
+  line-height: var(--body-4-link-line-height);
+  letter-spacing: var(--body-4-link-letter-spacing);
+  color: var(--primary-text);
+  background: var(--background-deemphasized);
+  border: none;
+  border-radius: var(--chip-medium-height);
+  cursor: pointer;
+  transition: background var(--duration-xx-short-in) var(--curve-fade-in);
+
+  &:hover {
+    background: var(--non-media-pressed);
+  }
+}
+
+// ============================================
+// CFE - Section Title
+// Blueprint: Headline 3 Emphasized
+// ============================================
+.cfe-section-title {
+  // Blueprint: Headline 3 Emphasized
+  font-family: var(--font-family-text);
+  font-size: var(--headline-3-emphasized-font-size);
+  font-weight: var(--headline-3-emphasized-weight);
+  line-height: var(--headline-3-emphasized-line-height);
+  letter-spacing: var(--headline-3-emphasized-letter-spacing);
+  color: var(--primary-text);
+  margin: 0 0 var(--margin);
+}
+
+// ============================================
+// CFE - Blueprint UFI Components
+// User Feedback Interactions per FDS spec
+// ============================================
+.cfe-ufi-reactions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+
+  &--on-media {
+    text-shadow: 0 1px 2px var(--shadow-text-and-icon-on-media);
+  }
+}
+
+.cfe-ufi-icons {
+  display: flex;
+  align-items: center;
+}
+
+.cfe-ufi-reaction-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  svg {
+    display: block;
+  }
+}
+
+.cfe-ufi-count {
+  // Blueprint: Body 4
+  font-family: var(--font-family-text);
+  font-size: var(--body-4-font-size);
+  font-weight: var(--body-4-weight);
+  line-height: var(--body-4-line-height);
+  letter-spacing: var(--body-4-letter-spacing);
+  color: var(--secondary-text);
+
+  &--on-media {
+    color: var(--secondary-text-on-media);
+  }
+}
+
+.cfe-ufi-comments {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  // Blueprint: Body 4
+  font-family: var(--font-family-text);
+  font-size: var(--body-4-font-size);
+  font-weight: var(--body-4-weight);
+  line-height: var(--body-4-line-height);
+  letter-spacing: var(--body-4-letter-spacing);
+  color: var(--secondary-text);
+
+  &--on-media {
+    color: var(--secondary-text-on-media);
+    text-shadow: 0 1px 2px var(--shadow-text-and-icon-on-media);
+  }
+}
+
+// ============================================
+// AI LOADING CHIP
+// Animated chip showing AI processing status
+// ============================================
+.ai-loading-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  background: transparent;
+  border: none;
+  border-radius: 100px;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--visible {
+    opacity: 1;
+  }
+
+  &__facepile {
+    display: flex;
+    align-items: center;
+    width: 56px; // Fixed: 3 avatars (24px each) with -8px overlap = 56px
+    flex-shrink: 0;
+  }
+
+  &__avatar {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &__text {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.23px;
+    color: var(--secondary-text, #65676B);
+    white-space: nowrap;
+    min-width: 185px; // Fixed: matches "32 people talking about this"
+  }
+}
+
+// ============================================
+// CONTENT LOADING STATES
+// Sequential fade-in animations for content sections
+// ============================================
+.cfe-loading-container {
+  min-height: 100vh;
+}
+
+.cfe-section-loading {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Typing animation for AI summary text
+.cfe-typing-text {
+  overflow: hidden;
+  
+  &__cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: var(--primary-text, #080809);
+    margin-left: 2px;
+    animation: blink 0.8s infinite;
+  }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ============================================
+// FLOATING TAB BAR
+// Liquid glass aesthetic with smooth transitions
+// Matches Figma designs: 12:15060 (search) and 11:10869 (tabs)
+// ============================================
+@keyframes floatingTabBarEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.floating-tab-bar {
+  position: fixed;
+  bottom: 4px; // Moved up 4px from bottom
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  animation: floatingTabBarEnter 0.4s ease-out forwards;
+  animation-delay: 0.1s;
+  opacity: 0; // Start invisible, animation will reveal
+  // Padding for safe area - this transparent area lets Safari see through to content
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  
+  // Chrome only (not Safari) - 0px from bottom by default, 12px ONLY upon scroll
+  // Uses @supports to detect non-WebKit browsers (Chrome, Firefox, Edge)
+  // Desktop Safari supports -webkit-touch-callout, so it won't match this rule
+  @supports not (-webkit-touch-callout: none) {
+    bottom: 0;
+    padding-bottom: 0;
+    
+    // 12px from bottom only when user has scrolled
+    body.has-scrolled & {
+      padding-bottom: 12px;
+    }
+  }
+
+  &--relative {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    animation: none;
+    opacity: 1;
+  }
+
+  &--dark {
+    // Override CSS variables for icon colors in dark mode
+    --primary-icon: #FFFFFF;
+    --secondary-icon: #FFFFFF;
+    --active-icon: #0866FF;
+
+    .floating-tab-bar__tabs {
+      background: #1f2937;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    // All tab icons white in dark mode - force override inline styles
+    .floating-tab-bar__tab svg,
+    .floating-tab-bar__tab-icon svg,
+    .floating-tab-bar__icon-stack svg {
+      color: #fff !important;
+      fill: #fff !important;
+
+      path, circle, rect, polygon {
+        fill: #fff !important;
+      }
+    }
+
+    .floating-tab-bar__highlight {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .floating-tab-bar__search-circle {
+      background: #374151;
+      border-color: rgba(255, 255, 255, 0.1);
+
+      svg {
+        color: #fff !important;
+        fill: #fff !important;
+
+        path, circle, rect, polygon {
+          fill: #fff !important;
+        }
+      }
+    }
+
+    .floating-tab-bar__search-bar {
+      background: #1f2937;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .floating-tab-bar__search-icon svg {
+      color: #fff !important;
+      fill: #fff !important;
+
+      path, circle, rect, polygon {
+        fill: #fff !important;
+      }
+    }
+
+    .floating-tab-bar__placeholder {
+      color: #fff;
+    }
+
+    .floating-tab-bar__submit-btn {
+      background: #374151;
+
+      svg {
+        color: #fff !important;
+        fill: #fff !important;
+
+        path, circle, rect, polygon {
+          fill: #fff !important;
+        }
+      }
+    }
+
+    .floating-tab-bar__close-circle {
+      background: #374151;
+      border-color: rgba(255, 255, 255, 0.1);
+
+      svg {
+        color: #fff !important;
+        fill: #fff !important;
+
+        path, circle, rect, polygon {
+          fill: #fff !important;
+        }
+      }
+    }
+
+    .floating-tab-bar__questions-notice {
+      color: #fff;
+    }
+
+    .floating-tab-bar__questions-count {
+      color: #fff;
+    }
+
+    .floating-tab-bar__home-indicator .floating-tab-bar__home-handle {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__protection {
+    display: none; // Replaced by individual element gradients
+  }
+
+  &__content {
+    position: relative;
+    padding: 5px 16px 8px;
+    pointer-events: auto;
+    overflow: hidden; // Clip translateX animations
+  }
+
+  &__questions-notice {
+    text-align: center;
+    padding: 8px 12px 0;
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--secondary-text, #65676B);
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+
+    &--hidden {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+  }
+
+  &__questions-count {
+    color: var(--secondary-text, #65676B);
+  }
+
+  &__questions-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    color: var(--accent, #0866FF);
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px; // 8px gap between elements
+    height: 52px;
+  }
+
+  // ============================================
+  // Tab Bar - Solid white background
+  // ============================================
+  &__tabs {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    height: 52px;
+    padding: 4px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 80px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s ease;
+  }
+
+  // ============================================
+  // Search Bar - Solid white background
+  // ============================================
+  &__search-bar {
+    position: absolute;
+    left: 0;
+    right: 56px; // 52px close button + 4px gap
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 52px;
+    padding: 4px 12px 4px 12px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 80px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s ease;
+
+    &--loading {
+      opacity: 0.6;
+      pointer-events: none; // Disable interactions while loading
+    }
+  }
+
+  &__search-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__search-input-wrapper {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    overflow: hidden; // Required for text-overflow: ellipsis to work
+  }
+
+  &__search-input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: var(--primary-text, #080809);
+    outline: none;
+    z-index: 1;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &__placeholder-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &__placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: var(--placeholder-text, #65686c);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; // Ensure text doesn't overflow container
+    transform: translateY(0);
+    opacity: 1;
+    will-change: transform, opacity; // Hint to browser for smoother animation
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    // Exit animation: slide up and fade out
+    &--exiting {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    // Enter animation: slide up from below
+    &--entering {
+      animation: slideUpFromBelow 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+  }
+
+  @keyframes slideUpFromBelow {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &__submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: var(--disabled-button-background, #E4E6EB);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+
+    &:hover {
+      background: var(--disabled-button-background-hover, #D8DADF);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__tab {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 1;
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &__tab-icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon-stack {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__highlight {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: calc((100% - 8px) / 4); // 4 tabs, accounting for padding
+    background: var(--accent-deemphasized, #ebf5ff);
+    border-radius: 999px;
+    z-index: 0;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+
+  &__tab--active {
+    .floating-tab-bar__tab-icon {
+      svg {
+        color: var(--accent, #0866ff);
+      }
+    }
+  }
+
+  // ============================================
+  // Search Icon Circle - Solid white background
+  // Shrunk from expanded search bar
+  // ============================================
+  &__search-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 80px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s ease;
+
+    &:active {
+      transform: scale(0.95) !important;
+    }
+  }
+
+  // ============================================
+  // X Close Circle - visible when search expanded
+  // ============================================
+  &__close-circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 80px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s ease;
+
+    &:active {
+      transform: scale(0.95) !important;
+    }
+  }
+
+  // ============================================
+  // Home Indicator - Hidden
+  // ============================================
+  &__home-indicator {
+    display: none;
+  }
+
+  &__home-handle {
+    display: none;
+  }
+}
+
+// Dark mode styling for Reels page tab bar
+.reels-floating-tab-bar {
+  // Override icon color variables for dark mode
+  --active-icon: #FFFFFF;
+  --primary-icon: #E4E6EB;
+
+  // Dark highlight background
+  .floating-tab-bar__highlight {
+    background: #3A3B3C;
+  }
+
+  // White icon for active tab - target all SVGs inside active tab
+  .floating-tab-bar__tab--active {
+    .floating-tab-bar__icon-stack svg {
+      color: #FFFFFF !important;
+    }
+  }
+
+  // Dark tab bar background - solid
+  .floating-tab-bar__tabs {
+    background: #242526;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  // Dark chevron button - solid
+  .floating-tab-bar__chevron-btn {
+    background: #242526;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  // Dark search bar - solid
+  .floating-tab-bar__search-bar {
+    background: #242526;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  // Dark search circle - solid
+  .floating-tab-bar__search-circle {
+    background: #242526;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+// Update padding for content when floating tab bar is present
+.content-forward-experience-v2.has-floating-tab-bar {
+  padding-bottom: 100px;
+}
+
+// ============================================
+// LOGGED-OUT SEARCH EXPERIENCE
+// Per Figma 19:71176 - SRP MetaAI Tab
+// ============================================
+.logged-out-search-experience {
+  background: $background-white;
+  min-height: 100vh;
+  padding-bottom: 120px; // Extra padding to prevent floating tab bar from covering content
+}
+
+// ============================================
+// LOS - Navigation Bar
+// ============================================
+.los-nav-bar {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: $background-white;
+  
+  // The query is now an h1 styled with Headline 3 Emphasized directly in JS
+  // So we just need basic container styles here
+  
+  &__left {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__center {
+    flex: 1;
+    padding: 0 12px;
+    min-width: 0;
+  }
+
+  &__query {
+    // Blueprint: Headline 3 Emphasized
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: normal;
+    color: $text-primary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+
+  &__ai-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    background: $background-light;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+
+    &:hover {
+      background: darken($background-light, 3%);
+    }
+
+    &--active {
+      background: $primary-blue;
+
+      .los-nav-bar__ai-text {
+        color: white;
+      }
+    }
+  }
+
+  &__ai-text {
+    // Blueprint: Meta 3
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $text-primary;
+  }
+}
+
+// ============================================
+// LOS - Tab Bar
+// ============================================
+.los-tabs {
+  display: flex;
+  align-items: center;
+  background: $background-white;
+  border-bottom: 1px solid $border-color;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__tab {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+
+    &:first-child {
+      padding-left: 16px;
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.03);
+    }
+
+    &--active {
+      .los-tabs__label {
+        color: $primary-blue;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__label {
+    // Blueprint: Meta 2
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $text-secondary;
+    transition: color 0.15s ease;
+  }
+
+  &__indicator {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    right: 16px;
+    height: 3px;
+    background: $primary-blue;
+    border-radius: 3px 3px 0 0;
+  }
+}
+
+// ============================================
+// LOS - AI Summary
+// ============================================
+.los-ai-summary {
+  padding: 0 16px 12px; // Reduced top padding by 12px
+  background: $background-white;
+
+  &__text {
+    // Blueprint: Body 3
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $text-primary;
+    margin: 0;
+  }
+}
+
+// ============================================
+// LOS - Post Card
+// ============================================
+.los-post-card {
+  display: flex;
+  flex-direction: column;
+  background: $background-white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &__image-wrapper {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 8px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  &__avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &__author {
+    // Blueprint: Meta 4 Link
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: $text-primary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__time {
+    // Blueprint: Meta 4
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $text-secondary;
+  }
+
+  &__caption {
+    // Blueprint: Body 4
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $text-primary;
+    margin: 0 0 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__ufi {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__ufi-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    // Blueprint: Meta 4
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $text-secondary;
+  }
+}
+
+// ============================================
+// LOS - Post Grid
+// ============================================
+.los-post-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  padding: 0 4px;
+}
+
+// ============================================
+// LOS - See More Button
+// ============================================
+.los-see-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  // No divider between cards and see more
+  cursor: pointer;
+  // Blueprint: Button 3
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  color: $text-primary;
+
+  &:hover {
+    background: $background-light;
+  }
+}
+
+// ============================================
+// LOS - Content Section
+// ============================================
+.los-content-section {
+  background: $background-white;
+  margin-bottom: 8px;
+
+  &__header {
+    padding: 16px 16px 0;
+  }
+
+  &__title {
+    // Blueprint: Headline 3 Emphasized
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    color: $text-primary;
+    margin: 0;
+  }
+}
+
+// ============================================
+// LOS - Related Queries
+// ============================================
+.los-related-queries {
+  padding: 16px;
+  background: $background-white;
+
+  &__title {
+    // Blueprint: Body 3
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $text-primary;
+    margin: 0 0 12px;
+  }
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: $background-light;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    // Blueprint: Body 3
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $text-primary;
+    transition: background 0.15s ease;
+
+    &:hover {
+      background: darken($background-light, 5%);
+    }
+  }
+}
+
+// ============================================
+// PAGE CONTENT FADE-IN ANIMATION
+// Applied when navigating between pages to smooth the transition
+// ============================================
+@keyframes pageContentFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-content-fade-in,
+.mobile-post-page {
+  animation: pageContentFadeIn 300ms ease-out forwards;
+}
+
+// ============================================
+// FLOATING TAB BAR VARIANT B
+// "Search as 5th Tab" Pattern - Tabs shift left
+// ============================================
+
+// Ensure transparent backgrounds when floating-tab-bar-b is present for Safari liquid glass
+// These rules mirror what works in the feed-video page
+html:has(.floating-tab-bar-b),
+html:has(.mobile-layout) {
+  background: transparent !important;
+  background-color: transparent !important;
+  overflow-y: auto !important;
+  height: auto !important;
+}
+
+body:has(.floating-tab-bar-b),
+body:has(.mobile-layout) {
+  background: transparent !important;
+  background-color: transparent !important;
+  overflow-y: auto !important;
+  height: auto !important;
+  position: relative !important;
+}
+
+#__next:has(.floating-tab-bar-b),
+#__next:has(.mobile-layout) {
+  background: transparent !important;
+  background-color: transparent !important;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.layout-container:has(.floating-tab-bar-b),
+.layout-container:has(.mobile-layout) {
+  background: transparent !important;
+  background-color: transparent !important;
+  position: relative !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.layout-container:has(.floating-tab-bar-b) .frame,
+.layout-container:has(.floating-tab-bar-b) .frame--logged-out,
+.layout-container:has(.mobile-layout) .frame,
+.layout-container:has(.mobile-layout) .frame--logged-out {
+  background: transparent !important;
+  background-color: transparent !important;
+  position: relative !important;
+  top: 0 !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+// Override any page wrapper backgrounds
+.layout-container:has(.mobile-layout) [class^="page--"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.floating-tab-bar-b {
+  position: fixed;
+  bottom: 0; // MUST be 0 - any gap shows browser's default white background
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  background: transparent !important; // Ensure tab bar wrapper is transparent
+  // NO padding on wrapper - any gap shows white. Safe area handled inside __content
+  padding-bottom: 0;
+  
+  // Chrome/non-iOS Safari - keep at true bottom
+  @supports not (-webkit-touch-callout: none) {
+    bottom: 0;
+  }
+  
+  // JavaScript-based browser detection fallback
+  body.non-ios-safari & {
+    bottom: 0;
+  }
+
+  &--relative {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+
+  &--dark {
+    // Override CSS variables for icon colors in dark mode
+    --primary-icon: #FFFFFF;
+    --secondary-icon: #FFFFFF;
+    --active-icon: #0866FF;
+
+    .floating-tab-bar-b__tabs {
+      background: #1f2937;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .floating-tab-bar-b__highlight {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    // All tab icons white in dark mode - force override inline styles
+    .floating-tab-bar-b__tab svg,
+    .floating-tab-bar-b__tab-icon svg,
+    .floating-tab-bar-b__icon-stack svg {
+      color: #FFFFFF !important;
+      fill: #FFFFFF !important;
+
+      path, circle, rect, polygon {
+        fill: #FFFFFF !important;
+      }
+    }
+
+    .floating-tab-bar-b__search-bar {
+      background: #1f2937;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .floating-tab-bar-b__search-icon svg {
+      color: #FFFFFF !important;
+      fill: #FFFFFF !important;
+
+      path, circle, rect, polygon {
+        fill: #FFFFFF !important;
+      }
+    }
+
+    .floating-tab-bar-b__placeholder {
+      color: #FFFFFF;
+    }
+
+    .floating-tab-bar-b__submit-btn {
+      background: #374151;
+
+      svg {
+        color: #FFFFFF !important;
+        fill: #FFFFFF !important;
+
+        path, circle, rect, polygon {
+          fill: #FFFFFF !important;
+        }
+      }
+    }
+
+    .floating-tab-bar-b__close-circle {
+      background: #374151;
+      border-color: rgba(255, 255, 255, 0.1);
+
+      svg {
+        color: #FFFFFF !important;
+        fill: #FFFFFF !important;
+
+        path, circle, rect, polygon {
+          fill: #FFFFFF !important;
+        }
+      }
+    }
+
+    .floating-tab-bar-b__home-indicator .floating-tab-bar-b__home-handle {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 5px 16px 4px;
+    // Safe area handling moved here from wrapper - margin pushes content above iPhone home indicator
+    // Using margin instead of padding so the wrapper still touches the viewport edge
+    // Added 4px to move tab bar up visually for iOS Safari
+    margin-bottom: calc(env(safe-area-inset-bottom, 0px) + 4px);
+    pointer-events: auto;
+    
+    // Chrome only (not Safari) - 0px from bottom by default, 12px ONLY upon scroll
+    // Uses @supports to detect non-WebKit browsers (Chrome, Firefox, Edge)
+    // Desktop Safari supports -webkit-touch-callout, so it won't match this rule
+    @supports not (-webkit-touch-callout: none) {
+      margin-bottom: 0;
+      
+      // 12px from bottom only when user has scrolled
+      body.has-scrolled & {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 52px;
+  }
+
+  // Tab Bar - solid white background with evenly spaced tabs
+  &__tabs {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: 52px;
+    padding: 4px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 80px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s ease;
+  }
+
+  &__tab {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 1;
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &__tab-icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon-stack {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__highlight {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: calc((100% - 8px) / 5); // 5 tabs (4 regular + search), accounting for padding
+    background: var(--accent-deemphasized, #ebf5ff);
+    border-radius: 999px;
+    z-index: 0;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 200ms ease-out;
+    pointer-events: none;
+  }
+
+  // Search Bar - same styling as variant A
+  &__search-bar {
+    position: absolute;
+    left: 0;
+    right: 56px; // 52px close button + 4px gap
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    height: 52px;
+    padding: 4px 12px 4px 20px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 100px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s ease;
+    
+    // Dark mode variant
+    &--dark {
+      background: #242526;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__search-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__search-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: transparent;
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--primary-text, #080809);
+    outline: none;
+    padding: 0;
+    text-align: left;
+
+    &::placeholder {
+      color: var(--placeholder-text, #65686c);
+    }
+    
+    // Dark mode variant
+    &--dark {
+      color: #e4e6eb;
+      
+      &::placeholder {
+        color: #b0b3b8;
+      }
+    }
+  }
+
+  // Legacy wrapper - kept for backwards compatibility
+  &__search-input-wrapper {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--placeholder-text, #65686c);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform: translateY(0);
+    opacity: 1;
+    will-change: transform, opacity;
+    pointer-events: none; // Allow clicks through to input
+
+    &--exiting {
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &--entering {
+      // Start from below, animate up - no transition to prevent conflict
+      transform: translateY(0);
+      opacity: 1;
+      animation: slideUpFromBelowB 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    }
+    
+    // Dark mode variant
+    &--dark {
+      color: #b0b3b8;
+    }
+  }
+
+  @keyframes slideUpFromBelowB {
+    0% {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &__submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: var(--disabled-button-background, #E4E6EB);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+
+    &:hover {
+      background: var(--disabled-button-background-hover, #D8DADF);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+    
+    // Dark mode variant
+    &--dark {
+      background: #3a3b3c;
+      
+      &:hover {
+        background: #4e4f50;
+      }
+    }
+  }
+
+  // X Close button - separate 52px circle, same styling as search circle in variant A
+  &__close-circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 80px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s ease;
+
+    &:active {
+      transform: scale(0.95) !important;
+    }
+    
+    // Dark mode variant
+    &--dark {
+      background: #242526;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__home-indicator {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0 4px;
+  }
+
+  &__home-handle {
+    width: 134px;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
+  }
+}
+
+// Glass overlay - appears when search is expanded
+.floating-tab-bar-b__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  z-index: 99;
+  transition: opacity 0.25s ease;
+  
+  &--dark {
+    background: #000000;
+  }
+}
+
+// Search suggestions - positioned above the tab bar
+.floating-tab-bar-b__suggestions {
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 72px);
+  left: 16px;
+  right: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  z-index: 101;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.floating-tab-bar-b__suggestion-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  // Body 3 Link typography - FDS tokens
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: var(--primary-text, #080809);
+  transition: transform 0.15s ease, background 0.15s ease;
+
+  &:active {
+    transform: scale(0.97);
+    background: #f0f2f5;
+  }
+
+  span {
+    white-space: nowrap;
+  }
+  
+  // Dark mode variant
+  &--dark {
+    background: #3a3b3c;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    color: #e4e6eb;
+    
+    &:active {
+      background: #4e4f50;
+    }
+  }
+
+  // Smaller icon in suggestion chips
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// ============================================
+// DARK MODE FOR FLOATING TAB BAR B (Reels/Video Pages)
+// FDS Dark Mode Colors
+// ============================================
+.reels-floating-tab-bar {
+  .floating-tab-bar-b {
+    // Tab Bar - dark background
+    &__tabs {
+      background: #242526;
+      border-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    // Highlight pill - dark mode
+    &__highlight {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    // Active tab icon - white
+    &__tab--active {
+      .floating-tab-bar-b__icon-stack svg {
+        color: #FFFFFF !important;
+      }
+    }
+
+    // Inactive tab icons - light gray
+    &__tab:not(.floating-tab-bar-b__tab--active) {
+      .floating-tab-bar-b__icon-stack svg {
+        color: #B0B3B8 !important;
+      }
+    }
+
+    // Search tab icon - light gray
+    &__tab--search {
+      svg {
+        color: #B0B3B8 !important;
+      }
+    }
+
+    // Expanded Search Bar - dark background
+    &__search-bar {
+      background: #242526;
+      border-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    // Search icon - secondary color in dark mode
+    &__search-icon svg {
+      color: #B0B3B8 !important;
+    }
+
+    // Placeholder text - dark mode
+    &__placeholder {
+      color: #B0B3B8;
+    }
+
+    // Submit button - dark mode
+    &__submit-btn {
+      background: #3A3B3C;
+
+      &:hover {
+        background: #4E4F50;
+      }
+
+      svg {
+        color: #B0B3B8 !important;
+      }
+    }
+
+    // Close circle - dark mode
+    &__close-circle {
+      background: #242526;
+      border-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+
+      svg {
+        color: #E4E6EB !important;
+      }
+    }
+  }
+}
+
+// ============================================
+// NAV COMPARISON CONTENT
+// ============================================
+
+.nav-comparison {
+  // Post Card
+  &__post-card {
+    background: #fff;
+    padding: 16px;
+    border-bottom: 1px solid #e4e6eb;
+  }
+
+  &__post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  &__post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__post-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__post-author {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #080809;
+  }
+
+  &__post-time {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #65686c;
+  }
+
+  &__post-text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #080809;
+    margin: 0 0 12px;
+  }
+
+  &__post-ufi {
+    display: flex;
+    gap: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #e4e6eb;
+  }
+
+  &__ufi-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #65686c;
+
+    svg {
+      color: #65686c;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  // Discovery Section
+  &__discovery-section {
+    background: #f0f2f5;
+    padding: 16px 0;
+    margin: 16px 0;
+  }
+
+  &__section-title {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #080809;
+    margin: 0 0 12px;
+    padding: 0 16px;
+  }
+
+  &__discovery-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 0 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__discovery-card {
+    flex-shrink: 0;
+    width: 280px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px;
+    scroll-snap-align: start;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  &__discovery-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #080809;
+    margin: 0 0 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__discovery-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__discovery-source {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #65686c;
+  }
+
+  &__discovery-likes {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #65686c;
+  }
+
+  // Group Post
+  &__group-post {
+    background: #fff;
+    padding: 16px;
+    border-bottom: 8px solid #f0f2f5;
+  }
+
+  &__group-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  &__group-avatar-stack {
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__group-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  &__author-avatar-overlay {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+  }
+
+  &__group-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__group-name {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #080809;
+  }
+
+  &__group-author {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #65686c;
+  }
+
+  &__group-title {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #080809;
+    margin: 0 0 8px;
+  }
+
+  &__group-text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #080809;
+    margin: 0 0 12px;
+  }
+
+  // Marketplace
+  &__marketplace {
+    padding: 16px;
+  }
+
+  &__marketplace-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__see-all {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #0866ff;
+    cursor: pointer;
+  }
+
+  &__marketplace-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  &__marketplace-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  &__marketplace-image {
+    aspect-ratio: 1;
+    background: #f0f2f5;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__marketplace-info {
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__marketplace-price {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #080809;
+  }
+
+  &__marketplace-title {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #080809;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__marketplace-location {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #65686c;
+  }
+
+  // Reels
+  &__reels {
+    padding: 16px;
+  }
+
+  &__reels-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  &__reel-card {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+  }
+
+  &__reel-thumbnail {
+    position: relative;
+    aspect-ratio: 9/16;
+    background: #1a1a1a;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__reel-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
+  }
+
+  &__reel-duration {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 14px;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  &__reel-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+  }
+
+  &__reel-info {
+    padding: 8px 10px;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__reel-title {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__reel-meta {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  // Search Active State
+  &__search-active {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__search-placeholder {
+    text-align: center;
+    padding: 40px 20px;
+
+    p {
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 22px;
+      color: #080809;
+      margin: 16px 0 8px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      color: #65686c;
+    }
+  }
+}
+
+// ============================================
+// NAV COMPARISON PAGE
+// ============================================
+
+.nav-comparison-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+
+  &__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background: #fff;
+    border-bottom: 1px solid #e4e6eb;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 8px);
+  }
+
+  &__title-row {
+    padding: 8px 16px 4px;
+  }
+
+  &__title {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #080809;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #65686c;
+    margin: 4px 0 0;
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px;
+  }
+
+  &__tab {
+    flex: 1;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #e4e6eb;
+    background: #fff;
+    color: #080809;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    cursor: pointer;
+    transition: all 150ms ease;
+
+    &--active {
+      border: 2px solid #0866ff;
+      background: #ebf5ff;
+      color: #0866ff;
+      font-weight: 600;
+    }
+  }
+
+  &__warning {
+    margin: 0 16px 12px;
+    padding: 10px 12px;
+    background: #fff3cd;
+    border-radius: 8px;
+    border: 1px solid #ffc107;
+
+    p {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+      color: #856404;
+      margin: 0;
+    }
+  }
+
+  &__content {
+    padding-top: 150px;
+    padding-bottom: 120px;
+  }
+}
+
+// ============================================
+// NAV WIREFRAMES
+// ============================================
+
+.nav-wireframe {
+  padding: 16px;
+
+  // Shared wireframe elements
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #d1d5db;
+
+    &--square {
+      border-radius: 8px;
+    }
+
+    &--small {
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      bottom: -4px;
+      right: -4px;
+      border: 2px solid #fff;
+    }
+  }
+
+  &__avatar-stack {
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__line {
+    height: 10px;
+    background: #d1d5db;
+    border-radius: 4px;
+    width: 100%;
+
+    &--short {
+      width: 60%;
+    }
+
+    &--medium {
+      width: 80%;
+    }
+
+    &--xshort {
+      width: 40%;
+    }
+
+    &--bold {
+      height: 14px;
+      background: #9ca3af;
+    }
+  }
+
+  &__lines {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+  }
+
+  // Home Tab Wireframe
+  &--home {
+    background: #f5f5f5;
+  }
+
+  &__stories {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+    margin-bottom: 16px;
+    overflow-x: auto;
+  }
+
+  &__story-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+    border: 2px solid #9ca3af;
+    flex-shrink: 0;
+  }
+
+  &__post {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  &__post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  &__post-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  &__post-image {
+    height: 200px;
+    background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  &__post-ufi {
+    display: flex;
+    gap: 24px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  &__ufi-btn {
+    width: 60px;
+    height: 24px;
+    background: #e5e7eb;
+    border-radius: 4px;
+  }
+
+  // Groups Tab Wireframe
+  &--groups {
+    background: #f5f5f5;
+    padding-top: 0;
+  }
+
+  &__group-header {
+    margin: 0 -16px 16px;
+  }
+
+  &__group-cover {
+    height: 120px;
+    background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+  }
+
+  &__group-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    background: #fff;
+  }
+
+  &__group-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 12px 0;
+    overflow-x: auto;
+    margin-bottom: 16px;
+  }
+
+  &__tab-pill {
+    width: 80px;
+    height: 32px;
+    background: #e5e7eb;
+    border-radius: 16px;
+    flex-shrink: 0;
+  }
+
+  // Marketplace Tab Wireframe
+  &--marketplace {
+    background: #f5f5f5;
+  }
+
+  &__mp-search {
+    margin-bottom: 16px;
+  }
+
+  &__mp-search-bar {
+    height: 40px;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+  }
+
+  &__mp-categories {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__category-pill {
+    width: 70px;
+    height: 28px;
+    background: #e5e7eb;
+    border-radius: 14px;
+    flex-shrink: 0;
+  }
+
+  &__mp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  &__mp-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  &__mp-image {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+  }
+
+  &__mp-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  // Reels Tab Wireframe
+  &--reels {
+    padding: 0;
+    margin: -16px;
+    height: calc(100vh - 200px);
+    background: #000;
+    position: relative;
+  }
+
+  &__reel-fullscreen {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+  }
+
+  &__reel-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 40%);
+  }
+
+  &__reel-author {
+    position: absolute;
+    bottom: 120px;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .nav-wireframe__avatar {
+      background: #4b5563;
+    }
+
+    .nav-wireframe__line {
+      width: 80px;
+      background: #6b7280;
+    }
+  }
+
+  &__follow-btn {
+    width: 60px;
+    height: 28px;
+    background: transparent;
+    border: 1px solid #6b7280;
+    border-radius: 6px;
+  }
+
+  &__reel-caption {
+    position: absolute;
+    bottom: 70px;
+    left: 16px;
+    right: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .nav-wireframe__line {
+      background: #6b7280;
+    }
+  }
+
+  &__reel-actions {
+    position: absolute;
+    right: 12px;
+    bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__reel-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__action-icon {
+    width: 32px;
+    height: 32px;
+    background: #6b7280;
+    border-radius: 50%;
+  }
+
+  &__action-count {
+    width: 24px;
+    height: 8px;
+    background: #6b7280;
+    border-radius: 4px;
+  }
+
+  // Search State Wireframe
+  &--search {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 150px);
+    padding: 0;
+  }
+
+  // Search suggestions list
+  &__suggestions-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+  }
+
+  &__suggestion-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+
+    &:active {
+      background: #ebebeb;
+    }
+  }
+
+  &__suggestion-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f2f5;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  &__suggestion-text {
+    flex: 1;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #050505;
+  }
+}
+
+// ============================================
+// NAV COMPARISON - PROPOSED VARIANT STYLES
+// Glimmer wireframes for "Search part of nav" option
+// ============================================
+
+// Keyframes for glimmer animation (matches actual loading states)
+@keyframes nav-glimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+// Mixin for glimmer effect (matches actual loading states)
+@mixin nav-glimmer($delay: 0s) {
+  background: linear-gradient(90deg, #f0f2f5 25%, #e4e6eb 50%, #f0f2f5 75%);
+  background-size: 200% 100%;
+  animation: nav-glimmer 1.5s infinite;
+  animation-delay: $delay;
+}
+
+// Mixin for glimmer on dark backgrounds (like reels)
+@mixin nav-glimmer-dark($delay: 0s) {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+  background-size: 200% 100%;
+  animation: nav-glimmer 1.5s infinite;
+  animation-delay: $delay;
+}
+
+// Proposed variant container
+.nav-comparison-page--proposed {
+  .nav-comparison-page__content {
+    background: #ffffff;
+  }
+
+  // ----------------------------------------
+  // HOME TAB - White background with glimmer
+  // ----------------------------------------
+  .nav-wireframe--home {
+    background: #ffffff;
+
+    .nav-wireframe__story-circle {
+      @include nav-glimmer(0s);
+      border-color: #e4e6eb;
+
+      &:nth-child(2) { animation-delay: 0.1s; }
+      &:nth-child(3) { animation-delay: 0.2s; }
+      &:nth-child(4) { animation-delay: 0.3s; }
+      &:nth-child(5) { animation-delay: 0.4s; }
+    }
+
+    .nav-wireframe__post {
+      background: #ffffff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-wireframe__avatar {
+      @include nav-glimmer(0.1s);
+    }
+
+    .nav-wireframe__line {
+      @include nav-glimmer(0.15s);
+    }
+
+    .nav-wireframe__post-image {
+      @include nav-glimmer(0.2s);
+    }
+
+    .nav-wireframe__post-ufi {
+      border-top-color: #e4e6eb;
+    }
+
+    .nav-wireframe__ufi-btn {
+      @include nav-glimmer(0.25s);
+    }
+  }
+
+  // ----------------------------------------
+  // GROUPS TAB - White background with glimmer
+  // ----------------------------------------
+  .nav-wireframe--groups {
+    background: #ffffff;
+
+    .nav-wireframe__group-cover {
+      @include nav-glimmer(0s);
+    }
+
+    .nav-wireframe__group-info {
+      background: #ffffff;
+    }
+
+    .nav-wireframe__avatar,
+    .nav-wireframe__avatar--square {
+      @include nav-glimmer(0.1s);
+    }
+
+    .nav-wireframe__avatar--small {
+      @include nav-glimmer(0.15s);
+      border-color: #ffffff;
+    }
+
+    .nav-wireframe__line {
+      @include nav-glimmer(0.2s);
+    }
+
+    .nav-wireframe__tab-pill {
+      @include nav-glimmer(0.25s);
+    }
+
+    .nav-wireframe__post {
+      background: #ffffff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-wireframe__post-ufi {
+      border-top-color: #e4e6eb;
+    }
+
+    .nav-wireframe__ufi-btn {
+      @include nav-glimmer(0.3s);
+    }
+  }
+
+  // ----------------------------------------
+  // MARKETPLACE TAB - White background with glimmer + discovery unit
+  // ----------------------------------------
+  .nav-wireframe--marketplace {
+    background: #ffffff;
+
+    .nav-wireframe__mp-search-bar {
+      background: #f0f2f5;
+      border-color: #e4e6eb;
+    }
+
+    .nav-wireframe__category-pill {
+      @include nav-glimmer(0s);
+
+      &:nth-child(2) { animation-delay: 0.1s; }
+      &:nth-child(3) { animation-delay: 0.2s; }
+      &:nth-child(4) { animation-delay: 0.3s; }
+      &:nth-child(5) { animation-delay: 0.4s; }
+    }
+
+    .nav-wireframe__mp-card {
+      background: #ffffff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-wireframe__mp-image {
+      @include nav-glimmer(0s);
+    }
+
+    .nav-wireframe__mp-card {
+      &:nth-child(1) .nav-wireframe__mp-image { animation-delay: 0s; }
+      &:nth-child(2) .nav-wireframe__mp-image { animation-delay: 0.1s; }
+      &:nth-child(3) .nav-wireframe__mp-image { animation-delay: 0.2s; }
+      &:nth-child(4) .nav-wireframe__mp-image { animation-delay: 0.3s; }
+      &:nth-child(5) .nav-wireframe__mp-image { animation-delay: 0.4s; }
+      &:nth-child(6) .nav-wireframe__mp-image { animation-delay: 0.5s; }
+    }
+
+    .nav-wireframe__line {
+      @include nav-glimmer(0.15s);
+    }
+  }
+
+  // ----------------------------------------
+  // REELS TAB - Dark mode with glimmer
+  // ----------------------------------------
+  .nav-wireframe--reels {
+    .nav-wireframe__reel-fullscreen {
+      background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+    }
+
+    .nav-wireframe__avatar {
+      @include nav-glimmer-dark(0s);
+    }
+
+    .nav-wireframe__line {
+      @include nav-glimmer-dark(0.1s);
+    }
+
+    .nav-wireframe__follow-btn {
+      border-color: #4a7ab0;
+      @include nav-glimmer-dark(0.15s);
+    }
+
+    .nav-wireframe__action-icon {
+      @include nav-glimmer-dark(0s);
+    }
+
+    .nav-wireframe__reel-action {
+      &:nth-child(1) .nav-wireframe__action-icon { animation-delay: 0s; }
+      &:nth-child(2) .nav-wireframe__action-icon { animation-delay: 0.1s; }
+      &:nth-child(3) .nav-wireframe__action-icon { animation-delay: 0.2s; }
+      &:nth-child(4) .nav-wireframe__action-icon { animation-delay: 0.3s; }
+    }
+
+    .nav-wireframe__action-count {
+      @include nav-glimmer-dark(0.2s);
+    }
+  }
+
+  // ----------------------------------------
+  // SEARCH STATE - White background with glimmer
+  // ----------------------------------------
+  .nav-wireframe--search {
+    background: #ffffff;
+
+    .nav-wireframe__suggestion-item {
+      &:hover {
+        background: #f5f5f5;
+      }
+
+      &:active {
+        background: #ebebeb;
+      }
+    }
+
+    .nav-wireframe__suggestion-icon {
+      @include nav-glimmer(0s);
+    }
+
+    .nav-wireframe__suggestion-item {
+      &:nth-child(1) .nav-wireframe__suggestion-icon { animation-delay: 0s; }
+      &:nth-child(2) .nav-wireframe__suggestion-icon { animation-delay: 0.1s; }
+      &:nth-child(3) .nav-wireframe__suggestion-icon { animation-delay: 0.2s; }
+      &:nth-child(4) .nav-wireframe__suggestion-icon { animation-delay: 0.3s; }
+      &:nth-child(5) .nav-wireframe__suggestion-icon { animation-delay: 0.4s; }
+      &:nth-child(6) .nav-wireframe__suggestion-icon { animation-delay: 0.5s; }
+    }
+  }
+}
+
+// ============================================
+// DISCOVERY UNIT WIREFRAME
+// Low-fi wireframe for discovery unit component
+// ============================================
+
+.nav-wireframe__discovery-unit {
+  margin: 16px 0;
+  padding: 0 16px;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  &-title {
+    height: 14px;
+    width: 140px;
+    background: #d1d5db;
+    border-radius: 4px;
+  }
+
+  &-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    margin: 0 -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &-card {
+    width: 200px;
+    flex-shrink: 0;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e4e6eb;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  &-card-image {
+    width: 100%;
+    height: 110px;
+    background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+  }
+
+  &-card-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &-card-text {
+    height: 10px;
+    background: #d1d5db;
+    border-radius: 4px;
+    width: 100%;
+
+    &--short {
+      width: 60%;
+    }
+  }
+
+  &-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &-card-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #d1d5db;
+  }
+
+  &-card-meta {
+    height: 8px;
+    background: #d1d5db;
+    border-radius: 4px;
+    flex: 1;
+  }
+}
+
+// Glimmer for discovery unit in proposed variant
+.nav-comparison-page--proposed {
+  .nav-wireframe__discovery-unit {
+    &-title {
+      @include nav-glimmer(0s);
+    }
+
+    &-card-image {
+      @include nav-glimmer(0.1s);
+    }
+
+    &-card-text {
+      @include nav-glimmer(0.2s);
+    }
+
+    &-card-avatar {
+      @include nav-glimmer(0.25s);
+    }
+
+    &-card-meta {
+      @include nav-glimmer(0.3s);
+    }
+
+    // Staggered animation for cards
+    .nav-wireframe__discovery-unit-card {
+      &:nth-child(1) .nav-wireframe__discovery-unit-card-image { animation-delay: 0.1s; }
+      &:nth-child(2) .nav-wireframe__discovery-unit-card-image { animation-delay: 0.2s; }
+      &:nth-child(3) .nav-wireframe__discovery-unit-card-image { animation-delay: 0.3s; }
+    }
+  }
+}
+
+// ============================================
+// GRID VIEW EXPERIENCE
+// 2-column grid layout with floating tab bar
+// ============================================
+
+.grid-view-experience {
+  min-height: 100vh;
+  background: #ffffff;
+
+  &.has-floating-tab-bar {
+    padding-bottom: 200px;
+  }
+}
+
+// Content area
+.gve-content {
+  background: #ffffff;
+}
+
+// See More Button
+.gve-see-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  padding: 0 12px;
+  margin-top: 12px;
+  margin-bottom: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+  span {
+    // Blueprint: Body 4 Link - Secondary
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: normal;
+    color: var(--secondary-text, #65676B);
+  }
+}
+
+// Grid View Unit Header
+.gve-unit-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 12px 8px 12px;
+  background: none;
+  border: none;
+  text-align: left;
+
+  &--clickable {
+    cursor: pointer;
+  }
+
+  &__title {
+    // Blueprint: Body 3
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.23px;
+    color: var(--primary-text);
+    margin: 0;
+    flex: 1;
+  }
+
+  &__title-bold {
+    font-weight: 700;
+  }
+
+  &__chevron {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+}
+
+// Grid View Section
+.gve-section {
+  margin-bottom: 8px;
+  background: white;
+}
+
+// Post Grid - 2 columns
+.gve-post-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 0 12px 12px 12px;
+}
+
+// Grid Post Card
+.gve-grid-card {
+  background: var(--surface-background, #ffffff);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &__thumbnail {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: 8px;
+  }
+
+  &__text {
+    font-family: var(--font-family-text);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--primary-text);
+    margin: 0 0 8px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    min-width: 0;
+    flex: 1;
+  }
+
+  &__avatar {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__author-name {
+    font-family: var(--font-family-text);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--secondary-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__likes {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex-shrink: 0;
+
+    span {
+      font-family: var(--font-family-text);
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--secondary-text);
+    }
+  }
+}
+
+// Reels Grid - 2x2
+.gve-reels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 0 12px 12px 12px;
+}
+
+// Grid Reel Card
+.gve-reel-card {
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__media {
+    position: relative;
+    aspect-ratio: 9/16;
+    background: #1a1a1a;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 40%
+    );
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    img {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid white;
+    }
+
+    span {
+      font-family: var(--font-family-text);
+      font-size: 11px;
+      font-weight: 500;
+      color: white;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__stats {
+    span {
+      font-family: var(--font-family-text);
+      font-size: 11px;
+      font-weight: 500;
+      color: white;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// Related Topics Section
+.gve-related-topics {
+  padding: 16px 12px;
+  background: white;
+
+  &__title {
+    font-family: var(--font-family-text);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: var(--primary-text);
+    margin: 0 0 12px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+// ============================================
+// Info Bottom Sheet
+// Overlay sheet with topic explanation
+// ============================================
+.info-bottom-sheet-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: flex-end;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.info-bottom-sheet {
+  background: #f2f4f7;
+  border-radius: 24px 24px 0 0;
+  width: 100%;
+  padding-bottom: env(safe-area-inset-bottom, 34px);
+  animation: slideUp 0.3s ease;
+
+  &__handle {
+    width: 40px;
+    height: 4px;
+    background: #d0d3d7;
+    border-radius: 2px;
+    margin: 8px auto;
+  }
+
+  &__header {
+    padding: 12px 16px 8px;
+    text-align: center;
+  }
+
+  &__title {
+    // Blueprint: Headline 3 Emphasized
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.41px;
+    color: #080809;
+    margin: 0;
+  }
+
+  &__body {
+    padding: 0 16px 24px;
+
+    p {
+      // Blueprint: Body 3
+      font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #65686c;
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+
+// ============================================
+// EXPERIENCE TYPE BOTTOM SHEET
+// Lets users switch between aggregation page variants
+// ============================================
+.experience-type-sheet {
+  &__subtitle {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #65686c;
+    margin: 4px 0 0;
+  }
+
+  &__options {
+    padding: 8px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: left;
+
+    &:hover {
+      background: #f5f6f7;
+    }
+
+    &--selected {
+      border-color: #0866ff;
+      background: #ebf5ff;
+    }
+  }
+
+  &__option-icon {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f2f5;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  &__option-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__option-label {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #080809;
+  }
+
+  &__option-description {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #65686c;
+  }
+
+  &__option-check {
+    color: #0866ff;
+    font-size: 18px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+}
+
+// ============================================
+// FULL SCREEN POST VIEWER
+// Immersive viewer for posts, reels, and media
+// ============================================
+.fullscreen-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: black;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  // Header with logo and close button
+  &__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(12px + env(safe-area-inset-top, 0)) 12px 12px 12px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  // Close button - positioned on the right within header
+  &__close-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  // ============================================
+  // DARK MODE SEARCH BAR (Bottom of viewer)
+  // Same colors as FloatingTabBarVariantB dark mode
+  // ============================================
+  &__search-bar {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 34px));
+    z-index: 100;
+  }
+
+  &__search-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 52px; // Match FloatingTabBarVariantB search bar height
+    background: #242526; // Dark mode background
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 26px; // Half of height for pill shape
+    padding: 0 16px;
+  }
+
+  &__search-input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 15px; // Match FloatingTabBarVariantB
+    font-weight: 400;
+    line-height: 20px;
+    color: #e4e6eb; // Dark mode text color
+    caret-color: #e4e6eb;
+
+    &::placeholder {
+      color: #b0b3b8; // Dark mode placeholder color
+    }
+  }
+
+  &__search-submit {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(28, 28, 29, 0.6); // Secondary button background on media
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.15s ease, opacity 0.15s ease;
+
+    &:hover:not(:disabled) {
+      background: rgba(28, 28, 29, 0.8); // Slightly darker on hover
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.4;
+    }
+  }
+
+  // Individual slide
+  &__slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Gradient overlays
+  &__gradient-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  &__gradient-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  // ============================================
+  // VERTICAL UFI (Right side actions) - above search bar
+  // ============================================
+  &__ufi {
+    position: absolute;
+    right: 0;
+    bottom: calc(76px + env(safe-area-inset-bottom, 34px)); // 52px search bar + 8px gap + 16px bottom padding
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px 12px;
+  }
+
+  &__ufi-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 48px;
+
+    &--no-label {
+      .fullscreen-viewer__ufi-count {
+        display: none;
+      }
+    }
+  }
+
+  &__ufi-count {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    color: white;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.62);
+    text-align: center;
+  }
+
+  // ============================================
+  // AUTHOR METADATA (Bottom left)
+  // ============================================
+  &__metadata {
+    position: absolute;
+    left: 4px; // Align with search bar (16px total with 12px padding)
+    bottom: calc(74px + env(safe-area-inset-bottom, 34px)); // Moved up 4px
+    z-index: 50;
+    max-width: calc(100% - 56px); // 44px UFI width + 12px gap
+    padding: 12px;
+
+    &--on-media {
+      text-shadow: 0 0 1px rgba(0, 0, 0, 0.62);
+    }
+  }
+
+  &__author-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__author-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    
+    &--squircle {
+      border-radius: 8px; // Squircle shape like group icons
+    }
+  }
+
+  // Group avatar with profile overlay (for group posts)
+  // Matches _mobilePost.scss: 36px squircle + 24px circle overlay
+  &__group-avatar-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  &__group-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px; // Squircle shape (matches _mobilePost)
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2); // Visible on dark background
+  }
+
+  &__profile-overlay {
+    position: absolute;
+    bottom: -2px;
+    right: 0; // Moved left by 2px
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #fff; // White outline for visibility
+    object-fit: cover;
+    box-sizing: content-box;
+  }
+
+  &__author-meta {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 2px;
+  }
+
+  &__author-subname {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__author-dot {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__author-time {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__author-info {
+    flex: 1;
+    min-width: 0;
+    overflow: visible; // Allow content to determine width
+  }
+
+  &__author-line {
+    display: inline-flex; // Inline-flex wraps to content width
+    align-items: center;
+    gap: 4px;
+    
+    // For group posts: allow name to expand to fill available width
+    &--group {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__author-name {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0; // Allow text to shrink and truncate
+    
+    // For group posts: no truncation, let it expand naturally
+    &--group {
+      overflow: visible;
+      text-overflow: clip;
+      flex-shrink: 0; // Don't shrink
+    }
+  }
+
+  &__follow-btn {
+    flex-shrink: 0;
+    margin-left: 4px; // Small gap from icons
+    padding: 2px 6px;
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: white;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  &__post-text {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: white;
+    margin: 8px 0 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  // ============================================
+  // REEL VIEW (Full screen video)
+  // ============================================
+  &__reel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: black;
+  }
+
+  &__reel-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // ============================================
+  // MEDIA POST VIEW (Blurred background + media)
+  // ============================================
+  &__media-post {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__media-backdrop {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  &__backdrop-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(25px);
+    transform: scale(1.1);
+  }
+
+  &__backdrop-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(37, 37, 37, 0.7);
+    mix-blend-mode: normal;
+  }
+
+  &__media-main {
+    position: relative;
+    z-index: 5;
+    max-width: 100%;
+    max-height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__media-content {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 0;
+  }
+
+  // ============================================
+  // TEXT POST VIEW (Diagonal gradient bg + large text)
+  // ============================================
+  &__text-post {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 104px 60px 0 16px;
+    padding-top: calc(104px + env(safe-area-inset-top, 0)); // Moved down 12px
+    overflow: hidden; // Not scrollable
+    padding-bottom: 200px; // Space for author + search bar at bottom
+  }
+
+  &__text-content {
+    font-family: var(--font-family-display, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.36px;
+    color: white;
+    margin: 0;
+  }
+
+  // ============================================
+  // COMMENTS SECTION (For text posts) - mirrors group post style in dark mode
+  // ============================================
+  &__comments {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__comment {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  &__comment-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  &__comment-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__comment-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__comment-author {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #e4e6eb; // Dark mode text
+  }
+
+  &__comment-dot {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 13px;
+    color: #b0b3b8; // Dark mode secondary text
+  }
+
+  &__comment-time {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 13px;
+    font-weight: 400;
+    color: #b0b3b8; // Dark mode secondary text
+  }
+
+  &__comment-text {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #e4e6eb; // Dark mode text
+    margin: 4px 0 0 0;
+  }
+
+  &__comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  &__comment-reply {
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 12px;
+    font-weight: 600;
+    color: #b0b3b8; // Dark mode secondary text
+    cursor: pointer;
+  }
+
+  &__comment-likes {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 12px;
+    font-weight: 400;
+    color: #b0b3b8; // Dark mode secondary text
+  }
+
+  &__comment-like-btn {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    flex-shrink: 0;
+    margin-left: auto;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  // View more comments CTA - dark mode version of groups permalink style
+  &__view-more-comments {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 8px 0;
+    margin-top: 0;
+    cursor: pointer;
+    // Body 4 Link typography
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: normal;
+    color: #e4e6eb; // Dark mode primary text
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// ============================================
+// CLICKABLE CARD STYLES
+// Make cards appear clickable (reset button defaults)
+// ============================================
+.cfe-post-card--clickable {
+  // Reset button defaults but KEEP the card border
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 12px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.cfe-reel-card--clickable {
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 12px;
+  padding: 0;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+

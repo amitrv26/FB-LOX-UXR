@@ -1,0 +1,49 @@
+{
+  "name": "comet",
+  "version": "1.0.0",
+  "description": "comet react",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@clerk/nextjs": "^6.36.5",
+    "@reduxjs/toolkit": "^2.5.0",
+    "@stylexjs/babel-plugin": "0.9.0",
+    "@stylexjs/nextjs-plugin": "^0.11.1",
+    "@stylexjs/stylex": "0.9.0",
+    "classnames": "^2.5.1",
+    "framer-motion": "^11.15.0",
+    "next": "^16.0.10",
+    "next-redux-wrapper": "^8.1.0",
+    "prop-types": "^15.8.1",
+    "react": "^19.0.0",
+    "react-autocomplete-cli": "^0.0.3",
+    "react-dom": "^19.0.0",
+    "react-palette": "^1.0.2",
+    "react-redux": "^9.2.0",
+    "react-waypoint": "^10.3.0",
+    "redux": "^5.0.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^3.1.0",
+    "sass": "^1.82.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^16.0.10",
+    "prettier": "^3.4.2",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.js dev --turbopack --hostname 127.0.0.1 --port 3001",
+    "build": "next build --webpack",
+    "start": "next start",
+    "export": "next export",
+    "generate": "rc-autocomplete",
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
+  }
+}

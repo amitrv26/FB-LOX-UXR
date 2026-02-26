@@ -1,0 +1,284 @@
+.fds-composer {
+  display: block;
+  width: 100%;
+  
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.fds-composer__container {
+  display: flex;
+  gap: var(--spacing-medium);
+  align-items: flex-start;
+  padding: var(--spacing-large);
+  background-color: var(--surface-background);
+  border-radius: var(--card-radius);
+  transition: background-color var(--duration-x-short-in) ease, box-shadow var(--duration-x-short-in) ease;
+  
+  .fds-composer--bg-transparent & {
+    background-color: transparent;
+    padding: var(--spacing-medium) 0;
+  }
+  
+  .fds-composer--bg-elevated & {
+    background-color: var(--surface-background);
+    box-shadow: 0 1px 2px var(--shadow-responsive-ui);
+  }
+  
+  .fds-composer--focused & {
+    box-shadow: 0 0 0 2px var(--decorative-icon-blue);
+  }
+}
+
+.fds-composer__profile {
+  flex-shrink: 0;
+  padding-top: var(--spacing-x-small);
+}
+
+.fds-composer__input-wrapper {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.fds-composer__textarea {
+  width: 100%;
+  min-height: 36px;
+  max-height: 200px;
+  padding: var(--spacing-medium) var(--spacing-large);
+  font-family: var(--font-family-text);
+  font-size: var(--body-3-font-size);
+  font-weight: var(--body-3-weight);
+  line-height: var(--body-3-line-height);
+  letter-spacing: var(--body-3-letter-spacing);
+  color: var(--primary-text);
+  background-color: var(--text-input-bar-background);
+  border: none;
+  border-radius: 18px;
+  resize: none;
+  overflow-y: auto;
+  outline: none;
+  transition: background-color var(--duration-x-short-in) ease;
+  
+  &::placeholder {
+    color: var(--secondary-text);
+  }
+  
+  &:focus {
+    background-color: var(--surface-background);
+  }
+  
+  &:disabled {
+    background-color: var(--text-input-bar-background);
+    cursor: not-allowed;
+  }
+  
+  .fds-composer--bg-transparent & {
+    background-color: var(--text-input-bar-background);
+  }
+  
+  .fds-composer--layout-compact & {
+    padding: 6px 10px;
+    font-size: var(--body-4-font-size);
+    line-height: var(--body-4-line-height);
+    letter-spacing: var(--body-4-letter-spacing);
+    min-height: 28px;
+  }
+  
+  .fds-composer--layout-inline & {
+    padding: var(--spacing-small) var(--spacing-medium);
+    font-size: var(--body-4-font-size);
+    line-height: var(--body-4-line-height);
+    letter-spacing: var(--body-4-letter-spacing);
+    min-height: 24px;
+    border-radius: 12px;
+  }
+}
+
+.fds-composer__character-count {
+  position: absolute;
+  bottom: var(--spacing-small);
+  right: var(--spacing-medium);
+  font-family: var(--font-family-text);
+  font-size: 11px;
+  font-weight: var(--meta-4-weight);
+  line-height: 12px;
+  color: var(--secondary-text);
+  background-color: var(--surface-background);
+  padding: var(--spacing-x-small) 6px;
+  border-radius: 10px;
+  pointer-events: none;
+  
+  &--warning {
+    color: var(--warning);
+  }
+  
+  &--error {
+    color: var(--negative);
+  }
+}
+
+.fds-composer__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-medium);
+  padding-top: var(--spacing-x-small);
+}
+
+.fds-composer__attachments {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+
+.fds-composer__attachment-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  border-radius: var(--profile-photo-actor-radius);
+  cursor: pointer;
+  transition: background-color var(--duration-x-short-in) ease;
+  padding: 0;
+  
+  &:hover {
+    background-color: var(--background-deemphasized);
+  }
+  
+  &:active {
+    background-color: var(--border-ui-emphasis);
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .fds-composer--layout-compact & {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.fds-composer__submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 var(--spacing-large);
+  background: none;
+  border: none;
+  border-radius: 16px;
+  font-family: var(--font-family-text);
+  font-size: var(--body-4-font-size);
+  font-weight: var(--meta-1-weight);
+  line-height: var(--body-4-line-height);
+  letter-spacing: var(--body-4-letter-spacing);
+  cursor: pointer;
+  transition: all var(--duration-x-short-in) ease;
+  
+  &--active {
+    background-color: var(--primary-button-background);
+    color: var(--primary-button-text);
+    
+    &:hover {
+      opacity: 0.9;
+    }
+    
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+  
+  &--disabled {
+    background-color: var(--disabled-button-background);
+    color: var(--disabled-text);
+    cursor: not-allowed;
+  }
+  
+  .fds-composer--layout-compact & {
+    height: 28px;
+    padding: 0 10px;
+    font-size: var(--meta-4-font-size);
+    line-height: 14px;
+    border-radius: 14px;
+  }
+  
+  .fds-composer--layout-inline & {
+    height: 24px;
+    padding: 0 var(--spacing-medium);
+    font-size: 11px;
+    line-height: 12px;
+    border-radius: 12px;
+  }
+}
+
+.fds-composer__submit-text {
+  white-space: nowrap;
+}
+
+.fds-composer__submit-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Compact layout adjustments
+.fds-composer--layout-compact {
+  .fds-composer__container {
+    padding: var(--spacing-medium);
+    gap: 6px;
+  }
+  
+  .fds-composer__profile {
+    padding-top: 1px;
+  }
+
+  .fds-composer__textarea {
+    min-height: 32px;
+    padding: 6px 10px;
+  }
+}
+
+// Inline layout adjustments
+.fds-composer--layout-inline {
+  .fds-composer__container {
+    padding: var(--spacing-small);
+    gap: var(--spacing-small);
+    border-radius: var(--text-input-radius);
+  }
+  
+  .fds-composer__profile {
+    padding-top: 0;
+  }
+}
+
+// Submitting state
+.fds-composer--submitting {
+  .fds-composer__textarea {
+    pointer-events: none;
+  }
+  
+  .fds-composer__attachment-button {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

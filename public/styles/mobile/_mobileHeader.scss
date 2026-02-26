@@ -1,0 +1,287 @@
+// Mobile Layout
+.mobile-layout {
+  min-height: 100vh;
+  background: transparent; // No background - allows Safari URL bar to see page content
+  overflow: visible !important;
+}
+
+.mobile-main {
+  padding-top: 48px; // Header height
+  overflow: visible !important;
+  min-height: 100vh;
+  // No padding - content scrolls behind floating tab bar
+  // This lets Safari's URL bar see the actual scrolling content
+  padding-bottom: 0;
+}
+
+// When search page, no padding top
+.mobile-main:has(.google-search-page) {
+  padding-top: 0;
+}
+
+// Override frame styles for logged-out routes (mobile and desktop)
+.frame--logged-out {
+  top: 0 !important;
+  background: transparent;
+}
+
+.layout-container:has(.frame--logged-out) {
+  background: transparent;
+}
+
+// =============================================================================
+// Safari Toolbar Minimization Support
+// -----------------------------------------------------------------------------
+// Safari's minimal-ui (browser chrome minimizing on scroll) only works when the
+// document body itself scrolls, not when scrolling happens inside a fixed/absolute
+// positioned container with overflow: scroll.
+//
+// These overrides convert the layout from a fixed container with internal scroll
+// to a naturally scrolling document, enabling Safari toolbar minimization.
+// =============================================================================
+
+// Override layout container for all mobile pages to allow native document scrolling
+.layout-container:has(.mobile-layout) {
+  position: relative !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh; // Use dynamic viewport height for better mobile support
+  background: transparent !important; // Remove grey wash for Safari liquid glass
+}
+
+.layout-container:has(.mobile-layout) .frame {
+  position: relative !important;
+  top: 0 !important;
+  bottom: auto !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: transparent !important; // Remove any background
+}
+
+// Override any page wrapper that might have overflow constraints
+.layout-container:has(.mobile-layout) [class^="page--"] {
+  overflow: visible !important;
+  height: auto !important;
+  background: transparent !important; // Remove any background
+}
+
+// Ensure html and body allow natural scrolling when mobile layout is present
+html:has(.mobile-layout) {
+  overflow-x: hidden;
+  overflow-y: auto !important;
+  height: auto !important;
+  background: transparent !important; // Transparent for Safari liquid glass
+  // Enable momentum scrolling on iOS
+  -webkit-overflow-scrolling: touch;
+}
+
+body:has(.mobile-layout) {
+  overflow-x: hidden;
+  overflow-y: auto !important;
+  height: auto !important;
+  position: relative !important;
+  background: transparent !important; // Transparent for Safari liquid glass
+  // Enable momentum scrolling on iOS
+  -webkit-overflow-scrolling: touch;
+}
+
+// Next.js root element - ensure transparent
+#__next:has(.mobile-layout) {
+  background: transparent !important;
+}
+
+// Mobile Header - matches Figma Navigation bar specs
+.mobile-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: #ffffff !important; // Always white, even with liquid glass elsewhere
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px; // MEDIUM padding from Figma
+  gap: 12px; // GAP_LARGE from Figma
+  z-index: 1000;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__wordmark {
+    height: 24px;
+    width: auto;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  // Open app - Primary Medium Button, Constrained width + Button 2 typography from Figma
+  &__login {
+    background: #0866FF; // Primary button color
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: var(--button-2-font-size); // 15px
+    font-weight: var(--button-2-weight); // 600 (semibold)
+    line-height: var(--button-2-line-height); // 20px
+    letter-spacing: var(--button-2-letter-spacing); // -0.24px
+    height: 36px;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+
+    &:hover {
+      background: #0756d4;
+    }
+
+    &:active {
+      background: #0548b3;
+    }
+  }
+
+  // Close button - replaces "Open app" when coming from aggregation
+  &__close-btn {
+    appearance: none;
+    background: #e4e6eb; // Grey circle background
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #d8dadf;
+    }
+
+    &:active {
+      background: #ccd0d5;
+    }
+  }
+}
+
+// Login Prompt Sheet
+.login-prompt-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.login-prompt-sheet {
+  background: var(--background-color);
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s var(--fds-animation-enter-exit-in);
+
+  &__handle {
+    width: 40px;
+    height: 4px;
+    background: #CED0D4;
+    border-radius: 2px;
+    margin: 12px auto;
+  }
+
+  &__content {
+    padding: 8px 24px 32px;
+    text-align: center;
+  }
+
+  &__icon {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark-color);
+    margin: 0 0 8px;
+  }
+
+  &__message {
+    font-size: 15px;
+    color: var(--text-medium-color);
+    margin: 0 0 24px;
+    line-height: 1.4;
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 12px;
+
+    &--primary {
+      background: #1877F2;
+      color: #fff;
+
+      &:hover {
+        background: #166FE5;
+      }
+    }
+
+    &--secondary {
+      background: #42B72A;
+      color: #fff;
+
+      &:hover {
+        background: #36A420;
+      }
+    }
+
+    &--text {
+      background: transparent;
+      color: var(--text-medium-color);
+      margin-bottom: 0;
+
+      &:hover {
+        background: var(--web-wash);
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+

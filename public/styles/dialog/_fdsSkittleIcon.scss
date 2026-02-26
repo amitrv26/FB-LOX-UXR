@@ -1,0 +1,194 @@
+.fds-skittle-icon {
+  align-items: center;
+  border: none;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  cursor: default;
+
+  &.fds-skittle-icon--clickable {
+    cursor: pointer;
+    transition: background var(--fds-duration-extra-short-in) var(--fds-animation-fade-in),
+      transform var(--fds-duration-short-in) var(--fds-animation-expand-collapse-in);
+
+    &:hover:not(.fds-skittle-icon--disabled) {
+      transition: background var(--fds-duration-extra-short-out) var(--fds-animation-fade-out),
+        transform var(--fds-duration-short-out) var(--fds-animation-expand-collapse-out);
+    }
+
+    &:active:not(.fds-skittle-icon--disabled) {
+      transform: scale(0.975);
+    }
+  }
+
+  &.fds-skittle-icon--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  // Shape styles
+  &.fds-skittle-icon--circle {
+    border-radius: 50%;
+  }
+
+  &.fds-skittle-icon--roundedRect {
+    border-radius: 8px;
+  }
+
+  &.fds-skittle-icon--square {
+    border-radius: 0;
+  }
+
+  // Size styles
+  &.fds-skittle-icon--size-32 {
+    height: 32px;
+    width: 32px;
+
+    .fds-skittle-icon-glyph {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  &.fds-skittle-icon--size-36 {
+    height: 36px;
+    width: 36px;
+
+    .fds-skittle-icon-glyph {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  &.fds-skittle-icon--size-40 {
+    height: 40px;
+    width: 40px;
+
+    .fds-skittle-icon-glyph {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  &.fds-skittle-icon--size-48 {
+    height: 48px;
+    width: 48px;
+
+    .fds-skittle-icon-glyph {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &.fds-skittle-icon--size-56 {
+    height: 56px;
+    width: 56px;
+
+    .fds-skittle-icon-glyph {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &.fds-skittle-icon--size-60 {
+    height: 60px;
+    width: 60px;
+
+    .fds-skittle-icon-glyph {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  // Glyph container
+  .fds-skittle-icon-glyph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  // Color styles
+  &.fds-skittle-icon--gray {
+    background-color: var(--gray-90, #e4e6eb);
+    
+    &.fds-skittle-icon--clickable:hover:not(.fds-skittle-icon--disabled) {
+      background-color: var(--color-btn-secondary-hover, rgba(0, 0, 0, 0.05));
+    }
+  }
+
+  &.fds-skittle-icon--blue {
+    background-color: var(--base-blue, #1877f2);
+  }
+
+  &.fds-skittle-icon--white {
+    background-color: var(--always-white, #ffffff);
+  }
+
+  &.fds-skittle-icon--red {
+    background-color: var(--negative, #e41e3f);
+  }
+
+  &.fds-skittle-icon--green {
+    background-color: var(--positive, #42b72a);
+  }
+
+  &.fds-skittle-icon--lightblue {
+    background-color: var(--primary-deemphasized-button-background, #e7f3ff);
+  }
+
+  &.fds-skittle-icon--cherry {
+    background-color: var(--base-cherry, #f02849);
+  }
+
+  &.fds-skittle-icon--grape {
+    background-color: var(--base-grape, #8b5cf6);
+  }
+
+  &.fds-skittle-icon--lemon {
+    background-color: var(--base-lemon, #fbbf24);
+  }
+
+  &.fds-skittle-icon--lime {
+    background-color: var(--base-lime, #84cc16);
+  }
+
+  &.fds-skittle-icon--pink {
+    background-color: var(--base-pink, #ec4899);
+  }
+
+  &.fds-skittle-icon--seafoam {
+    background-color: var(--base-seafoam, #14b8a6);
+  }
+
+  &.fds-skittle-icon--teal {
+    background-color: var(--base-teal, #0d9488);
+  }
+
+  &.fds-skittle-icon--tomato {
+    background-color: var(--base-tomato, #ef4444);
+  }
+
+  &.fds-skittle-icon--accent {
+    background-color: var(--accent, #1877f2);
+  }
+
+  // Badge styles
+  .fds-skittle-icon-badge {
+    align-items: center;
+    background-color: var(--accent, #1877f2);
+    border: 2px solid var(--card-background, #ffffff);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+  }
+}
+

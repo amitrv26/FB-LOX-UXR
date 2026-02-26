@@ -1,0 +1,6618 @@
+[
+  {
+    "name": "3d-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "3d-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "3d-slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "3d-slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "accessibility-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "accessibility-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "account-switcher-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "account-switcher-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "acquaintances-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "acquaintances-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "activity-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "activity-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "ad-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "ad-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "airplane-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "airplane-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "airplay-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "airplay-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "alarm-clock-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "alarm-clock-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "allowlist-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "allowlist-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "anonymous-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "anonymous-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "aperture-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "aperture-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-audio-hub-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-audio-hub-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-business-suite-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-business-suite-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-discord-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-discord-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-account-center-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-admin-assist-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-facebook-admin-assist-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-avatars-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-facebook-avatars-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-facebook-circle-lite-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-facebook-circle-lite-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-dating-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-facebook-dating-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-family-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-facebook-family-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-gaming-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-facebook-gaming-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-groups-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-facebook-groups-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-highlights-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-facebook-highlights-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-news-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-facebook-news-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-nicknames-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-facebook-nicknames-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-pay-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-facebook-pay-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-reels-dashed-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-facebook-reels-dashed-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-reels-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-facebook-reels-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-facebook-reels",
+    "variant": "other"
+  },
+  {
+    "name": "app-family-center-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-family-center-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-groups-plus-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-groups-plus-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-hashtag-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-hashtag-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-horizon-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-horizon-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-imessage-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-imessage-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-imo-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-imo-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-instagram-edits-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-instagram-edits-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-instagram-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-instagram-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-instant-games-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-instant-games-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-kakao-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-kakao-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-kwai-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-kwai-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-line-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-line-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-linkedin-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-linkedin-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-mentions-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-mentions-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-messages-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-messages-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-messenger-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-messenger-plus-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-messenger-plus-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-messenger-swish-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-messenger-swish-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-meta-ai-characters-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-meta-ai-characters-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-meta-ai-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-meta-ai-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-meta-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-meta-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-metamate-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-metamate-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-pages-feed-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-pages-feed-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-pages-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-pages-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-paypal-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-paypal-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-pinterest-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-pinterest-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-podcasts-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-podcasts-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-reddit-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-reddit-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-rooms-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-rooms-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-screenshot-tests-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-screenshot-tests-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-snapchat-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-snapchat-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-soundbites-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-soundbites-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-soundcloud-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-soundcloud-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-spotify-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-spotify-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-telegram-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-telegram-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-threads-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-threads-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-tiktok-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-tiktok-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-twitch-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-twitch-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-twitter-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-twitter-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-viber-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-viber-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-wechat-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-wechat-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-whatsapp-business-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-whatsapp-business-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-whatsapp-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-whatsapp-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-whatsapp-status-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-whatsapp-status-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-whatsapp-status-plus-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-whatsapp-status-plus-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-workplace-chat-comment-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-workplace-chat-comment-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-workplace-chat-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-workplace-chat-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-workplace-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-workplace-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "app-youtube-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "app-youtube-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "apple-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "apple-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "apps-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "apps-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "armchair-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "armchair-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-bottom-tab-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-bottom-tab-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-curved-left-cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-curved-left-cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-curved-left-down-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-curved-left-down-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-curved-left-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-curved-left-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-curved-right-cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-curved-right-cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-curved-right-down-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-curved-right-down-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-curved-right-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-curved-right-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-diagonal-left-down-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-diagonal-left-down-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-diagonal-left-up-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-diagonal-left-up-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-diagonal-right-down-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-diagonal-right-down-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-diagonal-right-up-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-diagonal-right-up-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-down-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-down-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-down-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-down-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-left-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-left-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-left-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-left-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-move-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-move-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-right-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-right-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-right-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-right-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-up-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-up-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrow-up-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrow-up-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrows-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrows-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrows-demote-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrows-demote-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrows-left-right-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrows-left-right-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrows-left-right-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrows-left-right-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrows-promote-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrows-promote-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrows-right-left-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrows-right-left-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrows-square-add-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrows-square-add-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrows-up-down-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrows-up-down-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrows-up-down-dot-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrows-up-down-dot-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arrows-up-down-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arrows-up-down-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "article-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "article-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "arts-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "arts-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "aspect-ratio-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "aspect-ratio-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "asterisk-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "asterisk-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "at-sign-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "at-sign-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "audio-effects-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "audio-effects-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "audio-hi-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "audio-hi-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "audio-lo-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "audio-lo-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "audio-mid-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "audio-mid-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "audio-note-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "audio-note-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "audio-null-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "audio-null-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "audio-off-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "audio-off-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "audio-wave-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "audio-wave-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "automation-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "automation-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "avatar-editor-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "avatar-editor-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "backpack-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "backpack-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "backspace-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "backspace-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "badge-checkmark-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "badge-checkmark-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "badge-empty-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "badge-empty-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "badge-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "badge-heart-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "badge-heart-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "badge-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "badge-ribbon-checkmark-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "badge-ribbon-checkmark-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "badge-ribbon-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "badge-ribbon-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "badge-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "badge-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "balcony-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "balcony-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "balloon-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "balloon-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bar-chart-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bar-chart-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bar-chart-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bar-chart-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bath-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bath-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "beach-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "beach-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "beaker-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "beaker-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bed-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bed-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "beer-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "beer-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bicycle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bicycle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "binoculars-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "binoculars-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bird-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bird-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "blocklist-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "blocklist-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bluetooth-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bluetooth-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bolt-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bolt-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bone-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bone-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "book-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "book-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bookmark-cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bookmark-cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bookmark-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bookmark-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bookmark-stack-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bookmark-stack-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bookmark-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bookmark-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bot-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bot-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bowtie-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bowtie-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "box-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "box-open-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "box-open-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "box-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "breaking-news-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "breaking-news-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "briefcase-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "briefcase-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "browser-history-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "browser-history-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "browser-window-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "browser-window-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "brush-paint-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "brush-paint-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "brush-scale-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "brush-scale-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bug-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bug-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "building-bank-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "building-bank-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "building-city-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "building-city-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "building-heart-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "building-heart-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "building-high-school-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "building-high-school-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "building-school-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "building-school-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bulb-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bulb-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "bus-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "bus-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "butterfly-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "butterfly-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "cake-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "cake-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "calendar-add-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "calendar-add-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "calendar-blank-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "calendar-blank-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "calendar-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "calendar-going-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "calendar-going-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "calendar-list-bullet-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "calendar-list-bullet-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "calendar-maybe-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "calendar-maybe-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "calendar-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "calendar-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "calendar-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "camcorder-cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "camcorder-cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "camcorder-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "camcorder-incoming-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "camcorder-incoming-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "camcorder-live-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "camcorder-live-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "camcorder-outgoing-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "camcorder-outgoing-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "camcorder-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "camcorder-plus-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "camcorder-plus-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "camcorder-slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "camcorder-slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "camera-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "camera-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "camera-rotate-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "camera-rotate-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "campfire-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "campfire-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "candle-religion-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "candle-religion-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "car-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "car-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "car-wheel-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "car-wheel-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "card-horizontal-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "card-horizontal-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "card-person-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "card-person-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "card-stack-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "card-stack-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "cards-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "cards-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "cat-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "cat-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "categories-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "categories-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "caution-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "caution-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "caution-cloud-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "caution-cloud-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "caution-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "caution-octagon-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "caution-octagon-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "caution-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "caution-triangle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "caution-triangle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "changed-beliefs-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "changed-beliefs-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "checkmark-2-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "checkmark-2-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "checkmark-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "checkmark-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "checkmark-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "checkmark-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "checkmark-square-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "checkmark-square-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "chevron-double-left-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "chevron-double-left-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "chevron-double-right-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "chevron-double-right-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "chevron-down-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "chevron-down-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "chevron-down-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "chevron-down-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "chevron-left-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "chevron-left-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "chevron-left-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "chevron-left-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "chevron-right-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "chevron-right-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "chevron-right-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "chevron-right-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "chevron-up-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "chevron-up-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "chevron-up-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "chevron-up-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "chick-2-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "chick-2-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "chick-nest-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "chick-nest-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "circle-2-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "circle-2-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "circle-3-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "circle-3-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "circle-copyright-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "circle-copyright-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "circle-dot-active-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "circle-dot-active-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "circle-dot-notification-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "circle-dot-notification-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "circle-full-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "circle-full-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "circle-halves-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "circle-halves-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "circle-heart-ribbon-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "circle-heart-ribbon-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "circle-ribbon-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "circle-ribbon-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "circles-5-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "circles-5-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "circles-scale-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "circles-scale-left-right-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "circles-scale-left-right-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "circles-scale-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "clapper-open-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "clapper-open-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "clock-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "clock-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "closed-caption-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "closed-caption-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "closed-caption-slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "closed-caption-slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "cocktail-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "cocktail-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "code-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "code-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "coin-stack-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "coin-stack-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "columns-3-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "columns-3-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "comment-audio-hi-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "comment-audio-hi-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "comment-cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "comment-cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "comment-dots-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "comment-dots-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "comment-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "comment-lines-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "comment-lines-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "comment-off-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "comment-off-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "comment-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "comment-photo-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "comment-photo-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "comment-play-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "comment-play-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "comment-questions-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "comment-questions-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "comment-shield-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "comment-shield-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "comment-slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "comment-slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "comment-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "comment-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "comment-swish-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "comment-swish-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "community-notes-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "community-notes-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "community-resources-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "community-resources-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "compass-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "compass-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "compose-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "compose-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "constrain-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "constrain-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "contact-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "contact-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "content-note-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "content-note-messages-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "content-note-messages-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "content-note-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "copy-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "copy-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "coupon-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "coupon-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "crafts-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "crafts-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "creative-formats-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "creative-formats-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "crop-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "crop-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "cross-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "cross-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "cup-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "cup-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "cupcake-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "cupcake-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "currency-thb-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "currency-thb-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "currency-usd-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "currency-usd-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "cursor-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "cursor-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "dashboard-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "dashboard-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "deli-sandwich-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "deli-sandwich-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "deskbell-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "deskbell-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "desktop-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "desktop-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "diagnosed-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "diagnosed-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "diamond-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "diamond-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "diamond-rise-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "diamond-rise-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "dice-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "dice-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "direct-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "direct-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "directions-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "directions-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "dishwasher-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "dishwasher-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "document-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "document-magnifying-glass-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "document-magnifying-glass-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "document-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "documents-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "documents-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "dog-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "dog-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "dollar-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "dollar-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "dot-1-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "dot-1-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "dots-2-horizontal-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "dots-2-horizontal-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "dots-3-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "dots-3-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "dots-3-horizontal-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "dots-3-horizontal-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "dots-3-vertical-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "dots-3-vertical-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "download-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "download-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "download-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "download-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "draft-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "draft-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "drag-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "drag-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "dress-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "dress-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "dumbbell-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "dumbbell-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "duration-1-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "duration-1-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "duration-30-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "duration-30-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "duration-60-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "duration-60-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "duration-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "duration-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "edit-clip-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "edit-clip-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "edit-history-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "edit-history-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "egg-crack-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "egg-crack-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "egg-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "egg-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "elevator-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "elevator-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "emoji-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "emoji-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "envelope-dot-notifications-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "envelope-dot-notifications-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "envelope-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "envelope-invitation-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "envelope-invitation-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "envelope-open-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "envelope-open-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "envelope-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "equal-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "equal-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "eraser-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "eraser-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "explicit-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "explicit-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "eye-cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "eye-cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "eye-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "eye-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "eyebrows-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "eyebrows-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "face-happy-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "face-happy-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "face-laughing-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "face-laughing-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "face-meme-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "face-meme-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "face-neutral-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "face-neutral-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "face-sad-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "face-sad-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "face-sparkles-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "face-sparkles-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "face-very-happy-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "face-very-happy-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "face-very-unhappy-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "face-very-unhappy-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "facebook-page-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "facebook-page-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "feed-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "feed-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "feedback-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "feedback-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "feeds-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "feeds-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "film-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "film-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "film-projector-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "film-projector-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "film-stack-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "film-stack-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "filter-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "filter-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "filter-sliders-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "filter-sliders-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "first-aid-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "first-aid-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "flag-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "flag-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "flame-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "flame-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "flash-auto-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "flash-auto-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "flash-default-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "flash-default-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "flash-off-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "flash-off-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "flash-slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "flash-slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "flip-horizontal-a-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "flip-horizontal-a-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "folder-arrows-left-right-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "folder-arrows-left-right-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "folder-save-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "folder-save-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "follow-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "follow-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "following-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "following-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "football-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "football-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "fork-knife-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "fork-knife-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "frames-cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "frames-cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "frames-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "frames-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-add-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-add-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-block-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-block-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-book-appointment-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-book-appointment-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-confirm-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-confirm-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-dot-active-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-dot-active-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-edit-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-edit-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-except-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-except-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-find-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-find-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-flag-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-flag-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-list-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-list-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-neutral-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-neutral-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-remove-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-remove-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-request-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-request-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-share-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-share-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friend-tag-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friend-tag-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friends-engagement-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friends-engagement-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friends-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friends-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "friends-plus-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "friends-plus-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "fundraiser-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "fundraiser-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "funnel-chart-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "funnel-chart-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "game-controller-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "game-controller-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gears-two-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gears-two-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gem-effects-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gem-effects-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gem-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gem-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-brush-arts-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-brush-arts-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-bulb-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-bulb-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-consumer-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-consumer-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-face-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-face-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-film-reel-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-film-reel-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-imagine-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-imagine-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-magnifying-glass-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-magnifying-glass-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-memory-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-memory-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-music-list-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-music-list-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-pencil-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-pencil-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-photo-square-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-photo-square-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-play-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-play-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-plus-square-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-plus-square-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-profile-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-profile-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-send-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-send-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-stickers-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-stickers-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-studio-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-studio-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-text-background-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-text-background-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gen-ai-translate-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gen-ai-translate-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gif-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gif-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gift-box-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gift-box-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gift-card-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gift-card-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "globe-americas-12",
+    "variant": "other"
+  },
+  {
+    "name": "globe-americas-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "globe-americas-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "globe-generic-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "globe-generic-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "go-to-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "go-to-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "google-cast-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "google-cast-on-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "google-cast-on-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "google-cast-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gramophone-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gramophone-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "green-screen-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "green-screen-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "grid-4-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "grid-4-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "grid-9-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "grid-9-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "grid-9-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "grid-9-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "group-checkmark-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "group-checkmark-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "group-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "group-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "group-plus-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "group-plus-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "guitar-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "guitar-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gyroscope-cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gyroscope-cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "gyroscope-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "gyroscope-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "hand-badge-checkmark-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "hand-badge-checkmark-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "hand-chat-bubble-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "hand-chat-bubble-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "hand-coin-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "hand-coin-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "hand-gift-box-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "hand-gift-box-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "hand-soap-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "hand-soap-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "hand-thumbs-down-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "hand-thumbs-down-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "hand-thumbs-up-down-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "hand-thumbs-up-down-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "hand-thumbs-up-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "hand-thumbs-up-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "hashtag-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "hashtag-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "hd-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "hd-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "headphones-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "headphones-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "health-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "health-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "heart-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "heart-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "heart-pulse-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "heart-pulse-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "heart-slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "heart-slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "heart-support-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "heart-support-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "height-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "height-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "hex-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "hex-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "hide-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "hide-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "high-five-hands-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "high-five-hands-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "hourglass-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "hourglass-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "house-dollar-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "house-dollar-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "house-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "house-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "hub-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "hub-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "inbox-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "inbox-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "info-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "info-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "info-cursive-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "info-cursive-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "info-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "info-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "instagram-boomerang-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "instagram-boomerang-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "instagram-layout-1-and-2-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "instagram-layout-1-and-2-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "instagram-layout-2-horiz-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "instagram-layout-2-horiz-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "instagram-layout-2-vert-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "instagram-layout-2-vert-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "instagram-layout-3-horiz-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "instagram-layout-3-horiz-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "instagram-layout-4-grid-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "instagram-layout-4-grid-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "instagram-layout-6-grid-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "instagram-layout-6-grid-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "instagram-layout-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "instagram-layout-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "instagram-new-story-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "instagram-new-story-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "instagram-story-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "instagram-story-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "internet-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "internet-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "key-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "key-house-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "key-house-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "key-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "keyboard-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "keyboard-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "keyhole-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "keyhole-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "kids-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "kids-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "landscape-view-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "landscape-view-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "language-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "language-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "laptop-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "laptop-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "leaf-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "leaf-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "leave-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "leave-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "license-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "license-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "life-event-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "life-event-major-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "life-event-major-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "life-event-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "life-preserver-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "life-preserver-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "like-filled-20",
+    "variant": "other"
+  },
+  {
+    "name": "like-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "like-outline-20",
+    "variant": "other"
+  },
+  {
+    "name": "like-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "line-bounce-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "line-bounce-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "line-chart-down-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "line-chart-down-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "line-chart-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "line-chart-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "line-smooth-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "line-smooth-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "link-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "link-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "list-arrow-down-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "list-arrow-down-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "list-arrow-up-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "list-arrow-up-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "list-bullet-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "list-bullet-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "list-gear-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "list-gear-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "list-numbered-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "list-numbered-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "live-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "live-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "live-person-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "live-person-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "live-photos-on-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "live-photos-on-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "local-news-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "local-news-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "location-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "location-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "lotus-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "lotus-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "magic-wand-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "magic-wand-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "magnifying-glass-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "magnifying-glass-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "map-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "map-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "marketplace-arrow-right-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "marketplace-arrow-right-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "marketplace-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "marketplace-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "masks-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "masks-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "media-rising-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "media-rising-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "media-stack-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "media-stack-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "megaphone-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "megaphone-lines-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "megaphone-lines-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "megaphone-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "mentorship-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "mentorship-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "messages-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "messages-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "messages-question-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "messages-question-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "messages-spotlight-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "messages-spotlight-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "messenger-breaking-news-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "messenger-breaking-news-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "microphone-cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "microphone-cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "microphone-effects-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "microphone-effects-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "microphone-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "microphone-karaoke-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "microphone-karaoke-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "microphone-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "microphone-retro-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "microphone-retro-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "microphone-slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "microphone-slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "microwave-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "microwave-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "military-land-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "military-land-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "miniplayer-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "miniplayer-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "minus-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "minus-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "minus-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "minus-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "minus-square-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "minus-square-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "mobile-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "mobile-install-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "mobile-install-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "mobile-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "monetary-gift-box-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "monetary-gift-box-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "monetary-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "monetary-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "moon-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "moon-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "more-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "more-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "more-shapes-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "more-shapes-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "mortar-board-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "mortar-board-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "motorcycle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "motorcycle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "music-effects-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "music-effects-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "music-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "music-list-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "music-list-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "music-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "nav-cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "nav-cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "navicon-sub-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "navicon-sub-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "nearby-places-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "nearby-places-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "necklace-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "necklace-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "neighborhood-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "neighborhood-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "network-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "network-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "news-feed-clock-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "news-feed-clock-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "news-feed-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "news-feed-headlines-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "news-feed-headlines-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "news-feed-home-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "news-feed-home-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "news-feed-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "next-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "next-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "note-add-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "note-add-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "note-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "note-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "notifications-cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "notifications-cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "notifications-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "notifications-ring-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "notifications-ring-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "offers-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "offers-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "on-this-day-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "on-this-day-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "oven-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "oven-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "overlapping-papers-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "overlapping-papers-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "owl-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "owl-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pacifier-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pacifier-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "palette-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "palette-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "paper-clip-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "paper-clip-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "paper-fold-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "paper-fold-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "paper-fold-text-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "paper-fold-text-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "paper-stack-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "paper-stack-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "party-hat-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "party-hat-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "passport-chip-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "passport-chip-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pause-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pause-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pause-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pause-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "paw-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "paw-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pencil-checkmark-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pencil-checkmark-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pencil-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pencil-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pencil-underline-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pencil-underline-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pentagon-heart-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pentagon-heart-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "phone-cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "phone-cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "phone-end-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "phone-end-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "phone-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "phone-incoming-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "phone-incoming-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "phone-outgoing-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "phone-outgoing-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "phone-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "photo-add-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "photo-add-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "photo-album-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "photo-album-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "photo-blank-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "photo-blank-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "photo-collage-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "photo-collage-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "photo-download-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "photo-download-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "photo-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "photo-heart-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "photo-heart-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "photo-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "photo-remix-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "photo-remix-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "photo-remove-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "photo-remove-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "photo-square-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "photo-square-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pie-chart-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pie-chart-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pin-checkmark-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pin-checkmark-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pin-cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pin-cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pin-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pin-location-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pin-location-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pin-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pin-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pin-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "play-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "play-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "play-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "play-list-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "play-list-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "play-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "plus-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "plus-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "plus-circle",
+    "variant": "other"
+  },
+  {
+    "name": "plus-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "plus-square-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "plus-square-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "point-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "point-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "poke-checkmark-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "poke-checkmark-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "poke-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "poke-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "politics-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "politics-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "poll-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "poll-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "polls-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "polls-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pop-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pop-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "portrait-view-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "portrait-view-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "post-checkmark-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "post-checkmark-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "post-clock-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "post-clock-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "post-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "post-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "post-slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "post-slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "posts-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "posts-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "praying-hands-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "praying-hands-open-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "praying-hands-open-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "praying-hands-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "previous-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "previous-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "privacy-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "privacy-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "privacy-settings-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "privacy-settings-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "privacy-unlocked-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "privacy-unlocked-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "professional-dashboard-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "professional-dashboard-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "profile-checkmark-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "profile-checkmark-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "profile-cover-photo-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "profile-cover-photo-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "profile-facebook-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "profile-facebook-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "profile-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "profile-gem-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "profile-gem-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "profile-media-review-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "profile-media-review-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "profile-professional-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "profile-professional-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "profile-rounded-square-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "profile-rounded-square-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "profile-settings-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "profile-settings-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "profile-slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "profile-slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "protractor-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "protractor-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "push-notifications-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "push-notifications-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "push-notifications-slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "push-notifications-slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pushpin-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pushpin-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "pushpin-slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "pushpin-slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "qr-code-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "qr-code-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "qr-scanner-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "qr-scanner-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "question-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "question-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "question-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "question-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "quit-clock-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "quit-clock-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "quit-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "quit-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "quotes-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "quotes-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "ratio-vertical-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "ratio-vertical-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "reaction-counts-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "reaction-counts-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "recents-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "recents-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "redo-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "redo-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "refresh-left-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "refresh-left-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "refresh-right-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "refresh-right-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "refrigerator-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "refrigerator-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "relationship-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "relationship-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "repeat-1-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "repeat-1-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "repeat-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "repeat-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "reply-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "reply-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "report-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "report-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "reshare-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "reshare-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "resize-down-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "resize-down-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "resize-exit-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "resize-exit-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "resize-free-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "resize-free-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "resize-up-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "resize-up-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "ribbon-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "ribbon-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "road-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "road-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "robot-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "robot-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "rocket-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "rocket-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "roofing-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "roofing-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "rotate-cw-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "rotate-cw-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "rotate-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "rotate-image-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "rotate-image-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "rotate-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "rotate-view-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "rotate-view-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "rows-3-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "rows-3-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "royalty-free-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "royalty-free-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "ruler-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "ruler-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "running-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "running-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "rv-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "rv-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "safety-check-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "safety-check-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sample-hi-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sample-hi-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sample-lo-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sample-lo-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sample-mid-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sample-mid-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "scale-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "scale-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "scissors-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "scissors-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "screen-dual-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "screen-dual-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "screen-dual-plus-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "screen-dual-plus-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "screen-share-mobile-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "screen-share-mobile-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "send-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "send-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "server-timeout-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "server-timeout-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "settings-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "settings-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "share-alternate-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "share-alternate-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "share-android-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "share-android-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "share-external-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "share-external-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "share-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "share-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "share-stack-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "share-stack-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "shield-checkmark-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "shield-checkmark-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "shield-content-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "shield-content-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "shield-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "shield-health-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "shield-health-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "shield-keyhole-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "shield-keyhole-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "shield-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "shield-person-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "shield-person-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "shield-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "shield-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "shopping-bag-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "shopping-bag-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "shopping-cart-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "shopping-cart-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "shopping-cart-plus-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "shopping-cart-plus-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "shops-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "shops-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sidebar-down-blank-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sidebar-down-blank-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sidebar-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sidebar-left-close-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sidebar-left-close-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sidebar-left-open-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sidebar-left-open-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sidebar-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sidebar-right-blank-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sidebar-right-blank-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sidebar-right-close-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sidebar-right-close-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sidebar-right-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sidebar-right-open-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sidebar-right-open-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sidebar-right-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sidebar-top-blank-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sidebar-top-blank-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "signal-tower-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "signal-tower-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sim-card-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sim-card-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "skip-backward-10-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "skip-backward-10-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "skip-backward-30-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "skip-backward-30-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "skip-backward-5-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "skip-backward-5-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "skip-forward-10-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "skip-forward-10-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "skip-forward-30-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "skip-forward-30-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "skip-forward-5-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "skip-forward-5-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "slash-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "slash-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "smart-glasses-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "smart-glasses-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "snow-globe-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "snow-globe-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "soccer-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "soccer-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "soup-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "soup-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "spas-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "spas-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sponsored-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sponsored-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "spray-can-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "spray-can-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sprout-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sprout-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "square-corner-bottom-left-box-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "square-corner-bottom-left-box-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "square-corner-bottom-right-box-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "square-corner-bottom-right-box-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "square-corner-top-left-box-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "square-corner-top-left-box-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "square-corner-top-right-box-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "square-corner-top-right-box-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "square-dashed-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "square-dashed-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "square-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "square-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "squares-2-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "squares-2-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "squiggle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "squiggle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "star-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "star-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "star-cross-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "star-cross-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "star-half-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "star-prize-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "star-prize-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "star-reviews-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "star-reviews-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "star-slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "star-slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "star-tip-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "star-tip-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "star-with-face-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "star-with-face-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "steering-wheel-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "steering-wheel-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "stickers-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "stickers-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "stop-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "stop-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "stop-playback-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "stop-playback-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "stopwatch-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "stopwatch-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "store-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "store-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "store-sign-heart-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "store-sign-heart-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "store-visits-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "store-visits-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "stories-archive-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "stories-archive-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "stories-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "stories-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "stroller-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "stroller-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "style-effects-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "style-effects-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "subgroup-messenger-private-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "subgroup-messenger-private-open-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "subgroup-messenger-private-open-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "subgroup-messenger-private-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "subgroup-messenger-public-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "subgroup-messenger-public-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "suicide-prevention-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "suicide-prevention-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sun-with-clouds-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sun-with-clouds-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "sunrise-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "sunrise-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "t-shirt-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "t-shirt-heart-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "t-shirt-heart-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "t-shirt-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "tag-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "tag-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "tag-price-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "tag-price-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "tag-remove-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "tag-remove-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "tag-stack-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "tag-stack-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "tag-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "tag-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "takeout-box-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "takeout-box-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "target-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "target-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "test-arrow-down-vote-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "test-arrow-down-vote-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "test-arrow-up-vote-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "test-arrow-up-vote-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "test-profile-rounded-square-checkmark-circle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "test-profile-rounded-square-checkmark-circle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "text-align-center-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "text-align-center-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "text-align-left-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "text-align-left-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "text-align-right-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "text-align-right-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "text-animation-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "text-animation-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "text-cursor-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "text-cursor-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "text-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "text-indent-decrease-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "text-indent-decrease-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "text-indent-increase-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "text-indent-increase-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "text-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "text-resize-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "text-resize-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "text-square-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "text-square-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "thermostat-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "thermostat-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "thought-bubble-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "thought-bubble-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "ticket-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "ticket-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "toggle-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "toggle-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "toolbox-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "toolbox-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "tools-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "tools-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "topics-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "topics-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "trailer-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "trailer-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "translate-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "translate-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "transmission-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "transmission-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "trash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "trash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "treasure-chest-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "treasure-chest-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "tree-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "tree-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "trending-arrow-down-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "trending-arrow-down-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "trending-arrow-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "trending-arrow-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "trending-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "trending-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "triangle-down-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "triangle-down-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "triangle-left-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "triangle-left-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "triangle-right-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "triangle-right-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "triangle-up-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "triangle-up-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "trim-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "trim-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "trophy-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "trophy-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "trophy-star-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "trophy-star-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "trowel-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "trowel-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "truck-shipping-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "truck-shipping-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "tv-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "tv-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "undo-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "undo-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "unfollow-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "unfollow-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "unlink-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "unlink-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "upload-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "upload-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "venn-diagram-2-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "venn-diagram-2-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "video-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "video-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "viewfinder-magnifying-glass-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "viewfinder-magnifying-glass-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "vinyl-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "vinyl-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "vote-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "vote-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "walk-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "walk-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "washing-machine-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "washing-machine-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "watch-tv-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "water-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "water-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "water-slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "water-slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "waving-hand-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "waving-hand-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "weather-bolt-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "weather-bolt-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "weather-cloud-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "weather-cloud-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "wireless-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "wireless-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "wireless-slash-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "wireless-slash-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "wrench-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "wrench-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "zoom-in-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "zoom-in-outline",
+    "variant": "outline"
+  },
+  {
+    "name": "zoom-out-filled",
+    "variant": "filled"
+  },
+  {
+    "name": "zoom-out-outline",
+    "variant": "outline"
+  }
+]

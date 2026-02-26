@@ -1,0 +1,23 @@
+.entity-header--marketplace {
+  overflow: hidden;
+  max-width: 100%;
+
+  .align-right {
+    display: flex;
+
+    button {
+      margin-left: 8px;
+    }
+  }
+
+  .flowing-links {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 16px;
+    overflow: hidden;
+
+    button {
+      margin-right: 8px;
+    }
+  }
+}

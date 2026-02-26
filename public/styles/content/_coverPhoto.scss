@@ -1,0 +1,77 @@
+.cover--wrapper {
+  background: var(--surface-background);
+  position: relative;
+
+  .cover--main {
+    max-width: 940px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+  }
+
+  .cover--bg-wrapper {
+    filter: blur(24px);
+    position: absolute;
+    top: -24px;
+    right: -24px;
+    bottom: -24px;
+    left: -24px;
+    z-index: 1;
+    height: 348px;
+
+    &:before {
+      background-image: linear-gradient(-180deg, rgba(255,255,255,0.20) 2%, var(--surface-background) 79%);
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+    }
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .cover--photo {
+    background: #54C7EC;
+    border-bottom-left-radius: var(--card-radius);
+    border-bottom-right-radius: var(--card-radius);
+    box-shadow: inset 0 0 0 1px var(--border-responsive-ui);
+    overflow: hidden;
+    position: relative;
+    height: 348px;
+    width: 100%;
+
+    &:after {
+      background-image: linear-gradient(-180deg, var(--always-transparent) 0%, var(--overlay-on-surface) 100%);
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 80px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .cover--image-wrapper {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

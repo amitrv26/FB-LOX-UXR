@@ -1,0 +1,47 @@
+.card--composer {
+  border-top: solid 1px var(--border-ui-emphasis);
+  padding: var(--spacing-medium) 0;
+  margin: 0 var(--spacing-large);
+
+  .composer-container {
+
+    .input {
+      background: var(--text-input-bar-background);
+      border: solid 1px var(--border-ui-emphasis);
+      border-radius: 18px;
+      color: var(--placeholder-text);
+      font-size: var(--body-4-font-size);
+      line-height: var(--body-4-line-height);
+      letter-spacing: var(--body-4-letter-spacing);
+      padding: var(--spacing-medium) var(--spacing-large);
+      outline: none;
+      user-select: text;
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+      -webkit-user-modify: read-write-plaintext-only;
+      -webkit-line-break: after-white-space;
+    }
+  }
+}
+
+.card.card--image .card--composer {
+  .accessory-list-cell {
+    &:hover {
+      cursor: none;
+    }
+
+    &:active {
+      transform: none;
+    }
+
+    .actor {
+      cursor: default;
+    }
+
+    .input {
+      cursor: text;
+      pointer-events: all;
+      user-select: text;
+    }
+  }
+}

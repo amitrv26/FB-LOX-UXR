@@ -1,0 +1,158 @@
+# Blueprint Typography Tokens
+
+When implementing typography in this codebase, ALWAYS use these exact Blueprint token values:
+
+## Headlines
+
+### Headline 1
+- fontSize: 28px
+- fontWeight: 700
+- lineHeight: 34px
+- letterSpacing: normal
+
+### Headline 2
+- fontSize: 22px
+- fontWeight: 700
+- lineHeight: 28px
+- letterSpacing: normal
+
+### Headline 3
+- fontSize: 17px
+- fontWeight: 500
+- lineHeight: 22px
+- letterSpacing: normal
+
+### Headline 3 Emphasized
+- fontSize: 17px
+- fontWeight: 700
+- lineHeight: 22px
+- letterSpacing: normal
+
+### Headline 4
+- fontSize: 15px
+- fontWeight: 500
+- lineHeight: 20px
+- letterSpacing: normal
+
+### Headline 4 Emphasized
+- fontSize: 15px
+- fontWeight: 700
+- lineHeight: 20px
+- letterSpacing: normal
+
+## Body Text
+
+### Body 1
+- fontSize: 17px
+- fontWeight: 400
+- lineHeight: 22px
+- letterSpacing: normal
+
+### Body 2
+- fontSize: 16px
+- fontWeight: 400
+- lineHeight: 21px
+- letterSpacing: normal
+
+### Body 3
+- fontSize: 15px
+- fontWeight: 400
+- lineHeight: 20px
+- letterSpacing: normal
+
+### Body 4
+- fontSize: 13px
+- fontWeight: 400
+- lineHeight: 18px
+- letterSpacing: normal
+
+### Body 4 Link
+- fontSize: 13px
+- fontWeight: 600
+- lineHeight: 18px
+- letterSpacing: normal
+
+## Meta Text
+
+### Meta 1
+- fontSize: 15px
+- fontWeight: 500
+- lineHeight: 20px
+- letterSpacing: normal
+
+### Meta 2
+- fontSize: 14px
+- fontWeight: 500
+- lineHeight: 18px
+- letterSpacing: normal
+
+### Meta 3
+- fontSize: 13px
+- fontWeight: 400
+- lineHeight: 16px
+- letterSpacing: normal
+
+### Meta 3 Link
+- fontSize: 13px
+- fontWeight: 600
+- lineHeight: 16px
+- letterSpacing: normal
+
+### Meta 4
+- fontSize: 12px
+- fontWeight: 400
+- lineHeight: 16px
+- letterSpacing: normal
+
+### Meta 4 Link
+- fontSize: 12px
+- fontWeight: 600
+- lineHeight: 16px
+- letterSpacing: normal
+
+## Button Text
+
+### Button 1 (Large)
+- fontSize: 17px
+- fontWeight: 600
+- lineHeight: 22px
+- letterSpacing: normal
+
+### Button 2 (Medium)
+- fontSize: 15px
+- fontWeight: 600
+- lineHeight: 20px
+- letterSpacing: normal
+
+### Button 3 (Small)
+- fontSize: 13px
+- fontWeight: 600
+- lineHeight: 16px
+- letterSpacing: normal
+
+## Colors
+
+### Text Colors
+- Primary: #050505 or #080809
+- Secondary: #65686c
+- Tertiary: #8a8d91
+- Link/Accent: #0866ff
+- Disabled: #bcc0c4
+- Inverse (on dark): #ffffff
+
+### Background Colors
+- Primary: #ffffff
+- Secondary: #f0f2f5
+- Tertiary: #e4e6eb
+- Accent: #ebf5ff (light blue)
+- Overlay: rgba(0, 0, 0, 0.6)
+
+## Font Family
+Always use: `-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif`
+
+## Important Rules
+1. NEVER use tight letter-spacing (like -0.41px) for body text or headlines at 17px or smaller
+2. letterSpacing should be 'normal' for all Blueprint typography tokens
+3. Always match the exact fontWeight - 400 for regular, 500 for medium, 600 for semibold, 700 for bold
+4. Line heights are specifically designed for readability - do not deviate from these values
+

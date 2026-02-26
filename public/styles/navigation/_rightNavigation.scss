@@ -1,0 +1,21 @@
+.right-navigation {
+  background: var(--surface-background);
+  box-shadow: 0 1px 2px 0 var(--shadow-persistent-ui);
+  box-sizing: border-box;
+  height: calc(100vh - 56px);
+  position: sticky;
+  top: 0;
+
+  right: 0;
+  z-index: 5;
+  overflow: scroll;
+  transition:
+    background var(--duration-xx-short-in) var(--curve-fade-in),
+    box-shadow var(--duration-xx-short-in) var(--curve-fade-in),
+    width var(--duration-short-in) var(--curve-expand-collapse-in);
+
+  &.deemphasis {
+    background: var(--always-transparent);
+    box-shadow: 0 1px 2px 0 var(--always-transparent);
+  }
+}

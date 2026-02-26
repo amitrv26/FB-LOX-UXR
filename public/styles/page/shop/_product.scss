@@ -1,0 +1,272 @@
+.shop--product-wrapper {
+    .TABLET & {
+        display: flex;
+        justify-content: center;
+        padding: 0 32px;
+        margin: 20px 0 0;
+    }
+    .MD & {
+        padding: 0 64px;
+    }
+    .XL & {
+        padding: 0 128px;
+    }
+    
+    .grid { display: grid; }
+
+    .image-viewer {
+        position: relative;
+        .TABLET & {
+            display: flex;
+            flex-direction: column;
+        }
+        .MD & {
+            flex-direction: row;
+        }
+
+        .image-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            
+            .TABLET & {
+                order: 1;
+            }
+            .MD & {
+                order: 2;
+            }
+
+            .image-wrapper {
+                height: 100vw;
+                overflow: hidden;
+                position: relative;
+
+                .TABLET & {
+                    border-radius: 8px;
+                    height: unset;
+                }
+
+                img {
+                    position: relative;
+                    object-fit: cover;
+                    object-position: center;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 2;
+                    .TABLET & {
+                        object-fit: unset;
+                        height: auto;
+                        width: auto;
+                        min-height: 100%;
+                        max-height: 80vh;
+                    }
+                }
+                
+                &:before {
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 75%;
+                    width: 100%;
+                    z-index: 4;
+                    .TABLET & {
+                        display: none;
+                    }
+                }  
+            }
+        }
+        
+        .image-selector {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            z-index: 5;
+            .TABLET & {
+                flex-direction: row;
+                margin: 32px 0 0;
+                position: static;
+                order: 2;
+            }
+            .MD & {
+                flex-direction: column;
+                margin: 0 32px 0 0;
+                order: 1;
+                width: 36px;
+                max-height: 80vh;
+            }
+
+            .thumbnail {
+                background: #fff;
+                border-radius: 4px;
+                cursor: pointer;
+                display: block;
+                overflow: hidden;
+                opacity: 0.5;
+                margin: 0 2px;
+                height: 8px;
+                width: 8px;
+                .TABLET & {
+                    background: var(--border-color);
+                    border-radius: 6px;
+                    margin: 0 4px;
+                    height: 36px;
+                    width: 36px;
+                }
+                .MD & {
+                    margin: 4px 0;
+                }
+
+                img {
+                    display: none;
+                    .TABLET & {
+                        display: block;
+                    }
+                }
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .sidebar {
+        padding: 20px 12px;
+        .TABLET & {
+            padding: 0;
+            margin-left: 16px;
+            max-width: 328px;
+        }
+
+        .row {
+            margin: 0 0 16px;
+
+            h1 {
+                font-size: 24px;
+                line-height: 28px;
+            }
+
+            h2 {
+                font-size: 17px;
+                line-height: 20px;
+            }
+
+            p {
+                color: #050505;
+                font-size: 15px;
+                line-height: 20px;
+                width: 97%;
+                a {
+                    color: #216FDB;
+                }
+            }
+
+            .label {
+                color: #65676B;
+                font-size: 13px;
+                line-height: 16px;
+            }
+
+            .label + h1 {
+                margin-top: 4px;
+            }
+            
+            h2 + .label {
+                margin-top: 2px;
+            }
+
+            h1 + h2 {
+                margin-top: 4px;
+            }
+
+            h2 + p {
+                margin-top: 12px;
+            }
+
+            &.details {
+                margin: 0 0 28px;
+            }
+        
+            &.sizes {
+                .btn-grid {
+                    grid-auto-columns: max-content;
+                    grid-auto-flow: column;
+                    gap: 8px;
+                    margin: 16px 0 0;
+                    button {
+                        height: 40px;
+                        width: 40px;
+                    }
+                }
+            }
+            &.color {
+                .btn-grid {
+                    grid-auto-columns: max-content;
+                    grid-auto-flow: column;
+                    gap: 8px;
+                    padding: 16px 0 2px;
+
+                    button.active {
+                        position: relative;
+
+                        .glyph {
+                            &:before {
+                                border: solid 2px var(--fb-blue);
+                                border-radius: 48px;
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                top: -4px;
+                                left: -4px;
+                                height: 44px;
+                                width: 44px;
+                            }
+                        }
+                    }
+
+                    span:nth-child(1) button {
+                        background: #050505;
+                    }
+                    span:nth-child(2) button {
+                        background: #A5BAA6;
+                    }
+                    span:nth-child(3) button {
+                        background: #F0E4E6;
+                    }
+                }
+            }
+            &.actions {
+                .btn-grid {
+                    grid-template-columns: auto 48px 48px;
+                    grid-auto-columns: max-content;
+                    grid-auto-flow: column;
+                    gap: 8px;
+        
+                    .glyph {
+                        height: 40px;
+                        width: 48px;
+                    }
+                }
+            }
+        }
+
+        .accordion {
+            border-bottom: solid 1px var(--web-wash);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0;
+            height: 44px;
+            .icon {
+                height: auto;
+                width: 24px;
+            }
+        }
+    }
+}

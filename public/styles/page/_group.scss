@@ -1,0 +1,31 @@
+.page--group {
+  display: flex;
+  .left-navigation {
+    left: 0;
+    width: 360px;
+  }
+}
+
+.main--group {
+  padding-left: 360px;
+
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 876px;
+    margin: 20px auto;
+
+    .sidebar-group {
+      width: 42%;
+      > * {
+        margin-bottom: 16px;
+      }
+    }
+
+    .main-group {
+      display: grid;
+      grid-row-gap: 16px;
+      width: 56.5%;
+    }
+  }
+}

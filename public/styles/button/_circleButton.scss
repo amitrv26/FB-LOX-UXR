@@ -1,0 +1,139 @@
+.circle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transform: scale(1);
+  transition: background var(--duration-x-short-in) var(--curve-fade-in),
+    transform var(--duration-short-in) var(--curve-expand-collapse-in);
+
+  &:hover {
+    transition: background var(--duration-x-short-out) var(--curve-fade-out),
+      transform var(--duration-short-out) var(--curve-expand-collapse-out);
+  }
+
+  &:active {
+    transform: scale(0.975);
+  }
+
+  // Style
+  &.primary {
+    background: var(--primary-button-background);
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &.secondary {
+    background: var(--border-ui-emphasis);
+    &:hover {
+      opacity: 0.9;
+    }
+    &.deemph {
+      background: var(--always-white);
+      &:hover {
+        background: var(--background-deemphasized);
+      }
+    }
+
+    &.active {
+      background: var(--accent-deemphasized);
+    }
+  }
+
+  &.secondary-on-media {
+    background: var(--secondary-button-background-on-media);
+    &:hover {
+      background: rgba(0, 0, 0, 0.75);
+    }
+    &:active {
+      background: rgba(0, 0, 0, 0.85);
+    }
+  }
+
+  &.red {
+    background: var(--negative);
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  // Size
+  &.xlarge {
+    border-radius: 24px;
+    padding: var(--spacing-large);
+    height: 48px;
+    width: 48px;
+
+    .glyph {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &.large {
+    border-radius: 20px;
+    padding: 11px;
+    height: var(--button-large-height);
+    width: var(--button-large-height);
+
+    .glyph {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  &.medium {
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--button-medium-height);
+    width: var(--button-medium-height);
+
+    .glyph {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  &.smedium {
+    border-radius: var(--spacing-x-large);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--button-small);
+    width: var(--button-small);
+
+    .glyph {
+      height: var(--spacing-x-large);
+      width: var(--spacing-x-large);
+    }
+  }
+
+  &.small {
+    border-radius: var(--spacing-large);
+    padding: var(--button-icon-label-spacing);
+    height: 24px;
+    width: 24px;
+
+    .glyph {
+      height: var(--spacing-large);
+      width: var(--spacing-large);
+    }
+  }
+
+  .glyph {
+    img {
+      object-fit: contain;
+      object-position: center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

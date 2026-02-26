@@ -1,0 +1,120 @@
+.navigation-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  &:before {
+    background: var(--background-deemphasized);
+    border-radius: var(--card-radius);
+    content: '';
+    display: block;
+    transform: scaleX(0.82) scaleY(0.7);
+    transform-origin: center;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: var(--spacing-small);
+    top: var(--spacing-small);
+    transition:
+      background var(--duration-x-short-in) var(--curve-fade-in),
+      opacity var(--duration-x-short-in) var(--curve-fade-in),
+      transform var(--duration-x-short-in) var(--curve-expand-collapse-in);
+  }
+
+  &:after {
+    background: var(--accent);
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    content: '';
+    display: block;
+    transform: translateY(3px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    transition: transform var(--duration-short-in) var(--curve-move-in);
+  }
+
+  span {
+    display: none;
+  }
+
+  &:hover {
+    &:before {
+      transform: scaleX(1);
+      opacity: 1;
+      transition:
+        opacity var(--duration-x-short-out) var(--curve-fade-out),
+        transform var(--duration-x-short-out) var(--curve-expand-collapse-out);
+    }
+  }
+
+  &:active {
+    .icon {
+      transform: scale(0.95);
+    }
+  }
+
+  &.active {
+    &:before {
+      background: var(--accent-deemphasized);
+      transform: scaleX(1);
+      opacity: 1;
+    }
+    &:after {
+      transform: translateY(0);
+      transition: transform var(--duration-short-out) var(--curve-move-out);
+    }
+  }
+
+  .icon {
+    position: relative;
+    object-fit: contain;
+    height: auto;
+    width: 26px;
+    z-index: 4;
+    transition: transform var(--duration-xx-short-in) var(--curve-passive-change-in);
+  }
+
+  .profile {
+    background: url('/images/dancircle.png');
+    background-size: cover;
+    border-radius: var(--spacing-x-large);
+    position: relative;
+    height: var(--button-small);
+    width: var(--button-small);
+    z-index: 4;
+  }
+
+  .navigation-badge {
+    background: var(--notification-badge);
+    border: solid 1px var(--always-white);
+    border-radius: 11px;
+    position: absolute;
+    top: 0;
+    left: 54%;
+    top: 5px;
+    height: 22px;
+    min-width: 22px;
+    z-index: 8;
+
+    span {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      font-weight: var(--meta-1-weight);
+      font-size: var(--body-4-font-size);
+      color: var(--always-white);
+      text-align: center;
+      line-height: 19px;
+      padding: 0 var(--button-icon-label-spacing);
+      width: 100%;
+    }
+  }
+}

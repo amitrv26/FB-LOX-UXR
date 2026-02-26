@@ -1,0 +1,725 @@
+// Desktop Google Search Results Page
+// Matches Google's actual desktop SERP layout
+
+@import url('https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+
+.gserp {
+  min-height: 100vh;
+  background: #fff;
+  font-family: 'Product Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+// =========================================
+// Header
+// =========================================
+.gserp-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px 6px;
+  gap: 24px;
+
+  &__left {
+    flex-shrink: 0;
+    padding-top: 4px;
+  }
+
+  &__center {
+    flex: 1;
+    max-width: 692px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+  }
+
+  &__apps {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(60, 64, 67, 0.08);
+    }
+  }
+
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.google-logo {
+  height: 30px;
+  width: auto;
+}
+
+// =========================================
+// Search Box
+// =========================================
+.gserp-searchbox {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  padding: 5px 8px 5px 16px;
+  height: 44px;
+  transition: box-shadow 0.2s;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: rgba(223, 225, 229, 0);
+  }
+
+  &__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: 'Product Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    color: #202124;
+    background: transparent;
+  }
+
+  &__clear,
+  &__mic,
+  &__lens,
+  &__search {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 50%;
+
+    &:hover {
+      background: rgba(60, 64, 67, 0.08);
+    }
+  }
+
+  &__divider {
+    width: 1px;
+    height: 24px;
+    background: #dadce0;
+    margin: 0 8px;
+  }
+}
+
+// =========================================
+// Topic Selector (Demo Only)
+// =========================================
+.gserp-topic-selector {
+  position: relative;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: #f1f3f4;
+    border: none;
+    border-radius: 16px;
+    font-family: 'Product Sans', sans-serif;
+    font-size: 13px;
+    color: #3c4043;
+    cursor: pointer;
+
+    &:hover {
+      background: #e8eaed;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    z-index: 1000;
+    overflow: hidden;
+  }
+
+  &__option {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    text-align: left;
+    background: none;
+    border: none;
+    font-family: 'Product Sans', sans-serif;
+    font-size: 14px;
+    color: #202124;
+    cursor: pointer;
+
+    &:hover {
+      background: #f1f3f4;
+    }
+
+    &.active {
+      background: #e8f0fe;
+      color: #1a73e8;
+    }
+  }
+}
+
+// =========================================
+// Tabs
+// =========================================
+.gserp-tabs {
+  border-bottom: 1px solid #ebebeb;
+  padding-left: 152px;
+  background: #fff;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 16px;
+    border: none;
+    background: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -1px;
+    font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    color: #5f6368;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+      color: #202124;
+    }
+
+    &--active {
+      color: #1a73e8;
+      border-bottom-color: #1a73e8;
+      font-weight: 500;
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+}
+
+// =========================================
+// Filter Pills
+// =========================================
+.gserp-filters {
+  padding: 8px 24px 8px 152px;
+
+  &__inner {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  &__pill {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 16px;
+    background: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 20px;
+    font-family: 'Product Sans', sans-serif;
+    font-size: 14px;
+    color: #3c4043;
+    cursor: pointer;
+
+    &:hover {
+      background: #f8f9fa;
+      border-color: #c4c7c9;
+    }
+  }
+}
+
+// =========================================
+// Location
+// =========================================
+.gserp-location {
+  display: flex;
+  align-items: center;
+  padding: 8px 24px 8px 152px;
+  font-family: 'Product Sans', sans-serif;
+  font-size: 14px;
+  color: #70757a;
+
+  strong {
+    color: #202124;
+  }
+
+  &__change {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: #1a73e8;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 4px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__more {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: 4px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: rgba(60, 64, 67, 0.08);
+    }
+  }
+}
+
+// =========================================
+// Main Content
+// =========================================
+.gserp-main {
+  display: flex;
+  max-width: 1000px;
+  padding: 16px 24px 24px 152px;
+}
+
+.gserp-results {
+  flex: 1;
+  max-width: 750px;
+}
+
+.gserp-divider {
+  border: none;
+  border-top: 1px solid #ebebeb;
+  margin: 24px 0;
+  position: relative;
+  z-index: 0;
+}
+
+// =========================================
+// AI Overview
+// =========================================
+.gserp-ai-overview {
+  margin-bottom: 24px;
+  margin-top: 0;
+  overflow: hidden; // Contain floated/positioned content
+  position: relative;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-family: 'Product Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #202124;
+    flex: 1;
+  }
+
+  &__more {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+
+    &:hover {
+      background: rgba(60, 64, 67, 0.08);
+    }
+  }
+
+  &__body {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start; // Prevent stretching
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__content p {
+    font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #202124;
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #202124;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #d3e3fd;
+    padding: 2px 4px;
+    border-radius: 4px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  &__subtitle {
+    font-family: 'Google Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #202124;
+    margin-bottom: 6px;
+    margin-top: 8px;
+  }
+
+  &__list {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 12px;
+
+    li {
+      font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #202124;
+    }
+  }
+
+  &__gradient {
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    margin-top: -50px;
+    margin-bottom: 0;
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__showmore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 24px;
+    margin-bottom: 12px;
+    margin-top: -4px;
+    background: #fff;
+    border: 1px solid #a3c9ff;
+    border-radius: 24px;
+    font-family: 'Google Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a73e8;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      background: #f8f9fa;
+      border-color: #7aafff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__divider {
+    width: 100%;
+    height: 1px;
+    background: #a3c9ff;
+    margin-top: 8px;
+  }
+
+  &__sidebar {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-self: flex-start; // Prevent sidebar from stretching
+  }
+
+  &__image {
+    width: 180px;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__attribution {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__attribution-site {
+    font-family: 'Product Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #202124;
+  }
+
+  &__attribution-group {
+    font-family: 'Product Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    color: #202124;
+  }
+
+  &__attribution-meta {
+    font-family: 'Product Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    color: #70757a;
+  }
+}
+
+// =========================================
+// Search Result
+// =========================================
+.gserp-result {
+  margin-bottom: 32px;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:hover .gserp-result__title {
+    text-decoration: underline;
+  }
+
+  &__source {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  &__favicon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__source-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__site {
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #202124;
+    line-height: 1.3;
+  }
+
+  &__breadcrumb {
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #4d5156;
+  }
+
+  &__meta {
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #70757a;
+    margin-left: auto;
+    padding-right: 8px;
+  }
+
+  &__more {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    &:hover {
+      background: rgba(60, 64, 67, 0.08);
+    }
+  }
+
+  &:hover &__more {
+    opacity: 1;
+  }
+
+  &__title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #1a0dab;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+
+  &__description {
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.58;
+    color: #4d5156;
+    margin-bottom: 4px;
+  }
+
+  &__readmore {
+    color: #1a0dab;
+    text-decoration: none;
+    margin-left: 4px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__related {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+
+    a {
+      font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+      font-size: 14px;
+      color: #1a0dab;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__related-meta {
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #70757a;
+  }
+}
+
+// =========================================
+// Sidebar
+// =========================================
+.gserp-sidebar {
+  width: 366px;
+  flex-shrink: 0;
+
+  &__card {
+    background: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+
+  &__card-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+
+  &__card h4 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1a0dab;
+    padding: 12px 16px 4px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__card p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #4d5156;
+    padding: 0 16px 12px;
+  }
+
+  &__card-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-top: 1px solid #ebebeb;
+
+    span {
+      font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+      font-size: 12px;
+      color: #70757a;
+      flex: 1;
+    }
+  }
+}
+
+// =========================================
+// Responsive
+// =========================================
+@media (max-width: 1100px) {
+  .gserp-sidebar {
+    display: none;
+  }
+
+  .gserp-main,
+  .gserp-tabs,
+  .gserp-filters,
+  .gserp-location {
+    padding-left: 24px;
+  }
+}

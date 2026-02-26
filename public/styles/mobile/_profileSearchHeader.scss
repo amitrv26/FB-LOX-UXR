@@ -1,0 +1,81 @@
+.profile-search-header {
+  padding: 12px;
+  padding-top: 60px; // Account for fixed header (48px) + some spacing
+  background: #fff;
+  
+  &__bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    border: 1px solid #dddfe2;
+    border-radius: 8px;
+    padding: 10px 12px;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  &__input {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    cursor: text;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: normal;
+    color: #1c1e21;
+    overflow: hidden;
+    min-width: 0;
+    
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  &__input .profile-search__text {
+    color: #65686c;
+  }
+}
+
+.profile-search__text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  
+  &--exiting {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  
+  &--entering {
+    animation: slideUp 0.3s ease forwards;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

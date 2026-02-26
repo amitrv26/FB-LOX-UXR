@@ -1,0 +1,9 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install --legacy-peer-deps",
+  "env": {
+    "VERCEL_SKEW_PROTECTION_ENABLED": "0"
+  }
+}
+

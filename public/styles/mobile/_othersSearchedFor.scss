@@ -1,0 +1,87 @@
+.others-searched-for {
+  padding: 6px 0;
+  margin-bottom: 0;
+  background: var(--surface-background, #ffffff);
+  border-bottom: 1px solid var(--divider-color, #e4e6eb);
+
+  &--no-divider {
+    border-bottom: none;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    // Headline 3 Emphasized - Blueprint tokens
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: normal;
+    color: var(--primary-text, #080809);
+    margin: 0;
+    padding: 8px 16px 8px;
+  }
+
+  &__scroll-container {
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 16px 12px 12px;
+  }
+
+  &__row {
+    display: flex;
+    gap: 8px;
+    width: max-content;
+  }
+
+  &__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;  // Consistent X padding on both sides
+    background: var(--surface-background, #ffffff);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 100px;  // Pill shape
+    cursor: pointer;
+    text-align: left;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s ease;
+    flex-shrink: 0;
+    white-space: nowrap;
+    width: auto;  // Wrap around content
+    max-width: none;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    &:active {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+  }
+
+  &__chip-label {
+    // Body 3 - Blueprint tokens
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: normal;
+    color: var(--primary-text, #080809);
+  }
+
+}
+

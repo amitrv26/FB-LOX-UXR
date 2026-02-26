@@ -1,0 +1,288 @@
+.fds-comment {
+  display: block;
+  position: relative;
+
+  &--pressable {
+    cursor: pointer;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &--highlighted {
+    background-color: var(--text-highlight);
+  }
+}
+
+.fds-comment__container {
+  display: flex;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-medium) 0;
+}
+
+.fds-comment__profile {
+  flex-shrink: 0;
+}
+
+.fds-comment__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.fds-comment__bubble {
+  background-color: var(--comment-background);
+  border-radius: 18px;
+  padding: var(--spacing-medium) var(--spacing-large);
+  display: inline-block;
+  max-width: fit-content;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  .fds-comment--bg-transparent & {
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+.fds-comment__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-x-small);
+  margin-bottom: var(--spacing-x-small);
+}
+
+.fds-comment__author-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+
+.fds-comment__author-name {
+  font-family: var(--font-family-text);
+  font-size: var(--body-4-font-size);
+  font-weight: var(--meta-1-weight);
+  line-height: var(--body-4-line-height);
+  letter-spacing: var(--body-4-letter-spacing);
+  color: var(--primary-text);
+}
+
+.fds-comment__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fds-comment__author-subtext {
+  font-family: var(--font-family-text);
+  font-size: 11px;
+  font-weight: var(--body-4-weight);
+  line-height: 12px;
+  color: var(--secondary-text);
+}
+
+.fds-comment__text {
+  font-family: var(--font-family-text);
+  font-size: var(--body-3-font-size);
+  font-weight: var(--body-3-weight);
+  line-height: var(--body-3-line-height);
+  letter-spacing: var(--body-3-letter-spacing);
+  color: var(--primary-text);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.fds-comment__see-more {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: var(--spacing-small);
+  font-family: var(--font-family-text);
+  font-size: var(--body-3-font-size);
+  font-weight: var(--body-3-link-weight);
+  line-height: var(--body-3-line-height);
+  letter-spacing: var(--body-3-letter-spacing);
+  color: var(--secondary-text);
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.fds-comment__reactions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  margin-top: var(--spacing-small);
+  padding: var(--spacing-x-small) 6px;
+  background-color: var(--surface-background);
+  border-radius: 10px;
+  border: 1px solid var(--border-ui-emphasis);
+  width: fit-content;
+}
+
+.fds-comment__reaction-icons {
+  display: flex;
+  align-items: center;
+  gap: -2px;
+}
+
+.fds-comment__reaction-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--profile-photo-actor-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--surface-background);
+  margin-left: -4px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &--like {
+    background-color: #0866ff;
+    color: var(--always-white);
+  }
+
+  &--love {
+    background-color: #f25268;
+    color: var(--always-white);
+  }
+
+  &--haha {
+    background-color: #f7b125;
+    color: var(--always-white);
+  }
+}
+
+.fds-comment__reaction-count {
+  font-family: var(--font-family-text);
+  font-size: 11px;
+  font-weight: var(--body-4-weight);
+  line-height: 12px;
+  color: var(--secondary-text);
+}
+
+.fds-comment__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-medium);
+  padding-left: var(--spacing-large);
+}
+
+.fds-comment__timestamp {
+  font-family: var(--font-family-text);
+  font-size: var(--meta-4-font-size);
+  font-weight: var(--meta-4-weight);
+  line-height: var(--meta-4-line-height);
+  color: var(--secondary-text);
+}
+
+.fds-comment__edited {
+  font-weight: var(--body-4-weight);
+}
+
+.fds-comment__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+
+.fds-comment__action-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-family-text);
+  font-size: var(--meta-4-font-size);
+  font-weight: var(--meta-1-weight);
+  line-height: var(--meta-4-line-height);
+  color: var(--secondary-text);
+  cursor: pointer;
+  transition: color var(--duration-xx-short-in) ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &--active {
+    color: var(--decorative-icon-blue);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.fds-comment__view-replies {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  background: none;
+  border: none;
+  padding: var(--spacing-small) 0 var(--spacing-small) var(--spacing-large);
+  font-family: var(--font-family-text);
+  font-size: var(--body-4-font-size);
+  font-weight: var(--meta-1-weight);
+  line-height: var(--body-4-line-height);
+  letter-spacing: var(--body-4-letter-spacing);
+  color: var(--secondary-text);
+  cursor: pointer;
+  transition: color var(--duration-xx-short-in) ease;
+
+  &:hover {
+    color: var(--primary-text);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.fds-comment__replies {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--spacing-medium);
+  padding-left: 0;
+
+  .fds-comment {
+    padding: var(--spacing-small) 0;
+  }
+}
+
+// Compact layout for nested replies
+.fds-comment--layout-compact {
+  .fds-comment__container {
+    padding: var(--spacing-small) 0;
+  }
+
+  .fds-comment__bubble {
+    padding: 6px 10px;
+  }
+
+  .fds-comment__author-name {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .fds-comment__text {
+    font-size: var(--body-4-font-size);
+    line-height: var(--body-4-line-height);
+    letter-spacing: var(--body-4-letter-spacing);
+  }
+
+  .fds-comment__timestamp,
+  .fds-comment__action-button {
+    font-size: 11px;
+    line-height: 14px;
+  }
+}

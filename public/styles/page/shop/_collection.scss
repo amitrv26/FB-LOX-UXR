@@ -1,0 +1,234 @@
+.shop--collection {
+    position: relative;
+    height: calc(var(--vw) * 100);
+    width: calc(var(--vw) * 100);
+
+    &.format--square {
+        .TABLET & {
+            .image {
+                padding-top: 100%;
+            }
+        }
+        .SM & {
+            max-width: 150vh;
+        }
+    }
+
+    &.format--portrait {
+        .TABLET & {
+            .image {
+                padding-top: 133.34%;
+            }
+        }
+        .SM & {
+            max-width: 125vh;
+        }
+        @media only screen and (min-width: 1940px) and (min-height: 1400px) {
+            max-width: 2004px;
+        }
+    }
+
+    &.format--landscape {
+        .TABLET & {
+            .image {
+                padding-top: 75%;
+            }
+        }
+        .SM & {
+            max-width: 175vh;
+        }
+        @media only screen and (min-width: 1940px) and (min-height: 1100px) {
+            max-width: 2004px;
+        }
+    }
+
+    &.format--wide {
+        .TABLET & {
+            height: calc(var(--vw) * 40);
+
+            .content {
+                padding: 32px;
+                margin: 0 auto;
+                max-width: 2068px;
+            }
+        }
+        .MD & {
+            .content {
+                padding: 64px;
+            }
+        }
+    }
+
+    &.format--square,
+    &.format--portrait,
+    &.format--landscape {
+        .TABLET & {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 64px;
+            margin: 0 auto;
+            padding: 32px;
+            height: auto;
+            width: auto;
+    
+            &.alt {
+                direction: rtl;
+            }
+
+            .image {
+                border-radius: 8px;
+                border: solid 0.5px rgba(0, 0, 0, 0.1);
+                position: relative;
+                overflow: hidden;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                }
+    
+                &:after {
+                    display: none;
+                }
+            }
+    
+            .content {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+    
+                h2 {
+                    color: #050505;
+                }
+                p {
+                    color: #65676B;
+                }
+                button {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        // .SM & {
+            // max-width: 640px;
+        // }
+        // @media only screen and (min-width: 960px) and (min-height: 500px) {
+        //     max-width: 768px;
+        // }
+        // @media only screen and (min-width: 960px) and (min-height: 600px) {
+        //     max-width: 960px;
+        // }
+        // @media only screen and (min-width: 960px) and (min-height: 700px) {
+        //     max-width: 1080px;
+        // }
+        // @media only screen and (min-width: 960px) and (min-height: 800px) {
+        //     max-width: 1280px;
+        // }
+        // @media only screen and (min-width: 960px) and (min-height: 900px) {
+        //     max-width: 1560px;
+        // }
+        // @media only screen and (min-width: 960px) and (min-height: 1000px) {
+        //     max-width: 1680px;
+        // }
+        // @media only screen and (min-width: 960px) and (min-height: 1100px) {
+        //     max-width: none;
+        // }
+    }
+    
+
+    .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            opacity: 0.5;
+            background-image: 
+                linear-gradient(
+                    180deg, 
+                    rgba(0,0,0,0.00) 0%, 
+                    rgba(0,0,0,0.00) 8%, 
+                    rgba(0,0,0,0.02) 16%, 
+                    rgba(0,0,0,0.05) 23%, 
+                    rgba(0,0,0,0.08) 30%, 
+                    rgba(0,0,0,0.12) 37%, 
+                    rgba(0,0,0,0.16) 43%, 
+                    rgba(0,0,0,0.20) 49%, 
+                    rgba(0,0,0,0.24) 55%, 
+                    rgba(0,0,0,0.28) 61%, 
+                    rgba(0,0,0,0.32) 68%, 
+                    rgba(0,0,0,0.35) 74%, 
+                    rgba(0,0,0,0.38) 82%, 
+                    rgba(0,0,0,0.40) 89%, 
+                    rgba(0,0,0,0.40) 98%
+                );
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 2;
+        }
+    }
+
+    .content {
+        color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 24px 16px;
+        position: relative;
+        height: 100%;
+        z-index: 4;
+
+
+        h2 {
+            font-size: 32px;
+            line-height: 34px;
+            font-weight: 800;
+            margin: 0 0 4px;
+            .TABLET & {
+                font-size: 36px;
+                line-height: 36px;
+                margin: 0 0 10px;
+                max-width: 360px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 600;
+            margin: 0 0 12px;
+            width: 90%;
+            .TABLET & {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                margin: 0 0 20px;
+                max-width: 380px;
+            }
+        }
+
+        button {
+            margin-right: auto;
+        }
+
+        h2 + button {
+            margin-top: 14px;
+        }
+    }
+}

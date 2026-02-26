@@ -1,0 +1,207 @@
+@import 'reset';
+@import 'fds-tokens';
+@import 'vars';
+@import 'layout';
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  // Allow natural document scrolling for Safari toolbar minimization
+  min-height: 100vh;
+  min-height: 100dvh; // Dynamic viewport height for mobile browsers
+  min-height: -webkit-fill-available; // iOS Safari fallback
+  overflow-x: hidden; // Prevent horizontal scroll only
+  // Enable smooth momentum scrolling on iOS
+  -webkit-overflow-scrolling: touch;
+}
+
+/*
+ * Navigation */
+@import 'navigation/navigationBar';
+@import 'navigation/navigationTab';
+@import 'navigation/leftNavigation';
+@import 'navigation/rightNavigation';
+@import 'navigation/pivotLink';
+
+/*
+ * Search */
+@import 'search/search';
+
+/*
+ * Buttons */
+@import 'button/button';
+@import 'button/buttonGroup';
+@import 'button/circleButton';
+@import 'button/profileButton';
+
+/*
+ * FDS Components */
+@import 'components/fds-profile-photo';
+@import 'components/fds-comment';
+@import 'components/fds-composer';
+
+/*
+ * Lists */
+@import 'list/accessoryListCell';
+@import 'list/dropdown';
+
+/*
+ * Dialogs */
+@import 'dialog/fdsDialog';
+@import 'dialog/fdsSkittleIcon';
+@import 'dialog/commentsDialog';
+
+/*
+ * Modules */
+@import 'modules/notificationWrapper';
+@import 'modules/pushView';
+@import 'modules/story';
+@import 'modules/feedFilter';
+
+/*
+ * Content */
+@import 'content/coverPhoto';
+@import 'content/default';
+@import 'content/unitHeader';
+@import 'content/stickyHeader';
+
+/*
+ * Entity Headers */
+@import 'entityHeader/group';
+@import 'entityHeader/groups';
+@import 'entityHeader/profile';
+@import 'entityHeader/marketplace';
+
+/*
+ * Placeholder Content */
+@import 'placeholder/notification';
+@import 'placeholder/notificationHeader';
+@import 'placeholder/shared';
+
+/*
+ * Cards */
+@import 'card/card';
+@import 'card/blingstring';
+@import 'card/composer';
+@import 'card/reactions';
+
+/*
+ * Pages */
+@import 'page/group';
+@import 'page/groups';
+@import 'page/profile';
+@import 'page/marketplace';
+@import 'page/newsfeed';
+@import 'page/watch';
+@import 'page/shops';
+
+/*
+ * Mobile */
+@import 'mobile/mobileHeader';
+@import 'mobile/mobilePost';
+@import 'mobile/mobileComments';
+@import 'mobile/relatedAnswers';
+@import 'mobile/marketplaceUnit';
+@import 'mobile/reelsUnit';
+@import 'mobile/relatedPostsUnit';
+@import 'mobile/othersSearchedFor';
+@import 'mobile/googleSearch';
+@import 'mobile/aggregation';
+@import 'mobile/profileSearchHeader';
+
+/*
+ * Safari Liquid Glass - Transparent backgrounds for URL bar
+ * Using class-based approach (more reliable than :has() which has timing issues)
+ * The .mobile-transparent-mode class is added to html/body via JavaScript in app/m/layout.js
+ */
+
+// Primary class-based transparent mode (most reliable)
+html.mobile-transparent-mode {
+  background: transparent !important;
+  background-color: transparent !important;
+  overflow-y: auto !important;
+  height: auto !important;
+}
+
+body.mobile-transparent-mode {
+  background: transparent !important;
+  background-color: transparent !important;
+  overflow-y: auto !important;
+  height: auto !important;
+  position: relative !important;
+}
+
+body.mobile-transparent-mode #__next {
+  background: transparent !important;
+  background-color: transparent !important;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+body.mobile-transparent-mode .layout-container {
+  background: transparent !important;
+  background-color: transparent !important;
+  position: relative !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+body.mobile-transparent-mode .layout-container .frame,
+body.mobile-transparent-mode .layout-container .frame--logged-out {
+  background: transparent !important;
+  background-color: transparent !important;
+  position: relative !important;
+  top: 0 !important;
+  bottom: auto !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+body.mobile-transparent-mode .layout-container [class^="page--"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  overflow: visible !important;
+  height: auto !important;
+}
+
+// Fallback :has() rules (for browsers that support it, as backup)
+html:has(.mobile-layout),
+html:has(.floating-tab-bar-b) {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+body:has(.mobile-layout),
+body:has(.floating-tab-bar-b) {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+#__next:has(.mobile-layout),
+#__next:has(.floating-tab-bar-b) {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.layout-container:has(.mobile-layout),
+.layout-container:has(.floating-tab-bar-b) {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.layout-container:has(.mobile-layout) .frame,
+.layout-container:has(.mobile-layout) .frame--logged-out,
+.layout-container:has(.floating-tab-bar-b) .frame,
+.layout-container:has(.floating-tab-bar-b) .frame--logged-out {
+  background: transparent !important;
+  background-color: transparent !important;
+}

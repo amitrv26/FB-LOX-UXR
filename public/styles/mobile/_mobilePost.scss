@@ -1,0 +1,379 @@
+// Mobile Post Page Container
+.mobile-post-page {
+  min-height: 100vh;
+  min-height: 100dvh; // Dynamic viewport height includes safe area
+  overflow-x: hidden; // Prevent horizontal scrolling
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+  max-width: 100vw; // Constrain to viewport width
+
+  &.has-floating-tab-bar {
+    // Padding for floating tab bar height
+    padding-bottom: 70px;
+  }
+}
+
+// Override layout container for mobile post page to allow scrolling
+.layout-container:has(.mobile-post-page) {
+  position: relative !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  background: transparent !important; // No background for Safari URL bar
+}
+
+.layout-container:has(.mobile-post-page) .frame {
+  position: relative !important;
+  top: 0 !important;
+  bottom: auto !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  background: transparent !important;
+}
+
+// Also target the page wrapper
+.page--groups:has(.mobile-post-page) {
+  overflow: visible !important;
+  height: auto !important;
+  background: transparent !important;
+}
+
+// Target body when mobile post page is present
+body:has(.mobile-post-page) {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  height: auto !important;
+  position: relative !important;
+}
+
+html:has(.mobile-post-page) {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  height: auto !important;
+}
+
+// Mobile Group Post
+.mobile-post {
+  background: var(--background-color);
+  margin-bottom: 4px; // Spacing between units
+  overflow-x: hidden; // Prevent horizontal scrolling
+  max-width: 100%; // Constrain to parent width
+
+  // Post Header - FDS Post Header style from Figma
+  &__post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    padding-bottom: 10px; // 10px spacing before LLM title
+    gap: 12px;
+  }
+
+  &__post-header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+
+    &--no-truncate {
+      min-width: auto;
+      overflow: visible;
+    }
+  }
+
+  // Group-style avatar: squircle with circle overlay (40dp total)
+  &__post-header-avatar-group {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  // Squircle - Group photo (background)
+  &__avatar-squircle {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px; // Squircle shape
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    // 1px media inner border stroke
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      pointer-events: none;
+    }
+  }
+
+  // Circle - Author photo (overlaid at bottom-right, more overlap)
+  &__avatar-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    border: 1px solid #fff;
+    box-sizing: content-box;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    // 1px media inner border stroke
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      pointer-events: none;
+    }
+  }
+
+  &__post-header-content {
+    flex: 1;
+    min-width: 0;
+
+    &--no-truncate {
+      min-width: auto;
+      overflow: visible;
+    }
+  }
+
+  // Entity name - Body 3 Link typography (15px, semibold)
+  &__post-header-entity {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: var(--text-dark-color, #080809);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &--no-truncate {
+      white-space: normal !important;
+      overflow: visible !important;
+      text-overflow: unset !important;
+      word-wrap: break-word;
+    }
+  }
+
+  // Meta - Meta 4 typography (12px, regular)
+  &__post-header-meta {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: var(--text-medium-color, #65686c);
+    margin: 0;
+    margin-top: 2px; // Spacing between entity name and metadata
+    display: flex;
+    align-items: center;
+    gap: 0;
+
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: var(--text-medium-color, #65686c);
+    }
+  }
+
+  // Author name - Meta 4 Link typography (12px, semibold)
+  &__post-header-author {
+    font-weight: 600;
+  }
+
+  &__post-header-separator {
+    margin: 0 4px;
+  }
+
+  &__join-btn {
+    background: transparent;
+    border: none;
+    color: #0866FF;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 12px;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Post Title - Headline 3 Emphasized typography
+  &__title {
+    padding: 0 12px;
+    margin-bottom: 4px; // 4px spacing before body/AI badge
+
+    h1 {
+      font-size: 17px;
+      font-weight: 700; // Emphasized
+      line-height: 22px;
+      letter-spacing: -0.24px;
+      color: var(--text-dark-color, #080809);
+      margin: 0;
+    }
+  }
+
+  // AI Badge - Meta 3 typography
+  &__ai-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 12px;
+    margin-top: 2px; // Reduced by 2px
+    margin-bottom: 8px; // 8px spacing before post body
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: var(--text-medium-color, #65686c);
+  }
+
+  &__ai-icon {
+    width: 12px;
+    height: 12px;
+    fill: var(--text-medium-color, #65686c);
+    flex-shrink: 0;
+  }
+
+  // Post Body - Body 3 typography - matches marketplace exactly
+  &__body {
+    padding: 0 12px 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    p {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0;
+      color: #080809;
+      margin: 0 0 12px;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // See more - Body 3 Link typography (inline with text)
+  &__see-more {
+    font-size: 15px;
+    font-weight: 600; // Body 3 Link weight
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: var(--text-medium-color, #65686c);
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // UFI Buttons - actions on left, reactions on right
+  &__ufi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+    padding: 0 8px;
+    background: var(--background-color, #ffffff);
+  }
+
+  &__ufi-left {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-left: -4px;
+  }
+
+  &__ufi-action {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; // Remove tap highlight on mobile
+    outline: none;
+    user-select: none;
+    -webkit-user-select: none;
+
+    // Body 4 Link typography with secondary text color
+    span {
+      font-size: var(--body-4-link-font-size, 13px);
+      font-weight: var(--body-4-link-weight, 600);
+      line-height: var(--body-4-link-line-height, 16px);
+      letter-spacing: var(--body-4-link-letter-spacing, -0.08px);
+      color: var(--secondary-text, #65676b);
+    }
+
+    &:hover {
+      background: var(--web-wash, #f0f2f5);
+      border-radius: 4px;
+    }
+
+    &:focus {
+      outline: none;
+      background: transparent;
+    }
+
+    &:active {
+      background: transparent;
+    }
+  }
+
+  &__ufi-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-medium-color, #65686c);
+  }
+
+  &__ufi-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 8px;
+    margin-right: -4px;
+  }
+
+  &__ufi-reactions {
+    display: flex;
+    align-items: center;
+    gap: 0; // No gap, icons sit directly next to each other
+
+    img {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+    }
+  }
+}
+

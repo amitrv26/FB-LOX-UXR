@@ -1,0 +1,121 @@
+// Base layout container - uses --wash background for desktop
+.layout-container {
+  background: var(--wash);
+  position: fixed;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+  .frame {
+    overflow: scroll;
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    width: calc(var(--vw) * 100);
+    z-index: 1;
+  }
+
+  .frame--logged-out {
+    background: transparent;
+  }
+}
+
+// Mobile transparent mode - class added by JavaScript for Safari liquid glass
+// This is the most reliable approach (vs :has() which has timing issues)
+html.mobile-transparent-mode,
+body.mobile-transparent-mode {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+body.mobile-transparent-mode .layout-container {
+  background: transparent !important;
+  background-color: transparent !important;
+  position: relative !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+body.mobile-transparent-mode .layout-container .frame,
+body.mobile-transparent-mode .layout-container .frame--logged-out {
+  background: transparent !important;
+  background-color: transparent !important;
+  position: relative !important;
+  top: 0 !important;
+  bottom: auto !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+body.mobile-transparent-mode .layout-container [class^="page--"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  overflow: visible !important;
+  height: auto !important;
+}
+
+// Feed video page - enable native scrolling for Safari liquid glass effect
+.layout-container:has(.feed-video-page) {
+  background: transparent !important;
+  position: relative !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.layout-container:has(.feed-video-page) .frame,
+.layout-container:has(.feed-video-page) .frame--logged-out {
+  background: transparent !important;
+  position: relative !important;
+  top: 0 !important;
+  bottom: auto !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.layout-container:has(.feed-video-page) [class^="page--"] {
+  background: transparent !important;
+  overflow: visible !important;
+  height: auto !important;
+}
+
+// Mobile layout - enable native scrolling for Safari liquid glass effect
+.layout-container:has(.mobile-layout) {
+  background: transparent !important;
+  position: relative !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.layout-container:has(.mobile-layout) .frame,
+.layout-container:has(.mobile-layout) .frame--logged-out {
+  background: transparent !important;
+  position: relative !important;
+  top: 0 !important;
+  bottom: auto !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.layout-container:has(.mobile-layout) [class^="page--"] {
+  background: transparent !important;
+  overflow: visible !important;
+  height: auto !important;
+}
+
+.perspective {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  perspective-origin: top;
+}

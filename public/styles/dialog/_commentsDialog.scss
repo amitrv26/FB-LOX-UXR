@@ -1,0 +1,39 @@
+.comments-dialog-content {
+  .card {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid var(--divider-color, #e4e6eb);
+  }
+
+  .card-header,
+  .card-content,
+  .card--bling-string {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .card--reactions {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    .reaction-container {
+      margin-left: 0;
+    }
+
+    .align-right {
+      padding-right: 0;
+    }
+  }
+
+  .gallery-wrapper {
+    margin: 0;
+  }
+
+  .comments-list {
+    background-color: var(--background-color, #ffffff);
+  }
+}
+

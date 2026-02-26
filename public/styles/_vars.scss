@@ -1,0 +1,74 @@
+:root {
+  --active-blue: #E6F1FF;
+  --background-color: #ffffff;
+  --background-alt-color: #F2F3F5;
+  --wash: #f5f6f7;
+  --web-wash: #F0F2F5;
+  --text-dark-color: #1C1E21;
+  --text-sec-button: #444950;
+  --text-medium-color: #606770;
+  --text-light-color: #8A8D91;
+  --accent-color: #3578E5;
+  --border-color: #dddddd;
+  --overlay-background-color: #2164D1;
+  --overlay-text-color: #ffffff;
+  --overlay-accent-color: #2A2F36;
+  --fb-blue: #006DE3;
+  --error-color: #D64541;
+  --color-white: #ffffff;
+  --color-btn-primary-hover: #1569D6;
+  --color-btn-secondary-hover: #D8DCE3;
+  --gray-90: #E4E5EC;
+  --secondary-button-background: #E4E6Eb;
+  --comment-background: #f0f2f5;
+  --fds-blue-95: #E7F3FF;
+
+  // On Media colors (for use on dark backgrounds/media)
+  --color-btn-secondary-on-media-background: rgba(0, 0, 0, 0.6);
+  --color-btn-secondary-on-media-hover: rgba(0, 0, 0, 0.75);
+  --color-btn-secondary-on-media-active: rgba(0, 0, 0, 0.85);
+  --color-icon-on-media: #ffffff;
+  --color-icon-primary-on-media: #ffffff;
+  --color-icon-secondary-on-media: rgba(255, 255, 255, 0.9);
+
+  // Easings
+  --fds-animation-enter-exit-in: cubic-bezier(.14,1,.34,1);
+  --fds-animation-enter-exit-out: cubic-bezier(.45,.1,.2,1);
+  --fds-animation-expand-collapse-in: cubic-bezier(.17,.17,0,1);
+  --fds-animation-expand-collapse-out: cubic-bezier(.17,.17,0,1);
+  --fds-animation-fade-in: cubic-bezier(0,0,1,1);
+  --fds-animation-fade-out: cubic-bezier(0,0,1,1);
+  --fds-animation-move-in: cubic-bezier(.17,.17,0,1);
+  --fds-animation-move-out: cubic-bezier(.17,.17,0,1);
+  --fds-animation-passive-move-in: cubic-bezier(.5,0,.1,1);
+  --fds-animation-passive-move-out: cubic-bezier(.5,0,.1,1);
+  --fds-animation-quick-move-in: cubic-bezier(0.1, 0.9, 0.2, 1);
+  --fds-animation-quick-move-out: cubic-bezier(0.1, 0.9, 0.2, 1);
+  --fds-animation-swap-shuffle-in: cubic-bezier(.14,1,.34,1);
+  --fds-animation-swap-shuffle-out: cubic-bezier(.45,.1,.2,1);
+
+  // Durations
+  --fds-duration-extra-extra-short-in: 100ms;
+  --fds-duration-extra-extra-short-out: 100ms;
+  --fds-duration-extra-long-in: 1000ms;
+  --fds-duration-extra-long-out: 1000ms;
+  --fds-duration-extra-short-in: 200ms;
+  --fds-duration-extra-short-out: 150ms;
+  --fds-duration-long-in: 500ms;
+  --fds-duration-long-out: 350ms;
+  --fds-duration-medium-in: 400ms;
+  --fds-duration-medium-out: 350ms;
+  --fds-duration-none: 0ms;
+  --fds-duration-short-in: 280ms;
+  --fds-duration-short-out: 200ms;
+}
+
+// Override CSS variables for Safari liquid glass effect on mobile
+// When mobile-transparent-mode class is present, make backgrounds transparent
+html.mobile-transparent-mode,
+body.mobile-transparent-mode {
+  --wash: transparent;
+  --background-color: transparent;
+  --web-wash: transparent;
+  --background-alt-color: transparent;
+}
