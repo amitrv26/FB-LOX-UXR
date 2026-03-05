@@ -190,6 +190,25 @@ I work remotely so I'm looking for cafes with good wifi, great coffee, and a nic
         reactions: 15,
       },
     ],
+    serp: {
+      entityCard: {
+        name: "Coffee by Design",
+        category: "Local coffee shop",
+        followers: "18K followers",
+        profileImage: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=120&h=120&fit=crop",
+        photos: [
+          "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop",
+          "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=200&h=200&fit=crop",
+          "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=200&h=200&fit=crop",
+        ],
+      },
+      contentGrid: [
+        { author: "Emily Chen", timeAgo: "2h", reactions: "1.2K", imageUrl: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=400&h=600&fit=crop" },
+        { author: "Marcus Webb", timeAgo: "5h", reactions: "847", imageUrl: "https://images.unsplash.com/photo-1521302200778-33500795e128?w=400&h=600&fit=crop" },
+        { author: "Priya Nair", timeAgo: "1d", reactions: "2.3K", imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=600&fit=crop" },
+        { author: "Jordan Lee", timeAgo: "3d", reactions: "614", imageUrl: "https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=400&h=600&fit=crop" },
+      ],
+    },
   },
 
   turkey: {
@@ -973,6 +992,25 @@ Does anyone know when the final season of Stranger Things is coming out? I've be
         reactions: 234,
       },
     ],
+    serp: {
+      entityCard: {
+        name: "Stranger Things",
+        category: "TV show · Netflix",
+        followers: "27M followers",
+        profileImage: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=120&h=120&fit=crop",
+        photos: [
+          "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=200&h=200&fit=crop",
+          "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=200&h=200&fit=crop",
+          "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=200&h=200&fit=crop",
+        ],
+      },
+      contentGrid: [
+        { author: "Gregory Otto", timeAgo: "9h", reactions: "46.5K", imageUrl: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=600&fit=crop" },
+        { author: "Ruby Patel", timeAgo: "1d", reactions: "46.5K", imageUrl: "https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=400&h=600&fit=crop" },
+        { author: "Romeo Jax", timeAgo: "5h", reactions: "6K", imageUrl: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=600&fit=crop" },
+        { author: "Justin Villanueva", timeAgo: "3d", reactions: "1.8K", imageUrl: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400&h=600&fit=crop" },
+      ],
+    },
   },
 };
 

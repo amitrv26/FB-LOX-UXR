@@ -4,10 +4,9 @@ import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import MobileHeader from "../../../../../../components/mobile/MobileHeader";
 import MobileComments from "../../../../../../components/mobile/MobileComments";
-import LoginPromptSheet from "../../../../../../components/mobile/LoginPromptSheet";
+import UpsellBottomSheet from "../../../../../../components/mobile/UpsellBottomSheet";
 import MarketplaceUnit from "../../../../../../components/mobile/MarketplaceUnit";
 import RelatedPostsUnit from "../../../../../../components/mobile/RelatedPostsUnit";
-import LikeSheet from "../../../../../../components/mobile/LikeSheet";
 import ShareSheet from "../../../../../../components/mobile/ShareSheet";
 import { AISparkleIcon } from "../../../../../../components/icons";
 import { IconInline } from "../../../../../../components/Icon";
@@ -465,11 +464,7 @@ const formatCount = (num) => {
 export default function RioTheatrePostPage() {
   const router = useRouter();
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
-  const [loginPromptConfig, setLoginPromptConfig] = useState({
-    title: "Log in to continue",
-    message: "Log in to interact with posts on Facebook.",
-    illustration: null,
-  });
+  const [upsellConfig, setUpsellConfig] = useState({ type: 'generic', count: 0 });
   const [showLikeSheet, setShowLikeSheet] = useState(false);
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [likeSheetReactionCount, setLikeSheetReactionCount] = useState(0);
@@ -485,12 +480,8 @@ export default function RioTheatrePostPage() {
     router.push(`/m/profile/similar-post/${post.id}`);
   };
 
-  const showLogin = (config = {}) => {
-    setLoginPromptConfig({
-      title: config.title || "Log in to continue",
-      message: config.message || "Log in to interact with posts on Facebook.",
-      illustration: config.illustration || null,
-    });
+  const showUpsell = (config = {}) => {
+    setUpsellConfig({ type: config.type || 'generic', count: config.count || 0 });
     setShowLoginPrompt(true);
   };
 
@@ -510,11 +501,7 @@ export default function RioTheatrePostPage() {
   };
 
   const handleReply = () => {
-    showLogin({
-      title: `${postData.commentsCount}+ comments and counting`,
-      message: "Join the conversation in the app.",
-      illustration: "/illustrations/comments.png",
-    });
+    showUpsell({ type: 'comment', count: postData.commentsCount });
   };
 
   const handleLikeComment = (reactionCount) => {
@@ -665,11 +652,7 @@ export default function RioTheatrePostPage() {
           initialVisibleCount={6}
           onReply={handleReply}
           onLikeComment={handleLikeComment}
-          onCommentPromptClick={() => showLogin({
-            title: `${postData.commentsCount}+ comments and counting`,
-            message: "Join the conversation in the app.",
-            illustration: "/illustrations/comments.png",
-          })}
+          onCommentPromptClick={() => showUpsell({ type: 'comment', count: postData.commentsCount })}
         />
       </div>
 
@@ -683,20 +666,20 @@ export default function RioTheatrePostPage() {
         showSeeAll={true}
       />
 
-      {/* Login Prompt Sheet */}
-      <LoginPromptSheet
+      {/* Upsell Bottom Sheet */}
+      <UpsellBottomSheet
         isOpen={showLoginPrompt}
         onClose={() => setShowLoginPrompt(false)}
-        title={loginPromptConfig.title}
-        message={loginPromptConfig.message}
-        illustration={loginPromptConfig.illustration}
+        type={upsellConfig.type}
+        count={upsellConfig.count}
       />
 
       {/* Like Sheet */}
-      <LikeSheet
+      <UpsellBottomSheet
         isOpen={showLikeSheet}
         onClose={() => setShowLikeSheet(false)}
-        reactionCount={likeSheetReactionCount}
+        type="like"
+        count={likeSheetReactionCount}
       />
 
       {/* Share Sheet */}

@@ -39,6 +39,8 @@ export default function RootLayout({ children }) {
       <link rel="preload" href="/illustrations/comments.png" as="image" />
       <link rel="preload" href="/illustrations/follow.png" as="image" />
       <link rel="preload" href="/illustrations/save-mp-items.png" as="image" />
+      <link rel="preload" href="/illustrations/messenger.png" as="image" />
+      <link rel="preload" href="/illustrations/end-of-feed.png" as="image" />
     </>
   );
 

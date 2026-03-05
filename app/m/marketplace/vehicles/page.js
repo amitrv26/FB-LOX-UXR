@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import OthersSearchedFor from "../../../../components/mobile/OthersSearchedFor";
-import LoginPromptSheet from "../../../../components/mobile/LoginPromptSheet";
+import UpsellBottomSheet from "../../../../components/mobile/UpsellBottomSheet";
 import "../../../../public/styles/mobile/aggregation.scss";
 
 // Stranger Things toys data for the grid - all items under $100
@@ -810,12 +810,10 @@ export default function MarketplaceToysPage() {
       </main>
 
       {/* Save Upsell Sheet */}
-      <LoginPromptSheet 
+      <UpsellBottomSheet 
         isOpen={showSaveSheet}
         onClose={() => setShowSaveSheet(false)}
-        title="Good finds go fast"
-        message="Save this and more in the app."
-        illustration="/illustrations/save-mp-items.png"
+        type="save"
       />
 
       </div>

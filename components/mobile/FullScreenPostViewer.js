@@ -5,8 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { fds } from '../vars';
 import Icon from '../Icon';
 import ReelsCommentsPanel from './ReelsCommentsPanel';
-import LikeSheet from './LikeSheet';
-import LoginPromptSheet from './LoginPromptSheet';
+import UpsellBottomSheet from './UpsellBottomSheet';
 
 // Grey placeholder for missing images
 const GREY_AVATAR = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect width='40' height='40' fill='%23e4e6eb'/%3E%3C/svg%3E";
@@ -789,20 +788,20 @@ const FullScreenPostViewer = ({
       </AnimatePresence>
 
       {/* Like Upsell Sheet - uses portal, so placed outside AnimatePresence */}
-      <LikeSheet
+      <UpsellBottomSheet
         isOpen={showLikeSheet}
         onClose={() => setShowLikeSheet(false)}
-        reactionCount={parseInt(String(currentPost?.likes || '21100').replace(/[^\d]/g, '')) || 21100}
+        type="like"
+        count={parseInt(String(currentPost?.likes || '21100').replace(/[^\d]/g, '')) || 21100}
         darkMode={true}
       />
 
       {/* Login Prompt Sheet - uses portal, so placed outside AnimatePresence */}
-      <LoginPromptSheet
+      <UpsellBottomSheet
         isOpen={showLoginPrompt}
         onClose={() => setShowLoginPrompt(false)}
-        title="15+ comments and counting"
-        message="Join the conversation in the app."
-        illustration="/illustrations/comments.png"
+        type="comment"
+        count={15}
         darkMode={true}
       />
     </>

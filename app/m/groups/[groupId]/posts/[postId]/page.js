@@ -10,8 +10,7 @@ import MobileComments from "../../../../../../components/mobile/MobileComments";
 import RelatedAnswers from "../../../../../../components/mobile/RelatedAnswers";
 import MarketplaceUnit from "../../../../../../components/mobile/MarketplaceUnit";
 import ReelsUnit from "../../../../../../components/mobile/ReelsUnit";
-import LoginPromptSheet from "../../../../../../components/mobile/LoginPromptSheet";
-import LikeSheet from "../../../../../../components/mobile/LikeSheet";
+import UpsellBottomSheet from "../../../../../../components/mobile/UpsellBottomSheet";
 import ShareSheet from "../../../../../../components/mobile/ShareSheet";
 
 // Helper to convert topic data to the format expected by components
@@ -280,11 +279,7 @@ export default function MobileGroupPostPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [currentTopic, setCurrentTopic] = useState('strangerthings');
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
-  const [loginPromptConfig, setLoginPromptConfig] = useState({
-    title: "Log in to continue",
-    message: "Log in to interact with posts on Facebook.",
-    illustration: null,
-  });
+  const [upsellConfig, setUpsellConfig] = useState({ type: 'generic', count: 0, entityName: '' });
   const [showLikeSheet, setShowLikeSheet] = useState(false);
   const [likeSheetReactionCount, setLikeSheetReactionCount] = useState(0);
   const [showShareSheet, setShowShareSheet] = useState(false);
@@ -693,20 +688,13 @@ export default function MobileGroupPostPage() {
     setSourcesSheet({ isOpen: false, sources: [] });
   };
 
-  const showLogin = (config = {}) => {
-    setLoginPromptConfig({
-      title: config.title || "Log in to continue",
-      message: config.message || "Log in to interact with posts on Facebook.",
-      illustration: config.illustration || null,
-    });
+  const showUpsell = (config = {}) => {
+    setUpsellConfig({ type: config.type || 'generic', count: config.count || 0, entityName: config.entityName || '' });
     setShowLoginPrompt(true);
   };
 
   const handleJoinGroup = () => {
-    showLogin({
-      title: "Join this group",
-      message: `Log in to join ${currentPostData.group?.name || 'this group'} and connect with other members.`,
-    });
+    showUpsell({ type: 'joinGroup' });
   };
 
   const handleLike = () => {
@@ -726,11 +714,7 @@ export default function MobileGroupPostPage() {
   };
 
   const handleReply = () => {
-    showLogin({
-      title: `${currentPostData?.post?.commentsCount || 0}+ comments and counting`,
-      message: "Join the conversation in the app.",
-      illustration: "/illustrations/comments.png",
-    });
+    showUpsell({ type: 'comment', count: currentPostData?.post?.commentsCount || 0 });
   };
 
   const handleLikeComment = (reactionCount) => {
@@ -789,11 +773,7 @@ export default function MobileGroupPostPage() {
           showAllComments={showAllComments}
           onReply={handleReply}
           onLikeComment={handleLikeComment}
-          onCommentPromptClick={() => showLogin({
-            title: `${currentPostData.post.commentsCount}+ comments and counting`,
-            message: "Join the conversation in the app.",
-            illustration: "/illustrations/comments.png",
-          })}
+          onCommentPromptClick={() => showUpsell({ type: 'comment', count: currentPostData.post.commentsCount })}
           highlightCommentIndex={(isSourcePage || shouldHighlightComment || isFromAggregation) ? 0 : null}
         />
       </div>
@@ -817,18 +797,19 @@ export default function MobileGroupPostPage() {
         <MarketplaceUnit title="Shop for merchandise" showSeeAll={true} />
       )}
 
-      <LoginPromptSheet
+      <UpsellBottomSheet
         isOpen={showLoginPrompt}
         onClose={() => setShowLoginPrompt(false)}
-        title={loginPromptConfig.title}
-        message={loginPromptConfig.message}
-        illustration={loginPromptConfig.illustration}
+        type={upsellConfig.type}
+        count={upsellConfig.count}
+        entityName={upsellConfig.entityName}
       />
 
-      <LikeSheet
+      <UpsellBottomSheet
         isOpen={showLikeSheet}
         onClose={() => setShowLikeSheet(false)}
-        reactionCount={likeSheetReactionCount}
+        type="like"
+        count={likeSheetReactionCount}
       />
 
       <ShareSheet

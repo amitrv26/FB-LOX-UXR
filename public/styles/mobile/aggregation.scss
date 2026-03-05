@@ -5849,8 +5849,10 @@ body:has(.mobile-layout) {
     border-radius: 80px;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.25s ease;
+    // iOS spring easing for a more fluid, native-feeling exit
+    transition: transform 0.38s cubic-bezier(0.32, 0.72, 0, 1),
+                opacity 0.22s ease-out;
+    will-change: transform, opacity;
   }
 
   &__tab {
@@ -5916,8 +5918,10 @@ body:has(.mobile-layout) {
     border-radius: 100px;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.25s ease;
+    // iOS spring easing — enters from right with natural snap
+    transition: transform 0.38s cubic-bezier(0.32, 0.72, 0, 1),
+                opacity 0.22s ease-out;
+    will-change: transform, opacity;
     
     // Dark mode variant
     &--dark {
@@ -6070,8 +6074,9 @@ body:has(.mobile-layout) {
     border-radius: 80px;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
     cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.25s ease;
+    transition: transform 0.38s cubic-bezier(0.32, 0.72, 0, 1),
+                opacity 0.22s ease-out;
+    will-change: transform, opacity;
 
     &:active {
       transform: scale(0.95) !important;

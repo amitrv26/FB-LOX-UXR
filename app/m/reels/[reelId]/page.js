@@ -2,8 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useParams, useSearchParams, useRouter } from "next/navigation";
-import LoginPromptSheet from "../../../../components/mobile/LoginPromptSheet";
-import LikeSheet from "../../../../components/mobile/LikeSheet";
+import UpsellBottomSheet from "../../../../components/mobile/UpsellBottomSheet";
 import ShareSheet from "../../../../components/mobile/ShareSheet";
 import ReelsCommentsPanel from "../../../../components/mobile/ReelsCommentsPanel";
 import { 
@@ -741,10 +740,7 @@ function PagesYouMightLikeInterstitial({ pages, onPageDismiss, onPageAction, onL
   };
   
   const handlePageAction = (page) => {
-    onLoginPrompt?.({
-      title: `View ${page.name}'s Page`,
-      message: `Log in to connect with ${page.name} on Facebook.`,
-    });
+    onLoginPrompt?.({ type: 'follow', entityName: page.name });
   };
   
   return (
@@ -1280,11 +1276,7 @@ export default function VideoPlayerPage() {
   const { openBottomSheet } = useUseCase();
   
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
-  const [loginPromptConfig, setLoginPromptConfig] = useState({
-    title: "Log in to continue",
-    message: "Log in to interact with videos on Facebook.",
-    illustration: null,
-  });
+  const [upsellConfig, setUpsellConfig] = useState({ type: 'generic', count: 0, entityName: '' });
   const [showLikeSheet, setShowLikeSheet] = useState(false);
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [currentVideoLikes, setCurrentVideoLikes] = useState(0);
@@ -1833,16 +1825,12 @@ export default function VideoPlayerPage() {
   const prevVideo = currentIndex > 0 ? videos[currentIndex - 1] : null;
   const nextVideo = currentIndex < videos.length - 1 ? videos[currentIndex + 1] : null;
 
-  const showLogin = (config = {}) => {
-    setLoginPromptConfig({
-      title: config.title || "Log in to continue",
-      message: config.message || "Log in to interact with videos on Facebook.",
-      illustration: config.illustration || null,
-    });
+  const showUpsell = (config = {}) => {
+    setUpsellConfig({ type: config.type || 'generic', count: config.count || 0, entityName: config.entityName || '' });
     setShowLoginPrompt(true);
   };
 
-  // Parse likes string (e.g., "2.8M") to number for the LikeSheet
+  // Parse likes string (e.g., "2.8M") to number for the like upsell
   const parseLikesString = (likesStr) => {
     if (!likesStr) return 0;
     const str = likesStr.toString().toUpperCase();
@@ -1865,8 +1853,8 @@ export default function VideoPlayerPage() {
   const handleShare = () => {
     setShowShareSheet(true);
   };
-  const handleFollow = () => showLogin({ title: `Follow ${video.author.name}`, message: `Log in to follow ${video.author.name} and see more content.` });
-  const handleMore = () => showLogin({ title: "More options", message: "Log in to access more options." });
+  const handleFollow = () => showUpsell({ type: 'follow', entityName: video.author.name });
+  const handleMore = () => showUpsell({ type: 'moreOptions' });
   const handleVideoClick = () => {
     const newIsPlaying = !isPlaying;
     setIsPlaying(newIsPlaying);
@@ -1941,7 +1929,7 @@ export default function VideoPlayerPage() {
                   pages={pagesYouMightLikeData}
                   onPageDismiss={(pageId) => console.log('Dismissed page:', pageId)}
                   onPageAction={(page) => console.log('Action on page:', page)}
-                  onLoginPrompt={showLogin}
+                  onLoginPrompt={showUpsell}
                   prevColor={videos[index - 1]?.accentColor}
                   nextColor={videos[index + 1]?.accentColor}
                 />
@@ -2041,11 +2029,7 @@ export default function VideoPlayerPage() {
                   onTouchEnd={(e) => e.stopPropagation()}
                 >
                   <button
-                    onClick={() => showLogin({
-                      title: "Message Sarah",
-                      message: "Log in to contact them directly.",
-                      illustration: "/illustrations/messenger.png",
-                    })}
+                    onClick={() => showUpsell({ type: 'message', entityName: 'Sarah' })}
                     style={{
                       display: 'flex',
                       alignItems: 'center',
@@ -2271,22 +2255,21 @@ export default function VideoPlayerPage() {
       }} />
       </div>{/* End of content wrapper with fade-in transition */}
 
-      {/* Login Prompt Sheet - Light mode for reels upsells */}
-      <LoginPromptSheet
+      {/* Upsell Bottom Sheet */}
+      <UpsellBottomSheet
         isOpen={showLoginPrompt}
         onClose={() => setShowLoginPrompt(false)}
-        title={loginPromptConfig.title}
-        message={loginPromptConfig.message}
-        illustration={loginPromptConfig.illustration}
-        darkMode={false}
+        type={upsellConfig.type}
+        count={upsellConfig.count}
+        entityName={upsellConfig.entityName}
       />
 
-      {/* Like Sheet for reactions upsell - Light mode for reels upsells */}
-      <LikeSheet
+      {/* Like upsell bottom sheet */}
+      <UpsellBottomSheet
         isOpen={showLikeSheet}
         onClose={() => setShowLikeSheet(false)}
-        reactionCount={currentVideoLikes}
-        darkMode={false}
+        type="like"
+        count={currentVideoLikes}
       />
 
       {/* Share Sheet */}
@@ -2298,14 +2281,9 @@ export default function VideoPlayerPage() {
         onClose={() => setShowCommentsPanel(false)}
         comments={reelsCommentsData}
         totalCount={reelsCommentsData.length}
-        onCommentPromptClick={() => {
-          // Keep comments panel open and overlay the login sheet on top
-          showLogin({ 
-            title: `${video.comments} comments and counting`, 
-            message: "Join the conversation in the app.",
-            illustration: "/illustrations/comments.png",
-          });
-        }}
+          onCommentPromptClick={() => {
+            showUpsell({ type: 'comment', count: parseInt(String(video.comments).replace(/[^\d]/g, '')) || 0 });
+          }}
         onLikeComment={(reactionCount) => {
           // Show reactions upsell with the comment's reaction count
           setCurrentVideoLikes(reactionCount);

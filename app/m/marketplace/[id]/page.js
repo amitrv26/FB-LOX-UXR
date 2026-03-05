@@ -5,7 +5,7 @@ import { useRouter, useParams, useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import OthersSearchedFor from "../../../../components/mobile/OthersSearchedFor";
 import Icon from "../../../../components/Icon";
-import LoginPromptSheet from "../../../../components/mobile/LoginPromptSheet";
+import UpsellBottomSheet from "../../../../components/mobile/UpsellBottomSheet";
 
 // Product data mapping - all locations set to Seattle, all prices under $100
 const productData = {
@@ -1817,12 +1817,11 @@ export default function MarketplaceProductPage() {
       </main>
 
       {/* Message Seller Prompt Sheet */}
-      <LoginPromptSheet 
+      <UpsellBottomSheet 
         isOpen={showMessagePrompt}
         onClose={() => setShowMessagePrompt(false)}
-        title="Message Maya"
-        message="Log in to contact them directly."
-        illustration="/illustrations/messenger.png"
+        type="message"
+        entityName="Maya"
       />
     </PageWrapper>
   );

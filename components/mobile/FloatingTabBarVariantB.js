@@ -403,16 +403,21 @@ const FloatingTabBarVariantB = ({
                 )}
               </div>
 
-              {/* Submit button - positioned to the right */}
+              {/* Submit button - fires with typed query or current rotating suggestion */}
               <button
                 className={`floating-tab-bar-b__submit-btn ${darkMode ? 'floating-tab-bar-b__submit-btn--dark' : ''}`}
-                onClick={() => searchQuery.trim() && onSearch?.(searchQuery)}
+                onClick={() => {
+                  const effectiveQuery = searchQuery.trim()
+                    || (showInitialPlaceholder ? placeholder : suggestedQueries?.[currentSuggestionIndex])
+                    || placeholder;
+                  onSearch?.(effectiveQuery);
+                }}
               >
                 <Icon
                   name="arrow-up-filled"
                   size={12}
-                  color={searchQuery.trim() ? "active" : "disabled"}
-                  style={{ display: "block", color: searchQuery.trim() ? "#0866ff" : "#b0b3b8" }}
+                  color="active"
+                  style={{ display: "block", color: "#0866ff" }}
                 />
               </button>
             </div>

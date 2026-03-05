@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import MobileHeader from "../../../../components/mobile/MobileHeader";
-import LoginPromptSheet from "../../../../components/mobile/LoginPromptSheet";
+import UpsellBottomSheet from "../../../../components/mobile/UpsellBottomSheet";
+import EndOfFeedUpsell from "../../../../components/mobile/EndOfFeedUpsell";
 import { IconInline } from "../../../../components/Icon";
 
 // Profile data for Finn Wolfhard
@@ -106,6 +107,8 @@ const Dots3HorizontalIcon = () => (
 export default function FinnWolfhardProfile() {
   const router = useRouter();
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
+  const [showFollowPrompt, setShowFollowPrompt] = useState(false);
+  const [showMessagePrompt, setShowMessagePrompt] = useState(false);
   const [activeTab, setActiveTab] = useState("All");
 
   const tabs = ["All", "Photos", "Reels", "Events"];
@@ -237,7 +240,7 @@ export default function FinnWolfhardProfile() {
             marginBottom: '12px',
           }}>
             <button 
-              onClick={() => setShowLoginPrompt(true)}
+              onClick={() => setShowFollowPrompt(true)}
               style={{
                 flex: 1,
                 height: '36px',
@@ -260,7 +263,7 @@ export default function FinnWolfhardProfile() {
               Follow
             </button>
             <button 
-              onClick={() => setShowLoginPrompt(true)}
+              onClick={() => setShowMessagePrompt(true)}
               style={{
                 flex: 1,
                 height: '36px',
@@ -669,15 +672,26 @@ export default function FinnWolfhardProfile() {
               </div>
             </div>
           ))}
+          <EndOfFeedUpsell />
         </div>
       </main>
 
-      {/* Login Prompt Sheet */}
-      <LoginPromptSheet 
+      <UpsellBottomSheet
+        isOpen={showFollowPrompt}
+        onClose={() => setShowFollowPrompt(false)}
+        type="follow"
+        entityName="Finn Wolfhard"
+      />
+      <UpsellBottomSheet
+        isOpen={showMessagePrompt}
+        onClose={() => setShowMessagePrompt(false)}
+        type="message"
+        entityName="Finn Wolfhard"
+      />
+      <UpsellBottomSheet
         isOpen={showLoginPrompt}
         onClose={() => setShowLoginPrompt(false)}
-        title="Log in to Facebook"
-        message="Log in to see more from Finn Wolfhard and connect with friends on Facebook."
+        type="generic"
       />
     </div>
   );

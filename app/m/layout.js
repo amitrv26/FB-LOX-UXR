@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import MobileHeader from "../../components/mobile/MobileHeader";
 import FloatingTabBarVariantB from "../../components/mobile/FloatingTabBarVariantB";
+import { topicsData } from "./_data/topicsData";
 
 // Tab order for determining transition direction
 const TAB_ORDER = ['home', 'groups', 'marketplace', 'reels'];
@@ -95,7 +96,10 @@ const AGGREGATION_TOPIC_QUERIES = [
 export default function MobileLayout({ children }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const router = useRouter();
+  const isHomePage = pathname === '/m' || pathname === '/m/';
   const isSearchPage = pathname?.startsWith('/m/search');
+  const isSerpPage = pathname?.startsWith('/m/serp');
   const isReelsPage = pathname?.startsWith('/m/reels');
   const isMessagesSharePage = pathname?.startsWith('/m/messages-share');
   const isMarketplaceSharePage = pathname?.startsWith('/m/marketplace-share');
@@ -112,6 +116,23 @@ export default function MobileLayout({ children }) {
   // Check if search should stay expanded (from related answers navigation)
   const keepSearchExpanded = searchParams?.get('keepSearchExpanded') === 'true';
   
+  // Topic-aware suggested queries derived from localStorage.selectedTopic
+  const [topicSuggestedQueries, setTopicSuggestedQueries] = useState(null);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const topicId = localStorage.getItem('selectedTopic');
+    if (topicId && topicsData[topicId]) {
+      const topic = topicsData[topicId];
+      // Build suggestions from the topic's search results titles / AI overview context
+      const queries = [
+        topic.searchQuery,
+        ...(topic.searchResults?.slice(0, 2).map(r => r.title) || []),
+      ].filter(Boolean).slice(0, 3);
+      setTopicSuggestedQueries(queries);
+    }
+  }, [pathname]);
+
   // Determine active tab from URL
   const activeTabFromPath = getActiveTabFromPath(pathname);
   const [activeTab, setActiveTab] = useState(activeTabFromPath);
@@ -293,7 +314,7 @@ export default function MobileLayout({ children }) {
   // For Reels from Google, defer to reelsTabBarVisible state
   // For Feed Video page, defer to feedVideoTabBarVisible state
   // Aggregation and Explore topic pages DO show tab bar (with search auto-expanded)
-  const showTabBar = !isMessagesSharePage && !isMarketplaceSharePage && !isSearchPage && !isAggregationSerp && !isNavComparisonPage &&
+  const showTabBar = !isMessagesSharePage && !isMarketplaceSharePage && !isSearchPage && !isSerpPage && !isAggregationSerp && !isNavComparisonPage &&
     (isReelsPage ? reelsTabBarVisible : (isFeedVideoPage ? feedVideoTabBarVisible : true));
 
   // Determine which skeleton to show based on destination tab
@@ -1031,7 +1052,7 @@ export default function MobileLayout({ children }) {
           animation: shimmer 1.5s ease-in-out infinite;
         }
       `}</style>
-      {!isSearchPage && !isReelsPage && !isMessagesSharePage && !isMarketplaceSharePage && !isNavComparisonPage && !isAggregationSerp && (
+      {!isHomePage && !isSearchPage && !isSerpPage && !isReelsPage && !isMessagesSharePage && !isMarketplaceSharePage && !isNavComparisonPage && !isAggregationSerp && (
         <MobileHeader 
           showCloseButton={(isGroupsPage || isPDPPage) && isFromAggregation}
         />
@@ -1063,6 +1084,12 @@ export default function MobileLayout({ children }) {
             onSearchToggle={(expanded) => {
               setSearchExpanded(expanded);
             }}
+            onSearch={(query) => {
+              // Navigate to the Facebook SERP page with the submitted query
+              const topicId = typeof window !== 'undefined' ? (localStorage.getItem('selectedTopic') || 'strangerthings') : 'strangerthings';
+              setSearchExpanded(false);
+              router.push(`/m/serp?q=${encodeURIComponent(query)}&topic=${topicId}`);
+            }}
             darkMode={false}
             isAutoExpanded={shouldAutoExpandSearch}
             placeholder={
@@ -1081,7 +1108,9 @@ export default function MobileLayout({ children }) {
                   ? GROUPS_STRANGER_THINGS_QUERIES
                   : (isAggregationTopicPageCheck || isExploreTopicPageCheck)
                     ? undefined // No rotating suggestions on aggregation pages, just static placeholder
-                    : (isPDPPage ? MARKETPLACE_PDP_QUERIES : undefined)
+                    : (isPDPPage 
+                        ? MARKETPLACE_PDP_QUERIES 
+                        : (topicSuggestedQueries || undefined))
             }
           />
         </div>

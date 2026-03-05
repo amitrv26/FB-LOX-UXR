@@ -2,7 +2,7 @@ export { default as MobileHeader } from "./MobileHeader";
 export { default as MobileGroupPost } from "./MobileGroupPost";
 export { default as MobileComments } from "./MobileComments";
 export { default as MobileComment } from "./MobileComment";
-export { default as LoginPromptSheet } from "./LoginPromptSheet";
+export { default as UpsellBottomSheet } from "./UpsellBottomSheet";
 
 // Aggregation page components
 export { default as AggregationHeader, AISparkleIcon } from "./AggregationHeader";

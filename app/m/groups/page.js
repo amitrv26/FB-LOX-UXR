@@ -3,8 +3,8 @@
 import { useState } from "react";
 import MobileGroupPost from "../../../components/mobile/MobileGroupPost";
 import MobileComment from "../../../components/mobile/MobileComment";
-import LoginPromptSheet from "../../../components/mobile/LoginPromptSheet";
-import LikeSheet from "../../../components/mobile/LikeSheet";
+import UpsellBottomSheet from "../../../components/mobile/UpsellBottomSheet";
+import EndOfFeedUpsell from "../../../components/mobile/EndOfFeedUpsell";
 import ShareSheet from "../../../components/mobile/ShareSheet";
 
 // Groups feed data - diverse group posts with featured comments
@@ -192,24 +192,13 @@ What streaming services do you all use? Looking for something reliable that won'
 ];
 
 export default function GroupsFeedPage() {
-  const [showLoginPrompt, setShowLoginPrompt] = useState(false);
-  const [loginPromptConfig, setLoginPromptConfig] = useState({
-    title: "Log in to continue",
-    message: "Log in to interact with posts on Facebook.",
-    illustration: null,
-  });
-  const [showLikeSheet, setShowLikeSheet] = useState(false);
+  const [upsellType, setUpsellType] = useState(null);
+  const [upsellCount, setUpsellCount] = useState(0);
   const [showShareSheet, setShowShareSheet] = useState(false);
-  const [likeSheetReactionCount, setLikeSheetReactionCount] = useState(0);
-
-  const handleLoginAction = (title, message, illustration = null) => {
-    setLoginPromptConfig({ title, message, illustration });
-    setShowLoginPrompt(true);
-  };
 
   const handleLikeAction = (reactionCount) => {
-    setLikeSheetReactionCount(reactionCount);
-    setShowLikeSheet(true);
+    setUpsellCount(reactionCount);
+    setUpsellType('like');
   };
 
   const handleShareAction = () => {
@@ -217,12 +206,8 @@ export default function GroupsFeedPage() {
   };
 
   const handleCommentAction = (commentCount) => {
-    setLoginPromptConfig({
-      title: `${commentCount}+ comments and counting`,
-      message: "Join the conversation in the app.",
-      illustration: "/illustrations/comments.png",
-    });
-    setShowLoginPrompt(true);
+    setUpsellCount(commentCount);
+    setUpsellType('comment');
   };
 
   return (
@@ -240,7 +225,7 @@ export default function GroupsFeedPage() {
               hideAiBadge={true}
               hideSeeMore={true}
               maxLines={5}
-              onJoinGroup={() => handleLoginAction("Log in to join", "Log in to join this group on Facebook.")}
+              onJoinGroup={() => setUpsellType('joinGroup')}
               onLike={() => handleLikeAction(item.post.reactions.total)}
               onComment={() => handleCommentAction(item.post.commentsCount)}
               onShare={handleShareAction}
@@ -251,8 +236,8 @@ export default function GroupsFeedPage() {
                 <MobileComment
                   comment={item.featuredComment}
                   postAuthorId={item.post.author.id}
-                  onReply={() => handleLoginAction("Log in to reply", "Log in to reply to comments on Facebook.")}
-                  onLike={() => handleLoginAction("Log in to like", "Log in to like comments on Facebook.")}
+                  onReply={() => setUpsellType('generic')}
+                  onLike={() => setUpsellType('generic')}
                   isExpanded={false}
                   onToggleReplies={() => {}}
                 />
@@ -260,22 +245,14 @@ export default function GroupsFeedPage() {
             )}
           </div>
         ))}
+        <EndOfFeedUpsell />
       </div>
 
-      {/* Login Prompt */}
-      <LoginPromptSheet
-        isOpen={showLoginPrompt}
-        onClose={() => setShowLoginPrompt(false)}
-        title={loginPromptConfig.title}
-        message={loginPromptConfig.message}
-        illustration={loginPromptConfig.illustration}
-      />
-
-      {/* Like Sheet for reactions upsell */}
-      <LikeSheet
-        isOpen={showLikeSheet}
-        onClose={() => setShowLikeSheet(false)}
-        reactionCount={likeSheetReactionCount}
+      <UpsellBottomSheet
+        isOpen={!!upsellType}
+        onClose={() => setUpsellType(null)}
+        type={upsellType || 'generic'}
+        count={upsellCount}
       />
 
       {/* Share Sheet */}

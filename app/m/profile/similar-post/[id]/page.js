@@ -4,9 +4,8 @@ import { useState, useRef, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import MobileHeader from "../../../../../components/mobile/MobileHeader";
 import MobileComments from "../../../../../components/mobile/MobileComments";
-import LoginPromptSheet from "../../../../../components/mobile/LoginPromptSheet";
+import UpsellBottomSheet from "../../../../../components/mobile/UpsellBottomSheet";
 import RelatedPostsUnit from "../../../../../components/mobile/RelatedPostsUnit";
-import LikeSheet from "../../../../../components/mobile/LikeSheet";
 import ShareSheet from "../../../../../components/mobile/ShareSheet";
 import { IconInline } from "../../../../../components/Icon";
 
@@ -79,18 +78,13 @@ export default function SimilarPostPage() {
   const params = useParams();
   const [postData, setPostData] = useState(null);
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
-  const [loginPromptConfig, setLoginPromptConfig] = useState({
-    title: "Log in to continue",
-    message: "Log in to interact with posts on Facebook.",
-    illustration: null,
-  });
+  const [upsellConfig, setUpsellConfig] = useState({ type: 'generic', count: 0 });
   const [showLikeSheet, setShowLikeSheet] = useState(false);
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [likeSheetReactionCount, setLikeSheetReactionCount] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   const commentsRef = useRef(null);
 
-  // Load post data from sessionStorage
   useEffect(() => {
     const storedPost = sessionStorage.getItem('similarPost');
     if (storedPost) {
@@ -98,12 +92,8 @@ export default function SimilarPostPage() {
     }
   }, []);
 
-  const showLogin = (config = {}) => {
-    setLoginPromptConfig({
-      title: config.title || "Log in to continue",
-      message: config.message || "Log in to interact with posts on Facebook.",
-      illustration: config.illustration || null,
-    });
+  const showUpsell = (config = {}) => {
+    setUpsellConfig({ type: config.type || 'generic', count: config.count || 0 });
     setShowLoginPrompt(true);
   };
 
@@ -121,11 +111,7 @@ export default function SimilarPostPage() {
   };
 
   const handleReply = () => {
-    showLogin({
-      title: `${postData?.comments || 0}+ comments and counting`,
-      message: "Join the conversation in the app.",
-      illustration: "/illustrations/comments.png",
-    });
+    showUpsell({ type: 'comment', count: postData?.comments || 0 });
   };
 
   const handleLikeComment = (reactionCount) => {
@@ -280,31 +266,27 @@ export default function SimilarPostPage() {
           initialVisibleCount={6}
           onReply={handleReply}
           onLikeComment={handleLikeComment}
-          onCommentPromptClick={() => showLogin({
-            title: `${postData.comments}+ comments and counting`,
-            message: "Join the conversation in the app.",
-            illustration: "/illustrations/comments.png",
-          })}
+          onCommentPromptClick={() => showUpsell({ type: 'comment', count: postData.comments })}
         />
       </div>
 
       {/* Similar Posts */}
       <RelatedPostsUnit title="Similar posts" onPostClick={handleSimilarPostClick} />
 
-      {/* Login Prompt Sheet */}
-      <LoginPromptSheet
+      {/* Upsell Bottom Sheet */}
+      <UpsellBottomSheet
         isOpen={showLoginPrompt}
         onClose={() => setShowLoginPrompt(false)}
-        title={loginPromptConfig.title}
-        message={loginPromptConfig.message}
-        illustration={loginPromptConfig.illustration}
+        type={upsellConfig.type}
+        count={upsellConfig.count}
       />
 
       {/* Like Sheet */}
-      <LikeSheet
+      <UpsellBottomSheet
         isOpen={showLikeSheet}
         onClose={() => setShowLikeSheet(false)}
-        reactionCount={likeSheetReactionCount}
+        type="like"
+        count={likeSheetReactionCount}
       />
 
       {/* Share Sheet */}

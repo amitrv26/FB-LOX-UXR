@@ -1,0 +1,461 @@
+// ─────────────────────────────────────────────────────────────
+// Facebook SERP page styles
+// Matches Figma design node 346-26601
+// ─────────────────────────────────────────────────────────────
+
+// Modal slide-up entrance — mirrors the Figma prototype transition
+// Uses iOS-style spring easing (cubic-bezier 0.32, 0.72, 0, 1)
+@keyframes serpSlideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.serp-page {
+  background: #ffffff;
+  min-height: 100dvh;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  // Slide up from below like a native iOS sheet
+  animation: serpSlideUp 380ms cubic-bezier(0.32, 0.72, 0, 1) both;
+  // Ensure the page is above the outgoing tab bar during transition
+  position: relative;
+  z-index: 200;
+}
+
+// ── Navigation Bar ────────────────────────────────────────────
+
+.serp-nav {
+  background: #ffffff;
+  padding: 8px 16px 8px 12px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.serp-nav__query-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+}
+
+.serp-nav__loading-slot {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+
+.serp-nav__query {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: normal;
+  color: #050505;
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.serp-nav__actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.serp-nav__icon-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 50%;
+
+  &:active {
+    background: rgba(0, 0, 0, 0.06);
+  }
+}
+
+// ── Page Content ──────────────────────────────────────────────
+
+.serp-content {
+  padding: 0;
+}
+
+// ── Section Visibility (staggered entrance) ───────────────────
+
+.serp-section {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+
+  &--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ── AI Summary ────────────────────────────────────────────────
+
+.serp-section--ai {
+  padding: 0 16px 12px;
+}
+
+.serp-ai-summary {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: #050505;
+  margin: 0;
+}
+
+// ── Entity Spotlight Card ─────────────────────────────────────
+
+.serp-section--entity {
+  padding: 0 12px 4px;
+}
+
+.serp-entity-card {
+  background: #f8f9fb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.serp-entity-card__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+}
+
+.serp-entity-card__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.serp-entity-card__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.serp-entity-card__name-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+}
+
+.serp-entity-card__name {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: #080809;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.serp-entity-card__dot {
+  font-size: 15px;
+  color: #65686c;
+  line-height: 20px;
+  flex-shrink: 0;
+}
+
+.serp-entity-card__follow {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: #0866ff;
+  flex-shrink: 0;
+}
+
+.serp-entity-card__meta {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: normal;
+  color: #65686c;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.serp-entity-card__photos {
+  display: flex;
+  gap: 2px;
+  padding: 0 12px 12px;
+}
+
+.serp-entity-card__photo-wrap {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.serp-entity-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+// ── Content Grid ──────────────────────────────────────────────
+
+.serp-section--grid {
+  padding: 4px 12px 0;
+}
+
+.serp-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.serp-grid-card {
+  // 2 cards per row with 4px gap
+  width: calc(50% - 2px);
+  height: 308px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.serp-grid-card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+// Top gradient overlay (for author info)
+.serp-grid-card__top-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border-radius: 12px 12px 0 0;
+  pointer-events: none;
+}
+
+// Bottom gradient overlay (for reactions)
+.serp-grid-card__bottom-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border-radius: 0 0 12px 12px;
+  pointer-events: none;
+}
+
+// Author block (top-left)
+.serp-grid-card__author {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.62);
+}
+
+.serp-grid-card__author-name {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: normal;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.serp-grid-card__time {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: normal;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+// Reactions block (bottom-left)
+.serp-grid-card__reactions {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.62);
+}
+
+.serp-grid-card__reaction-count {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: normal;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+// ── See More ──────────────────────────────────────────────────
+
+.serp-see-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  padding: 8px 0 9px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  span {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: normal;
+    color: #65686c;
+  }
+}
+
+// ── Custom Floating Bottom Bar ────────────────────────────────
+
+.serp-floating-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 16px 4px;
+  margin-bottom: calc(env(safe-area-inset-bottom, 0px) + 4px);
+  z-index: 300;
+  background: transparent;
+  pointer-events: none;
+
+  @supports not (-webkit-touch-callout: none) {
+    margin-bottom: 0;
+
+    body.has-scrolled & {
+      margin-bottom: 12px;
+    }
+  }
+
+  > * {
+    pointer-events: auto;
+  }
+}
+
+.serp-floating-bar__back {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    background: #f0f2f5;
+  }
+}
+
+.serp-floating-bar__search {
+  flex: 1;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 80px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 4px 0 12px;
+}
+
+.serp-floating-bar__input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: #080809;
+  outline: none;
+  padding: 0;
+  caret-color: #0866ff;
+
+  &::placeholder {
+    color: #65686c;
+  }
+}
+
+.serp-floating-bar__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background: #e4e6eb;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}

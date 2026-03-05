@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import MobileHeader from "../../../../components/mobile/MobileHeader";
-import LoginPromptSheet from "../../../../components/mobile/LoginPromptSheet";
+import UpsellBottomSheet from "../../../../components/mobile/UpsellBottomSheet";
+import EndOfFeedUpsell from "../../../../components/mobile/EndOfFeedUpsell";
 import FloatingTabBar from "../../../../components/mobile/FloatingTabBar";
 import { IconInline } from "../../../../components/Icon";
 
@@ -94,6 +95,8 @@ const Dots3HorizontalIcon = () => (
 export default function SarahMannaProfile() {
   const router = useRouter();
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
+  const [showFollowPrompt, setShowFollowPrompt] = useState(false);
+  const [showMessagePrompt, setShowMessagePrompt] = useState(false);
   const [activeTab, setActiveTab] = useState("Posts");
 
   const tabs = ["Posts", "Photos", "Friends", "Events"];
@@ -229,7 +232,7 @@ export default function SarahMannaProfile() {
             marginBottom: '12px',
           }}>
             <button 
-              onClick={() => setShowLoginPrompt(true)}
+              onClick={() => setShowFollowPrompt(true)}
               style={{
                 flex: 1,
                 height: '36px',
@@ -252,7 +255,7 @@ export default function SarahMannaProfile() {
               Add friend
             </button>
             <button 
-              onClick={() => setShowLoginPrompt(true)}
+              onClick={() => setShowMessagePrompt(true)}
               style={{
                 flex: 1,
                 height: '36px',
@@ -597,6 +600,7 @@ export default function SarahMannaProfile() {
               </div>
             </div>
           ))}
+          <EndOfFeedUpsell />
         </div>
       </main>
 
@@ -624,13 +628,10 @@ export default function SarahMannaProfile() {
         `}</style>
       </div>
 
-      {/* Login Prompt Sheet */}
-      <LoginPromptSheet 
-        isOpen={showLoginPrompt}
-        onClose={() => setShowLoginPrompt(false)}
-        title="Log in to Facebook"
-        message="Log in to see more from Sarah Manna and connect with friends on Facebook."
-      />
+      {/* Upsell Bottom Sheets */}
+      <UpsellBottomSheet isOpen={showFollowPrompt} onClose={() => setShowFollowPrompt(false)} type="follow" entityName="Sarah Manna" />
+      <UpsellBottomSheet isOpen={showMessagePrompt} onClose={() => setShowMessagePrompt(false)} type="message" entityName="Sarah Manna" />
+      <UpsellBottomSheet isOpen={showLoginPrompt} onClose={() => setShowLoginPrompt(false)} type="generic" />
     </div>
   );
 }

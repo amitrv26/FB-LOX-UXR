@@ -1,8 +1,32 @@
 "use client";
 
+import { useUseCase } from "../../contexts/UseCaseContext";
+
 export default function MobileLandingPage() {
+  const { openBottomSheet } = useUseCase();
+
   return (
     <div style={{ minHeight: "100vh", background: "#fff", paddingBottom: "calc(173px + env(safe-area-inset-bottom, 0px))" }}>
+      <div
+        onClick={() => openBottomSheet({ selectedCategory: null })}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          padding: "12px",
+          height: "48px",
+          display: "flex",
+          alignItems: "center",
+          zIndex: 1000,
+          cursor: "pointer",
+        }}
+      >
+        <img
+          src="/images/facebook-wordmark.png"
+          alt="Facebook"
+          style={{ height: "24px", width: "auto" }}
+        />
+      </div>
       <div
         style={{
           marginTop: "66px",
@@ -10,11 +34,28 @@ export default function MobileLandingPage() {
           justifyContent: "center",
         }}
       >
-        <img
-          src="/images/home-hero.png"
-          alt=""
-          style={{ width: "233px", height: "328px", aspectRatio: "103/145", display: "block" }}
-        />
+        <div
+          style={{
+            position: "relative",
+            width: "351px",
+            height: "328px",
+            overflow: "hidden",
+          }}
+        >
+          <img
+            src="/images/home-hero.png"
+            alt=""
+            style={{
+              position: "absolute",
+              top: "8.74%",
+              left: "-18.52%",
+              width: "137.04%",
+              height: "82.51%",
+              maxWidth: "none",
+              display: "block",
+            }}
+          />
+        </div>
       </div>
       <div
         style={{

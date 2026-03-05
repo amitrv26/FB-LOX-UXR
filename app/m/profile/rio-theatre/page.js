@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import LoginPromptSheet from "../../../../components/mobile/LoginPromptSheet";
+import UpsellBottomSheet from "../../../../components/mobile/UpsellBottomSheet";
+import EndOfFeedUpsell from "../../../../components/mobile/EndOfFeedUpsell";
 import ReviewsSheet from "../../../../components/mobile/ReviewsSheet";
 import RelatedPostsUnit from "../../../../components/mobile/RelatedPostsUnit";
-import LikeSheet from "../../../../components/mobile/LikeSheet";
 import ShareSheet from "../../../../components/mobile/ShareSheet";
 import { IconInline } from "../../../../components/Icon";
 
@@ -1454,35 +1454,34 @@ export default function RioTheatreProfile() {
               )}
               </React.Fragment>
             ))}
+
+            <EndOfFeedUpsell />
             
           </div>
         )}
       </main>
 
       {/* Login Prompt Sheet */}
-      <LoginPromptSheet 
+      <UpsellBottomSheet 
         isOpen={showLoginPrompt}
         onClose={() => setShowLoginPrompt(false)}
-        title="Log in to Facebook"
-        message="Log in to see more from Rio Theatre and connect with friends on Facebook."
+        type="generic"
       />
 
       {/* Follow Prompt Sheet */}
-      <LoginPromptSheet 
+      <UpsellBottomSheet 
         isOpen={showFollowPrompt}
         onClose={() => setShowFollowPrompt(false)}
-        title="Follow Rio Theatre"
-        message="Log in to follow them on Facebook."
-        illustration="/illustrations/follow.png"
+        type="follow"
+        entityName="Rio Theatre"
       />
 
       {/* Message Prompt Sheet */}
-      <LoginPromptSheet 
+      <UpsellBottomSheet 
         isOpen={showMessagePrompt}
         onClose={() => setShowMessagePrompt(false)}
-        title="Message Rio Theatre"
-        message="Log in to contact them directly."
-        illustration="/illustrations/messenger.png"
+        type="message"
+        entityName="Rio Theatre"
       />
 
       {/* Reviews Sheet */}
@@ -1496,10 +1495,11 @@ export default function RioTheatreProfile() {
       />
 
       {/* Like Sheet */}
-      <LikeSheet
+      <UpsellBottomSheet
         isOpen={showLikeSheet}
         onClose={() => setShowLikeSheet(false)}
-        reactionCount={likeSheetReactionCount}
+        type="like"
+        count={likeSheetReactionCount}
       />
 
       {/* Share Sheet */}

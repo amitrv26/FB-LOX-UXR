@@ -2,8 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useParams } from "next/navigation";
-import LoginPromptSheet from "../../../../components/mobile/LoginPromptSheet";
-import LikeSheet from "../../../../components/mobile/LikeSheet";
+import UpsellBottomSheet from "../../../../components/mobile/UpsellBottomSheet";
 import ShareSheet from "../../../../components/mobile/ShareSheet";
 import UseCaseBottomSheet from "../../../../components/mobile/UseCaseBottomSheet";
 import RelatedPostsUnit from "../../../../components/mobile/RelatedPostsUnit";
@@ -1726,11 +1725,7 @@ const SimilarItemsShelf = ({ items, onItemClick }) => (
 export default function FeedVideoPage() {
   const params = useParams();
   const [showLoginSheet, setShowLoginSheet] = useState(false);
-  const [loginPromptConfig, setLoginPromptConfig] = useState({
-    title: "Log in to continue",
-    message: "Log in to see more from Facebook.",
-    illustration: null,
-  });
+  const [upsellConfig, setUpsellConfig] = useState({ type: 'generic', count: 0 });
   const [showLikeSheet, setShowLikeSheet] = useState(false);
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [currentLikeCount, setCurrentLikeCount] = useState(0);
@@ -1766,23 +1761,14 @@ export default function FeedVideoPage() {
   };
 
   const handleInteraction = () => {
-    setLoginPromptConfig({
-      title: "Log in to continue",
-      message: "Log in to see more from Facebook.",
-      illustration: null,
-    });
+    setUpsellConfig({ type: 'generic', count: 0 });
     setShowLoginSheet(true);
   };
 
   // Handle comment click - shows login prompt with comment count
   const handleCommentClick = (commentsCount) => {
     const numComments = parseLikesString(commentsCount);
-    const formattedCount = formatNumber(numComments);
-    setLoginPromptConfig({
-      title: `${formattedCount}+ comments and counting`,
-      message: "Join the conversation in the app.",
-      illustration: "/illustrations/comments.png",
-    });
+    setUpsellConfig({ type: 'comment', count: numComments });
     setShowLoginSheet(true);
   };
 
@@ -2001,19 +1987,19 @@ export default function FeedVideoPage() {
       </div>
 
       {/* Login Prompt Sheet */}
-      <LoginPromptSheet 
+      <UpsellBottomSheet 
         isOpen={showLoginSheet}
         onClose={() => setShowLoginSheet(false)}
-        title={loginPromptConfig.title}
-        message={loginPromptConfig.message}
-        illustration={loginPromptConfig.illustration}
+        type={upsellConfig.type}
+        count={upsellConfig.count}
       />
 
       {/* Like Sheet for reactions upsell */}
-      <LikeSheet
+      <UpsellBottomSheet
         isOpen={showLikeSheet}
         onClose={() => setShowLikeSheet(false)}
-        reactionCount={currentLikeCount}
+        type="like"
+        count={currentLikeCount}
       />
 
       {/* Share Sheet */}

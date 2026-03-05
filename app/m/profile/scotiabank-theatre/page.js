@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import LoginPromptSheet from "../../../../components/mobile/LoginPromptSheet";
+import UpsellBottomSheet from "../../../../components/mobile/UpsellBottomSheet";
+import EndOfFeedUpsell from "../../../../components/mobile/EndOfFeedUpsell";
 import ReviewsSheet from "../../../../components/mobile/ReviewsSheet";
 import RelatedPostsUnit from "../../../../components/mobile/RelatedPostsUnit";
-import LikeSheet from "../../../../components/mobile/LikeSheet";
 import ShareSheet from "../../../../components/mobile/ShareSheet";
 import { IconInline } from "../../../../components/Icon";
 
@@ -1315,34 +1315,32 @@ export default function ScotiabankTheatreProfile() {
                 )}
               </React.Fragment>
             ))}
+            <EndOfFeedUpsell />
           </div>
         )}
       </main>
 
-      {/* Login Prompt Sheet */}
-      <LoginPromptSheet 
+      {/* Generic Login Prompt */}
+      <UpsellBottomSheet 
         isOpen={showLoginPrompt}
         onClose={() => setShowLoginPrompt(false)}
-        title="Log in to Facebook"
-        message="Log in to see more from Scotiabank Theatre and connect with friends on Facebook."
+        type="generic"
       />
 
-      {/* Follow Prompt Sheet */}
-      <LoginPromptSheet 
+      {/* Follow Prompt */}
+      <UpsellBottomSheet 
         isOpen={showFollowPrompt}
         onClose={() => setShowFollowPrompt(false)}
-        title="Follow Scotiabank Theatre"
-        message="Log in to follow them on Facebook."
-        illustration="/illustrations/follow.png"
+        type="follow"
+        entityName="Scotiabank Theatre"
       />
 
-      {/* Message Prompt Sheet */}
-      <LoginPromptSheet 
+      {/* Message Prompt */}
+      <UpsellBottomSheet 
         isOpen={showMessagePrompt}
         onClose={() => setShowMessagePrompt(false)}
-        title="Message Scotiabank Theatre"
-        message="Log in to contact them directly."
-        illustration="/illustrations/messenger.png"
+        type="message"
+        entityName="Scotiabank Theatre"
       />
 
       {/* Reviews Sheet */}
@@ -1356,10 +1354,11 @@ export default function ScotiabankTheatreProfile() {
       />
 
       {/* Like Sheet */}
-      <LikeSheet
+      <UpsellBottomSheet
         isOpen={showLikeSheet}
         onClose={() => setShowLikeSheet(false)}
-        reactionCount={likeSheetReactionCount}
+        type="like"
+        count={likeSheetReactionCount}
       />
 
       {/* Share Sheet */}
