@@ -45,8 +45,13 @@ const UPSELL_CONFIGS = {
     message: "Save this and more on the app.",
   },
   joinGroup: {
-    illustration: null,
-    getTitle: () => "Join this group",
+    illustration: "/illustrations/follow.png",
+    getTitle: (name) => `Join ${name || 'this group'}`,
+    message: "Log in to join this group on Facebook.",
+  },
+  join_group: {
+    illustration: "/illustrations/follow.png",
+    getTitle: (name) => `Join ${name || 'this group'}`,
     message: "Log in to join this group on Facebook.",
   },
   generic: {

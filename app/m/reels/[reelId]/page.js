@@ -41,35 +41,30 @@ const preloadVideo = (src) => {
   video.load();
 };
 
-// Pages you may like data (Stranger Things cast)
-const pagesYouMightLikeData = [
+const groupsYouMightLikeData = [
   {
-    id: 'page-1',
-    name: 'Noah Schnapp',
-    subtitle: '2.1M followers',
-    image: '/images/stranger-things-assets/images/profile/noah.jpg',
-    actionType: 'view',
+    id: 'group-1',
+    name: 'Stranger Things Fans',
+    subtitle: '1.2M members',
+    image: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=400&h=320&fit=crop',
   },
   {
-    id: 'page-2',
-    name: 'Millie Bobby Brown',
-    subtitle: '61.2M followers',
-    image: '/images/millie/millie-pp.jpg',
-    actionType: 'view',
+    id: 'group-2',
+    name: 'Horror & Sci-Fi Club',
+    subtitle: '487K members',
+    image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=320&fit=crop',
   },
   {
-    id: 'page-3',
-    name: 'Finn Wolfhard',
-    subtitle: '1.8M followers',
-    image: '/images/profile/finn-cp.jpg',
-    actionType: 'view',
+    id: 'group-3',
+    name: '80s Nostalgia',
+    subtitle: '238K members',
+    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=320&fit=crop',
   },
   {
-    id: 'page-4',
-    name: 'Gaten Matarazzo',
-    subtitle: '18.4M followers',
-    image: '/images/stranger-things-assets/images/profile/gaten.jpg',
-    actionType: 'view',
+    id: 'group-4',
+    name: 'Netflix Binge Watch',
+    subtitle: '3.5M members',
+    image: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=400&h=320&fit=crop',
   },
 ];
 
@@ -110,9 +105,9 @@ const videoFeed = [
     accentColor: '#2c2c2e', // Dark charcoal
   },
   {
-    id: 'pages-interstitial',
+    id: 'groups-interstitial',
     type: 'interstitial',
-    interstitialType: 'pages_you_might_like',
+    interstitialType: 'groups_you_might_like',
   },
   {
     id: 'video-1',
@@ -607,22 +602,21 @@ function MarketplaceDiscoveryUnit({ cards, isVisible, onDismiss, tabBarOffset = 
   );
 }
 
-// Page Card for Pages You Might Like interstitial
-function PageCard({ page, onDismiss, onAction }) {
+function GroupCard({ group, onDismiss, onAction }) {
   return (
     <div style={{
       position: 'relative',
       background: '#242526',
-      borderRadius: '12px',
+      borderRadius: '8px',
       overflow: 'hidden',
       display: 'flex',
       flexDirection: 'column',
+      border: '1px solid #3A3B3C',
     }}>
-      {/* Dismiss X button */}
       <button
         onClick={(e) => {
           e.stopPropagation();
-          onDismiss?.(page.id);
+          onDismiss?.(group.id);
         }}
         style={{
           position: 'absolute',
@@ -645,16 +639,15 @@ function PageCard({ page, onDismiss, onAction }) {
         </svg>
       </button>
       
-      {/* Profile image - 4:3 aspect ratio */}
       <div style={{
         width: '100%',
-        paddingTop: '75%', // 4:3 aspect ratio
+        aspectRatio: '5 / 4',
         position: 'relative',
         background: '#3A3B3C',
       }}>
         <img
-          src={page.image}
-          alt={page.name}
+          src={group.image}
+          alt={group.name}
           style={{
             position: 'absolute',
             top: 0,
@@ -666,14 +659,11 @@ function PageCard({ page, onDismiss, onAction }) {
         />
       </div>
       
-      {/* Content */}
       <div style={{
-        padding: '12px',
+        padding: '8px 12px 12px',
         display: 'flex',
         flexDirection: 'column',
-        gap: '4px',
       }}>
-        {/* Name - Headline 4 Emphasized */}
         <span style={{
           color: '#E4E6EB',
           fontSize: '15px',
@@ -681,11 +671,14 @@ function PageCard({ page, onDismiss, onAction }) {
           lineHeight: '20px',
           letterSpacing: 'normal',
           fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap',
+          display: 'block',
         }}>
-          {page.name}
+          {group.name}
         </span>
         
-        {/* Subtitle - Body 4 */}
         <span style={{
           color: '#B0B3B8',
           fontSize: '13px',
@@ -693,24 +686,24 @@ function PageCard({ page, onDismiss, onAction }) {
           lineHeight: '18px',
           letterSpacing: 'normal',
           fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
+          marginTop: '2px',
         }}>
-          {page.subtitle}
+          {group.subtitle}
         </span>
         
-        {/* Action Button */}
         <button
           onClick={(e) => {
             e.stopPropagation();
-            onAction?.(page);
+            onAction?.(group);
           }}
           style={{
-            marginTop: '8px',
+            marginTop: '10px',
             width: '100%',
             height: '36px',
             background: '#FFFFFF',
             border: 'none',
-            borderRadius: '8px',
-            color: '#050505',
+            borderRadius: '6px',
+            color: '#000000',
             fontSize: '15px',
             fontWeight: 600,
             lineHeight: '20px',
@@ -719,28 +712,26 @@ function PageCard({ page, onDismiss, onAction }) {
             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
           }}
         >
-          View
+          Join
         </button>
       </div>
     </div>
   );
 }
 
-// Pages You Might Like Interstitial - Full screen between videos
-function PagesYouMightLikeInterstitial({ pages, onPageDismiss, onPageAction, onLoginPrompt, prevColor, nextColor }) {
-  const [visiblePages, setVisiblePages] = useState(pages);
+function GroupsYouMightLikeInterstitial({ groups, onGroupDismiss, onGroupAction, onLoginPrompt, prevColor, nextColor }) {
+  const [visibleGroups, setVisibleGroups] = useState(groups);
   
-  // Default to charcoal tones if not provided
   const topColor = prevColor || '#2c2c2e';
   const bottomColor = nextColor || '#242426';
   
-  const handleDismissPage = (pageId) => {
-    setVisiblePages(prev => prev.filter(p => p.id !== pageId));
-    onPageDismiss?.(pageId);
+  const handleDismissGroup = (groupId) => {
+    setVisibleGroups(prev => prev.filter(g => g.id !== groupId));
+    onGroupDismiss?.(groupId);
   };
   
-  const handlePageAction = (page) => {
-    onLoginPrompt?.({ type: 'follow', entityName: page.name });
+  const handleGroupAction = (group) => {
+    onLoginPrompt?.({ type: 'join_group', entityName: group.name });
   };
   
   return (
@@ -750,14 +741,12 @@ function PagesYouMightLikeInterstitial({ pages, onPageDismiss, onPageAction, onL
       left: 0,
       right: 0,
       bottom: 0,
-      background: `radial-gradient(ellipse at center, #000000 0%, ${topColor} 70%, ${bottomColor} 100%)`,
+      background: `linear-gradient(180deg, ${topColor} 0%, #1a1a1c 50%, ${bottomColor} 100%)`,
       display: 'flex',
       flexDirection: 'column',
-      padding: '16px',
-      paddingTop: 'calc(env(safe-area-inset-top, 0px) + 96px)',
-      paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 80px)',
+      justifyContent: 'center',
+      padding: '0 12px 12px',
     }}>
-      {/* Title - Headline 2 Emphasized */}
       <h2 style={{
         color: '#E4E6EB',
         fontSize: '22px',
@@ -765,26 +754,23 @@ function PagesYouMightLikeInterstitial({ pages, onPageDismiss, onPageAction, onL
         lineHeight: '28px',
         letterSpacing: 'normal',
         textAlign: 'center',
-        margin: '0 0 24px 0',
+        margin: '0 0 12px 0',
         fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
       }}>
-        Pages you may like
+        Groups you may like
       </h2>
       
-      {/* 2x2 Grid */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
-        gap: '12px',
-        flex: 1,
-        alignContent: 'start',
+        gap: '8px',
       }}>
-        {visiblePages.slice(0, 4).map((page) => (
-          <PageCard
-            key={page.id}
-            page={page}
-            onDismiss={handleDismissPage}
-            onAction={handlePageAction}
+        {visibleGroups.slice(0, 4).map((group) => (
+          <GroupCard
+            key={group.id}
+            group={group}
+            onDismiss={handleDismissGroup}
+            onAction={handleGroupAction}
           />
         ))}
       </div>
@@ -1401,7 +1387,7 @@ export default function VideoPlayerPage() {
     if (sourceParam === 'tabbar') {
       // Disable transition to prevent slide animation when setting initial index
       setDisableTransition(true);
-      setCurrentIndex(3); // Start on fourth video (no discovery units)
+      setCurrentIndex(0);
       setPeekDismissed(true); // No scroll hint
       setCameFromMessages(false); // No "Reply to Sarah" UI
       
@@ -1925,10 +1911,10 @@ export default function VideoPlayerPage() {
             >
               {/* Render interstitial or video based on type */}
               {v.type === 'interstitial' ? (
-                <PagesYouMightLikeInterstitial
-                  pages={pagesYouMightLikeData}
-                  onPageDismiss={(pageId) => console.log('Dismissed page:', pageId)}
-                  onPageAction={(page) => console.log('Action on page:', page)}
+                <GroupsYouMightLikeInterstitial
+                  groups={groupsYouMightLikeData}
+                  onGroupDismiss={(groupId) => console.log('Dismissed group:', groupId)}
+                  onGroupAction={(group) => console.log('Action on group:', group)}
                   onLoginPrompt={showUpsell}
                   prevColor={videos[index - 1]?.accentColor}
                   nextColor={videos[index + 1]?.accentColor}
