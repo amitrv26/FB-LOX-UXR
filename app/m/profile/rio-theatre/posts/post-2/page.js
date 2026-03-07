@@ -6,40 +6,40 @@ import MobileComments from "../../../../../../components/mobile/MobileComments";
 import UpsellBottomSheet from "../../../../../../components/mobile/UpsellBottomSheet";
 import ShareSheet from "../../../../../../components/mobile/ShareSheet";
 
-// Profile data for Rio Theatre
+// Profile data for Webster Hall
 const profileData = {
-  name: "Rio Theatre",
+  name: "Webster Hall",
   verified: true,
-  username: "riotheatrevancouver",
-  bio: "Page · Movie Theater",
-  followers: "24K",
+  username: "websterhall",
+  bio: "Page · Music Venue",
+  followers: "180K",
   profileImage: "/images/stranger-things-assets/images/profile/rio-theatre-pp.jpg",
 };
 
-// Post data - Rocky Horror Picture Show
+// Post data - Chappell Roan sold-out show
 const postData = {
   id: "post-2",
-  body: `Thank you Vancouver for making last night's Rocky Horror Picture Show a SOLD OUT success! 🎭
+  body: `Last night was ELECTRIC! 🔥 Thank you NYC for making Chappell Roan's show a SOLD OUT success!
 
-Next show: January 25th. Get your tickets early!
+Next up: Sabrina Carpenter on March 28th. Don't sleep on tickets!
 
-The energy was absolutely electric - from the Time Warp to the toast throwing, you all brought your A-game! 🥂
+The energy was absolutely incredible - from Hot To Go to Good Luck, Babe!, you all brought the most insane energy we've seen all year! 🎤
 
-Special shoutout to our shadow cast who delivered an incredible performance. You make these nights unforgettable!
+Special shoutout to our incredible production crew who made the lights and sound absolutely flawless. You make these nights unforgettable!
 
-Can't wait to do it all again. See you at the next one, Vancouver! 💋
+Can't wait to do it all again. See you at the next one, NYC! 🗽
 
-#RockyHorrorPictureShow #RioTheatre #Vancouver #CultClassics #RHPS`,
+#ChappellRoan #WebsterHall #NYC #LiveMusic #GoodLuckBabe`,
   image: "/images/stranger-things-assets/images/profile/rio-theatre-post.jpg",
   postedTime: "1d",
   reactions: {
-    like: 98,
-    love: 42,
-    wow: 16,
-    total: 156,
+    like: 1200,
+    love: 480,
+    wow: 120,
+    total: 1800,
   },
-  commentsCount: 34,
-  sharesCount: 18,
+  commentsCount: 67,
+  sharesCount: 234,
 };
 
 // Comments data
@@ -51,7 +51,7 @@ const commentsData = [
       name: "Amanda Torres",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=64&h=64&fit=crop&crop=faces",
     },
-    text: "Last night was AMAZING! First time at the Rio for Rocky Horror and definitely won't be my last 🎉",
+    text: "Last night was AMAZING! First time at Webster Hall for a concert and definitely won't be my last 🎉",
     time: "18h",
     reactions: { like: 23 },
     replies: [],
@@ -64,7 +64,7 @@ const commentsData = [
       name: "Jake Morrison",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop&crop=faces",
     },
-    text: "The shadow cast was phenomenal! Such talented performers 👏",
+    text: "The sound quality was phenomenal! Webster Hall really is the best venue in NYC 👏",
     time: "16h",
     reactions: { like: 15 },
     replies: [],
@@ -77,7 +77,7 @@ const commentsData = [
       name: "Priya Sharma",
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=faces",
     },
-    text: "Been coming to Rio's Rocky Horror since 2015 and it never gets old! Best way to spend a Saturday night 💋",
+    text: "Been coming to Webster Hall since 2019 and it never gets old! Best way to spend a Saturday night 🎶",
     time: "14h",
     reactions: { like: 31 },
     replies: [],
@@ -90,7 +90,7 @@ const commentsData = [
       name: "Chris Williams",
       avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=64&h=64&fit=crop&crop=faces",
     },
-    text: "Already got my tickets for the 25th! Let's gooo 🙌",
+    text: "Already got my tickets for Sabrina Carpenter on the 28th! Let's gooo 🙌",
     time: "12h",
     reactions: { like: 8 },
     replies: [],
@@ -100,11 +100,11 @@ const commentsData = [
     id: "comment-5",
     author: {
       id: "user-5",
-      name: "Rio Theatre",
+      name: "Webster Hall",
       avatar: "/images/stranger-things-assets/images/profile/rio-theatre-pp.jpg",
       verified: true,
     },
-    text: "Thank you all for the love! 💕 Our shadow cast works so hard to bring you an unforgettable experience. See you at the next show!",
+    text: "Thank you all for the love! 💕 Our production crew works so hard to bring you an unforgettable experience. See you at the next show!",
     time: "10h",
     reactions: { like: 45 },
     replies: [],

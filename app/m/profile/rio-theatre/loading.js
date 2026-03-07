@@ -1,6 +1,6 @@
 "use client";
 
-// Glimmer/Skeleton loading state for Rio Theatre profile page
+// Glimmer/Skeleton loading state for Webster Hall profile page
 // Matches the actual page layout for a smooth transition
 
 export default function RioTheatreLoading() {

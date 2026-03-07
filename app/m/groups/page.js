@@ -245,7 +245,7 @@ export default function GroupsFeedPage() {
             )}
           </div>
         ))}
-        <EndOfFeedUpsell />
+        <EndOfFeedUpsell hideWordmark />
       </div>
 
       <UpsellBottomSheet

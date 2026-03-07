@@ -92,8 +92,8 @@ const AI_OVERVIEWS = {
     expandedText: "Open late night, Joe's serves classic New York-style pizza with a perfectly crispy crust. Expect lines but quick service.",
   },
   profileBusiness: {
-    summary: "The Rio Theatre is Vancouver's beloved independent cinema, famous for its eclectic programming including cult classics, independent films, and live events since 1938.",
-    expandedText: "Located on East Broadway, the Rio Theatre offers a unique movie-going experience with special screenings, themed events, and a vibrant community atmosphere.",
+    summary: "Webster Hall is NYC's legendary live music venue in the East Village, hosting iconic concerts and unforgettable live events since 1886.",
+    expandedText: "Located on E 11th St in Manhattan, Webster Hall features multiple performance spaces and has hosted everyone from the Ramones to Billie Eilish. Sabrina Carpenter's upcoming intimate show is nearly sold out.",
   },
   marketplace: {
     summary: "Stranger Things toys are highly sought after by collectors. Funko Pops and LEGO sets are the most popular, with rare chase editions fetching premium prices.",
@@ -220,7 +220,14 @@ export default function GoogleSearch() {
           <svg className="google-search-bar__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="#202124">
             <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
           </svg>
-          <span className="google-search-bar__query">{query}</span>
+          <input 
+            type="text" 
+            className="google-search-bar__query" 
+            defaultValue={query}
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck="false"
+          />
           <button className="google-search-bar__clear">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="#202124">
               <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
@@ -2224,7 +2231,7 @@ export default function GoogleSearch() {
           </section>
         )}
 
-        {/* Profile Search Results - Business (Rio Theatre) */}
+        {/* Profile Search Results - Business (Webster Hall) */}
         {selectedCategory === 'profileBusiness' && (
           <section style={{ marginTop: '-12px' }}>
             {/* Google Maps-style Business Card */}
@@ -2248,7 +2255,7 @@ export default function GoogleSearch() {
                   margin: 0,
                   fontFamily: "'Product Sans', -apple-system, BlinkMacSystemFont, sans-serif",
                 }}>
-                  {businessProfileResults[0]?.name || 'Rio Theatre'}
+                  {businessProfileResults[0]?.name || 'Webster Hall'}
                 </h1>
                 <div style={{ display: 'flex', gap: '8px' }}>
                   <button style={{ 
@@ -2308,7 +2315,7 @@ export default function GoogleSearch() {
                   color: '#70757a',
                   fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
                 }}>
-                  · Movie theater
+                  · Music venue
                 </span>
               </div>
 
@@ -2365,8 +2372,8 @@ export default function GoogleSearch() {
                   flexShrink: 0,
                 }}>
                   <img 
-                    src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&h=400&fit=crop"
-                    alt="Rio Theatre Interior"
+                    src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=600&h=400&fit=crop"
+                    alt="Webster Hall Interior"
                     style={{ 
                       width: '100%', 
                       height: '100%', 
@@ -2386,8 +2393,8 @@ export default function GoogleSearch() {
                   flexShrink: 0,
                 }}>
                   <img 
-                    src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=400&h=300&fit=crop"
-                    alt="Rio Theatre Street View"
+                    src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=300&fit=crop"
+                    alt="Webster Hall Street View"
                     style={{ 
                       width: '100%', 
                       height: '100%', 
@@ -2425,8 +2432,8 @@ export default function GoogleSearch() {
                   flexShrink: 0,
                 }}>
                   <img 
-                    src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=400&h=300&fit=crop"
-                    alt="Rio Theatre Event"
+                    src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop"
+                    alt="Webster Hall Event"
                     style={{ 
                       width: '100%', 
                       height: '100%', 
@@ -2626,7 +2633,7 @@ export default function GoogleSearch() {
                       color: '#202124',
                       fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
                     }}>
-                      {' '}· The Rio Theatre
+                      {' '}· Webster Hall
                     </span>
                     <p style={{ 
                       fontSize: '12px', 
@@ -2634,7 +2641,7 @@ export default function GoogleSearch() {
                       fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
                       margin: 0,
                     }}>
-                      34K followers · 6.3K+ posts
+                      180K followers · 5.8K+ posts
                     </p>
                   </div>
                 </div>
@@ -2652,7 +2659,7 @@ export default function GoogleSearch() {
                 fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
                 lineHeight: '1.3',
               }}>
-                The Rio Theatre (@riotheatre)
+                Webster Hall (@websterhall)
               </h3>
 
               {/* Image Grid - 5 images that fit perfectly */}
@@ -2688,7 +2695,7 @@ export default function GoogleSearch() {
                 lineHeight: '1.5',
                 fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
               }}>
-                Buttering your popcorn since 1938. Follow along to see when we play classic, cult and new films.
+                NYC's legendary live music venue since 1886. Concerts, DJ nights, and unforgettable live events in the East Village.
               </p>
             </div>
 
@@ -2701,7 +2708,7 @@ export default function GoogleSearch() {
               height: '4px'
             }}></div>
 
-            {/* Facebook Post - Rio Theatre Vancouver */}
+            {/* Facebook Post - Webster Hall NYC */}
             <div 
               style={{ marginBottom: '16px', cursor: 'pointer' }}
               onClick={() => router.push('/m/profile/rio-theatre/posts/stranger-things-finale')}
@@ -2732,7 +2739,7 @@ export default function GoogleSearch() {
                       color: '#202124',
                       fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
                     }}>
-                      {' '}· The Rio Theatre
+                      {' '}· Webster Hall
                     </span>
                     <p style={{ 
                       fontSize: '12px', 
@@ -2740,7 +2747,7 @@ export default function GoogleSearch() {
                       fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
                       margin: 0,
                     }}>
-                      34K followers · 6.3K+ posts
+                      180K followers · 5.8K+ posts
                     </p>
                   </div>
                 </div>
@@ -2758,7 +2765,7 @@ export default function GoogleSearch() {
                 fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
                 lineHeight: '1.3',
               }}>
-                🎬 STRANGER THINGS SERIES FINALE - LIVE AT THE RIO! 🎬
+                🎤 SABRINA CARPENTER LIVE AT WEBSTER HALL - NYC! 🎤
               </h3>
 
               {/* Content */}
@@ -2769,7 +2776,7 @@ export default function GoogleSearch() {
                 lineHeight: '1.5',
                 fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
               }}>
-                We're beyond excited to announce that Vancouver's beloved independent cinema will be hosting a VERY special screening of the Stranger Things series finale!
+                We're thrilled to announce a special intimate show with Sabrina Carpenter at NYC's legendary Webster Hall! Tickets on sale this Friday.
               </p>
             </div>
 

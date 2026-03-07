@@ -1610,7 +1610,7 @@ export default function VideoPlayerPage() {
       
       peekTimerRef.current = setTimeout(() => {
         setShowPeek(true);
-      }, 3000);
+      }, 1500);
     } else {
       setShowPeek(false);
     }
@@ -1899,8 +1899,8 @@ export default function VideoPlayerPage() {
         left: 0,
         right: 0,
         bottom: 0,
-        transform: (showPeek && !showCommentsPanel) ? 'translateY(-48px)' : 'translateY(0)',
-        transition: 'transform 0.4s ease-out',
+        transform: (showPeek && !showCommentsPanel) ? 'translateY(-36px)' : 'translateY(0)',
+        transition: 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
       }}>
         {videos.map((v, index) => {
           // Only render videos within range (current -1 to current +1)
@@ -2058,24 +2058,25 @@ export default function VideoPlayerPage() {
         })}
       </div>
 
-      {/* Peek of Next Video - Scroll for More */}
-      {showPeek && nextVideo && nextVideo.type !== 'interstitial' && (
+      {/* Peek of Next Video - small strip at very bottom */}
+      {nextVideo && nextVideo.type !== 'interstitial' && (
         <div 
           style={{
             position: 'absolute',
             bottom: '-12px',
             left: 0,
             right: 0,
-            height: '60px',
-            zIndex: 60,
-            animation: 'slideUpPeek 0.4s ease-out forwards, bouncePeek 1.6s ease-in-out 0.9s infinite',
+            height: '48px',
+            zIndex: 40,
+            transform: (showPeek && !showCommentsPanel) ? 'translateY(0)' : 'translateY(100%)',
+            opacity: (showPeek && !showCommentsPanel) ? 1 : 0,
+            transition: 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
           }}
           onTouchStart={(e) => e.stopPropagation()}
           onTouchMove={(e) => e.stopPropagation()}
           onTouchEnd={(e) => e.stopPropagation()}
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Next video thumbnail peek - positioned to show top of video */}
           <div style={{
             position: 'absolute',
             top: 0,
@@ -2104,55 +2105,37 @@ export default function VideoPlayerPage() {
             </div>
           </div>
           
-          {/* Gradient overlay with scroll indicator */}
           <div style={{
             position: 'absolute',
             top: 0,
             left: 0,
             right: 0,
             bottom: 0,
-            background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%)',
+            background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 100%)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             gap: '5px',
-            paddingBottom: '12px',
           }}>
             <span style={{
               color: '#fff',
-              fontSize: '13px',
+              fontSize: '12px',
               fontWeight: '500',
               display: 'flex',
               alignItems: 'center',
-              gap: '5px',
+              gap: '4px',
               textShadow: '0 1px 3px rgba(0,0,0,0.5)',
+              animation: showPeek ? 'bouncePeekText 1.6s ease-in-out 1s infinite' : 'none',
             }}>
-              <span style={{ fontSize: '11px' }}>↑</span> Scroll for more
+              <span style={{ fontSize: '10px' }}>↑</span> Scroll for more
             </span>
           </div>
           
-          {/* CSS Animation */}
           <style jsx>{`
-            @keyframes slideUpPeek {
-              from {
-                transform: translateY(100%);
-                opacity: 0;
-              }
-              to {
-                transform: translateY(0);
-                opacity: 1;
-              }
-            }
-            @keyframes bouncePeek {
-              0% {
-                transform: translateY(0);
-              }
-              18% {
-                transform: translateY(-12px);
-              }
-              38%, 100% {
-                transform: translateY(0);
-              }
+            @keyframes bouncePeekText {
+              0% { transform: translateY(0); }
+              18% { transform: translateY(-4px); }
+              38%, 100% { transform: translateY(0); }
             }
           `}</style>
         </div>

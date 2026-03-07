@@ -9,14 +9,14 @@ import UpsellBottomSheet from "../../../../components/mobile/UpsellBottomSheet";
 
 // Product data mapping - all locations set to Seattle, all prices under $100
 const productData = {
-  't1': { id: 't1', price: '$25', title: 'Funko Pop Eleven with Eggos #421', location: 'Seattle, WA', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', condition: 'New', brand: 'Funko', category: 'Toys & Games', subcategory: 'LEGO', theme: 'Stranger Things', description: 'Funko Pop Eleven holding Eggos waffles. Mint condition, never removed from box. A must-have for any Stranger Things collector! This is the #421 vinyl figure from the popular Netflix series.' },
-  't2': { id: 't2', price: '$89', title: 'LEGO The Upside Down 75810', location: 'Seattle, WA', distance: '2 mi', image: '/images/stranger-things-assets/images/marketplace/lego.jpg', condition: 'Like new', brand: 'LEGO', category: 'Toys & Games', subcategory: 'LEGO', theme: 'Stranger Things', description: 'Complete LEGO Stranger Things set featuring the Byers house in both dimensions. All 2,287 pieces included, built once and displayed in smoke-free home. Includes all 8 minifigures.' },
-  't3': { id: 't3', price: '$85', title: 'Demogorgon Chase Edition RARE', location: 'Seattle, WA', distance: '5 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', condition: 'New', brand: 'Funko', category: 'Collectibles', subcategory: 'Funko', theme: 'Stranger Things', description: 'Rare chase edition Demogorgon Funko Pop #428. Glow in the dark variant. Box in pristine condition. Serious collectors only! Limited edition release.' },
-  't4': { id: 't4', price: '$79', title: 'LEGO Creel House Custom MOC', location: 'Seattle, WA', distance: '3 mi', image: '/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg', condition: 'New', brand: 'Custom MOC', category: 'Toys & Games', subcategory: 'LEGO', theme: 'Stranger Things', description: 'Custom LEGO Creel House from Season 4. Incredible detail including the grandfather clock and attic. Over 2,500 pieces! Instructions included for rebuilding.' },
-  't5': { id: 't5', price: '$69', title: 'Funko Pop Hawkins Gang Set (6)', location: 'Seattle, WA', distance: '8 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', condition: 'New', brand: 'Funko', category: 'Collectibles', subcategory: 'Funko', theme: 'Stranger Things', description: 'Complete set of 6 Funko Pops: Mike, Dustin, Lucas, Will, Eleven, and Max. All mint in box. Selling as set only. Perfect for starting your collection!' },
-  't6': { id: 't6', price: '$35', title: 'Stranger Things PEZ Set', location: 'Seattle, WA', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/pez-set.jpg', condition: 'New', brand: 'PEZ', category: 'Collectibles', subcategory: 'Collectibles', theme: 'Stranger Things', description: 'Stranger Things PEZ Dispensers Collector Set. Features characters from the show. New in packaging, never opened. Great gift for any fan!' },
-  't7': { id: 't7', price: '$75', title: 'Steve Harrington Autographed Card', location: 'Seattle, WA', distance: '2 mi', image: '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg', condition: 'Like new', brand: 'Topps', category: 'Collectibles', subcategory: 'Cards', theme: 'Stranger Things', description: 'Authentic autographed trading card signed by Joe Keery (Steve Harrington). Comes with certificate of authenticity. Card is in excellent condition, stored in protective sleeve.' },
-  't8': { id: 't8', price: '$45', title: 'Funko Pop Eddie Munson #1250', location: 'Seattle, WA', distance: '4 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', condition: 'New', brand: 'Funko', category: 'Toys & Games', subcategory: 'Funko', theme: 'Stranger Things', description: 'Eddie Munson Funko Pop #1250 from Stranger Things Season 4. The fan-favorite character in his iconic Hellfire Club shirt. Never removed from box.' },
+  't1': { id: 't1', price: '$25', title: 'Funko Pop Eleven with Eggos #421', location: 'Seattle, WA', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', images: ['/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'New', brand: 'Funko', category: 'Toys & Games', subcategory: 'LEGO', theme: 'Stranger Things', description: 'Funko Pop Eleven holding Eggos waffles. Mint condition, never removed from box. A must-have for any Stranger Things collector! This is the #421 vinyl figure from the popular Netflix series.' },
+  't2': { id: 't2', price: '$89', title: 'LEGO The Upside Down 75810', location: 'Seattle, WA', distance: '2 mi', image: '/images/stranger-things-assets/images/marketplace/lego.jpg', images: ['/images/stranger-things-assets/images/marketplace/lego.jpg', '/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'Like new', brand: 'LEGO', category: 'Toys & Games', subcategory: 'LEGO', theme: 'Stranger Things', description: 'Complete LEGO Stranger Things set featuring the Byers house in both dimensions. All 2,287 pieces included, built once and displayed in smoke-free home. Includes all 8 minifigures.' },
+  't3': { id: 't3', price: '$85', title: 'Demogorgon Chase Edition RARE', location: 'Seattle, WA', distance: '5 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', images: ['/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'New', brand: 'Funko', category: 'Collectibles', subcategory: 'Funko', theme: 'Stranger Things', description: 'Rare chase edition Demogorgon Funko Pop #428. Glow in the dark variant. Box in pristine condition. Serious collectors only! Limited edition release.' },
+  't4': { id: 't4', price: '$79', title: 'LEGO Creel House Custom MOC', location: 'Seattle, WA', distance: '3 mi', image: '/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg', images: ['/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg', '/images/stranger-things-assets/images/marketplace/lego.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg'], condition: 'New', brand: 'Custom MOC', category: 'Toys & Games', subcategory: 'LEGO', theme: 'Stranger Things', description: 'Custom LEGO Creel House from Season 4. Incredible detail including the grandfather clock and attic. Over 2,500 pieces! Instructions included for rebuilding.' },
+  't5': { id: 't5', price: '$69', title: 'Funko Pop Hawkins Gang Set (6)', location: 'Seattle, WA', distance: '8 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', images: ['/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'New', brand: 'Funko', category: 'Collectibles', subcategory: 'Funko', theme: 'Stranger Things', description: 'Complete set of 6 Funko Pops: Mike, Dustin, Lucas, Will, Eleven, and Max. All mint in box. Selling as set only. Perfect for starting your collection!' },
+  't6': { id: 't6', price: '$35', title: 'Stranger Things PEZ Set', location: 'Seattle, WA', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/pez-set.jpg', images: ['/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'New', brand: 'PEZ', category: 'Collectibles', subcategory: 'Collectibles', theme: 'Stranger Things', description: 'Stranger Things PEZ Dispensers Collector Set. Features characters from the show. New in packaging, never opened. Great gift for any fan!' },
+  't7': { id: 't7', price: '$75', title: 'Steve Harrington Autographed Card', location: 'Seattle, WA', distance: '2 mi', image: '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg', images: ['/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg'], condition: 'Like new', brand: 'Topps', category: 'Collectibles', subcategory: 'Cards', theme: 'Stranger Things', description: 'Authentic autographed trading card signed by Joe Keery (Steve Harrington). Comes with certificate of authenticity. Card is in excellent condition, stored in protective sleeve.' },
+  't8': { id: 't8', price: '$45', title: 'Funko Pop Eddie Munson #1250', location: 'Seattle, WA', distance: '4 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', images: ['/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/lego.jpg'], condition: 'New', brand: 'Funko', category: 'Toys & Games', subcategory: 'Funko', theme: 'Stranger Things', description: 'Eddie Munson Funko Pop #1250 from Stranger Things Season 4. The fan-favorite character in his iconic Hellfire Club shirt. Never removed from box.' },
 };
 
 // Similar items for recommendations - all under $100 with full numbers
@@ -279,8 +279,10 @@ export default function MarketplaceProductPage() {
   const searchParams = useSearchParams();
   const [product, setProduct] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const carouselRef = useRef(null);
   const [expandedQuestions, setExpandedQuestions] = useState(new Set(['mq-1']));
   const [showMessagePrompt, setShowMessagePrompt] = useState(false);
+  const [showSavePrompt, setShowSavePrompt] = useState(false);
   
   // Check if coming from aggregation page
   const isFromAggregation = searchParams?.get('fromAggregation') === 'true';
@@ -353,6 +355,7 @@ export default function MarketplaceProductPage() {
 
   useEffect(() => {
     const productId = params.id;
+    setCurrentImageIndex(0);
     
     if (productData[productId]) {
       setProduct(productData[productId]);
@@ -364,7 +367,24 @@ export default function MarketplaceProductPage() {
         setProduct(productData['t1']);
       }
     }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [params.id]);
+
+  const productImages = product?.images || (product?.image ? [product.image] : []);
+
+  const handleCarouselScroll = () => {
+    const el = carouselRef.current;
+    if (!el) return;
+    const index = Math.round(el.scrollLeft / el.offsetWidth);
+    setCurrentImageIndex(index);
+  };
+
+  const scrollToImage = (index) => {
+    const el = carouselRef.current;
+    if (!el) return;
+    el.scrollTo({ left: index * el.offsetWidth, behavior: 'smooth' });
+  };
 
   // Handle click on related question card - navigate to groups permalink
   const handleCardClick = (questionItem, card, cardIdx) => {
@@ -392,7 +412,19 @@ export default function MarketplaceProductPage() {
     const isLego = item.title.toLowerCase().includes('lego');
     const isFunko = item.title.toLowerCase().includes('funko') || item.title.toLowerCase().includes('pop');
     
-    // Build full product data for the PDP
+    const allMarketplaceImages = [
+      '/images/stranger-things-assets/images/marketplace/funko-pop.jpg',
+      '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg',
+      '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg',
+      '/images/stranger-things-assets/images/marketplace/lego.jpg',
+      '/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg',
+      '/images/stranger-things-assets/images/marketplace/pez-set.jpg',
+      '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg',
+    ];
+    const otherImages = allMarketplaceImages.filter(img => img !== item.image);
+    const shuffled = otherImages.sort(() => 0.5 - Math.random()).slice(0, 4);
+    const itemImages = [item.image, ...shuffled];
+
     const productData = {
       id: item.id,
       price: item.price,
@@ -400,6 +432,7 @@ export default function MarketplaceProductPage() {
       location: item.location,
       distance: item.distance,
       image: item.image,
+      images: itemImages,
       condition: 'Like new',
       brand: isLego ? 'LEGO' : isFunko ? 'Funko' : 'Collectible',
       category: isLego ? 'Toys & Games' : 'Collectibles',
@@ -448,50 +481,70 @@ export default function MarketplaceProductPage() {
       {/* Main Content */}
       <main>
         {/* Image Carousel */}
-        <div style={{
-          position: 'relative',
-          width: '100%',
-          paddingTop: 'calc(100% - 120px)',
-          background: '#f0f2f5',
-        }}>
-          <img
-            src={product.image}
-            alt={product.title}
+        <div style={{ position: 'relative', width: '100%', background: '#f0f2f5', overflow: 'hidden' }}>
+          <div
+            ref={carouselRef}
+            onScroll={handleCarouselScroll}
+            className="hide-scrollbar"
             style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
+              display: 'flex',
+              overflowX: 'scroll',
+              WebkitOverflowScrolling: 'touch',
+              scrollSnapType: 'x mandatory',
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
             }}
-          />
-          {/* FDS Pagination dots */}
-          <div style={{
-            position: 'absolute',
-            bottom: '12px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '4px',
-            padding: '6px 8px',
-            borderRadius: '100px',
-            background: 'rgba(28, 28, 29, 0.8)',
-          }}>
-            {[0, 1, 2, 3, 4].map((i) => (
-              <div
+          >
+            {productImages.map((src, i) => (
+              <img
                 key={i}
+                src={src}
+                alt={`${product.title} - photo ${i + 1}`}
+                draggable={false}
                 style={{
-                  width: '6px',
-                  height: '6px',
-                  borderRadius: '50%',
-                  background: i === currentImageIndex ? '#ffffff' : 'rgba(255, 255, 255, 0.35)',
-                  transition: 'background 0.2s ease',
+                  width: '100vw',
+                  height: 'calc(100vw - 120px)',
+                  objectFit: 'cover',
+                  flexShrink: 0,
+                  scrollSnapAlign: 'start',
                 }}
               />
             ))}
           </div>
+          {/* FDS Pagination dots */}
+          {productImages.length > 1 && (
+            <div style={{
+              position: 'absolute',
+              bottom: '12px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+              padding: '6px 8px',
+              borderRadius: '100px',
+              background: 'rgba(28, 28, 29, 0.8)',
+              zIndex: 2,
+            }}>
+              {productImages.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => scrollToImage(i)}
+                  style={{
+                    width: '6px',
+                    height: '6px',
+                    borderRadius: '50%',
+                    background: i === currentImageIndex ? '#ffffff' : 'rgba(255, 255, 255, 0.35)',
+                    transition: 'background 0.2s ease',
+                    border: 'none',
+                    padding: 0,
+                    cursor: 'pointer',
+                  }}
+                />
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Price and Title */}
@@ -518,100 +571,92 @@ export default function MarketplaceProductPage() {
           </p>
         </div>
 
-        {/* UFI Buttons - Like, Comment, Share with reactions */}
+        {/* UFI Buttons - Like, Comment, Bookmark with inline reactions */}
         <div style={{
           display: 'flex',
-          alignItems: 'center',
-          padding: '0 12px',
-          height: '40px',
+          alignItems: 'flex-end',
           background: '#fff',
           marginTop: '-12px',
           marginBottom: '4px',
         }}>
-          {/* Left side - Like, Comment, Share */}
-          <div style={{
+          {/* Like */}
+          <button style={{
             display: 'flex',
             alignItems: 'center',
+            gap: '6px',
+            height: '44px',
+            padding: '8px 12px',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
           }}>
-            {/* Like */}
-            <button style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px',
-              padding: '10px 12px 10px 0',
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-            }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#65686c" style={{ display: 'block', flexShrink: 0 }}>
-                <path fillRule="evenodd" clipRule="evenodd" d="M10.999 0.5C9.61831 0.5 8.49902 1.61929 8.49902 3V3.81449C8.49902 5.0965 8.20054 6.3609 7.62721 7.50757L6.73803 9.28591C6.62168 9.51861 6.51869 9.75703 6.42932 10H3C1.61929 10 0.5 11.1193 0.5 12.5V20.5C0.5 21.8807 1.61929 23 3 23L6.99902 23C6.99968 23 7.00132 23 7.00197 23H13.4582L13.5 23.0002H17.75C19.5287 23.0002 20.9975 21.6734 21.2207 19.9555C22.0005 19.3146 22.5 18.3412 22.5 17.2502C22.5 17.0763 22.4872 16.905 22.4625 16.7372C23.1022 16.1037 23.5 15.2236 23.5 14.2502C23.5 13.6479 23.3472 13.0799 23.0785 12.5842C23.1899 12.2422 23.25 11.8775 23.25 11.5C23.25 9.567 21.683 8 19.75 8H14.999V4.5C14.999 2.29086 13.2082 0.5 10.999 0.5ZM8 21H13.4785L13.5 21.0002H17.75C18.5784 21.0002 19.25 20.3287 19.25 19.5002C19.25 19.4833 19.2497 19.4663 19.2492 19.4495C19.237 19.0807 19.429 18.7352 19.7484 18.5507C20.1999 18.2899 20.5 17.8045 20.5 17.2502C20.5 17.0609 20.4654 16.8819 20.403 16.7177C20.2344 16.2739 20.4011 15.7727 20.802 15.5182C21.2237 15.2506 21.5 14.7823 21.5 14.2502C21.5 13.8943 21.3773 13.5697 21.171 13.3126C20.9193 12.999 20.88 12.5652 21.0711 12.2114C21.185 12.0007 21.25 11.7594 21.25 11.5C21.25 10.6716 20.5784 10 19.75 10L14.4902 10C13.6671 10 12.999 9.33273 12.999 8.50961V4.5C12.999 3.39543 12.1036 2.5 10.999 2.5C10.7229 2.5 10.499 2.72386 10.499 3V3.81449C10.499 5.40699 10.1282 6.97762 9.41606 8.40199L8.52689 10.1803C8.19449 10.8451 8.01467 11.5753 8 12.3176V21ZM6 12.2995C5.99935 12.3384 5.99902 12.3774 5.99902 12.4164V21H3C2.72386 21 2.5 20.7761 2.5 20.5V12.5C2.5 12.2239 2.72386 12 3 12H6V12.2995Z" fill="#65686c"/>
-              </svg>
-              <span style={{
-                fontSize: '13px',
-                fontWeight: '600',
-                color: '#65686c',
-                lineHeight: '20px',
-                letterSpacing: '-0.08px',
-              }}>99</span>
-            </button>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#65686c" style={{ display: 'block', flexShrink: 0 }}>
+              <path fillRule="evenodd" clipRule="evenodd" d="M10.999 0.5C9.61831 0.5 8.49902 1.61929 8.49902 3V3.81449C8.49902 5.0965 8.20054 6.3609 7.62721 7.50757L6.73803 9.28591C6.62168 9.51861 6.51869 9.75703 6.42932 10H3C1.61929 10 0.5 11.1193 0.5 12.5V20.5C0.5 21.8807 1.61929 23 3 23L6.99902 23C6.99968 23 7.00132 23 7.00197 23H13.4582L13.5 23.0002H17.75C19.5287 23.0002 20.9975 21.6734 21.2207 19.9555C22.0005 19.3146 22.5 18.3412 22.5 17.2502C22.5 17.0763 22.4872 16.905 22.4625 16.7372C23.1022 16.1037 23.5 15.2236 23.5 14.2502C23.5 13.6479 23.3472 13.0799 23.0785 12.5842C23.1899 12.2422 23.25 11.8775 23.25 11.5C23.25 9.567 21.683 8 19.75 8H14.999V4.5C14.999 2.29086 13.2082 0.5 10.999 0.5ZM8 21H13.4785L13.5 21.0002H17.75C18.5784 21.0002 19.25 20.3287 19.25 19.5002C19.25 19.4833 19.2497 19.4663 19.2492 19.4495C19.237 19.0807 19.429 18.7352 19.7484 18.5507C20.1999 18.2899 20.5 17.8045 20.5 17.2502C20.5 17.0609 20.4654 16.8819 20.403 16.7177C20.2344 16.2739 20.4011 15.7727 20.802 15.5182C21.2237 15.2506 21.5 14.7823 21.5 14.2502C21.5 13.8943 21.3773 13.5697 21.171 13.3126C20.9193 12.999 20.88 12.5652 21.0711 12.2114C21.185 12.0007 21.25 11.7594 21.25 11.5C21.25 10.6716 20.5784 10 19.75 10L14.4902 10C13.6671 10 12.999 9.33273 12.999 8.50961V4.5C12.999 3.39543 12.1036 2.5 10.999 2.5C10.7229 2.5 10.499 2.72386 10.499 3V3.81449C10.499 5.40699 10.1282 6.97762 9.41606 8.40199L8.52689 10.1803C8.19449 10.8451 8.01467 11.5753 8 12.3176V21ZM6 12.2995C5.99935 12.3384 5.99902 12.3774 5.99902 12.4164V21H3C2.72386 21 2.5 20.7761 2.5 20.5V12.5C2.5 12.2239 2.72386 12 3 12H6V12.2995Z" fill="#65686c"/>
+            </svg>
+            <span style={{
+              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
+              fontSize: '13px',
+              fontWeight: 600,
+              color: '#65686c',
+              lineHeight: '16px',
+              letterSpacing: 'normal',
+            }}>10</span>
+          </button>
 
-            {/* Comment */}
-            <button style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px',
-              padding: '10px 12px',
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-            }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#65686c" style={{ display: 'block', flexShrink: 0 }}>
-                <path fillRule="evenodd" clipRule="evenodd" d="M12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 13.6405 2.9175 15.1851 3.65326 16.5359C3.9179 17.0217 4.01879 17.5892 3.87305 18.1533L3.1582 20.8418L5.84668 20.127C6.41079 19.9812 6.9783 20.0821 7.46406 20.3467C8.8149 21.0825 10.3595 21.5 12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5ZM0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C10.0782 23.5 8.26351 23.0279 6.66895 22.1924C6.50263 22.1053 6.34422 22.0918 6.22363 22.123L2.82422 23.0049C1.71693 23.292 0.708044 22.2831 0.995117 21.1758L1.87695 17.7764C1.90815 17.6558 1.89474 17.4974 1.80762 17.3311C0.97205 15.7365 0.5 13.9218 0.5 12Z" fill="#65686c"/>
-              </svg>
-              <span style={{
-                fontSize: '13px',
-                fontWeight: '600',
-                color: '#65686c',
-                lineHeight: '20px',
-                letterSpacing: '-0.08px',
-              }}>2.1K</span>
-            </button>
+          {/* Comment */}
+          <button style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            height: '44px',
+            padding: '8px 12px',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+          }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#65686c" style={{ display: 'block', flexShrink: 0 }}>
+              <path fillRule="evenodd" clipRule="evenodd" d="M12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 13.6405 2.9175 15.1851 3.65326 16.5359C3.9179 17.0217 4.01879 17.5892 3.87305 18.1533L3.1582 20.8418L5.84668 20.127C6.41079 19.9812 6.9783 20.0821 7.46406 20.3467C8.8149 21.0825 10.3595 21.5 12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5ZM0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C10.0782 23.5 8.26351 23.0279 6.66895 22.1924C6.50263 22.1053 6.34422 22.0918 6.22363 22.123L2.82422 23.0049C1.71693 23.292 0.708044 22.2831 0.995117 21.1758L1.87695 17.7764C1.90815 17.6558 1.89474 17.4974 1.80762 17.3311C0.97205 15.7365 0.5 13.9218 0.5 12Z" fill="#65686c"/>
+            </svg>
+            <span style={{
+              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
+              fontSize: '13px',
+              fontWeight: 600,
+              color: '#65686c',
+              lineHeight: '16px',
+              letterSpacing: 'normal',
+            }}>5</span>
+          </button>
 
-            {/* Share */}
-            <button style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px',
-              padding: '10px 12px',
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-            }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#65686c" style={{ display: 'block', flexShrink: 0 }}>
-                <path fillRule="evenodd" clipRule="evenodd" d="M12.8628 3.15582C12.5462 2.83512 12 3.05932 12 3.50998V8.00248C12 8.55476 11.5523 9.00248 11 9.00248H10.5C7.58095 9.00248 5.50274 10.222 4.12357 12.0953C2.91318 13.7395 2.21242 15.9327 2.04135 18.3301C2.81703 17.3939 3.76238 16.6319 4.93033 16.075C6.44545 15.3526 8.27778 15.0025 10.5 15.0025H11C11.5523 15.0025 12 15.4502 12 16.0025V20.4901C12 20.9408 12.5462 21.165 12.8628 20.8443L21.2451 12.3543C21.4389 12.1579 21.4389 11.8423 21.2451 11.6459L12.8628 3.15582ZM10 3.50998C10 1.27134 12.7132 0.157623 14.286 1.75067L22.6683 10.2408C23.6312 11.216 23.6312 12.7842 22.6683 13.7594L14.286 22.2494C12.7132 23.8425 10 22.7288 10 20.4901V17.0092C8.22692 17.058 6.86408 17.3687 5.79111 17.8803C4.63182 18.433 3.75465 19.2468 3.04864 20.3333C2.59207 21.0359 1.78571 21.1208 1.2696 21.0032C0.755147 20.8861 0 20.429 0 19.5025C0 16.3518 0.789377 13.2508 2.51296 10.9096C4.17987 8.6454 6.68372 7.14917 10 7.01268V3.50998Z" fill="#65686c"/>
-              </svg>
-              <span style={{
-                fontSize: '13px',
-                fontWeight: '600',
-                color: '#65686c',
-                lineHeight: '20px',
-                letterSpacing: '-0.08px',
-              }}>367</span>
-            </button>
-          </div>
+          {/* Bookmark */}
+          <button
+            onClick={() => setShowSavePrompt(true)}
+            style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '44px',
+            padding: '8px 12px',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+          }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#65686c" style={{ display: 'block', flexShrink: 0 }}>
+              <path fillRule="evenodd" clipRule="evenodd" d="M3 3.5C3 1.84314 4.34315 0.5 6 0.5H18C19.6569 0.5 21 1.84315 21 3.5V20.9996C21 23.0597 18.6482 24.2356 17.0001 22.9997L12.3 19.4749C12.1222 19.3416 11.8778 19.3416 11.7 19.4749L6.99991 22.9997C5.35181 24.2356 3 23.0597 3 20.9996V3.5ZM6 2.5C5.44771 2.5 5 2.94771 5 3.5V20.9996C5 21.4116 5.47036 21.6468 5.79998 21.3996L10.5001 17.8749C11.3889 17.2083 12.6111 17.2083 13.4999 17.8749L18.2 21.3996C18.5296 21.6468 19 21.4116 19 20.9996V3.5C19 2.94772 18.5523 2.5 18 2.5H6Z" fill="#65686c"/>
+            </svg>
+          </button>
 
-          {/* Right side - Inline Reactions (same as groups permalink) */}
+          {/* Inline Reactions - right aligned */}
           <div style={{
             flex: 1,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'flex-end',
-            padding: '0 4px 0 12px',
+            height: '44px',
+            padding: '8px 12px',
           }}>
             <div style={{
               display: 'flex',
               alignItems: 'center',
-              gap: 0,
             }}>
               <img 
                 src="/images/reactions/like_default_40.png" 
@@ -629,6 +674,77 @@ export default function MarketplaceProductPage() {
                 style={{ width: '18px', height: '18px', borderRadius: '50%' }}
               />
             </div>
+          </div>
+        </div>
+
+        {/* Send Message Card - Elevated with border and shadow */}
+        <div style={{
+          margin: '8px 12px 16px',
+          background: '#fff',
+          borderRadius: '12px',
+          border: '1px solid #e2e5e9',
+          boxShadow: '0px 2px 16px 0px rgba(0, 0, 0, 0.1)',
+          position: 'relative',
+          zIndex: 1,
+        }}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+            padding: '12px 12px 8px',
+          }}>
+            {/* Messenger icon - 16px */}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#080809">
+              <path fillRule="evenodd" clipRule="evenodd" d="M12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 13.6405 2.9175 15.1851 3.65326 16.5359C3.9179 17.0217 4.01879 17.5892 3.87305 18.1533L3.1582 20.8418L5.84668 20.127C6.41079 19.9812 6.9783 20.0821 7.46406 20.3467C8.8149 21.0825 10.3595 21.5 12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5ZM0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C10.0782 23.5 8.26351 23.0279 6.66895 22.1924C6.50263 22.1053 6.34422 22.0918 6.22363 22.123L2.82422 23.0049C1.71693 23.292 0.708044 22.2831 0.995117 21.1758L1.87695 17.7764C1.90815 17.6558 1.89474 17.4974 1.80762 17.3311C0.97205 15.7365 0.5 13.9218 0.5 12ZM18.5068 9.28223C18.8742 8.71443 18.1934 8.05362 17.6367 8.4375L13.8203 11.0693C13.6918 11.1581 13.5226 11.1608 13.3916 11.0762L10.0039 8.88477C9.7172 8.6995 9.33478 8.78169 9.14941 9.06836L5.49316 14.7178C5.12555 15.2856 5.80655 15.9466 6.36328 15.5625L10.1807 12.9307C10.3092 12.8419 10.4782 12.8392 10.6094 12.9238L13.9961 15.1152C14.2828 15.3006 14.6652 15.2184 14.8506 14.9316L18.5068 9.28223Z" fill="#080809" />
+            </svg>
+            <span style={{ fontSize: '15px', fontWeight: '500', color: '#080809', lineHeight: '20px', letterSpacing: 'normal' }}>
+              Send seller a message
+            </span>
+          </div>
+          <div style={{
+            display: 'flex',
+            gap: '8px',
+            alignItems: 'center',
+            padding: '0 12px 16px',
+          }}>
+            <div style={{
+              flex: 1,
+              display: 'flex',
+              alignItems: 'center',
+              background: '#f0f2f5',
+              borderRadius: '24px',
+              padding: '8px 12px',
+              minHeight: '40px',
+            }}>
+              <span style={{ 
+                flex: 1,
+                fontSize: '15px', 
+                color: '#080809',
+                lineHeight: '20px',
+                letterSpacing: 'normal',
+              }}>
+                Good morning, is this still available?
+              </span>
+            </div>
+            <button 
+              onClick={() => setShowMessagePrompt(true)}
+              style={{
+                width: '24px',
+                height: '24px',
+                background: 'none',
+                border: 'none',
+                padding: 0,
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
+              }}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#0866ff">
+                <path d="M1.68791 9.33183C-0.843349 6.81538 0.938748 2.49512 4.50803 2.49512H19.4969C22.5755 2.49512 24.5001 5.8272 22.9618 8.49386L15.4716 21.478C13.6882 24.5696 9.05567 23.9547 8.14054 20.5048L6.90124 15.833L12.5439 11.6508C12.9524 11.348 13.0687 10.7869 12.8142 10.3468C12.5596 9.90663 12.0154 9.72754 11.5492 9.93056L5.11076 12.7347L1.68791 9.33183Z" fill="#0866ff" />
+              </svg>
+            </button>
           </div>
         </div>
 
@@ -844,80 +960,6 @@ export default function MarketplaceProductPage() {
                 {product.distance} away
               </p>
             </div>
-          </div>
-        </div>
-
-        {/* Send Message Card - Elevated with border and shadow */}
-        <div style={{
-          margin: '8px 12px 16px',
-          background: '#fff',
-          borderRadius: '12px',
-          border: '1px solid #e2e5e9',
-          boxShadow: '0px 2px 16px 0px rgba(0, 0, 0, 0.1)',
-          position: 'relative',
-          zIndex: 1,
-        }}>
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '6px',
-            padding: '12px 12px 8px',
-          }}>
-            {/* Messenger icon - 16px */}
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#080809">
-              <path fillRule="evenodd" clipRule="evenodd" d="M12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 13.6405 2.9175 15.1851 3.65326 16.5359C3.9179 17.0217 4.01879 17.5892 3.87305 18.1533L3.1582 20.8418L5.84668 20.127C6.41079 19.9812 6.9783 20.0821 7.46406 20.3467C8.8149 21.0825 10.3595 21.5 12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5ZM0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C10.0782 23.5 8.26351 23.0279 6.66895 22.1924C6.50263 22.1053 6.34422 22.0918 6.22363 22.123L2.82422 23.0049C1.71693 23.292 0.708044 22.2831 0.995117 21.1758L1.87695 17.7764C1.90815 17.6558 1.89474 17.4974 1.80762 17.3311C0.97205 15.7365 0.5 13.9218 0.5 12ZM18.5068 9.28223C18.8742 8.71443 18.1934 8.05362 17.6367 8.4375L13.8203 11.0693C13.6918 11.1581 13.5226 11.1608 13.3916 11.0762L10.0039 8.88477C9.7172 8.6995 9.33478 8.78169 9.14941 9.06836L5.49316 14.7178C5.12555 15.2856 5.80655 15.9466 6.36328 15.5625L10.1807 12.9307C10.3092 12.8419 10.4782 12.8392 10.6094 12.9238L13.9961 15.1152C14.2828 15.3006 14.6652 15.2184 14.8506 14.9316L18.5068 9.28223Z" fill="#080809" />
-            </svg>
-            {/* Headline 4 - 15px, 500 weight */}
-            <span style={{ fontSize: '15px', fontWeight: '500', color: '#080809', lineHeight: '20px', letterSpacing: 'normal' }}>
-              Send seller a message
-            </span>
-          </div>
-          <div style={{
-            display: 'flex',
-            gap: '8px',
-            alignItems: 'center',
-            padding: '0 12px 16px',
-          }}>
-            <div style={{
-              flex: 1,
-              display: 'flex',
-              alignItems: 'center',
-              background: '#f0f2f5',
-              borderRadius: '24px',
-              padding: '8px 12px',
-              minHeight: '40px',
-            }}>
-              {/* Body 3 - 15px */}
-              <span style={{ 
-                flex: 1,
-                fontSize: '15px', 
-                color: '#080809',
-                lineHeight: '20px',
-                letterSpacing: 'normal',
-              }}>
-                Good morning, is this still available?
-              </span>
-            </div>
-            {/* Blueprint FDS Nucleus Filled Send Icon */}
-            <button 
-              onClick={() => setShowMessagePrompt(true)}
-              style={{
-                width: '24px',
-                height: '24px',
-                background: 'none',
-                border: 'none',
-                padding: 0,
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0,
-              }}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="#0866ff">
-                <path d="M1.68791 9.33183C-0.843349 6.81538 0.938748 2.49512 4.50803 2.49512H19.4969C22.5755 2.49512 24.5001 5.8272 22.9618 8.49386L15.4716 21.478C13.6882 24.5696 9.05567 23.9547 8.14054 20.5048L6.90124 15.833L12.5439 11.6508C12.9524 11.348 13.0687 10.7869 12.8142 10.3468C12.5596 9.90663 12.0154 9.72754 11.5492 9.93056L5.11076 12.7347L1.68791 9.33183Z" fill="#0866ff" />
-              </svg>
-            </button>
           </div>
         </div>
 
@@ -1179,6 +1221,30 @@ export default function MarketplaceProductPage() {
               "Stranger Things gifts",
               "Limited edition Pop",
             ]}
+            onQueryClick={(query) => {
+              const queryToProducts = {
+                "Stranger Things Funko Pop": ["t1", "t5", "t8"],
+                "LEGO Stranger Things": ["t2", "t4"],
+                "Rare Funko Pop chase": ["t3", "t8", "t5"],
+                "Vintage collectibles": ["t6", "t7"],
+                "Funko Pop display": ["t5", "t1", "t8"],
+                "Stranger Things poster": ["t7", "t6"],
+                "Netflix merch deals": ["t8", "t5", "t1"],
+                "Vinyl price guide": ["t3", "t7"],
+                "Eleven Funko Pop": ["t1", "t8", "t5"],
+                "Demogorgon figure": ["t3", "t5"],
+                "Hawkins High merch": ["t6", "t7", "t8"],
+                "Pop protectors": ["t5", "t1", "t3"],
+                "Chase edition Funko": ["t3", "t8", "t1"],
+                "Collectible toys": ["t4", "t2", "t6"],
+                "Stranger Things gifts": ["t6", "t7", "t4"],
+                "Limited edition Pop": ["t8", "t3", "t5"],
+              };
+              const candidates = queryToProducts[query] || ["t1"];
+              const targetId = candidates.find(id => id !== params.id) || candidates[0];
+              router.push(`/m/marketplace/${targetId}`, { scroll: false });
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             noDivider
           />
         </div>
@@ -1393,61 +1459,66 @@ export default function MarketplaceProductPage() {
             }}>
               <div style={{
                 background: '#fff',
-                borderRadius: '12px',
-                padding: '16px',
-                boxShadow: '0 2px 12px rgba(0, 0, 0, 0.1)',
-                border: '1px solid rgba(0, 0, 0, 0.05)',
+                borderRadius: '16px',
+                boxShadow: '0px 0px 16px 0px rgba(0, 0, 0, 0.1)',
               }}>
-                {/* Content row with illustration */}
                 <div style={{
                   display: 'flex',
-                  alignItems: 'flex-start',
                   gap: '12px',
-                  marginBottom: '12px',
+                  alignItems: 'flex-start',
+                  padding: '12px',
                 }}>
-                  {/* Notification illustration */}
-                  <img 
-                    src="/illustrations/notif.png" 
-                    alt="Notification"
-                    style={{
-                      width: '48px',
-                      height: '48px',
-                      flexShrink: 0,
-                    }}
-                  />
-                  {/* Headline 3: 17px, 500 weight */}
+                  {/* Notification bell icon - filled, using Figma nucleus icon */}
+                  <div style={{ paddingTop: '4px', flexShrink: 0 }}>
+                    <div style={{
+                      width: '24px',
+                      height: '24px',
+                      backgroundColor: '#0866ff',
+                      WebkitMaskImage: "url('/images/icons/notifications-filled.png')",
+                      WebkitMaskSize: '24px 24px',
+                      WebkitMaskRepeat: 'no-repeat',
+                      WebkitMaskPosition: '0px 0px',
+                      maskImage: "url('/images/icons/notifications-filled.png')",
+                      maskSize: '24px 24px',
+                      maskRepeat: 'no-repeat',
+                      maskPosition: '0px 0px',
+                    }} />
+                  </div>
                   <p style={{
                     fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
                     fontSize: '17px',
-                    fontWeight: '500',
-                    lineHeight: '22px',
+                    fontWeight: 500,
+                    lineHeight: '20px',
                     letterSpacing: 'normal',
                     color: '#080809',
                     margin: 0,
+                    flex: 1,
+                    padding: '4px 0',
                   }}>
-                    Get notified for items related to "stranger things funko pop"
+                    Get notified for items related to &ldquo;stranger things funko pop&rdquo;
                   </p>
                 </div>
-                {/* Primary Button - Button 2 (Medium): 15px, 600 weight */}
-                <button 
-                  onClick={() => window.open('https://apps.apple.com/app/facebook/id284882215', '_blank')}
-                  style={{
-                    width: '100%',
-                    padding: '10px 16px',
-                    background: '#0866ff',
-                    border: 'none',
-                    borderRadius: '8px',
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
-                    fontSize: '15px',
-                    fontWeight: '600',
-                    lineHeight: '20px',
-                    letterSpacing: 'normal',
-                    color: '#fff',
-                    cursor: 'pointer',
-                  }}
-                >
-                  Open app
-                </button>
+                <div style={{ padding: '0 12px 12px' }}>
+                  <button 
+                    onClick={() => window.open('https://apps.apple.com/app/facebook/id284882215', '_blank')}
+                    style={{
+                      width: '100%',
+                      height: '36px',
+                      background: '#0866ff',
+                      border: 'none',
+                      borderRadius: '8px',
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
+                      fontSize: '15px',
+                      fontWeight: 600,
+                      lineHeight: '20px',
+                      letterSpacing: 'normal',
+                      color: '#fff',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    Open app
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -1822,6 +1893,13 @@ export default function MarketplaceProductPage() {
         onClose={() => setShowMessagePrompt(false)}
         type="message"
         entityName="Maya"
+      />
+
+      {/* Save Upsell Sheet */}
+      <UpsellBottomSheet
+        isOpen={showSavePrompt}
+        onClose={() => setShowSavePrompt(false)}
+        type="save"
       />
     </PageWrapper>
   );

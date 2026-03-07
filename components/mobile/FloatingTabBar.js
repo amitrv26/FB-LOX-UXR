@@ -88,6 +88,8 @@ const FloatingTabBar = ({
   // If forceExpanded is true, always start expanded
   const [isSearchExpanded, setIsSearchExpanded] = useState(forceExpanded === true ? true : initialSearchExpanded);
   const [hasSearched, setHasSearched] = useState(searchConducted);
+  const [inputFocused, setInputFocused] = useState(false);
+  const [inputValue, setInputValue] = useState("");
   // Sync expanded state when forceExpanded changes
   useEffect(() => {
     if (forceExpanded === true) {
@@ -328,22 +330,25 @@ const FloatingTabBar = ({
               />
             </div>
             <div className="floating-tab-bar__search-input-wrapper">
-              <button 
-                className="floating-tab-bar__placeholder-container"
-                onClick={() => {
-                  if (!showInitialPlaceholder && onSuggestionTap) {
+              <input
+                type="text"
+                className="floating-tab-bar__placeholder-container floating-tab-bar__real-input"
+                placeholder={currentPlaceholderText}
+                onFocus={() => setInputFocused(true)}
+                onBlur={() => setInputFocused(false)}
+                onChange={(e) => setInputValue(e.target.value)}
+                value={inputValue}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && inputValue.trim()) {
                     setHasSearched(true);
-                    onSuggestionTap(currentPlaceholderText);
+                    if (onSuggestionTap) onSuggestionTap(inputValue.trim());
+                    else if (onSearch) onSearch(inputValue.trim());
                   }
                 }}
-              >
-                <span 
-                  className={`floating-tab-bar__placeholder ${getPlaceholderAnimationClass()}`}
-                  key={showInitialPlaceholder ? 'initial' : currentSuggestionIndex}
-                >
-                  {currentPlaceholderText}
-                </span>
-              </button>
+                autoComplete="off"
+                autoCorrect="off"
+                spellCheck="false"
+              />
             </div>
             <button
               className="floating-tab-bar__submit-btn"

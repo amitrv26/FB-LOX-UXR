@@ -42,7 +42,7 @@ const UPSELL_CONFIGS = {
   save: {
     illustration: "/illustrations/save-mp-items.png",
     getTitle: () => "Good finds go fast",
-    message: "Save this and more in the app.",
+    message: "Save this and more on the app.",
   },
   joinGroup: {
     illustration: null,
@@ -71,11 +71,10 @@ const darkModeColors = {
   primaryButtonText: '#050505',
   secondaryButton: '#3A3B3C',
   secondaryButtonText: '#E4E6EB',
-  illustrationBg: 'transparent',
 };
 
 const lightModeColors = {
-  background: '#f2f4f7',
+  background: '#ffffff',
   handle: '#84878b',
   primaryText: '#080809',
   secondaryText: '#65686c',
@@ -84,7 +83,6 @@ const lightModeColors = {
   primaryButtonText: '#ffffff',
   secondaryButton: '#e2e5e9',
   secondaryButtonText: '#080809',
-  illustrationBg: 'transparent',
 };
 
 const isImageCached = (src) => {
@@ -235,7 +233,6 @@ const UpsellBottomSheet = ({
           animation: isAnimatingOut
             ? 'upsellSheetSlideDown 0.25s cubic-bezier(0.32, 0, 0.67, 0) forwards'
             : 'upsellSheetSlideUp 0.35s cubic-bezier(0.32, 0.72, 0, 1) forwards',
-          paddingBottom: 'env(safe-area-inset-bottom, 0px)',
           willChange: 'transform, opacity',
         }}
       >
@@ -274,7 +271,7 @@ const UpsellBottomSheet = ({
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: colors.illustrationBg,
+                backgroundColor: 'transparent',
                 borderRadius: '8px',
                 overflow: 'hidden',
               }}>
@@ -299,7 +296,7 @@ const UpsellBottomSheet = ({
           <div style={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '10px',
+            gap: '4px',
             alignItems: 'center',
             padding: '0 0 12px',
           }}>
@@ -308,8 +305,8 @@ const UpsellBottomSheet = ({
               fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
               fontSize: '17px',
               fontWeight: 700,
-              lineHeight: '22px',
-              letterSpacing: 'normal',
+              lineHeight: '20px',
+              letterSpacing: '-0.41px',
               textAlign: 'center',
               color: colors.primaryText,
             }}>{title}</h2>
@@ -319,9 +316,9 @@ const UpsellBottomSheet = ({
               fontSize: '15px',
               fontWeight: 400,
               lineHeight: '20px',
-              letterSpacing: 'normal',
+              letterSpacing: '-0.24px',
               textAlign: 'center',
-              color: colors.secondaryText,
+              color: colors.primaryText,
             }}>{message}</p>
           </div>
         </div>
@@ -373,8 +370,6 @@ const UpsellBottomSheet = ({
           </button>
         </div>
 
-        {/* Home affordance safe area */}
-        <div style={{ height: '32px' }} />
       </div>
     </>
   );

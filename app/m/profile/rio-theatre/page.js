@@ -9,16 +9,16 @@ import RelatedPostsUnit from "../../../../components/mobile/RelatedPostsUnit";
 import ShareSheet from "../../../../components/mobile/ShareSheet";
 import { IconInline } from "../../../../components/Icon";
 
-// Profile data for Rio Theatre
+// Profile data for Webster Hall
 const profileData = {
-  name: "Rio Theatre",
+  name: "Webster Hall",
   verified: true,
-  username: "riotheatrevancouver",
-  description: "Buttering your popcorn since 1938. See website for our calendar of live events as well as classic, cult, and new films. Come early for great seats!",
-  recommendedPercent: "92",
-  priceRange: "$",
-  followers: "35K",
-  following: "95",
+  username: "websterhall",
+  description: "NYC's legendary live music venue since 1886. Concerts, DJ nights, and unforgettable live events in the East Village. See website for upcoming shows!",
+  recommendedPercent: "94",
+  priceRange: "$$",
+  followers: "180K",
+  following: "312",
   coverImage: "/images/rio-theatre/image.png",
   profileImage: "/images/rio-theatre/Entity header/Actor.png",
 };
@@ -28,132 +28,132 @@ const postsData = [
   {
     id: "stranger-things-finale",
     author: {
-      name: "Rio Theatre",
+      name: "Webster Hall",
       verified: true,
       date: "2h",
     },
-    text: "🎬 STRANGER THINGS SERIES FINALE - LIVE AT THE RIO! 🎬\n\nWe're beyond excited to announce that Vancouver's beloved independent cinema will be hosting a VERY special screening of the Stranger Things series finale!\n\n📅 Date: January 25, 2026\n🎟️ Doors open: 6:00 PM\n🎬 Screening: 7:30 PM\n🎤 Live Q&A: 10:00 PM",
+    text: "🎤 SABRINA CARPENTER LIVE AT WEBSTER HALL - NYC! 🎤\n\nWe're thrilled to announce a special intimate show with Sabrina Carpenter at NYC's legendary Webster Hall!\n\n📅 Date: March 28, 2026\n🎟️ Doors open: 7:00 PM\n🎤 Show starts: 8:30 PM\n✨ VIP Meet & Greet: 6:00 PM",
     image: "/images/rio-theatre/DATA-UNSPLASH-@slientlymine-coffee.png",
-    reactions: { count: "2.4K", like: true, love: true },
-    comments: "26",
-    shares: "342",
+    reactions: { count: "5.2K", like: true, love: true },
+    comments: "48",
+    shares: "1.2K",
   },
   {
     id: "post-2",
     author: {
-      name: "Rio Theatre",
+      name: "Webster Hall",
       verified: true,
       date: "1d",
     },
-    text: "Thank you Vancouver for making last night's Rocky Horror Picture Show a SOLD OUT success! 🎭\n\nNext show: January 25th. Get your tickets early!",
+    text: "Last night was ELECTRIC! 🔥 Thank you NYC for making Chappell Roan's show a SOLD OUT success! The energy in the room was unreal.\n\nNext up: Sabrina Carpenter on March 28th. Don't sleep on tickets!",
     image: "/images/rio-theatre/1.png",
-    reactions: { count: "156", like: true, love: true },
-    comments: "34",
-    shares: "18",
+    reactions: { count: "1.8K", like: true, love: true },
+    comments: "67",
+    shares: "234",
   },
   {
     id: "post-3",
     author: {
-      name: "Rio Theatre",
+      name: "Webster Hall",
       verified: true,
       date: "3d",
     },
-    text: "Behind the scenes at our iconic projection booth! 🎥 Our vintage 35mm projectors have been running since 1938, keeping the magic of cinema alive in Vancouver.",
+    text: "Behind the scenes at our legendary Grand Ballroom! 🎸 From the Ramones to Billie Eilish, this stage has seen it all. Who do you want to see here next?",
     image: "/images/rio-theatre/2.png",
-    reactions: { count: "89", like: true, love: true },
-    comments: "12",
-    shares: "5",
+    reactions: { count: "892", like: true, love: true },
+    comments: "156",
+    shares: "45",
   },
   {
     id: "post-4",
     author: {
-      name: "Rio Theatre",
+      name: "Webster Hall",
       verified: true,
       date: "5d",
     },
-    text: "Movie night essentials: fresh popcorn, cold drinks, and the best seats in the house! 🍿 What's your go-to snack combo?",
+    text: "Concert night essentials: good vibes, great music, and your crew! 🎶 What's your go-to pre-show ritual? Drop it in the comments!",
     image: "/images/rio-theatre/3.png",
-    reactions: { count: "234", like: true, love: true },
-    comments: "67",
-    shares: "23",
+    reactions: { count: "567", like: true, love: true },
+    comments: "89",
+    shares: "34",
   },
   {
     id: "post-5",
     author: {
-      name: "Rio Theatre",
+      name: "Webster Hall",
       verified: true,
       date: "1w",
     },
-    text: "Throwback to last week's sold-out screening! 📸 Thank you to everyone who came out to celebrate cinema with us. You make this community so special!",
+    text: "Throwback to last week's sold-out show! 📸 Thank you to everyone who came out to make it unforgettable. NYC, you never disappoint!",
     image: "/images/rio-theatre/4.png",
-    reactions: { count: "312", like: true, love: true },
-    comments: "45",
-    shares: "31",
+    reactions: { count: "1.1K", like: true, love: true },
+    comments: "78",
+    shares: "56",
   },
   {
     id: "post-6",
     author: {
-      name: "Rio Theatre",
+      name: "Webster Hall",
       verified: true,
       date: "1w",
     },
-    text: "Our beautiful marquee lit up for another magical evening! ✨ There's nothing quite like seeing your favorite films on the big screen.",
+    text: "Our iconic marquee lit up for another legendary night in the East Village! ✨ There's nothing like live music at Webster Hall.",
     image: "/images/rio-theatre/5.png",
-    reactions: { count: "178", like: true, love: true },
-    comments: "28",
-    shares: "14",
+    reactions: { count: "743", like: true, love: true },
+    comments: "45",
+    shares: "28",
   },
   {
     id: "post-7",
     author: {
-      name: "Rio Theatre",
+      name: "Webster Hall",
       verified: true,
       date: "2w",
     },
-    text: "Cozy vibes at the Rio! ☕ Our lobby is the perfect spot to hang out before the show. Come early, grab a drink, and soak in the atmosphere.",
+    text: "Pre-show vibes at Webster Hall! 🍸 Our bars are fully stocked and the energy is building. Doors open at 7 - come early and soak it in!",
     image: "/images/rio-theatre/6.png",
-    reactions: { count: "145", like: true, love: true },
-    comments: "19",
-    shares: "8",
+    reactions: { count: "456", like: true, love: true },
+    comments: "32",
+    shares: "15",
   },
   {
     id: "post-8",
     author: {
-      name: "Rio Theatre",
+      name: "Webster Hall",
       verified: true,
       date: "2w",
     },
-    text: "Film lovers unite! 🎬 We're so grateful for this amazing community. Every screening feels like a family gathering.",
+    text: "Music lovers unite! 🎵 We're so grateful for this incredible community. Every show at Webster Hall feels like a family reunion.",
     image: "/images/rio-theatre/7.png",
-    reactions: { count: "267", like: true, love: true },
-    comments: "52",
-    shares: "27",
+    reactions: { count: "623", like: true, love: true },
+    comments: "67",
+    shares: "41",
   },
   {
     id: "post-9",
     author: {
-      name: "Rio Theatre",
+      name: "Webster Hall",
       verified: true,
       date: "3w",
     },
-    text: "Another packed house! 🙌 Vancouver, you never disappoint. Thank you for supporting independent cinema!",
+    text: "Another packed house! 🙌 New York, you always bring the energy. Thank you for keeping live music alive!",
     image: "/images/rio-theatre/8.png",
-    reactions: { count: "423", like: true, love: true },
-    comments: "78",
-    shares: "45",
+    reactions: { count: "934", like: true, love: true },
+    comments: "112",
+    shares: "67",
   },
   {
     id: "post-10",
     author: {
-      name: "Rio Theatre",
+      name: "Webster Hall",
       verified: true,
       date: "3w",
     },
-    text: "The Rio Theatre: Where memories are made and films come alive. 🌟 What's your favorite Rio memory? Share in the comments!",
+    text: "Webster Hall: Where legends are made and music comes alive. 🌟 What's your favorite Webster Hall memory? Share in the comments!",
     image: "/images/rio-theatre/9.png",
-    reactions: { count: "189", like: true, love: true },
-    comments: "93",
-    shares: "16",
+    reactions: { count: "512", like: true, love: true },
+    comments: "189",
+    shares: "38",
   },
 ];
 
@@ -161,46 +161,46 @@ const postsData = [
 const eventsData = [
   {
     id: "event-1",
-    date: "Wed, Jan 14 - Jan 14",
-    title: "The Secret Agent at the Rio Theatre",
-    responded: 47,
+    date: "Fri, Mar 28 at 7:00 PM EST",
+    title: "Sabrina Carpenter Live at Webster Hall",
+    responded: 2847,
     image: "/images/rio-theatre/1.png",
   },
   {
     id: "event-2",
-    date: "Tue, Jan 13 at 9:15 PM EST",
-    title: "Misery (Rob Reiner Tribute) at the Rio Theatre",
-    responded: 8,
+    date: "Sat, Apr 5 at 8:00 PM EST",
+    title: "Wallows - Tell Me That It's Over Tour at Webster Hall",
+    responded: 1234,
     image: "/images/rio-theatre/2.png",
   },
   {
     id: "event-3",
-    date: "Wed, Jan 14 at 9:15 PM EST...",
-    title: "Sentimental Value at the Rio Theatre",
-    responded: 83,
+    date: "Fri, Apr 11 at 9:00 PM EST",
+    title: "Tate McRae - Think Later World Tour at Webster Hall",
+    responded: 983,
     image: "/images/rio-theatre/3.png",
   },
   {
     id: "event-4",
-    date: "Wed, Jan 14 at 12:20 AM EST",
-    title: "Rental Family at the Rio Theatre",
-    responded: 12,
+    date: "Sat, Apr 19 at 8:00 PM EST",
+    title: "Gracie Abrams Live at Webster Hall",
+    responded: 756,
     image: "/images/rio-theatre/4.png",
   },
   {
     id: "event-5",
-    date: "Tue, Jan 25 at 9:15 PM",
-    title: "Dune: Part Two at the Rio Theatre",
-    responded: 5,
+    date: "Fri, May 2 at 9:00 PM EST",
+    title: "Beabadoobee - This Is How Tomorrow Moves at Webster Hall",
+    responded: 542,
     image: "/images/rio-theatre/5.png",
   },
 ];
 
 // Similar Pages data for the Similar Pages Unit
 const similarPagesData = [
-  { id: 'sp1', name: 'Scotiabank Theatre', followers: '28K', image: '/images/rio-theatre/scotiabank.png' },
-  { id: 'sp2', name: 'Vancouver Civic Theatre', followers: '15K', image: '/images/rio-theatre/civic-theatre.png' },
-  { id: 'sp3', name: 'Cineplex Cinemas Marine Gateway', followers: '42K', image: '/images/rio-theatre/marine-gateway.png' },
+  { id: 'sp1', name: 'Brooklyn Steel', followers: '95K', image: '/images/rio-theatre/scotiabank.png' },
+  { id: 'sp2', name: 'Irving Plaza', followers: '120K', image: '/images/rio-theatre/civic-theatre.png' },
+  { id: 'sp3', name: 'Terminal 5', followers: '85K', image: '/images/rio-theatre/marine-gateway.png' },
 ];
 
 // Icons - Badge Checkmark (blueprint token icon)
@@ -535,7 +535,7 @@ export default function RioTheatreProfile() {
                 >
                   <div style={{ padding: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><IconInline name="star-outline" size={24} color="primary" /></div>
                   <span style={{ fontSize: '15px', fontWeight: '600', lineHeight: '20px', letterSpacing: 'normal', color: '#080809', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>
-                    92% recommend (3,780 reviews)
+                    94% recommend (3,456 reviews)
                   </span>
                 </div>
 
@@ -551,7 +551,7 @@ export default function RioTheatreProfile() {
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '0' }}>
                   <div style={{ padding: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><IconInline name="pin-outline" size={24} color="primary" /></div>
                   <span style={{ fontSize: '15px', fontWeight: '600', lineHeight: '20px', letterSpacing: 'normal', color: '#080809', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif', paddingTop: '10px' }}>
-                    1660 East Broadway, Vancouver, BC, Canada V5N 1W1
+                    125 E 11th St, New York, NY 10003
                   </span>
                 </div>
               </div>
@@ -574,7 +574,7 @@ export default function RioTheatreProfile() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '0' }}>
                   <div style={{ padding: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><IconInline name="link-outline" size={24} color="primary" /></div>
                   <span style={{ fontSize: '15px', fontWeight: '600', lineHeight: '20px', letterSpacing: 'normal', color: '#080809', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>
-                    riotheatre.ca
+                    websterhall.com
                   </span>
                 </div>
           </div>
@@ -598,10 +598,10 @@ export default function RioTheatreProfile() {
                   <div style={{ padding: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><IconInline name="coupon-outline" size={24} color="primary" /></div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', paddingTop: '8px' }}>
                     <span style={{ fontSize: '15px', fontWeight: '600', lineHeight: '20px', letterSpacing: 'normal', color: '#080809', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>
-                      10% off shows after 9 PM
+                      15% off tickets for students
                     </span>
                     <span style={{ fontSize: '13px', fontWeight: '400', lineHeight: '16px', letterSpacing: 'normal', color: '#080809', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>
-                      Show this promotion in store to claim
+                      Show valid student ID at the box office
                     </span>
                   </div>
             </div>
@@ -625,7 +625,7 @@ export default function RioTheatreProfile() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '0' }}>
                   <div style={{ padding: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><IconInline name="at-sign-outline" size={24} color="primary" /></div>
                   <span style={{ fontSize: '15px', fontWeight: '600', lineHeight: '20px', letterSpacing: 'normal', color: '#080809', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>
-                    riotheatre + 1
+                    websterhall + 1
                   </span>
             </div>
 
@@ -633,7 +633,7 @@ export default function RioTheatreProfile() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '0' }}>
                   <div style={{ padding: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><IconInline name="phone-outline" size={24} color="primary" /></div>
                   <span style={{ fontSize: '15px', fontWeight: '600', lineHeight: '20px', letterSpacing: 'normal', color: '#080809', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>
-                    +1 (604) 879-3456
+                    +1 (212) 353-1600
                   </span>
           </div>
 
@@ -641,7 +641,7 @@ export default function RioTheatreProfile() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '0' }}>
                   <div style={{ padding: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><IconInline name="app-messenger-swish-outline" size={24} color="primary" /></div>
                   <span style={{ fontSize: '15px', fontWeight: '600', lineHeight: '20px', letterSpacing: 'normal', color: '#080809', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>
-                    The Rio Theatre
+                    Webster Hall
                   </span>
                 </div>
               </div>
@@ -740,7 +740,7 @@ export default function RioTheatreProfile() {
                 margin: 0,
                 fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
               }}>
-                Rio Theatre's photos
+                Webster Hall's photos
               </h2>
             </div>
             
@@ -855,7 +855,7 @@ export default function RioTheatreProfile() {
               </h2>
             </div>
             
-            {/* Events List - matches "Upcoming events at Rio Theatre" unit */}
+            {/* Events List - matches "Upcoming events at Webster Hall" unit */}
             <div style={{ paddingBottom: '8px' }}>
               {eventsData.map((event) => (
                 <div 
@@ -1179,7 +1179,7 @@ export default function RioTheatreProfile() {
                       margin: 0,
                       fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
                     }}>
-                      Upcoming events at Rio Theatre
+                      Upcoming events at Webster Hall
                     </h2>
                     <button
                       onClick={() => setShowLoginPrompt(true)}
@@ -1455,7 +1455,7 @@ export default function RioTheatreProfile() {
               </React.Fragment>
             ))}
 
-            <EndOfFeedUpsell />
+            <EndOfFeedUpsell hideWordmark />
             
           </div>
         )}
@@ -1473,7 +1473,7 @@ export default function RioTheatreProfile() {
         isOpen={showFollowPrompt}
         onClose={() => setShowFollowPrompt(false)}
         type="follow"
-        entityName="Rio Theatre"
+        entityName="Webster Hall"
       />
 
       {/* Message Prompt Sheet */}
@@ -1481,16 +1481,16 @@ export default function RioTheatreProfile() {
         isOpen={showMessagePrompt}
         onClose={() => setShowMessagePrompt(false)}
         type="message"
-        entityName="Rio Theatre"
+        entityName="Webster Hall"
       />
 
       {/* Reviews Sheet */}
       <ReviewsSheet 
         isOpen={showReviewsSheet}
         onClose={() => setShowReviewsSheet(false)}
-        businessName="Rio Theatre"
-        recommendedPercent="92"
-        reviewCount="3,780"
+        businessName="Webster Hall"
+        recommendedPercent="94"
+        reviewCount="3,456"
         onLoginPrompt={() => setShowLoginPrompt(true)}
       />
 

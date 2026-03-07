@@ -64,6 +64,37 @@ export default function MarketplaceToysPage() {
   // Save upsell sheet state
   const [showSaveSheet, setShowSaveSheet] = useState(false);
   
+  // Active search chip filter
+  const [activeQuery, setActiveQuery] = useState(null);
+
+  const getFilteredListings = () => {
+    if (!activeQuery) return toyListings;
+    const q = activeQuery.toLowerCase();
+    const scored = toyListings.map(toy => {
+      const text = `${toy.title} ${toy.id}`.toLowerCase();
+      let score = 0;
+      if (q.includes('funko') && text.includes('funko')) score += 3;
+      if (q.includes('lego') && text.includes('lego')) score += 3;
+      if (q.includes('demogorgon') && text.includes('demogorgon')) score += 3;
+      if (q.includes('eleven') && text.includes('eleven')) score += 3;
+      if (q.includes('poster') && text.includes('poster')) score += 3;
+      if (q.includes('chase') && text.includes('chase')) score += 3;
+      if (q.includes('rare') && text.includes('rare')) score += 2;
+      if (q.includes('vintage') || q.includes('retro')) score += 1;
+      if (q.includes('collectible') || q.includes('merch')) score += 1;
+      if (q.includes('limited') && text.includes('edition')) score += 2;
+      if (q.includes('pop') && text.includes('pop')) score += 2;
+      if (q.includes('upside down') && text.includes('upside down')) score += 3;
+      q.split(' ').forEach(word => {
+        if (word.length > 3 && text.includes(word)) score += 1;
+      });
+      return { ...toy, score };
+    });
+    return scored.sort((a, b) => b.score - a.score);
+  };
+
+  const filteredListings = getFilteredListings();
+  
   // Prevent flash of unstyled content - show glimmer until mounted
   const [isMounted, setIsMounted] = useState(false);
   
@@ -300,7 +331,7 @@ export default function MarketplaceToysPage() {
               color: '#0064d1',
               fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
               whiteSpace: 'nowrap',
-            }}>Seattle, WA</span>
+            }}>New York, NY</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#0064d1">
               <path d="M7.41417 9C5.63236 9 4.74002 11.1543 5.99995 12.4142L10.2322 16.6464C11.2085 17.6228 12.7914 17.6228 13.7677 16.6464L18 12.4142C19.2599 11.1543 18.3675 9 16.5857 9H7.41417Z"/>
             </svg>
@@ -316,7 +347,9 @@ export default function MarketplaceToysPage() {
               color: '#65686c',
               margin: 0,
             }}>
-              16+ results for "stranger things toys"
+              {activeQuery
+                ? `${filteredListings.length}+ results for "${activeQuery.toLowerCase()}"`
+                : '16+ results for "stranger things toys"'}
             </p>
           </div>
         )}
@@ -329,7 +362,7 @@ export default function MarketplaceToysPage() {
           width: '100%',
           boxSizing: 'border-box',
         }}>
-          {toyListings.slice(0, 6).map((toy, index) => (
+          {filteredListings.slice(0, 6).map((toy, index) => (
             <div 
               key={toy.id} 
               onClick={() => router.push(`/m/marketplace/${toy.id}`)}
@@ -448,7 +481,10 @@ export default function MarketplaceToysPage() {
         {/* Others searched for */}
         <OthersSearchedFor 
           queries={marketplaceSuggestions}
-          onQueryClick={(query) => console.log("Query clicked:", query)}
+          onQueryClick={(query) => {
+            setActiveQuery(query === activeQuery ? null : query);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
           className="others-searched-for--no-divider"
         />
 
@@ -461,7 +497,7 @@ export default function MarketplaceToysPage() {
           boxSizing: 'border-box',
           paddingTop: '12px',
         }}>
-          {toyListings.slice(6, 12).map((toy, index) => (
+          {filteredListings.slice(6, 12).map((toy, index) => (
             <div 
               key={`more-${toy.id}`} 
               onClick={() => router.push(`/m/marketplace/${toy.id}`)}
@@ -708,7 +744,7 @@ export default function MarketplaceToysPage() {
           boxSizing: 'border-box',
           paddingTop: '8px',
         }}>
-          {toyListings.slice(12).map((toy, index) => (
+          {filteredListings.slice(12).map((toy, index) => (
             <div 
               key={`final-${toy.id}`} 
               onClick={() => router.push(`/m/marketplace/${toy.id}`)}

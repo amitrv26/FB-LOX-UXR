@@ -2,7 +2,7 @@
 
 const FACEBOOK_WORDMARK_URL = "/images/facebook-wordmark.png";
 
-export default function EndOfFeedUpsell() {
+export default function EndOfFeedUpsell({ hideWordmark = false }) {
   const handleOpenApp = () => {
     window.location.href = "fb://";
     setTimeout(() => {
@@ -19,20 +19,21 @@ export default function EndOfFeedUpsell() {
       background: '#ffffff',
       width: '100%',
     }}>
-      {/* Promotion header with Facebook wordmark */}
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '12px 16px',
-        borderBottom: '1px solid #e4e6eb',
-      }}>
-        <img
-          src={FACEBOOK_WORDMARK_URL}
-          alt="Facebook"
-          style={{ height: '20px' }}
-        />
-      </div>
+      {!hideWordmark && (
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '12px 16px',
+          borderBottom: '1px solid #e4e6eb',
+        }}>
+          <img
+            src={FACEBOOK_WORDMARK_URL}
+            alt="Facebook"
+            style={{ height: '20px' }}
+          />
+        </div>
+      )}
 
       {/* Illustration */}
       <div style={{
@@ -57,7 +58,7 @@ export default function EndOfFeedUpsell() {
       <div style={{
         display: 'flex',
         flexDirection: 'column',
-        gap: '10px',
+        gap: '4px',
         padding: '0 12px',
         textAlign: 'center',
       }}>
@@ -65,8 +66,8 @@ export default function EndOfFeedUpsell() {
           margin: 0,
           fontSize: '17px',
           fontWeight: 700,
-          lineHeight: '22px',
-          letterSpacing: 'normal',
+          lineHeight: '20px',
+          letterSpacing: '-0.41px',
           color: '#080809',
           fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
         }}>
@@ -77,7 +78,7 @@ export default function EndOfFeedUpsell() {
           fontSize: '15px',
           fontWeight: 400,
           lineHeight: '20px',
-          letterSpacing: 'normal',
+          letterSpacing: '-0.24px',
           color: '#080809',
           fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
         }}>

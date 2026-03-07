@@ -5008,6 +5008,23 @@ $card-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     -webkit-tap-highlight-color: transparent;
   }
 
+  &__real-input {
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family-text, -apple-system, BlinkMacSystemFont, sans-serif);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: var(--primary-text, #080809);
+    outline: none;
+    -webkit-appearance: none;
+
+    &::placeholder {
+      color: var(--placeholder-text, #65686c);
+    }
+  }
+
   &__placeholder {
     position: absolute;
     top: 0;

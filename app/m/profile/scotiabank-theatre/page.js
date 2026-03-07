@@ -1315,7 +1315,7 @@ export default function ScotiabankTheatreProfile() {
                 )}
               </React.Fragment>
             ))}
-            <EndOfFeedUpsell />
+            <EndOfFeedUpsell hideWordmark />
           </div>
         )}
       </main>

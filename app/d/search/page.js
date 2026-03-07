@@ -167,7 +167,6 @@ export default function DesktopSearchPage() {
               type="text" 
               className="gserp-searchbox__input" 
               defaultValue={searchQuery}
-              readOnly
             />
             <button className="gserp-searchbox__clear">
               <ClearIcon />
