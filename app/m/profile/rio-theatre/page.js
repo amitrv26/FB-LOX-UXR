@@ -23,6 +23,19 @@ const profileData = {
   profileImage: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=200&h=200&fit=crop",
 };
 
+// Concert/venue photo gallery for the Photos grid
+const photoGalleryImages = [
+  "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&h=400&fit=crop",
+  "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=400&h=400&fit=crop",
+  "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=400&fit=crop",
+  "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
+  "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop",
+  "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=400&h=400&fit=crop",
+  "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=400&fit=crop",
+  "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop",
+  "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=400&h=400&fit=crop",
+];
+
 // Sample posts data
 const postsData = [
   {
@@ -33,7 +46,7 @@ const postsData = [
       date: "2h",
     },
     text: "🎤 SABRINA CARPENTER LIVE AT WEBSTER HALL - NYC! 🎤\n\nWe're thrilled to announce a special intimate show with Sabrina Carpenter at NYC's legendary Webster Hall!\n\n📅 Date: March 28, 2026\n🎟️ Doors open: 7:00 PM\n🎤 Show starts: 8:30 PM\n✨ VIP Meet & Greet: 6:00 PM",
-    image: "/images/rio-theatre/DATA-UNSPLASH-@slientlymine-coffee.png",
+    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=450&fit=crop",
     reactions: { count: "5.2K", like: true, love: true },
     comments: "48",
     shares: "1.2K",
@@ -46,7 +59,7 @@ const postsData = [
       date: "1d",
     },
     text: "Last night was ELECTRIC! 🔥 Thank you NYC for making Chappell Roan's show a SOLD OUT success! The energy in the room was unreal.\n\nNext up: Sabrina Carpenter on March 28th. Don't sleep on tickets!",
-    image: "/images/rio-theatre/1.png",
+    image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=450&fit=crop",
     reactions: { count: "1.8K", like: true, love: true },
     comments: "67",
     shares: "234",
@@ -59,7 +72,7 @@ const postsData = [
       date: "3d",
     },
     text: "Behind the scenes at our legendary Grand Ballroom! 🎸 From the Ramones to Billie Eilish, this stage has seen it all. Who do you want to see here next?",
-    image: "/images/rio-theatre/2.png",
+    image: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=800&h=450&fit=crop",
     reactions: { count: "892", like: true, love: true },
     comments: "156",
     shares: "45",
@@ -72,7 +85,7 @@ const postsData = [
       date: "5d",
     },
     text: "Concert night essentials: good vibes, great music, and your crew! 🎶 What's your go-to pre-show ritual? Drop it in the comments!",
-    image: "/images/rio-theatre/3.png",
+    image: "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=800&h=450&fit=crop",
     reactions: { count: "567", like: true, love: true },
     comments: "89",
     shares: "34",
@@ -85,7 +98,7 @@ const postsData = [
       date: "1w",
     },
     text: "Throwback to last week's sold-out show! 📸 Thank you to everyone who came out to make it unforgettable. NYC, you never disappoint!",
-    image: "/images/rio-theatre/4.png",
+    image: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=800&h=450&fit=crop",
     reactions: { count: "1.1K", like: true, love: true },
     comments: "78",
     shares: "56",
@@ -98,7 +111,7 @@ const postsData = [
       date: "1w",
     },
     text: "Our iconic marquee lit up for another legendary night in the East Village! ✨ There's nothing like live music at Webster Hall.",
-    image: "/images/rio-theatre/5.png",
+    image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&h=450&fit=crop",
     reactions: { count: "743", like: true, love: true },
     comments: "45",
     shares: "28",
@@ -111,7 +124,7 @@ const postsData = [
       date: "2w",
     },
     text: "Pre-show vibes at Webster Hall! 🍸 Our bars are fully stocked and the energy is building. Doors open at 7 - come early and soak it in!",
-    image: "/images/rio-theatre/6.png",
+    image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=450&fit=crop",
     reactions: { count: "456", like: true, love: true },
     comments: "32",
     shares: "15",
@@ -124,7 +137,7 @@ const postsData = [
       date: "2w",
     },
     text: "Music lovers unite! 🎵 We're so grateful for this incredible community. Every show at Webster Hall feels like a family reunion.",
-    image: "/images/rio-theatre/7.png",
+    image: "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=800&h=450&fit=crop",
     reactions: { count: "623", like: true, love: true },
     comments: "67",
     shares: "41",
@@ -137,7 +150,7 @@ const postsData = [
       date: "3w",
     },
     text: "Another packed house! 🙌 New York, you always bring the energy. Thank you for keeping live music alive!",
-    image: "/images/rio-theatre/8.png",
+    image: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&h=450&fit=crop",
     reactions: { count: "934", like: true, love: true },
     comments: "112",
     shares: "67",
@@ -150,7 +163,7 @@ const postsData = [
       date: "3w",
     },
     text: "Webster Hall: Where legends are made and music comes alive. 🌟 What's your favorite Webster Hall memory? Share in the comments!",
-    image: "/images/rio-theatre/9.png",
+    image: "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=800&h=450&fit=crop",
     reactions: { count: "512", like: true, love: true },
     comments: "189",
     shares: "38",
@@ -164,43 +177,43 @@ const eventsData = [
     date: "Fri, Mar 28 at 7:00 PM EST",
     title: "Sabrina Carpenter Live at Webster Hall",
     responded: 2847,
-    image: "/images/rio-theatre/1.png",
+    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200&h=200&fit=crop",
   },
   {
     id: "event-2",
     date: "Sat, Apr 5 at 8:00 PM EST",
     title: "Wallows - Tell Me That It's Over Tour at Webster Hall",
     responded: 1234,
-    image: "/images/rio-theatre/2.png",
+    image: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=200&h=200&fit=crop",
   },
   {
     id: "event-3",
     date: "Fri, Apr 11 at 9:00 PM EST",
     title: "Tate McRae - Think Later World Tour at Webster Hall",
     responded: 983,
-    image: "/images/rio-theatre/3.png",
+    image: "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=200&h=200&fit=crop",
   },
   {
     id: "event-4",
     date: "Sat, Apr 19 at 8:00 PM EST",
     title: "Gracie Abrams Live at Webster Hall",
     responded: 756,
-    image: "/images/rio-theatre/4.png",
+    image: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=200&h=200&fit=crop",
   },
   {
     id: "event-5",
     date: "Fri, May 2 at 9:00 PM EST",
     title: "Beabadoobee - This Is How Tomorrow Moves at Webster Hall",
     responded: 542,
-    image: "/images/rio-theatre/5.png",
+    image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&h=200&fit=crop",
   },
 ];
 
 // Similar Pages data for the Similar Pages Unit
 const similarPagesData = [
-  { id: 'sp1', name: 'Brooklyn Steel', followers: '95K', image: '/images/rio-theatre/scotiabank.png' },
-  { id: 'sp2', name: 'Irving Plaza', followers: '120K', image: '/images/rio-theatre/civic-theatre.png' },
-  { id: 'sp3', name: 'Terminal 5', followers: '85K', image: '/images/rio-theatre/marine-gateway.png' },
+  { id: 'sp1', name: 'Brooklyn Steel', followers: '95K', image: 'https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=400&h=400&fit=crop' },
+  { id: 'sp2', name: 'Irving Plaza', followers: '120K', image: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400&h=400&fit=crop' },
+  { id: 'sp3', name: 'Terminal 5', followers: '85K', image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=400&fit=crop' },
 ];
 
 // Icons - Badge Checkmark (blueprint token icon)
@@ -689,11 +702,11 @@ export default function RioTheatreProfile() {
                   borderRadius: '12px',
                   overflow: 'hidden',
                 }}>
-                  {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
+                  {photoGalleryImages.map((src, idx) => (
                     <img 
-                      key={num}
-                      src={`/images/rio-theatre/${num}.png`}
-                      alt={`Photo ${num}`}
+                      key={idx}
+                      src={src}
+                      alt={`Photo ${idx + 1}`}
                       style={{
                         aspectRatio: '1',
                         width: '100%',
@@ -750,17 +763,17 @@ export default function RioTheatreProfile() {
               gridTemplateColumns: 'repeat(3, 1fr)', 
               gap: '4px',
             }}>
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
+              {photoGalleryImages.map((src, idx) => (
                 <div 
-                  key={num}
+                  key={idx}
                   style={{
                     aspectRatio: '1',
                     background: '#000',
                   }}
                 >
                   <img 
-                    src={`/images/rio-theatre/${num}.png`}
-                    alt={`Photo ${num}`}
+                    src={src}
+                    alt={`Photo ${idx + 1}`}
                     style={{
                       width: '100%',
                       height: '100%',
@@ -782,15 +795,15 @@ export default function RioTheatreProfile() {
               gap: '2px',
             }}>
               {[
-                { views: '66', image: '/images/rio-theatre/1.png' },
-                { views: '596', image: '/images/rio-theatre/2.png' },
-                { views: '1.6K', image: '/images/rio-theatre/3.png' },
-                { views: '234', image: '/images/rio-theatre/4.png' },
-                { views: '1.2K', image: '/images/rio-theatre/5.png' },
-                { views: '89', image: '/images/rio-theatre/6.png' },
-                { views: '456', image: '/images/rio-theatre/7.png' },
-                { views: '2.1K', image: '/images/rio-theatre/8.png' },
-                { views: '178', image: '/images/rio-theatre/9.png' },
+                { views: '66', image: photoGalleryImages[0] },
+                { views: '596', image: photoGalleryImages[1] },
+                { views: '1.6K', image: photoGalleryImages[2] },
+                { views: '234', image: photoGalleryImages[3] },
+                { views: '1.2K', image: photoGalleryImages[4] },
+                { views: '89', image: photoGalleryImages[5] },
+                { views: '456', image: photoGalleryImages[6] },
+                { views: '2.1K', image: photoGalleryImages[7] },
+                { views: '178', image: photoGalleryImages[8] },
               ].map((reel, index) => (
                 <div 
                   key={index}
