@@ -19,8 +19,8 @@ const profileData = {
   priceRange: "$$",
   followers: "180K",
   following: "312",
-  coverImage: "/images/rio-theatre/image.png",
-  profileImage: "/images/rio-theatre/Entity header/Actor.png",
+  coverImage: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=400&fit=crop",
+  profileImage: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=200&h=200&fit=crop",
 };
 
 // Sample posts data
@@ -1344,18 +1344,10 @@ export default function RioTheatreProfile() {
                     {similarPagesData.map((page) => (
                       <div 
                         key={page.id}
-                        onClick={() => {
-                          if (page.name === 'Scotiabank Theatre') {
-                            router.push('/m/profile/scotiabank-theatre');
-                          } else {
-                            setShowLoginPrompt(true);
-                          }
-                        }}
                         style={{
                           flex: '0 0 auto',
                           width: '164px',
                           background: '#fff',
-                          cursor: 'pointer',
                           borderRadius: '8px',
                           border: '1px solid #E2E5E9',
                           overflow: 'hidden',

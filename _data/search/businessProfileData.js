@@ -11,7 +11,7 @@ export const businessProfileResults = [
   },
 ];
 
-export const businessProfileQuery = "webster hall sabrina carpenter concert nyc";
+export const businessProfileQuery = "Webster Hall";
 
 // Quick facts for Webster Hall
 export const businessQuickFacts = {

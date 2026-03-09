@@ -68,13 +68,13 @@ const MARKETPLACE_PDP_QUERIES = [
   "Should I buy this now or wait?",
 ];
 
-// Rio Theatre profile page suggested queries
+// Webster Hall profile page suggested queries
 const RIO_THEATRE_QUERIES = [
-  "Stranger Things finale screening",
-  "Rio Theatre ticket prices",
-  "Upcoming events at Rio Theatre",
-  "Rocky Horror Picture Show schedule",
-  "Rio Theatre hours and location",
+  "Sabrina Carpenter concert tickets",
+  "Upcoming shows at Webster Hall",
+  "Webster Hall NYC events this week",
+  "Best concerts in East Village NYC",
+  "Webster Hall hours and location",
 ];
 
 // Groups permalink page suggested queries (Stranger Things themed)
@@ -1094,7 +1094,7 @@ export default function MobileLayout({ children }) {
             isAutoExpanded={shouldAutoExpandSearch}
             placeholder={
               isProfilePageWithExpandedSearch(pathname) 
-                ? "Search Rio Theatre" 
+                ? "Search Webster Hall" 
                 : (isGroupsPage && (isFromGoogle || isFromAggregation))
                   ? "Ask about Stranger Things..."
                   : (isAggregationTopicPageCheck || isExploreTopicPageCheck)

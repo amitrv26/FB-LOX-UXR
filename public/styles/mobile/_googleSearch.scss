@@ -105,7 +105,7 @@ html:has(.google-search-page) {
   margin: 0 16px 4px;
   padding: 10px 14px 10px 14px;
   background: #fff;
-  border: 1px solid #dfe1e5;
+  border: none;
   border-radius: 24px;
   box-shadow: 0 1px 6px rgba(32, 33, 36, 0.1);
 
@@ -124,6 +124,12 @@ html:has(.google-search-page) {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    -webkit-appearance: none;
+    appearance: none;
   }
 
   &__clear {

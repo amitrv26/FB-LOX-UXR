@@ -6,35 +6,36 @@ import { motion } from "framer-motion";
 import OthersSearchedFor from "../../../../components/mobile/OthersSearchedFor";
 import Icon from "../../../../components/Icon";
 import UpsellBottomSheet from "../../../../components/mobile/UpsellBottomSheet";
+import ShareSheet from "../../../../components/mobile/ShareSheet";
 
-// Product data mapping - all locations set to Seattle, all prices under $100
+// Product data mapping - all locations set to New York, all prices under $100
 const productData = {
-  't1': { id: 't1', price: '$25', title: 'Funko Pop Eleven with Eggos #421', location: 'Seattle, WA', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', images: ['/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'New', brand: 'Funko', category: 'Toys & Games', subcategory: 'LEGO', theme: 'Stranger Things', description: 'Funko Pop Eleven holding Eggos waffles. Mint condition, never removed from box. A must-have for any Stranger Things collector! This is the #421 vinyl figure from the popular Netflix series.' },
-  't2': { id: 't2', price: '$89', title: 'LEGO The Upside Down 75810', location: 'Seattle, WA', distance: '2 mi', image: '/images/stranger-things-assets/images/marketplace/lego.jpg', images: ['/images/stranger-things-assets/images/marketplace/lego.jpg', '/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'Like new', brand: 'LEGO', category: 'Toys & Games', subcategory: 'LEGO', theme: 'Stranger Things', description: 'Complete LEGO Stranger Things set featuring the Byers house in both dimensions. All 2,287 pieces included, built once and displayed in smoke-free home. Includes all 8 minifigures.' },
-  't3': { id: 't3', price: '$85', title: 'Demogorgon Chase Edition RARE', location: 'Seattle, WA', distance: '5 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', images: ['/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'New', brand: 'Funko', category: 'Collectibles', subcategory: 'Funko', theme: 'Stranger Things', description: 'Rare chase edition Demogorgon Funko Pop #428. Glow in the dark variant. Box in pristine condition. Serious collectors only! Limited edition release.' },
-  't4': { id: 't4', price: '$79', title: 'LEGO Creel House Custom MOC', location: 'Seattle, WA', distance: '3 mi', image: '/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg', images: ['/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg', '/images/stranger-things-assets/images/marketplace/lego.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg'], condition: 'New', brand: 'Custom MOC', category: 'Toys & Games', subcategory: 'LEGO', theme: 'Stranger Things', description: 'Custom LEGO Creel House from Season 4. Incredible detail including the grandfather clock and attic. Over 2,500 pieces! Instructions included for rebuilding.' },
-  't5': { id: 't5', price: '$69', title: 'Funko Pop Hawkins Gang Set (6)', location: 'Seattle, WA', distance: '8 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', images: ['/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'New', brand: 'Funko', category: 'Collectibles', subcategory: 'Funko', theme: 'Stranger Things', description: 'Complete set of 6 Funko Pops: Mike, Dustin, Lucas, Will, Eleven, and Max. All mint in box. Selling as set only. Perfect for starting your collection!' },
-  't6': { id: 't6', price: '$35', title: 'Stranger Things PEZ Set', location: 'Seattle, WA', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/pez-set.jpg', images: ['/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'New', brand: 'PEZ', category: 'Collectibles', subcategory: 'Collectibles', theme: 'Stranger Things', description: 'Stranger Things PEZ Dispensers Collector Set. Features characters from the show. New in packaging, never opened. Great gift for any fan!' },
-  't7': { id: 't7', price: '$75', title: 'Steve Harrington Autographed Card', location: 'Seattle, WA', distance: '2 mi', image: '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg', images: ['/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg'], condition: 'Like new', brand: 'Topps', category: 'Collectibles', subcategory: 'Cards', theme: 'Stranger Things', description: 'Authentic autographed trading card signed by Joe Keery (Steve Harrington). Comes with certificate of authenticity. Card is in excellent condition, stored in protective sleeve.' },
-  't8': { id: 't8', price: '$45', title: 'Funko Pop Eddie Munson #1250', location: 'Seattle, WA', distance: '4 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', images: ['/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/lego.jpg'], condition: 'New', brand: 'Funko', category: 'Toys & Games', subcategory: 'Funko', theme: 'Stranger Things', description: 'Eddie Munson Funko Pop #1250 from Stranger Things Season 4. The fan-favorite character in his iconic Hellfire Club shirt. Never removed from box.' },
+  't1': { id: 't1', price: '$25', title: 'Funko Pop Eleven with Eggos #421', location: 'New York, NY', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', images: ['/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'New', brand: 'Funko', category: 'Toys & Games', subcategory: 'LEGO', theme: 'Stranger Things', description: 'Funko Pop Eleven holding Eggos waffles. Mint condition, never removed from box. A must-have for any Stranger Things collector! This is the #421 vinyl figure from the popular Netflix series.' },
+  't2': { id: 't2', price: '$89', title: 'LEGO The Upside Down 75810', location: 'New York, NY', distance: '2 mi', image: '/images/stranger-things-assets/images/marketplace/lego.jpg', images: ['/images/stranger-things-assets/images/marketplace/lego.jpg', '/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'Like new', brand: 'LEGO', category: 'Toys & Games', subcategory: 'LEGO', theme: 'Stranger Things', description: 'Complete LEGO Stranger Things set featuring the Byers house in both dimensions. All 2,287 pieces included, built once and displayed in smoke-free home. Includes all 8 minifigures.' },
+  't3': { id: 't3', price: '$85', title: 'Demogorgon Chase Edition RARE', location: 'New York, NY', distance: '5 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', images: ['/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'New', brand: 'Funko', category: 'Collectibles', subcategory: 'Funko', theme: 'Stranger Things', description: 'Rare chase edition Demogorgon Funko Pop #428. Glow in the dark variant. Box in pristine condition. Serious collectors only! Limited edition release.' },
+  't4': { id: 't4', price: '$79', title: 'LEGO Creel House Custom MOC', location: 'New York, NY', distance: '3 mi', image: '/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg', images: ['/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg', '/images/stranger-things-assets/images/marketplace/lego.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg'], condition: 'New', brand: 'Custom MOC', category: 'Toys & Games', subcategory: 'LEGO', theme: 'Stranger Things', description: 'Custom LEGO Creel House from Season 4. Incredible detail including the grandfather clock and attic. Over 2,500 pieces! Instructions included for rebuilding.' },
+  't5': { id: 't5', price: '$69', title: 'Funko Pop Hawkins Gang Set (6)', location: 'New York, NY', distance: '8 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', images: ['/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'New', brand: 'Funko', category: 'Collectibles', subcategory: 'Funko', theme: 'Stranger Things', description: 'Complete set of 6 Funko Pops: Mike, Dustin, Lucas, Will, Eleven, and Max. All mint in box. Selling as set only. Perfect for starting your collection!' },
+  't6': { id: 't6', price: '$35', title: 'Stranger Things PEZ Set', location: 'New York, NY', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/pez-set.jpg', images: ['/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg'], condition: 'New', brand: 'PEZ', category: 'Collectibles', subcategory: 'Collectibles', theme: 'Stranger Things', description: 'Stranger Things PEZ Dispensers Collector Set. Features characters from the show. New in packaging, never opened. Great gift for any fan!' },
+  't7': { id: 't7', price: '$75', title: 'Steve Harrington Autographed Card', location: 'New York, NY', distance: '2 mi', image: '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg', images: ['/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg'], condition: 'Like new', brand: 'Topps', category: 'Collectibles', subcategory: 'Cards', theme: 'Stranger Things', description: 'Authentic autographed trading card signed by Joe Keery (Steve Harrington). Comes with certificate of authenticity. Card is in excellent condition, stored in protective sleeve.' },
+  't8': { id: 't8', price: '$45', title: 'Funko Pop Eddie Munson #1250', location: 'New York, NY', distance: '4 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', images: ['/images/stranger-things-assets/images/marketplace/funko-pop.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg', '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg', '/images/stranger-things-assets/images/marketplace/pez-set.jpg', '/images/stranger-things-assets/images/marketplace/lego.jpg'], condition: 'New', brand: 'Funko', category: 'Toys & Games', subcategory: 'Funko', theme: 'Stranger Things', description: 'Eddie Munson Funko Pop #1250 from Stranger Things Season 4. The fan-favorite character in his iconic Hellfire Club shirt. Never removed from box.' },
 };
 
 // Similar items for recommendations - all under $100 with full numbers
 const similarItems = [
-  { id: 's1', price: '$20', title: 'Dustin Funko Pop', location: 'Kirkland, WA', distance: '3 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg' },
-  { id: 's2', price: '$23', title: 'Max Funko Pop', location: 'Seattle, WA', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
-  { id: 's3', price: '$89', title: 'LEGO Set Used', location: 'Bellevue, WA', distance: '5 mi', image: '/images/stranger-things-assets/images/marketplace/lego.jpg' },
-  { id: 's4', price: '$30', title: 'Vecna Funko Pop', location: 'Redmond, WA', distance: '8 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg' },
-  { id: 's5', price: '$35', title: 'Eleven Funko Pop', location: 'Tacoma, WA', distance: '12 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
-  { id: 's6', price: '$25', title: 'Steve Funko Pop', location: 'Everett, WA', distance: '15 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg' },
-  { id: 's7', price: '$79', title: 'Upside Down LEGO', location: 'Renton, WA', distance: '6 mi', image: '/images/stranger-things-assets/images/marketplace/lego.jpg' },
-  { id: 's8', price: '$28', title: 'Demogorgon Pop', location: 'Kent, WA', distance: '10 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg' },
-  { id: 's9', price: '$19', title: 'Lucas Funko Pop', location: 'Burien, WA', distance: '7 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
-  { id: 's10', price: '$22', title: 'Will Funko Pop', location: 'Auburn, WA', distance: '14 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg' },
-  { id: 's11', price: '$18', title: 'Mike Funko Pop', location: 'Federal Way, WA', distance: '18 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg' },
-  { id: 's12', price: '$24', title: 'Hopper Funko Pop', location: 'Lynnwood, WA', distance: '11 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
-  { id: 's13', price: '$21', title: 'Nancy Funko Pop', location: 'Issaquah, WA', distance: '9 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg' },
-  { id: 's14', price: '$17', title: 'Jonathan Pop', location: 'Bothell, WA', distance: '13 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg' },
+  { id: 's1', price: '$20', title: 'Dustin Funko Pop', location: 'New York, NY', distance: '3 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg' },
+  { id: 's2', price: '$23', title: 'Max Funko Pop', location: 'New York, NY', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
+  { id: 's3', price: '$89', title: 'LEGO Set Used', location: 'Brooklyn, NY', distance: '5 mi', image: '/images/stranger-things-assets/images/marketplace/lego.jpg' },
+  { id: 's4', price: '$30', title: 'Vecna Funko Pop', location: 'Queens, NY', distance: '8 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg' },
+  { id: 's5', price: '$35', title: 'Eleven Funko Pop', location: 'Bronx, NY', distance: '12 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
+  { id: 's6', price: '$25', title: 'Steve Funko Pop', location: 'Hoboken, NJ', distance: '15 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg' },
+  { id: 's7', price: '$79', title: 'Upside Down LEGO', location: 'Jersey City, NJ', distance: '6 mi', image: '/images/stranger-things-assets/images/marketplace/lego.jpg' },
+  { id: 's8', price: '$28', title: 'Demogorgon Pop', location: 'Staten Island, NY', distance: '10 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg' },
+  { id: 's9', price: '$19', title: 'Lucas Funko Pop', location: 'Astoria, NY', distance: '7 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
+  { id: 's10', price: '$22', title: 'Will Funko Pop', location: 'Yonkers, NY', distance: '14 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg' },
+  { id: 's11', price: '$18', title: 'Mike Funko Pop', location: 'Long Island, NY', distance: '18 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg' },
+  { id: 's12', price: '$24', title: 'Hopper Funko Pop', location: 'Harlem, NY', distance: '11 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
+  { id: 's13', price: '$21', title: 'Nancy Funko Pop', location: 'Williamsburg, NY', distance: '9 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg' },
+  { id: 's14', price: '$17', title: 'Jonathan Pop', location: 'Park Slope, NY', distance: '13 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg' },
 ];
 
 // Blueprint Icons - OUTLINE versions from public/icons folder
@@ -69,10 +70,9 @@ const BookmarkIcon = () => (
   </svg>
 );
 
-// Share outline icon
 const ShareIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="#050505">
-    <path fillRule="evenodd" clipRule="evenodd" d="M12.8628 3.15582C12.5462 2.83512 12 3.05932 12 3.50998V8.00248C12 8.55476 11.5523 9.00248 11 9.00248H10.5C7.58095 9.00248 5.50274 10.222 4.12357 12.0953C2.91318 13.7395 2.21242 15.9327 2.04135 18.3301C2.81703 17.3939 3.76238 16.6319 4.93033 16.075C6.44545 15.3526 8.27778 15.0025 10.5 15.0025H11C11.5523 15.0025 12 15.4502 12 16.0025V20.4901C12 20.9408 12.5462 21.165 12.8628 20.8443L21.2451 12.3543C21.4389 12.1579 21.4389 11.8423 21.2451 11.6459L12.8628 3.15582ZM10 3.50998C10 1.27134 12.7132 0.157623 14.286 1.75067L22.6683 10.2408C23.6312 11.216 23.6312 12.7842 22.6683 13.7594L14.286 22.2494C12.7132 23.8425 10 22.7288 10 20.4901V17.0092C8.22692 17.058 6.86408 17.3687 5.79111 17.8803C4.63182 18.433 3.75465 19.2468 3.04864 20.3333C2.59207 21.0359 1.78571 21.1208 1.2696 21.0032C0.755147 20.8861 0 20.429 0 19.5025C0 16.3518 0.789377 13.2508 2.51296 10.9096C4.17987 8.6454 6.68372 7.14917 10 7.01268V3.50998Z" fill="#050505" />
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="#65686c">
+    <path fillRule="evenodd" clipRule="evenodd" d="M12.8628 3.15582C12.5462 2.83512 12 3.05932 12 3.50998V8.00248C12 8.55476 11.5523 9.00248 11 9.00248H10.5C7.58095 9.00248 5.50274 10.222 4.12357 12.0953C2.91318 13.7395 2.21242 15.9327 2.04135 18.3301C2.81703 17.3939 3.76238 16.6319 4.93033 16.075C6.44545 15.3526 8.27778 15.0025 10.5 15.0025H11C11.5523 15.0025 12 15.4502 12 16.0025V20.4901C12 20.9408 12.5462 21.165 12.8628 20.8443L21.2451 12.3543C21.4389 12.1579 21.4389 11.8423 21.2451 11.6459L12.8628 3.15582ZM10 3.50998C10 1.27134 12.7132 0.157623 14.286 1.75067L22.6683 10.2408C23.6312 11.216 23.6312 12.7842 22.6683 13.7594L14.286 22.2494C12.7132 23.8425 10 22.7288 10 20.4901V17.0092C8.22692 17.058 6.86408 17.3687 5.79111 17.8803C4.63182 18.433 3.75465 19.2468 3.04864 20.3333C2.59207 21.0359 1.78571 21.1208 1.2696 21.0032C0.755147 20.8861 0 20.429 0 19.5025C0 16.3518 0.789377 13.2508 2.51296 10.9096C4.17987 8.6454 6.68372 7.14917 10 7.01268V3.50998Z" fill="#65686c" />
   </svg>
 );
 
@@ -283,6 +283,9 @@ export default function MarketplaceProductPage() {
   const [expandedQuestions, setExpandedQuestions] = useState(new Set(['mq-1']));
   const [showMessagePrompt, setShowMessagePrompt] = useState(false);
   const [showSavePrompt, setShowSavePrompt] = useState(false);
+  const [showSharePrompt, setShowSharePrompt] = useState(false);
+  const [showLikePrompt, setShowLikePrompt] = useState(false);
+  const [showCommentPrompt, setShowCommentPrompt] = useState(false);
   
   // Check if coming from aggregation page
   const isFromAggregation = searchParams?.get('fromAggregation') === 'true';
@@ -580,7 +583,9 @@ export default function MarketplaceProductPage() {
           marginBottom: '4px',
         }}>
           {/* Like */}
-          <button style={{
+          <button
+            onClick={() => setShowLikePrompt(true)}
+            style={{
             display: 'flex',
             alignItems: 'center',
             gap: '6px',
@@ -604,7 +609,9 @@ export default function MarketplaceProductPage() {
           </button>
 
           {/* Comment */}
-          <button style={{
+          <button
+            onClick={() => setShowCommentPrompt(true)}
+            style={{
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
@@ -625,6 +632,22 @@ export default function MarketplaceProductPage() {
               lineHeight: '16px',
               letterSpacing: 'normal',
             }}>5</span>
+          </button>
+
+          {/* Share */}
+          <button
+            onClick={() => setShowSharePrompt(true)}
+            style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+            height: '44px',
+            padding: '8px 12px',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+          }}>
+            <ShareIcon />
           </button>
 
           {/* Bookmark */}
@@ -1893,6 +1916,28 @@ export default function MarketplaceProductPage() {
         onClose={() => setShowMessagePrompt(false)}
         type="message"
         entityName="Maya"
+      />
+
+      {/* Like Upsell Sheet */}
+      <UpsellBottomSheet
+        isOpen={showLikePrompt}
+        onClose={() => setShowLikePrompt(false)}
+        type="like"
+        count={10}
+      />
+
+      {/* Comment Upsell Sheet */}
+      <UpsellBottomSheet
+        isOpen={showCommentPrompt}
+        onClose={() => setShowCommentPrompt(false)}
+        type="comment"
+        count={5}
+      />
+
+      {/* Share Sheet */}
+      <ShareSheet
+        isOpen={showSharePrompt}
+        onClose={() => setShowSharePrompt(false)}
       />
 
       {/* Save Upsell Sheet */}

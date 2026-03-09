@@ -8,22 +8,22 @@ import "../../../../public/styles/mobile/aggregation.scss";
 
 // Stranger Things toys data for the grid - all items under $100
 const toyListings = [
-  { id: 't1', price: '$25', title: 'Funko Pop Eleven with Eggos #421', location: 'Seattle, WA', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg' },
-  { id: 't2', price: '$89', title: 'LEGO The Upside Down 75810', location: 'Seattle, WA', distance: '2 mi', image: '/images/stranger-things-assets/images/marketplace/lego.jpg', badge: 'Just listed' },
-  { id: 't3', price: '$85', title: 'Demogorgon Chase Edition RARE', location: 'Seattle, WA', distance: '5 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
-  { id: 't4', price: '$79', title: 'LEGO Creel House Custom MOC', location: 'Seattle, WA', distance: '3 mi', image: '/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg', badge: 'Just listed' },
-  { id: 't5', price: '$69', title: 'Funko Pop Hawkins Gang Set (6)', location: 'Seattle, WA', distance: '8 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg' },
-  { id: 't6', price: '$35', title: 'Stranger Things PEZ Set', location: 'Seattle, WA', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/pez-set.jpg' },
-  { id: 't7', price: '$75', title: 'Steve Harrington Autographed Card', location: 'Seattle, WA', distance: '2 mi', image: '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg' },
-  { id: 't8', price: '$45', title: 'Funko Pop Eddie Munson #1250', location: 'Seattle, WA', distance: '4 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg' },
-  { id: 't9', price: '$65', title: 'Funko Pop Vecna #1312', location: 'Seattle, WA', distance: '6 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
-  { id: 't10', price: '$99', title: 'LEGO Hawkins Lab Complete Set', location: 'Seattle, WA', distance: '12 mi', image: '/images/stranger-things-assets/images/marketplace/lego.jpg' },
-  { id: 't11', price: '$18', title: 'Stranger Things Season 4 Poster', location: 'Seattle, WA', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg' },
-  { id: 't12', price: '$55', title: 'Funko Pop Max with Skateboard', location: 'Seattle, WA', distance: '9 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', badge: 'Just listed' },
-  { id: 't13', price: '$92', title: 'LEGO Starcourt Mall MOC', location: 'Seattle, WA', distance: '5 mi', image: '/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg' },
-  { id: 't14', price: '$28', title: 'Hellfire Club T-Shirt XL', location: 'Seattle, WA', distance: '15 mi', image: '/images/stranger-things-assets/images/marketplace/pez-set.jpg' },
-  { id: 't15', price: '$50', title: 'Signed Dustin Henderson Photo', location: 'Seattle, WA', distance: '20 mi', image: '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg' },
-  { id: 't16', price: '$42', title: 'Funko Pop Hopper with Donut', location: 'Seattle, WA', distance: '18 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
+  { id: 't1', price: '$25', title: 'Funko Pop Eleven with Eggos #421', location: 'New York, NY', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg' },
+  { id: 't2', price: '$89', title: 'LEGO The Upside Down 75810', location: 'New York, NY', distance: '2 mi', image: '/images/stranger-things-assets/images/marketplace/lego.jpg', badge: 'Just listed' },
+  { id: 't3', price: '$85', title: 'Demogorgon Chase Edition RARE', location: 'New York, NY', distance: '5 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
+  { id: 't4', price: '$79', title: 'LEGO Creel House Custom MOC', location: 'New York, NY', distance: '3 mi', image: '/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg', badge: 'Just listed' },
+  { id: 't5', price: '$69', title: 'Funko Pop Hawkins Gang Set (6)', location: 'New York, NY', distance: '8 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg' },
+  { id: 't6', price: '$35', title: 'Stranger Things PEZ Set', location: 'New York, NY', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/pez-set.jpg' },
+  { id: 't7', price: '$75', title: 'Steve Harrington Autographed Card', location: 'New York, NY', distance: '2 mi', image: '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg' },
+  { id: 't8', price: '$45', title: 'Funko Pop Eddie Munson #1250', location: 'New York, NY', distance: '4 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg' },
+  { id: 't9', price: '$65', title: 'Funko Pop Vecna #1312', location: 'New York, NY', distance: '6 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
+  { id: 't10', price: '$99', title: 'LEGO Hawkins Lab Complete Set', location: 'New York, NY', distance: '12 mi', image: '/images/stranger-things-assets/images/marketplace/lego.jpg' },
+  { id: 't11', price: '$18', title: 'Stranger Things Season 4 Poster', location: 'New York, NY', distance: '1 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg' },
+  { id: 't12', price: '$55', title: 'Funko Pop Max with Skateboard', location: 'New York, NY', distance: '9 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg', badge: 'Just listed' },
+  { id: 't13', price: '$92', title: 'LEGO Starcourt Mall MOC', location: 'New York, NY', distance: '5 mi', image: '/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg' },
+  { id: 't14', price: '$28', title: 'Hellfire Club T-Shirt XL', location: 'New York, NY', distance: '15 mi', image: '/images/stranger-things-assets/images/marketplace/pez-set.jpg' },
+  { id: 't15', price: '$50', title: 'Signed Dustin Henderson Photo', location: 'New York, NY', distance: '20 mi', image: '/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg' },
+  { id: 't16', price: '$42', title: 'Funko Pop Hopper with Donut', location: 'New York, NY', distance: '18 mi', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
 ];
 
 // Marketplace-related suggestions for "Others searched for"
@@ -48,10 +48,10 @@ const marketplaceSuggestions = [
 
 // Groups with similar listings data
 const suggestedGroups = [
-  { id: 'g1', name: 'Seattle Funko Pop Buy Sell Trade', listingsPerDay: '50+', image: 'https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg' },
-  { id: 'g2', name: 'PNW Collectibles Marketplace', listingsPerDay: '120+', image: '/images/stranger-things-assets/images/profile/stranger-things-post.png' },
-  { id: 'g3', name: 'LEGO Buy Sell Trade Seattle', listingsPerDay: '35+', image: 'https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_.jpg' },
-  { id: 'g4', name: 'Toys & Games Resellers WA', listingsPerDay: '80+', image: '/images/stranger-things-assets/images/profile/stranger-things-in-theatres.jpg' },
+  { id: 'g1', name: 'NYC Funko Pop Buy Sell Trade', listingsPerDay: '50+', image: 'https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg' },
+  { id: 'g2', name: 'NYC Collectibles Marketplace', listingsPerDay: '120+', image: '/images/stranger-things-assets/images/profile/stranger-things-post.png' },
+  { id: 'g3', name: 'LEGO Buy Sell Trade NYC', listingsPerDay: '35+', image: 'https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_.jpg' },
+  { id: 'g4', name: 'Toys & Games Resellers NY', listingsPerDay: '80+', image: '/images/stranger-things-assets/images/profile/stranger-things-in-theatres.jpg' },
 ];
 
 export default function MarketplaceToysPage() {
