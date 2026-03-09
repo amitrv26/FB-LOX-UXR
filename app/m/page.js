@@ -60,7 +60,8 @@ export default function MobileLandingPage() {
       <div
         style={{
           textAlign: "center",
-          padding: "12px 24px 0",
+          padding: "0 24px 0",
+          marginTop: "-5px",
         }}
       >
         <h1
@@ -103,6 +104,17 @@ export default function MobileLandingPage() {
         }}
       >
         <button
+          onClick={() => {
+            window.location.href = "fb://";
+            setTimeout(() => {
+              const ua = navigator.userAgent || "";
+              if (/android/i.test(ua)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.facebook.katana";
+              } else {
+                window.location.href = "https://apps.apple.com/app/facebook/id284882215";
+              }
+            }, 500);
+          }}
           style={{
             width: "100%",
             padding: "10px 16px",
