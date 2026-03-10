@@ -1,19 +1,17 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { useRouter, useSearchParams } from "next/navigation";
 import Icon from "../../../components/Icon";
 import AILoadingChip from "../../../components/mobile/AILoadingChip";
+import ShareSheet from "../../../components/mobile/ShareSheet";
 import { topicsData } from "../_data/topicsData";
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
 
-const BookmarkIcon = () => (
-  <Icon name="bookmark-outline" size={24} color="primary" style={{ display: "block" }} />
-);
-
-const FilterIcon = () => (
-  <Icon name="filter-sliders-outline" size={24} color="primary" style={{ display: "block" }} />
+const ShareIcon = () => (
+  <Icon name="share-outline" size={24} color="primary" style={{ display: "block" }} />
 );
 
 const LikeIcon = () => (
@@ -96,6 +94,7 @@ export default function SerpPage() {
   // Search input state for the bottom bar
   const [searchQuery, setSearchQuery] = useState(query);
   const [keyboardHeight, setKeyboardHeight] = useState(0);
+  const [showShareSheet, setShowShareSheet] = useState(false);
   const inputRef = useRef(null);
 
   const handleLoadingComplete = () => {
@@ -113,12 +112,11 @@ export default function SerpPage() {
     });
   };
 
-  // Auto-focus the search input after the slide-up animation completes
-  // so the keyboard opens naturally (mirroring the Figma prototype)
+  // Auto-focus the search input quickly so the keyboard opens
   useEffect(() => {
     const timer = setTimeout(() => {
       inputRef.current?.focus();
-    }, 420); // slightly after the 380ms animation
+    }, 100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -149,9 +147,15 @@ export default function SerpPage() {
     );
   };
 
-  // Scroll to top on mount
-  useEffect(() => {
+  // Scroll to top on mount (useLayoutEffect to fire before paint)
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  // Track if mounted for portal rendering
+  const [portalReady, setPortalReady] = useState(false);
+  useEffect(() => {
+    setPortalReady(true);
   }, []);
 
   return (
@@ -172,11 +176,8 @@ export default function SerpPage() {
               )}
             </div>
             <div className="serp-nav__actions">
-              <button className="serp-nav__icon-btn" aria-label="Save">
-                <BookmarkIcon />
-              </button>
-              <button className="serp-nav__icon-btn" aria-label="Filter">
-                <FilterIcon />
+              <button className="serp-nav__icon-btn" aria-label="Share" onClick={() => setShowShareSheet(true)}>
+                <ShareIcon />
               </button>
             </div>
           </div>
@@ -222,61 +223,69 @@ export default function SerpPage() {
         <div style={{ height: "100px" }} />
       </div>
 
-      {/* Floating bar is outside .serp-page so its position:fixed
-          isn't broken by the parent's transform animation */}
-      <div
-        className="serp-floating-bar"
-        style={{
-          bottom: keyboardHeight > 0 ? `${keyboardHeight}px` : undefined,
-          transition: "bottom 0.1s ease-out",
-        }}
-      >
-        <button
-          className="serp-floating-bar__back"
-          onClick={() => router.back()}
-          aria-label="Go back"
+      {/* Floating bar rendered via portal to document.body so position:fixed
+          isn't broken by the template.js transform animation */}
+      {portalReady && createPortal(
+        <div
+          className="serp-floating-bar"
+          style={{
+            bottom: keyboardHeight > 0 ? `${keyboardHeight}px` : undefined,
+            transition: "bottom 0.1s ease-out",
+          }}
         >
-          <Icon name="chevron-left-outline" size={24} color="primary" style={{ display: "block" }} />
-        </button>
-        <div className="serp-floating-bar__search">
-          <Icon
-            name="gen-ai-magnifying-glass-filled"
-            size={20}
-            color="active"
-            style={{ display: "block", flexShrink: 0 }}
-          />
-          <input
-            ref={inputRef}
-            type="text"
-            className="serp-floating-bar__input"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            onFocus={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") handleSearchSubmit();
-            }}
-            placeholder="Ask anything..."
-            autoComplete="off"
-            autoCorrect="off"
-            spellCheck="false"
-          />
           <button
-            className="serp-floating-bar__submit"
-            onClick={handleSearchSubmit}
-            aria-label="Search"
+            className="serp-floating-bar__back"
+            onClick={() => router.back()}
+            aria-label="Go back"
           >
-            <Icon
-              name="arrow-up-filled"
-              size={12}
-              color={searchQuery.trim() ? "active" : "disabled"}
-              style={{
-                display: "block",
-                color: searchQuery.trim() ? "#0866ff" : "#b0b3b8",
-              }}
-            />
+            <Icon name="chevron-left-outline" size={24} color="primary" style={{ display: "block" }} />
           </button>
-        </div>
-      </div>
+          <div className="serp-floating-bar__search">
+            <Icon
+              name="gen-ai-magnifying-glass-filled"
+              size={20}
+              color="active"
+              style={{ display: "block", flexShrink: 0 }}
+            />
+            <input
+              ref={inputRef}
+              type="text"
+              className="serp-floating-bar__input"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") handleSearchSubmit();
+              }}
+              placeholder="Ask anything..."
+              autoComplete="off"
+              autoCorrect="off"
+              spellCheck="false"
+            />
+            <button
+              className="serp-floating-bar__submit"
+              onClick={handleSearchSubmit}
+              aria-label="Search"
+            >
+              <Icon
+                name="arrow-up-filled"
+                size={12}
+                color={searchQuery.trim() ? "active" : "disabled"}
+                style={{
+                  display: "block",
+                  color: searchQuery.trim() ? "#0866ff" : "#b0b3b8",
+                }}
+              />
+            </button>
+          </div>
+        </div>,
+        document.body
+      )}
+
+      <ShareSheet
+        isOpen={showShareSheet}
+        onClose={() => setShowShareSheet(false)}
+      />
     </>
   );
 }

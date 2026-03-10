@@ -11,6 +11,7 @@ import RelatedAnswers from "../../../../../../components/mobile/RelatedAnswers";
 import MarketplaceUnit from "../../../../../../components/mobile/MarketplaceUnit";
 import ReelsUnit from "../../../../../../components/mobile/ReelsUnit";
 import UpsellBottomSheet from "../../../../../../components/mobile/UpsellBottomSheet";
+import EndOfFeedUpsell from "../../../../../../components/mobile/EndOfFeedUpsell";
 import ShareSheet from "../../../../../../components/mobile/ShareSheet";
 
 // Helper to convert topic data to the format expected by components
@@ -704,9 +705,7 @@ export default function MobileGroupPostPage() {
   };
 
   const handleComment = () => {
-    // Load all comments and scroll to comments section
-    setShowAllComments(true);
-    commentsRef.current?.scrollIntoView({ behavior: "smooth" });
+    showUpsell({ type: 'comment', count: currentPostData?.post?.commentsCount || 0 });
   };
 
   const handleShare = () => {
@@ -796,6 +795,8 @@ export default function MobileGroupPostPage() {
       {!isFromAggregation && (
         <MarketplaceUnit title="Shop for merchandise" showSeeAll={true} />
       )}
+
+      <EndOfFeedUpsell hideWordmark />
 
       <UpsellBottomSheet
         isOpen={showLoginPrompt}

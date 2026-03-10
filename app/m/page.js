@@ -6,7 +6,7 @@ export default function MobileLandingPage() {
   const { openBottomSheet } = useUseCase();
 
   return (
-    <div style={{ minHeight: "100vh", background: "#fff", paddingBottom: "calc(173px + env(safe-area-inset-bottom, 0px))" }}>
+    <div style={{ minHeight: "100vh", background: "#fff", display: "flex", flexDirection: "column" }}>
       <div
         onClick={() => openBottomSheet({ selectedCategory: null })}
         style={{
@@ -29,9 +29,13 @@ export default function MobileLandingPage() {
       </div>
       <div
         style={{
-          marginTop: "66px",
+          flex: 1,
           display: "flex",
+          flexDirection: "column",
           justifyContent: "center",
+          alignItems: "center",
+          paddingTop: "48px",
+          paddingBottom: "calc(170px + env(safe-area-inset-bottom, 0px))",
         }}
       >
         <div
@@ -56,14 +60,13 @@ export default function MobileLandingPage() {
             }}
           />
         </div>
-      </div>
-      <div
-        style={{
-          textAlign: "center",
-          padding: "0 24px 0",
-          marginTop: "-5px",
-        }}
-      >
+        <div
+          style={{
+            textAlign: "center",
+            padding: "0 24px 0",
+            marginTop: "-5px",
+          }}
+        >
         <h1
           style={{
             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
@@ -90,6 +93,7 @@ export default function MobileLandingPage() {
         >
           See what people are loving, listing, and talking about right now.
         </p>
+        </div>
       </div>
       <div
         style={{

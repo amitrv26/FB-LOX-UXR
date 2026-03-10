@@ -1085,9 +1085,9 @@ export default function MobileLayout({ children }) {
               setSearchExpanded(expanded);
             }}
             onSearch={(query) => {
-              // Navigate to the Facebook SERP page with the submitted query
               const topicId = typeof window !== 'undefined' ? (localStorage.getItem('selectedTopic') || 'strangerthings') : 'strangerthings';
               setSearchExpanded(false);
+              window.scrollTo(0, 0);
               router.push(`/m/serp?q=${encodeURIComponent(query)}&topic=${topicId}`);
             }}
             darkMode={false}

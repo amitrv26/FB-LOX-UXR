@@ -93,7 +93,9 @@ const FloatingTabBarVariantB = ({
   
   // Track if component has mounted - skip animations on initial mount when auto-expanded
   const [hasMounted, setHasMounted] = useState(false);
-  const skipInitialTransition = isAutoExpanded && !hasMounted;
+  // Skip expand transition entirely - show search bar instantly on tap
+  const [skipExpandTransition, setSkipExpandTransition] = useState(false);
+  const skipInitialTransition = (isAutoExpanded && !hasMounted) || skipExpandTransition;
   
   // Mark as mounted after first render
   useEffect(() => {
@@ -229,16 +231,17 @@ const FloatingTabBarVariantB = ({
 
   const handleSearchClick = () => {
     const willExpand = !isSearchExpanded;
-    onSearchToggle?.(willExpand);
     
-    // Mark that user manually tapped search (for showing chips)
     if (willExpand) {
+      setSkipExpandTransition(true);
+      onSearchToggle?.(true);
       setUserTappedSearch(true);
-      // Focus input to trigger keyboard when expanding
       setTimeout(() => {
         searchInputRef.current?.focus();
-      }, 100);
+        setSkipExpandTransition(false);
+      }, 50);
     } else {
+      onSearchToggle?.(false);
       setUserTappedSearch(false);
     }
   };

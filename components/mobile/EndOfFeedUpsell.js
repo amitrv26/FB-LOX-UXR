@@ -19,6 +19,12 @@ export default function EndOfFeedUpsell({ hideWordmark = false }) {
       background: '#ffffff',
       width: '100%',
     }}>
+      {/* Upper separator line */}
+      <div style={{
+        height: '1px',
+        background: '#ccd0d5',
+        width: '100%',
+      }} />
       {!hideWordmark && (
         <div style={{
           display: 'flex',
@@ -43,15 +49,11 @@ export default function EndOfFeedUpsell({ hideWordmark = false }) {
         paddingTop: '20px',
         paddingBottom: '12px',
       }}>
-        <img
-          src="/illustrations/end-of-feed.png"
-          alt=""
-          style={{
-            width: '64px',
-            height: '66px',
-            objectFit: 'contain',
-          }}
-        />
+        <svg width="64" height="66" viewBox="0 0 64 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="33" r="28" fill="#ebf5ff" />
+          <circle cx="32" cy="33" r="20" fill="#c2dbff" />
+          <path d="M24 33L29.5 38.5L40.5 27.5" stroke="#0866ff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </div>
 
       {/* Text content */}
