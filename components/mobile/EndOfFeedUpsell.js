@@ -6,7 +6,12 @@ export default function EndOfFeedUpsell({ hideWordmark = false }) {
   const handleOpenApp = () => {
     window.location.href = "fb://";
     setTimeout(() => {
-      window.location.href = "https://apps.apple.com/app/facebook/id284882215";
+      const ua = navigator.userAgent || "";
+      if (/android/i.test(ua)) {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.facebook.katana";
+      } else {
+        window.location.href = "https://apps.apple.com/app/facebook/id284882215";
+      }
     }, 500);
   };
 
@@ -18,13 +23,18 @@ export default function EndOfFeedUpsell({ hideWordmark = false }) {
     <div style={{
       background: '#ffffff',
       width: '100%',
+      flexShrink: 0,
     }}>
       {/* Upper separator line */}
-      <div style={{
-        height: '1px',
-        background: '#ccd0d5',
+      <hr style={{
+        margin: 0,
+        padding: 0,
+        border: 'none',
+        borderTop: '1px solid #ccd0d5',
         width: '100%',
+        display: 'block',
       }} />
+
       {!hideWordmark && (
         <div style={{
           display: 'flex',
@@ -41,7 +51,7 @@ export default function EndOfFeedUpsell({ hideWordmark = false }) {
         </div>
       )}
 
-      {/* Illustration */}
+      {/* Illustration - 64x64 check icon */}
       <div style={{
         display: 'flex',
         alignItems: 'center',
@@ -49,10 +59,15 @@ export default function EndOfFeedUpsell({ hideWordmark = false }) {
         paddingTop: '20px',
         paddingBottom: '12px',
       }}>
-        <svg width="64" height="66" viewBox="0 0 64 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="32" cy="33" r="28" fill="#ebf5ff" />
-          <circle cx="32" cy="33" r="20" fill="#c2dbff" />
-          <path d="M24 33L29.5 38.5L40.5 27.5" stroke="#0866ff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" style={{ display: 'block', width: '64px', height: '64px', flexShrink: 0 }}>
+          <defs>
+            <linearGradient id="eofGrad1" x1="5.93" y1="8.24" x2="33.77" y2="54.99" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#42BDFF"/>
+              <stop offset="0.78" stopColor="#0866FF"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="32" fill="url(#eofGrad1)"/>
+          <path d="M44.35 21.6C45.68 20.32 47.79 20.36 49.07 21.68C50.34 23.01 50.31 25.12 48.98 26.4L29.65 45.06C28.36 46.31 26.32 46.31 25.02 45.07L16.36 36.74C15.03 35.46 14.99 33.35 16.26 32.02C17.54 30.7 19.65 30.65 20.98 31.93L27.33 38.04L44.35 21.6Z" fill="white"/>
         </svg>
       </div>
 
@@ -68,8 +83,8 @@ export default function EndOfFeedUpsell({ hideWordmark = false }) {
           margin: 0,
           fontSize: '17px',
           fontWeight: 700,
-          lineHeight: '20px',
-          letterSpacing: '-0.41px',
+          lineHeight: '22px',
+          letterSpacing: 'normal',
           color: '#080809',
           fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
         }}>
@@ -80,7 +95,7 @@ export default function EndOfFeedUpsell({ hideWordmark = false }) {
           fontSize: '15px',
           fontWeight: 400,
           lineHeight: '20px',
-          letterSpacing: '-0.24px',
+          letterSpacing: 'normal',
           color: '#080809',
           fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
         }}>

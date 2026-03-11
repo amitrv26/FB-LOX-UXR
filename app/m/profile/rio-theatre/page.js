@@ -1460,7 +1460,7 @@ export default function RioTheatreProfile() {
               </React.Fragment>
             ))}
 
-            <EndOfFeedUpsell hideWordmark />
+            <EndOfFeedUpsell hideWordmark={true} />
             
           </div>
         )}

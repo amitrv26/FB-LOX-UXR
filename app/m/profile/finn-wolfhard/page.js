@@ -672,7 +672,7 @@ export default function FinnWolfhardProfile() {
               </div>
             </div>
           ))}
-          <EndOfFeedUpsell hideWordmark />
+          <EndOfFeedUpsell hideWordmark={true} />
         </div>
       </main>
 

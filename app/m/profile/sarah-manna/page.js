@@ -600,7 +600,7 @@ export default function SarahMannaProfile() {
               </div>
             </div>
           ))}
-          <EndOfFeedUpsell hideWordmark />
+          <EndOfFeedUpsell hideWordmark={true} />
         </div>
       </main>
 

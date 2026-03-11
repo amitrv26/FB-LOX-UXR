@@ -796,7 +796,7 @@ export default function MobileGroupPostPage() {
         <MarketplaceUnit title="Shop for merchandise" showSeeAll={true} />
       )}
 
-      <EndOfFeedUpsell hideWordmark />
+      <EndOfFeedUpsell hideWordmark={true} />
 
       <UpsellBottomSheet
         isOpen={showLoginPrompt}
