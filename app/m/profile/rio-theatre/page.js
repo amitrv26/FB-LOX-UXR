@@ -59,7 +59,7 @@ const postsData = [
       date: "1d",
     },
     text: "Last night was ELECTRIC! 🔥 Thank you NYC for making Chappell Roan's show a SOLD OUT success! The energy in the room was unreal.\n\nNext up: Sabrina Carpenter on March 28th. Don't sleep on tickets!",
-    image: "https://images.unsplash.com/photo-1547355253-ff0740f6e8c1?w=800&h=450&fit=crop",
+    image: "/images/chappell-roan-live.png",
     reactions: { count: "1.8K", like: true, love: true },
     comments: "67",
     shares: "234",
