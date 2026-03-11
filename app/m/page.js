@@ -35,7 +35,7 @@ export default function MobileLandingPage() {
           justifyContent: "center",
           alignItems: "center",
           paddingTop: "48px",
-          paddingBottom: "calc(170px + env(safe-area-inset-bottom, 0px))",
+          paddingBottom: "calc(81px + 96px + env(safe-area-inset-bottom, 0px))",
         }}
       >
         <div
@@ -137,6 +137,7 @@ export default function MobileLandingPage() {
           Open Facebook app
         </button>
         <button
+          onClick={() => { window.location.href = "/m/login"; }}
           style={{
             width: "100%",
             padding: "10px 16px",

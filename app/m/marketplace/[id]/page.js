@@ -634,22 +634,6 @@ export default function MarketplaceProductPage() {
             }}>5</span>
           </button>
 
-          {/* Share */}
-          <button
-            onClick={() => setShowSharePrompt(true)}
-            style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '6px',
-            height: '44px',
-            padding: '8px 12px',
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-          }}>
-            <ShareIcon />
-          </button>
-
           {/* Bookmark */}
           <button
             onClick={() => setShowSavePrompt(true)}
@@ -666,6 +650,22 @@ export default function MarketplaceProductPage() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="#65686c" style={{ display: 'block', flexShrink: 0 }}>
               <path fillRule="evenodd" clipRule="evenodd" d="M3 3.5C3 1.84314 4.34315 0.5 6 0.5H18C19.6569 0.5 21 1.84315 21 3.5V20.9996C21 23.0597 18.6482 24.2356 17.0001 22.9997L12.3 19.4749C12.1222 19.3416 11.8778 19.3416 11.7 19.4749L6.99991 22.9997C5.35181 24.2356 3 23.0597 3 20.9996V3.5ZM6 2.5C5.44771 2.5 5 2.94771 5 3.5V20.9996C5 21.4116 5.47036 21.6468 5.79998 21.3996L10.5001 17.8749C11.3889 17.2083 12.6111 17.2083 13.4999 17.8749L18.2 21.3996C18.5296 21.6468 19 21.4116 19 20.9996V3.5C19 2.94772 18.5523 2.5 18 2.5H6Z" fill="#65686c"/>
             </svg>
+          </button>
+
+          {/* Share */}
+          <button
+            onClick={() => setShowSharePrompt(true)}
+            style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+            height: '44px',
+            padding: '8px 12px',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+          }}>
+            <ShareIcon />
           </button>
 
           {/* Inline Reactions - right aligned */}

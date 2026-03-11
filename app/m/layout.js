@@ -98,6 +98,7 @@ export default function MobileLayout({ children }) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const isHomePage = pathname === '/m' || pathname === '/m/';
+  const isLoginPage = pathname === '/m/login' || pathname === '/m/login/';
   const isSearchPage = pathname?.startsWith('/m/search');
   const isSerpPage = pathname?.startsWith('/m/serp');
   const isReelsPage = pathname?.startsWith('/m/reels');
@@ -314,7 +315,7 @@ export default function MobileLayout({ children }) {
   // For Reels from Google, defer to reelsTabBarVisible state
   // For Feed Video page, defer to feedVideoTabBarVisible state
   // Aggregation and Explore topic pages DO show tab bar (with search auto-expanded)
-  const showTabBar = !isMessagesSharePage && !isMarketplaceSharePage && !isSearchPage && !isSerpPage && !isAggregationSerp && !isNavComparisonPage &&
+  const showTabBar = !isLoginPage && !isMessagesSharePage && !isMarketplaceSharePage && !isSearchPage && !isSerpPage && !isAggregationSerp && !isNavComparisonPage &&
     (isReelsPage ? reelsTabBarVisible : (isFeedVideoPage ? feedVideoTabBarVisible : true));
 
   // Determine which skeleton to show based on destination tab
@@ -1052,7 +1053,7 @@ export default function MobileLayout({ children }) {
           animation: shimmer 1.5s ease-in-out infinite;
         }
       `}</style>
-      {!isHomePage && !isSearchPage && !isSerpPage && !isReelsPage && !isMessagesSharePage && !isMarketplaceSharePage && !isNavComparisonPage && !isAggregationSerp && (
+      {!isHomePage && !isLoginPage && !isSearchPage && !isSerpPage && !isReelsPage && !isMessagesSharePage && !isMarketplaceSharePage && !isNavComparisonPage && !isAggregationSerp && (
         <MobileHeader 
           showCloseButton={(isGroupsPage || isPDPPage) && isFromAggregation}
         />

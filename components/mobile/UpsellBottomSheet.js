@@ -177,7 +177,7 @@ const UpsellBottomSheet = ({
   };
 
   const handleLogin = () => {
-    window.location.href = "https://www.facebook.com/login";
+    window.location.href = "/m/login";
   };
 
   if (!isOpen && !isAnimatingOut) return null;

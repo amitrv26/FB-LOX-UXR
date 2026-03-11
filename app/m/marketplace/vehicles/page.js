@@ -48,10 +48,10 @@ const marketplaceSuggestions = [
 
 // Groups with similar listings data
 const suggestedGroups = [
-  { id: 'g1', name: 'NYC Funko Pop Buy Sell Trade', listingsPerDay: '50+', image: 'https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg' },
-  { id: 'g2', name: 'NYC Collectibles Marketplace', listingsPerDay: '120+', image: '/images/stranger-things-assets/images/profile/stranger-things-post.png' },
-  { id: 'g3', name: 'LEGO Buy Sell Trade NYC', listingsPerDay: '35+', image: 'https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_.jpg' },
-  { id: 'g4', name: 'Toys & Games Resellers NY', listingsPerDay: '80+', image: '/images/stranger-things-assets/images/profile/stranger-things-in-theatres.jpg' },
+  { id: 'g1', name: 'NYC Funko Pop Buy Sell Trade', listingsPerDay: '50+', image: 'https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=400&h=400&fit=crop' },
+  { id: 'g2', name: 'NYC Collectibles Marketplace', listingsPerDay: '120+', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=400&fit=crop' },
+  { id: 'g3', name: 'LEGO Buy Sell Trade NYC', listingsPerDay: '35+', image: 'https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=400&h=400&fit=crop' },
+  { id: 'g4', name: 'Toys & Games Resellers NY', listingsPerDay: '80+', image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&h=400&fit=crop' },
 ];
 
 export default function MarketplaceToysPage() {

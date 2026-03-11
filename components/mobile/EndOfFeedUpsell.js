@@ -16,7 +16,7 @@ export default function EndOfFeedUpsell({ hideWordmark = false }) {
   };
 
   const handleLogin = () => {
-    window.location.href = "https://www.facebook.com/login";
+    window.location.href = "/m/login";
   };
 
   return (

@@ -298,7 +298,7 @@ const ReviewsSheet = ({
                 >Open app</button>
                 <button 
                   onClick={() => {
-                    window.location.href = "https://www.facebook.com/login";
+                    window.location.href = "/m/login";
                   }}
                   style={{
                     width: '100%',
