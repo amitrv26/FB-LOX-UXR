@@ -46,7 +46,7 @@ const postsData = [
       date: "2h",
     },
     text: "🎤 SABRINA CARPENTER LIVE AT WEBSTER HALL - NYC! 🎤\n\nWe're thrilled to announce a special intimate show with Sabrina Carpenter at NYC's legendary Webster Hall!\n\n📅 Date: March 28, 2026\n🎟️ Doors open: 7:00 PM\n🎤 Show starts: 8:30 PM\n✨ VIP Meet & Greet: 6:00 PM",
-    image: "https://images.unsplash.com/photo-1508854710579-5cecc3a9ff17?w=800&h=450&fit=crop",
+    image: "/images/sabrina-carpenter-live.png",
     reactions: { count: "5.2K", like: true, love: true },
     comments: "48",
     shares: "1.2K",
@@ -177,7 +177,7 @@ const eventsData = [
     date: "Fri, Mar 28 at 7:00 PM EST",
     title: "Sabrina Carpenter Live at Webster Hall",
     responded: 2847,
-    image: "https://images.unsplash.com/photo-1508854710579-5cecc3a9ff17?w=200&h=200&fit=crop",
+    image: "/images/sabrina-carpenter-live.png",
   },
   {
     id: "event-2",
