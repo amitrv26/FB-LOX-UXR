@@ -6,18 +6,23 @@ export default function MobileLandingPage() {
   const { openBottomSheet } = useUseCase();
 
   return (
-    <div style={{ height: "100vh", background: "#fff", display: "flex", flexDirection: "column", overflow: "hidden" }}>
+    <div style={{
+      height: "100dvh",
+      background: "#fff",
+      display: "flex",
+      flexDirection: "column",
+      overflow: "hidden",
+      paddingBottom: "calc(65px + env(safe-area-inset-bottom, 0px))",
+    }}>
+      {/* Wordmark */}
       <div
         onClick={() => openBottomSheet({ selectedCategory: null })}
         style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
+          flexShrink: 0,
           padding: "12px",
           height: "48px",
           display: "flex",
           alignItems: "center",
-          zIndex: 1000,
           cursor: "pointer",
         }}
       >
@@ -27,6 +32,8 @@ export default function MobileLandingPage() {
           style={{ height: "24px", width: "auto" }}
         />
       </div>
+
+      {/* Center content - grows to fill space, centers children */}
       <div
         style={{
           flex: 1,
@@ -34,16 +41,17 @@ export default function MobileLandingPage() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          paddingTop: "48px",
-          paddingBottom: "calc(200px + env(safe-area-inset-bottom, 0px))",
+          minHeight: 0,
+          overflow: "hidden",
         }}
       >
         <div
           style={{
             position: "relative",
-            width: "351px",
-            height: "328px",
+            width: "280px",
+            height: "260px",
             overflow: "hidden",
+            flexShrink: 0,
           }}
         >
           <img
@@ -63,48 +71,47 @@ export default function MobileLandingPage() {
         <div
           style={{
             textAlign: "center",
-            padding: "0 24px 0",
-            marginTop: "-5px",
+            padding: "0 24px",
+            flexShrink: 0,
           }}
         >
-        <h1
-          style={{
-            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
-            fontSize: "28px",
-            fontWeight: 700,
-            lineHeight: "34px",
-            letterSpacing: "normal",
-            color: "#050505",
-            margin: "0 0 8px 0",
-          }}
-        >
-          Join the 3 billion
-        </h1>
-        <p
-          style={{
-            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
-            fontSize: "15px",
-            fontWeight: 400,
-            lineHeight: "20px",
-            letterSpacing: "normal",
-            color: "#65676b",
-            margin: 0,
-          }}
-        >
-          See what people are loving, listing, and talking about right now.
-        </p>
+          <h1
+            style={{
+              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
+              fontSize: "28px",
+              fontWeight: 700,
+              lineHeight: "34px",
+              letterSpacing: "normal",
+              color: "#050505",
+              margin: "0 0 8px 0",
+            }}
+          >
+            Join the 3 billion
+          </h1>
+          <p
+            style={{
+              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
+              fontSize: "15px",
+              fontWeight: 400,
+              lineHeight: "20px",
+              letterSpacing: "normal",
+              color: "#65676b",
+              margin: 0,
+            }}
+          >
+            See what people are loving, listing, and talking about right now.
+          </p>
         </div>
       </div>
+
+      {/* Buttons - always at bottom */}
       <div
         style={{
-          position: "fixed",
-          bottom: "calc(81px + env(safe-area-inset-bottom, 0px))",
-          left: 0,
-          right: 0,
+          flexShrink: 0,
           display: "flex",
           flexDirection: "column",
           gap: "8px",
-          padding: "0 16px",
+          padding: "0 16px 16px",
         }}
       >
         <button
