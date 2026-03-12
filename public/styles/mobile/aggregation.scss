@@ -5824,23 +5824,8 @@ body:has(.mobile-layout) {
   &__content {
     position: relative;
     padding: 5px 16px 4px;
-    // Safe area handling moved here from wrapper - margin pushes content above iPhone home indicator
-    // Using margin instead of padding so the wrapper still touches the viewport edge
-    // Added 4px to move tab bar up visually for iOS Safari
-    margin-bottom: calc(env(safe-area-inset-bottom, 0px) + 4px);
+    margin-bottom: calc(env(safe-area-inset-bottom, 0px));
     pointer-events: auto;
-    
-    // Chrome only (not Safari) - 0px from bottom by default, 12px ONLY upon scroll
-    // Uses @supports to detect non-WebKit browsers (Chrome, Firefox, Edge)
-    // Desktop Safari supports -webkit-touch-callout, so it won't match this rule
-    @supports not (-webkit-touch-callout: none) {
-      margin-bottom: 0;
-      
-      // 12px from bottom only when user has scrolled
-      body.has-scrolled & {
-        margin-bottom: 12px;
-      }
-    }
   }
 
   &__row {

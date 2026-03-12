@@ -6,7 +6,7 @@ export default function MobileLandingPage() {
   const { openBottomSheet } = useUseCase();
 
   return (
-    <div style={{ minHeight: "100vh", background: "#fff", display: "flex", flexDirection: "column" }}>
+    <div style={{ height: "100vh", background: "#fff", display: "flex", flexDirection: "column", overflow: "hidden" }}>
       <div
         onClick={() => openBottomSheet({ selectedCategory: null })}
         style={{
@@ -35,7 +35,7 @@ export default function MobileLandingPage() {
           justifyContent: "center",
           alignItems: "center",
           paddingTop: "48px",
-          paddingBottom: "calc(169px + env(safe-area-inset-bottom, 0px))",
+          paddingBottom: "calc(200px + env(safe-area-inset-bottom, 0px))",
         }}
       >
         <div
