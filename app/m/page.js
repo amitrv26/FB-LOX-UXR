@@ -35,7 +35,7 @@ export default function MobileLandingPage() {
           justifyContent: "center",
           alignItems: "center",
           paddingTop: "48px",
-          paddingBottom: "calc(81px + 96px + env(safe-area-inset-bottom, 0px))",
+          paddingBottom: "calc(169px + env(safe-area-inset-bottom, 0px))",
         }}
       >
         <div
