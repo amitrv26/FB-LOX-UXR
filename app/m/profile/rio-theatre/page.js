@@ -1421,11 +1421,8 @@ export default function RioTheatreProfile() {
                           <button 
                             onClick={(e) => {
                               e.stopPropagation();
-                              if (page.name === 'Scotiabank Theatre') {
-                                router.push('/m/profile/scotiabank-theatre');
-                              } else {
-                                setShowLoginPrompt(true);
-                              }
+                              const slug = page.name.toLowerCase().replace(/\s+/g, '-');
+                              router.push(`/m/profile/${slug}`);
                             }}
                             style={{
                               width: '100%',

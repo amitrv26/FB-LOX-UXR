@@ -2251,7 +2251,7 @@ export default function VideoPlayerPage() {
         comments={reelsCommentsData}
         totalCount={reelsCommentsData.length}
           onCommentPromptClick={() => {
-            showUpsell({ type: 'comment', count: parseInt(String(video.comments).replace(/[^\d]/g, '')) || 0 });
+            showUpsell({ type: 'comment', count: parseLikesString(video.comments) });
           }}
         onLikeComment={(reactionCount) => {
           // Show reactions upsell with the comment's reaction count

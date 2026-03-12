@@ -216,6 +216,11 @@ export default function MobileLayout({ children }) {
     setSearchExpanded(shouldExpand);
   }, [pathname, searchParams, isFromTabBar]);
 
+  // Scroll to top on every route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   // Enable Safari liquid glass effect on all mobile pages
   // This is more reliable than :has() selectors which can have timing issues
   useEffect(() => {

@@ -395,8 +395,7 @@ const FloatingTabBarVariantB = ({
                       onSearch?.(searchQuery);
                     }
                   }}
-                  style={{ pointerEvents: 'none' }}
-                  readOnly
+                  onFocus={() => setSearchQuery("")}
                 />
                 {/* Rotating placeholder for SERP landing (when no suggestion chips) */}
                 {!showSuggestionChips && !searchQuery && (

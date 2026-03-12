@@ -35,7 +35,7 @@ const UPSELL_CONFIGS = {
     message: "Join the conversation in the app.",
   },
   message: {
-    illustration: "/illustrations/messenger.png",
+    illustration: "/illustrations/messenger-icon.png",
     getTitle: (name) => `Message ${name || ''}`.trim(),
     message: "Log in to contact them directly.",
   },
@@ -284,8 +284,8 @@ const UpsellBottomSheet = ({
                   src={illustration}
                   alt=""
                   style={{
-                    width: '100%',
-                    height: '100%',
+                    width: type === 'message' ? '88px' : '100%',
+                    height: type === 'message' ? '88px' : '100%',
                     objectFit: 'contain',
                     opacity: imageLoaded ? 1 : 0,
                     transition: 'opacity 0.15s ease-out',
