@@ -55,7 +55,7 @@ export default function MobileLandingPage() {
           }}
         >
           <img
-            src="/images/home-hero.png"
+            src="/images/home-hero.jpg"
             alt=""
             style={{
               position: "absolute",

@@ -34,17 +34,24 @@ const preloadIcon = (name) => {
     });
 };
 
-// Preload tab bar icons immediately on module load
+// Defer icon preloading until after page is interactive
 if (typeof window !== 'undefined') {
-  const criticalIcons = [
-    'news-feed-home-outline', 'news-feed-home-filled',
-    'app-facebook-groups-outline', 'app-facebook-groups-filled',
-    'marketplace-outline', 'marketplace-filled',
-    'app-facebook-reels-outline', 'app-facebook-reels-filled',
-    'gen-ai-magnifying-glass-outline', 'gen-ai-magnifying-glass-filled',
-    'nav-cross-outline', 'arrow-up-filled',
-  ];
-  criticalIcons.forEach(preloadIcon);
+  const deferIconPreload = () => {
+    const criticalIcons = [
+      'news-feed-home-outline', 'news-feed-home-filled',
+      'app-facebook-groups-outline', 'app-facebook-groups-filled',
+      'marketplace-outline', 'marketplace-filled',
+      'app-facebook-reels-outline', 'app-facebook-reels-filled',
+      'gen-ai-magnifying-glass-outline', 'gen-ai-magnifying-glass-filled',
+      'nav-cross-outline', 'arrow-up-filled',
+    ];
+    criticalIcons.forEach(preloadIcon);
+  };
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(deferIconPreload);
+  } else {
+    setTimeout(deferIconPreload, 200);
+  }
 }
 
 const sizeMap = {

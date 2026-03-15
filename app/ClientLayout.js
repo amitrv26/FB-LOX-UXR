@@ -13,6 +13,7 @@ import { store } from "../store/redux";
 import Frame from "../layout/Frame";
 import ShakeToNavigate from "../components/ShakeToNavigate";
 import { UseCaseProvider } from "../contexts/UseCaseContext";
+import PasswordGate from "../components/PasswordGate";
 
 const BREAKPOINT_MOBILE = 700;
 const BREAKPOINT_TABLET = 1100;
@@ -134,8 +135,10 @@ function LayoutContent({ children }) {
 
 export default function ClientLayout({ children }) {
   return (
-    <Provider store={store}>
-      <LayoutContent>{children}</LayoutContent>
-    </Provider>
+    <PasswordGate>
+      <Provider store={store}>
+        <LayoutContent>{children}</LayoutContent>
+      </Provider>
+    </PasswordGate>
   );
 }

@@ -48,10 +48,10 @@ const marketplaceSuggestions = [
 
 // Groups with similar listings data
 const suggestedGroups = [
-  { id: 'g1', name: 'NYC Funko Pop Buy Sell Trade', listingsPerDay: '50+', image: 'https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=400&h=400&fit=crop' },
-  { id: 'g2', name: 'NYC Collectibles Marketplace', listingsPerDay: '120+', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=400&fit=crop' },
-  { id: 'g3', name: 'LEGO Buy Sell Trade NYC', listingsPerDay: '35+', image: 'https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=400&h=400&fit=crop' },
-  { id: 'g4', name: 'Toys & Games Resellers NY', listingsPerDay: '80+', image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&h=400&fit=crop' },
+  { id: 'g1', slug: 'nyc-funko-pop-buy-sell-trade', name: 'NYC Funko Pop Buy Sell Trade', listingsPerDay: '50+', image: 'https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=400&h=400&fit=crop' },
+  { id: 'g2', slug: 'nyc-collectibles-marketplace', name: 'NYC Collectibles Marketplace', listingsPerDay: '120+', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=400&fit=crop' },
+  { id: 'g3', slug: 'lego-buy-sell-trade-nyc', name: 'LEGO Buy Sell Trade NYC', listingsPerDay: '35+', image: 'https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=400&h=400&fit=crop' },
+  { id: 'g4', slug: 'toys-games-resellers-ny', name: 'Toys & Games Resellers NY', listingsPerDay: '80+', image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&h=400&fit=crop' },
 ];
 
 export default function MarketplaceToysPage() {
@@ -654,6 +654,7 @@ export default function MarketplaceToysPage() {
             {suggestedGroups.map((group) => (
               <div 
                 key={group.id}
+                onClick={() => router.push(`/m/groups/${group.slug}`)}
                 style={{
                   flex: '0 0 auto',
                   width: '164px',
@@ -713,19 +714,24 @@ export default function MarketplaceToysPage() {
                     {group.listingsPerDay} listings a day
                   </p>
                   {/* View Button - Primary Deemphasized, Medium, Full Width */}
-                  <button style={{
-                    width: '100%',
-                    padding: '8px 16px',
-                    borderRadius: '6px',
-                    border: 'none',
-                    background: '#ebf5ff',
-                    color: '#0866ff',
-                    fontSize: '15px',
-                    fontWeight: '600',
-                    lineHeight: '20px',
-                    letterSpacing: '-0.24px',
-                    cursor: 'pointer',
-                  }}>
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      router.push(`/m/groups/${group.slug}`);
+                    }}
+                    style={{
+                      width: '100%',
+                      padding: '8px 16px',
+                      borderRadius: '6px',
+                      border: 'none',
+                      background: '#ebf5ff',
+                      color: '#0866ff',
+                      fontSize: '15px',
+                      fontWeight: '600',
+                      lineHeight: '20px',
+                      letterSpacing: '-0.24px',
+                      cursor: 'pointer',
+                    }}>
                     View
                   </button>
                 </div>

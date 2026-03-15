@@ -32,17 +32,7 @@ const isDev = process.env.NODE_ENV === 'development';
 const hasClerkKeys = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
 export default function RootLayout({ children }) {
-  // Preload links for commonly used upsell illustrations
-  const preloadLinks = (
-    <>
-      <link rel="preload" href="/illustrations/reactions.png" as="image" />
-      <link rel="preload" href="/illustrations/comments.png" as="image" />
-      <link rel="preload" href="/illustrations/follow.png" as="image" />
-      <link rel="preload" href="/illustrations/save-mp-items.png" as="image" />
-      <link rel="preload" href="/illustrations/messenger.png" as="image" />
-      <link rel="preload" href="/illustrations/end-of-feed.png" as="image" />
-    </>
-  );
+  const preloadLinks = null;
 
   // In development without Clerk keys, render without ClerkProvider
   if (isDev && !hasClerkKeys) {
