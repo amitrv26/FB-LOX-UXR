@@ -242,6 +242,8 @@ export default function ScotiabankTheatreProfile() {
   const [showMessagePrompt, setShowMessagePrompt] = useState(false);
   const [showReviewsSheet, setShowReviewsSheet] = useState(false);
   const [showLikeSheet, setShowLikeSheet] = useState(false);
+  const [showCommentSheet, setShowCommentSheet] = useState(false);
+  const [commentSheetCount, setCommentSheetCount] = useState(0);
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [likeSheetReactionCount, setLikeSheetReactionCount] = useState(0);
   const [expandedPosts, setExpandedPosts] = useState({});
@@ -1000,7 +1002,10 @@ export default function ScotiabankTheatreProfile() {
                       </button>
                       
                       <button
-                        onClick={() => setShowLoginPrompt(true)}
+                        onClick={() => {
+                          setCommentSheetCount(parseReactionCount(post.comments));
+                          setShowCommentSheet(true);
+                        }}
                         style={{
                           padding: '10px 12px',
                           background: 'none',
@@ -1359,6 +1364,14 @@ export default function ScotiabankTheatreProfile() {
         onClose={() => setShowLikeSheet(false)}
         type="like"
         count={likeSheetReactionCount}
+      />
+
+      {/* Comment Sheet */}
+      <UpsellBottomSheet
+        isOpen={showCommentSheet}
+        onClose={() => setShowCommentSheet(false)}
+        type="comment"
+        count={commentSheetCount}
       />
 
       {/* Share Sheet */}

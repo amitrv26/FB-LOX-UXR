@@ -113,6 +113,8 @@ export default function BrooklynSteelProfile() {
   const [showMessagePrompt, setShowMessagePrompt] = useState(false);
   const [showReviewsSheet, setShowReviewsSheet] = useState(false);
   const [showLikeSheet, setShowLikeSheet] = useState(false);
+  const [showCommentSheet, setShowCommentSheet] = useState(false);
+  const [commentSheetCount, setCommentSheetCount] = useState(0);
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [likeSheetReactionCount, setLikeSheetReactionCount] = useState(0);
   const [expandedPosts, setExpandedPosts] = useState({});
@@ -292,7 +294,7 @@ export default function BrooklynSteelProfile() {
                         <LikeIcon />
                         <span style={{ fontSize: '13px', fontWeight: '600', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{post.reactions.count}</span>
                       </button>
-                      <button onClick={() => setShowLoginPrompt(true)} style={{ padding: '10px 12px', background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', color: '#65676b' }}>
+                      <button onClick={() => { setCommentSheetCount(parseReactionCount(post.comments)); setShowCommentSheet(true); }} style={{ padding: '10px 12px', background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', color: '#65676b' }}>
                         <CommentIcon />
                         <span style={{ fontSize: '13px', fontWeight: '600', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{post.comments}</span>
                       </button>
@@ -346,6 +348,7 @@ export default function BrooklynSteelProfile() {
       <UpsellBottomSheet isOpen={showMessagePrompt} onClose={() => setShowMessagePrompt(false)} type="message" entityName="Brooklyn Steel" />
       <ReviewsSheet isOpen={showReviewsSheet} onClose={() => setShowReviewsSheet(false)} businessName="Brooklyn Steel" recommendedPercent="92" reviewCount="3,891" onLoginPrompt={() => setShowLoginPrompt(true)} />
       <UpsellBottomSheet isOpen={showLikeSheet} onClose={() => setShowLikeSheet(false)} type="like" count={likeSheetReactionCount} />
+      <UpsellBottomSheet isOpen={showCommentSheet} onClose={() => setShowCommentSheet(false)} type="comment" count={commentSheetCount} />
       <ShareSheet isOpen={showShareSheet} onClose={() => setShowShareSheet(false)} />
     </div>
   );

@@ -262,6 +262,8 @@ export default function RioTheatreProfile() {
   const [showMessagePrompt, setShowMessagePrompt] = useState(false);
   const [showReviewsSheet, setShowReviewsSheet] = useState(false);
   const [showLikeSheet, setShowLikeSheet] = useState(false);
+  const [showCommentSheet, setShowCommentSheet] = useState(false);
+  const [commentSheetCount, setCommentSheetCount] = useState(0);
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [likeSheetReactionCount, setLikeSheetReactionCount] = useState(0);
   const [expandedPosts, setExpandedPosts] = useState({});
@@ -1093,16 +1095,14 @@ export default function RioTheatreProfile() {
                   {/* Comment */}
                   <button
                     onClick={() => {
-                      // Posts 2 and 3 are not tappable
-                      if (post.id !== 'post-2' && post.id !== 'post-3') {
-                        router.push(`/m/profile/rio-theatre/posts/${post.id}`);
-                      }
+                      setCommentSheetCount(parseReactionCount(post.comments));
+                      setShowCommentSheet(true);
                     }}
                     style={{
                       padding: '10px 12px',
                       background: 'none',
                       border: 'none',
-                      cursor: (post.id === 'post-2' || post.id === 'post-3') ? 'default' : 'pointer',
+                      cursor: 'pointer',
                       display: 'flex',
                       alignItems: 'center',
                       gap: '6px',
@@ -1502,6 +1502,14 @@ export default function RioTheatreProfile() {
         onClose={() => setShowLikeSheet(false)}
         type="like"
         count={likeSheetReactionCount}
+      />
+
+      {/* Comment Sheet */}
+      <UpsellBottomSheet
+        isOpen={showCommentSheet}
+        onClose={() => setShowCommentSheet(false)}
+        type="comment"
+        count={commentSheetCount}
       />
 
       {/* Share Sheet */}

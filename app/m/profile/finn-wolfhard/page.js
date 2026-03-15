@@ -109,6 +109,7 @@ export default function FinnWolfhardProfile() {
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
   const [showFollowPrompt, setShowFollowPrompt] = useState(false);
   const [showMessagePrompt, setShowMessagePrompt] = useState(false);
+  const [showCommentSheet, setShowCommentSheet] = useState(false);
   const [activeTab, setActiveTab] = useState("All");
 
   const tabs = ["All", "Photos", "Reels", "Events"];
@@ -599,7 +600,7 @@ export default function FinnWolfhardProfile() {
                   
                   {/* Comment */}
                   <button
-                    onClick={() => router.push('/m/profile/finn-wolfhard/posts/calpurnia-sessions')}
+                    onClick={() => setShowCommentSheet(true)}
                     style={{
                       padding: '10px 12px',
                       background: 'none',
@@ -692,6 +693,11 @@ export default function FinnWolfhardProfile() {
         isOpen={showLoginPrompt}
         onClose={() => setShowLoginPrompt(false)}
         type="generic"
+      />
+      <UpsellBottomSheet
+        isOpen={showCommentSheet}
+        onClose={() => setShowCommentSheet(false)}
+        type="comment"
       />
     </div>
   );

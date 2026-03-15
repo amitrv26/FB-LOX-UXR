@@ -97,6 +97,7 @@ export default function SarahMannaProfile() {
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
   const [showFollowPrompt, setShowFollowPrompt] = useState(false);
   const [showMessagePrompt, setShowMessagePrompt] = useState(false);
+  const [showCommentSheet, setShowCommentSheet] = useState(false);
   const [activeTab, setActiveTab] = useState("Posts");
 
   const tabs = ["Posts", "Photos", "Friends", "Events"];
@@ -530,7 +531,7 @@ export default function SarahMannaProfile() {
                   
                   {/* Comment */}
                   <button
-                    onClick={() => setShowLoginPrompt(true)}
+                    onClick={() => setShowCommentSheet(true)}
                     style={{
                       padding: '10px 12px',
                       background: 'none',
@@ -632,6 +633,7 @@ export default function SarahMannaProfile() {
       <UpsellBottomSheet isOpen={showFollowPrompt} onClose={() => setShowFollowPrompt(false)} type="follow" entityName="Sarah Manna" />
       <UpsellBottomSheet isOpen={showMessagePrompt} onClose={() => setShowMessagePrompt(false)} type="message" entityName="Sarah Manna" />
       <UpsellBottomSheet isOpen={showLoginPrompt} onClose={() => setShowLoginPrompt(false)} type="generic" />
+      <UpsellBottomSheet isOpen={showCommentSheet} onClose={() => setShowCommentSheet(false)} type="comment" />
     </div>
   );
 }
