@@ -55,7 +55,7 @@ const UPSELL_CONFIGS = {
     message: "Log in to join this group on Facebook.",
   },
   event: {
-    illustration: "/illustrations/events-upsell.svg",
+    illustration: "/illustrations/events-upsell.png",
     getTitle: () => "Make sure you're there",
     message: "See more about this event in the app.",
   },
