@@ -44,6 +44,13 @@ const postsData = [
     reactions: { count: "127", like: true, love: true },
     comments: "34",
     shares: "8",
+    commentPreviews: [
+      { name: "Mike Chen", avatar: "https://i.pravatar.cc/40?img=11", text: "Season 5 is gonna be INSANE 🔥 I'm not ready for the finale", time: "1h", likes: 12 },
+      { name: "Jessica Liu", avatar: "https://i.pravatar.cc/40?img=23", text: "The Upside Down scenes in the teaser gave me chills!! Can't wait 😭", time: "45m", likes: 8 },
+      { name: "Brandon Wells", avatar: "https://i.pravatar.cc/40?img=52", text: "My theory is Eleven is going to have to sacrifice her powers to close the gate for good 😢", time: "30m", likes: 14 },
+      { name: "Tina Nakamura", avatar: "https://i.pravatar.cc/40?img=29", text: "I've rewatched the whole series twice already in preparation. Season 5 can't come soon enough!!", time: "25m", likes: 6 },
+      { name: "Carlos Medina", avatar: "https://i.pravatar.cc/40?img=61", text: "If anything happens to Steve in S5 I'm going to lose it 😩 Protect him at all costs", time: "20m", likes: 21 },
+    ],
   },
   {
     id: "post-2",
@@ -57,6 +64,13 @@ const postsData = [
     reactions: { count: "256", like: true, love: true },
     comments: "42",
     shares: "3",
+    commentPreviews: [
+      { name: "David Park", avatar: "https://i.pravatar.cc/40?img=33", text: "Omg what a cutie!! 🐶 What breed is he?", time: "18h", likes: 5 },
+      { name: "Emma Rodriguez", avatar: "https://i.pravatar.cc/40?img=44", text: "Those eyes!! I need to come over for puppy cuddles ASAP", time: "16h", likes: 3 },
+      { name: "Liam Foster", avatar: "https://i.pravatar.cc/40?img=68", text: "Is that a Golden Retriever mix?? Absolutely adorable 😍", time: "14h", likes: 7 },
+      { name: "Olivia Hart", avatar: "https://i.pravatar.cc/40?img=41", text: "Weekend vibes indeed! Your dog is living the best life honestly", time: "12h", likes: 4 },
+      { name: "Nathan Reyes", avatar: "https://i.pravatar.cc/40?img=57", text: "This just made my whole day. I need a dog tax every week please 🐕❤️", time: "10h", likes: 11 },
+    ],
   },
 ];
 
@@ -98,6 +112,7 @@ export default function SarahMannaProfile() {
   const [showMessagePrompt, setShowMessagePrompt] = useState(false);
   const [showCommentSheet, setShowCommentSheet] = useState(false);
   const [activeTab, setActiveTab] = useState("Posts");
+  const [expandedComments, setExpandedComments] = useState({});
 
   const tabs = ["Posts", "Photos", "Friends", "Events"];
 
@@ -595,6 +610,48 @@ export default function SarahMannaProfile() {
                   </div>
                 </div>
               </div>
+
+              {/* Comment Previews */}
+              {post.commentPreviews && post.commentPreviews.length > 0 && (() => {
+                const isExpanded = expandedComments[post.id];
+                const visibleComments = isExpanded ? post.commentPreviews : post.commentPreviews.slice(0, 2);
+                return (
+                <div style={{ padding: '0 12px 12px', background: '#fff' }}>
+                  <div style={{ borderTop: '1px solid #e4e6eb', paddingTop: '8px' }}>
+                    {visibleComments.map((comment, cIdx) => (
+                      <div key={cIdx} style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
+                        <img src={comment.avatar} alt="" style={{ width: '32px', height: '32px', borderRadius: '50%', flexShrink: 0, objectFit: 'cover' }} />
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ background: '#f0f2f5', borderRadius: '12px', padding: '8px 12px' }}>
+                            <p style={{ fontSize: '13px', fontWeight: '600', color: '#050505', margin: 0, fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.name}</p>
+                            <p style={{ fontSize: '15px', fontWeight: '400', lineHeight: '20px', color: '#050505', margin: '2px 0 0', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.text}</p>
+                          </div>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '4px 4px 0' }}>
+                            <span style={{ fontSize: '12px', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.time}</span>
+                            <button onClick={() => setShowCommentSheet(true)} style={{ background: 'none', border: 'none', padding: 0, fontSize: '12px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>Like</button>
+                            <button onClick={() => setShowCommentSheet(true)} style={{ background: 'none', border: 'none', padding: 0, fontSize: '12px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>Reply</button>
+                            {comment.likes > 0 && (
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginLeft: 'auto' }}>
+                                <img src="/images/reactions/like_default_40.png" alt="Like" style={{ width: '14px', height: '14px' }} />
+                                <span style={{ fontSize: '12px', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.likes}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                    {!isExpanded && (
+                      <button
+                        onClick={() => setExpandedComments(prev => ({ ...prev, [post.id]: true }))}
+                        style={{ background: 'none', border: 'none', padding: '4px 0 0', fontSize: '15px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}
+                      >
+                        View all comments
+                      </button>
+                    )}
+                  </div>
+                </div>
+                );
+              })()}
             </div>
           ))}
           <EndOfFeedUpsell hideWordmark={true} />

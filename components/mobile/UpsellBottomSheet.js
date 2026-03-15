@@ -54,6 +54,11 @@ const UPSELL_CONFIGS = {
     getTitle: (name) => `Join ${name || 'this group'}`,
     message: "Log in to join this group on Facebook.",
   },
+  event: {
+    illustration: "/illustrations/events-upsell.svg",
+    getTitle: () => "Make sure you're there",
+    message: "See more about this event in the app.",
+  },
   generic: {
     illustration: null,
     getTitle: () => "Log in to continue",

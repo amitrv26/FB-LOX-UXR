@@ -50,6 +50,14 @@ const postsData = [
     reactions: { count: "5.2K", like: true, love: true },
     comments: "48",
     shares: "1.2K",
+    commentPreviews: [
+      { name: "Jessica M.", avatar: "https://i.pravatar.cc/40?img=5", text: "OMG I just got my tickets!! VIP Meet & Greet here I come 😭🎤", time: "1h", likes: 24 },
+      { name: "NYC Concert Fan", avatar: "https://i.pravatar.cc/40?img=12", text: "Sabrina at Webster Hall is going to be INSANE. Such an intimate venue for her!", time: "45m", likes: 18 },
+      { name: "Rachel K.", avatar: "https://i.pravatar.cc/40?img=23", text: "Does anyone know if there's an age limit? Want to bring my daughter!", time: "30m", likes: 5 },
+      { name: "East Village Music", avatar: "https://i.pravatar.cc/40?img=35", text: "This is going to sell out SO fast. Sabrina in a 1,500 cap room? Unreal.", time: "25m", likes: 31 },
+      { name: "Tom B.", avatar: "https://i.pravatar.cc/40?img=42", text: "Just secured 2 tickets! Best birthday present ever 🎂", time: "20m", likes: 12 },
+      { name: "ConcertQueenNYC", avatar: "https://i.pravatar.cc/40?img=48", text: "I saw her last year at MSG but Webster Hall will hit different. So much more intimate!", time: "15m", likes: 27 },
+    ],
   },
   {
     id: "post-2",
@@ -63,6 +71,13 @@ const postsData = [
     reactions: { count: "1.8K", like: true, love: true },
     comments: "67",
     shares: "234",
+    commentPreviews: [
+      { name: "Alex Rivera", avatar: "https://i.pravatar.cc/40?img=15", text: "I was there and it was the best show of my life!! Chappell absolutely killed it 🔥", time: "22h", likes: 45 },
+      { name: "LiveMusicNYC", avatar: "https://i.pravatar.cc/40?img=22", text: "The crowd singing along to every word was incredible. This is why live music matters.", time: "20h", likes: 31 },
+      { name: "Megan T.", avatar: "https://i.pravatar.cc/40?img=29", text: "Pink Pony Club live had me in tears. Chappell's voice is even better in person 😭", time: "18h", likes: 52 },
+      { name: "IndieVibes", avatar: "https://i.pravatar.cc/40?img=36", text: "The way she connected with the audience was magical. True performer.", time: "16h", likes: 19 },
+      { name: "David L.", avatar: "https://i.pravatar.cc/40?img=50", text: "Already counting down to Sabrina on the 28th! Webster Hall is on a ROLL 🔥", time: "14h", likes: 28 },
+    ],
   },
   {
     id: "post-3",
@@ -76,6 +91,14 @@ const postsData = [
     reactions: { count: "892", like: true, love: true },
     comments: "156",
     shares: "45",
+    commentPreviews: [
+      { name: "Matt K.", avatar: "https://i.pravatar.cc/40?img=33", text: "Bring Hozier to this stage!! He would sound incredible in the Grand Ballroom 🙏", time: "2d", likes: 67 },
+      { name: "EastVillageLocal", avatar: "https://i.pravatar.cc/40?img=25", text: "The history of this venue is unmatched. Saw my first concert here in 2003!", time: "2d", likes: 42 },
+      { name: "Amy C.", avatar: "https://i.pravatar.cc/40?img=44", text: "PLEASE book Mitski here. The Grand Ballroom would be perfect for her shows!", time: "2d", likes: 55 },
+      { name: "NYCMusicBlog", avatar: "https://i.pravatar.cc/40?img=53", text: "From The Ramones to Billie Eilish — that's an incredible legacy. What a room.", time: "1d", likes: 33 },
+      { name: "Jake R.", avatar: "https://i.pravatar.cc/40?img=61", text: "Phoebe Bridgers at Webster Hall would be a dream 🌙", time: "1d", likes: 48 },
+      { name: "SoundEngineer", avatar: "https://i.pravatar.cc/40?img=17", text: "The acoustics in the Grand Ballroom are genuinely world-class. Few rooms like it.", time: "1d", likes: 21 },
+    ],
   },
   {
     id: "post-4",
@@ -89,6 +112,13 @@ const postsData = [
     reactions: { count: "567", like: true, love: true },
     comments: "89",
     shares: "34",
+    commentPreviews: [
+      { name: "Sarah J.", avatar: "https://i.pravatar.cc/40?img=9", text: "Dinner at Veselka then walking over to Webster Hall. Best pre-show combo in the East Village! 🥟", time: "4d", likes: 28 },
+      { name: "ConcertVibes", avatar: "https://i.pravatar.cc/40?img=18", text: "Getting there early to grab a spot at the front of the Grand Ballroom. No substitutes!", time: "4d", likes: 15 },
+      { name: "Priya S.", avatar: "https://i.pravatar.cc/40?img=27", text: "My ritual: matching outfit with my concert buddy, always! 🎶✨", time: "3d", likes: 22 },
+      { name: "Carlos M.", avatar: "https://i.pravatar.cc/40?img=55", text: "Pregame at St. Marks Place then head over. Never fails.", time: "3d", likes: 11 },
+      { name: "NightOwlNYC", avatar: "https://i.pravatar.cc/40?img=63", text: "Honestly the energy walking into Webster Hall is already the best part", time: "3d", likes: 17 },
+    ],
   },
   {
     id: "post-5",
@@ -102,6 +132,10 @@ const postsData = [
     reactions: { count: "1.1K", like: true, love: true },
     comments: "78",
     shares: "56",
+    commentPreviews: [
+      { name: "DanielNYC", avatar: "https://i.pravatar.cc/40?img=51", text: "Best night out in ages. The sound quality in this venue is absolutely top tier 🔊", time: "6d", likes: 33 },
+      { name: "Emma W.", avatar: "https://i.pravatar.cc/40?img=44", text: "Already counting down to the next one! When are tickets for April shows dropping?", time: "5d", likes: 19 },
+    ],
   },
   {
     id: "post-6",
@@ -115,6 +149,9 @@ const postsData = [
     reactions: { count: "743", like: true, love: true },
     comments: "45",
     shares: "28",
+    commentPreviews: [
+      { name: "PhotographerMike", avatar: "https://i.pravatar.cc/40?img=60", text: "That marquee is the most iconic thing on 11th Street. Always makes me smile when I walk by!", time: "6d", likes: 22 },
+    ],
   },
   {
     id: "post-7",
@@ -128,6 +165,9 @@ const postsData = [
     reactions: { count: "456", like: true, love: true },
     comments: "32",
     shares: "15",
+    commentPreviews: [
+      { name: "DrinkExpert", avatar: "https://i.pravatar.cc/40?img=14", text: "The cocktails at Webster Hall are underrated! That espresso martini hits different before a show 🍸", time: "1w", likes: 17 },
+    ],
   },
   {
     id: "post-8",
@@ -141,6 +181,10 @@ const postsData = [
     reactions: { count: "623", like: true, love: true },
     comments: "67",
     shares: "41",
+    commentPreviews: [
+      { name: "MusicIsLife", avatar: "https://i.pravatar.cc/40?img=32", text: "This venue has the best community. Everyone is there for the love of music ❤️", time: "1w", likes: 29 },
+      { name: "TommyNYC", avatar: "https://i.pravatar.cc/40?img=57", text: "Been a regular here for 10 years. Webster Hall is home.", time: "1w", likes: 21 },
+    ],
   },
   {
     id: "post-9",
@@ -154,6 +198,10 @@ const postsData = [
     reactions: { count: "934", like: true, love: true },
     comments: "112",
     shares: "67",
+    commentPreviews: [
+      { name: "CrowdSurfer", avatar: "https://i.pravatar.cc/40?img=41", text: "The energy in this place is unmatched!! Every single person was on their feet all night 🙌", time: "2w", likes: 38 },
+      { name: "LiveNation Fan", avatar: "https://i.pravatar.cc/40?img=28", text: "NYC keeps live music alive and Webster Hall is at the heart of it. Legend.", time: "2w", likes: 25 },
+    ],
   },
   {
     id: "post-10",
@@ -167,6 +215,10 @@ const postsData = [
     reactions: { count: "512", like: true, love: true },
     comments: "189",
     shares: "38",
+    commentPreviews: [
+      { name: "OG Webster Fan", avatar: "https://i.pravatar.cc/40?img=47", text: "Seeing The Strokes here in 2006 changed my life. This venue is pure magic ✨", time: "2w", likes: 56 },
+      { name: "Jennifer L.", avatar: "https://i.pravatar.cc/40?img=38", text: "My favorite memory is the NYE show last year. Confetti everywhere and the best crowd ever!", time: "2w", likes: 34 },
+    ],
   },
 ];
 
@@ -258,6 +310,7 @@ const Dots3HorizontalIcon = () => (
 export default function RioTheatreProfile() {
   const router = useRouter();
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
+  const [showEventPrompt, setShowEventPrompt] = useState(false);
   const [showFollowPrompt, setShowFollowPrompt] = useState(false);
   const [showMessagePrompt, setShowMessagePrompt] = useState(false);
   const [showReviewsSheet, setShowReviewsSheet] = useState(false);
@@ -267,6 +320,7 @@ export default function RioTheatreProfile() {
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [likeSheetReactionCount, setLikeSheetReactionCount] = useState(0);
   const [expandedPosts, setExpandedPosts] = useState({});
+  const [expandedComments, setExpandedComments] = useState({});
   const [activeTab, setActiveTab] = useState("All");
 
   // Prefetch post detail pages for instant navigation
@@ -875,7 +929,7 @@ export default function RioTheatreProfile() {
               {eventsData.map((event) => (
                 <div 
                   key={event.id}
-                  onClick={() => setShowLoginPrompt(true)}
+                  onClick={() => setShowEventPrompt(true)}
                   style={{ 
                     display: 'flex',
                     alignItems: 'center',
@@ -1169,6 +1223,48 @@ export default function RioTheatreProfile() {
                 </div>
                 </div>
               </div>
+
+              {/* Comment Previews */}
+              {post.commentPreviews && post.commentPreviews.length > 0 && (() => {
+                const isExpanded = expandedComments[post.id];
+                const visibleComments = isExpanded ? post.commentPreviews : post.commentPreviews.slice(0, 2);
+                return (
+                <div style={{ padding: '0 12px 12px', background: '#fff' }}>
+                  <div style={{ borderTop: '1px solid #e4e6eb', paddingTop: '8px' }}>
+                    {visibleComments.map((comment, cIdx) => (
+                      <div key={cIdx} style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
+                        <img src={comment.avatar} alt="" style={{ width: '32px', height: '32px', borderRadius: '50%', flexShrink: 0, objectFit: 'cover' }} />
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ background: '#f0f2f5', borderRadius: '12px', padding: '8px 12px' }}>
+                            <p style={{ fontSize: '13px', fontWeight: '600', color: '#050505', margin: 0, fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.name}</p>
+                            <p style={{ fontSize: '15px', fontWeight: '400', lineHeight: '20px', color: '#050505', margin: '2px 0 0', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.text}</p>
+                          </div>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '4px 4px 0' }}>
+                            <span style={{ fontSize: '12px', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.time}</span>
+                            <button onClick={() => { setCommentSheetCount(parseReactionCount(post.comments)); setShowCommentSheet(true); }} style={{ background: 'none', border: 'none', padding: 0, fontSize: '12px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>Like</button>
+                            <button onClick={() => { setCommentSheetCount(parseReactionCount(post.comments)); setShowCommentSheet(true); }} style={{ background: 'none', border: 'none', padding: 0, fontSize: '12px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>Reply</button>
+                            {comment.likes > 0 && (
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginLeft: 'auto' }}>
+                                <img src="/images/reactions/like_default_40.png" alt="Like" style={{ width: '14px', height: '14px' }} />
+                                <span style={{ fontSize: '12px', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.likes}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                    {!isExpanded && (
+                      <button
+                        onClick={() => setExpandedComments(prev => ({ ...prev, [post.id]: true }))}
+                        style={{ background: 'none', border: 'none', padding: '4px 0 0', fontSize: '15px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}
+                      >
+                        View all comments
+                      </button>
+                    )}
+                  </div>
+                </div>
+                );
+              })()}
               
               {/* Events Unit - shown after the 3rd post */}
               {index === 2 && (
@@ -1195,7 +1291,7 @@ export default function RioTheatreProfile() {
                       Upcoming events at Webster Hall
                     </h2>
                     <button
-                      onClick={() => setShowLoginPrompt(true)}
+                      onClick={() => setShowEventPrompt(true)}
                       style={{
                         background: 'none',
                         border: 'none',
@@ -1218,7 +1314,7 @@ export default function RioTheatreProfile() {
                     {eventsData.slice(0, 3).map((event, eventIndex) => (
                       <div 
                         key={event.id}
-                        onClick={() => setShowLoginPrompt(true)}
+                        onClick={() => setShowEventPrompt(true)}
                         style={{ 
                           display: 'flex',
                           alignItems: 'center',
@@ -1468,6 +1564,13 @@ export default function RioTheatreProfile() {
         isOpen={showLoginPrompt}
         onClose={() => setShowLoginPrompt(false)}
         type="generic"
+      />
+
+      {/* Event Prompt Sheet */}
+      <UpsellBottomSheet 
+        isOpen={showEventPrompt}
+        onClose={() => setShowEventPrompt(false)}
+        type="event"
       />
 
       {/* Follow Prompt Sheet */}

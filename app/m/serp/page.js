@@ -81,8 +81,20 @@ export default function SerpPage() {
   const searchParams = useSearchParams();
 
   const query = searchParams.get("q") || "";
-  const topicKey = searchParams.get("topic") || "strangerthings";
-  const topic = topicsData[topicKey] || topicsData.strangerthings;
+  const topicParam = searchParams.get("topic") || "";
+
+  // Match topic: use explicit param, or infer from query keywords
+  const resolvedTopicKey = (() => {
+    if (topicParam && topicsData[topicParam]) return topicParam;
+    const q = query.toLowerCase();
+    if (q.includes("webster hall") || q.includes("sabrina carpenter") || q.includes("concert ticket") || q.includes("east village") || q.includes("live music nyc")) return "websterhall";
+    if (q.includes("coffee") || q.includes("cafe") || q.includes("portland")) return "coffee";
+    if (q.includes("turkey") || q.includes("thanksgiving")) return "turkey";
+    if (q.includes("nfl") || q.includes("football") || q.includes("super bowl")) return "nfl";
+    if (q.includes("pinecone") || q.includes("pine cone") || q.includes("wreath")) return "pinecone";
+    return "strangerthings";
+  })();
+  const topic = topicsData[resolvedTopicKey];
 
   const aiSummary = topic.aiOverview?.summary || "";
   const serpData = topic.serp || null;
@@ -142,7 +154,7 @@ export default function SerpPage() {
     setSectionsVisible([false, false, false]);
     setIsLoading(true);
     router.replace(
-      `/m/serp?q=${encodeURIComponent(searchQuery.trim())}&topic=${topicKey}`,
+      `/m/serp?q=${encodeURIComponent(searchQuery.trim())}&topic=${resolvedTopicKey}`,
       { scroll: false }
     );
   };

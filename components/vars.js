@@ -35,17 +35,14 @@ export const fds = {
 export const transition = {
   page: {
     initial: { 
-      opacity: 0, 
-      z: 50 
+      opacity: 0
     },
     enter: {
       opacity: 1,
-      z: 0,
       transition: { duration: fds.duration.mediumIn, ease: fds.animation.moveIn }
     },
     exit: {
       opacity: 0,
-      z: -50,
       transition: { duration: fds.duration.mediumOut, ease: fds.animation.moveOut }
     }
   },

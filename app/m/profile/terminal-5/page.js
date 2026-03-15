@@ -30,6 +30,13 @@ const postsData = [
     reactions: { count: "5.6K", like: true, love: true },
     comments: "234",
     shares: "890",
+    commentPreviews: [
+      { name: "Jake Morrison", avatar: "https://i.pravatar.cc/40?img=12", text: "Saw him at Coachella last year and it was life-changing. Can't believe he's doing all three floors!", time: "4h", likes: 23 },
+      { name: "Nina Patel", avatar: "https://i.pravatar.cc/40?img=32", text: "Just grabbed my tickets — who's going Friday? 🎶", time: "3h", likes: 8 },
+      { name: "Tommy Vance", avatar: "https://i.pravatar.cc/40?img=57", text: "Three floors of Fred Again.. is going to be absolutely mental. NYC isn't ready 🔥", time: "2h", likes: 15 },
+      { name: "Chloe Nakamura", avatar: "https://i.pravatar.cc/40?img=5", text: "His Boiler Room set changed my life. Terminal 5 is the perfect venue for this kind of energy.", time: "2h", likes: 11 },
+      { name: "Derek Simmons", avatar: "https://i.pravatar.cc/40?img=67", text: "I wonder if each floor will have a different vibe? That would be incredible for an electronic show.", time: "1h", likes: 6 },
+    ],
   },
   {
     id: "post-2",
@@ -39,6 +46,13 @@ const postsData = [
     reactions: { count: "3.1K", like: true, love: true },
     comments: "98",
     shares: "156",
+    commentPreviews: [
+      { name: "Marcus Chen", avatar: "https://i.pravatar.cc/40?img=51", text: "The bass on the second floor was absolutely insane. Best Disclosure set I've ever seen.", time: "1d", likes: 45 },
+      { name: "Leah Torres", avatar: "https://i.pravatar.cc/40?img=23", text: "We danced from 9 to 2am nonstop. Terminal 5 never disappoints 🔥", time: "1d", likes: 17 },
+      { name: "Priya Sharma", avatar: "https://i.pravatar.cc/40?img=9", text: "Top floor had the best sound quality honestly. Could feel every beat in my chest.", time: "23h", likes: 22 },
+      { name: "Elliot Burke", avatar: "https://i.pravatar.cc/40?img=53", text: "Being able to move between floors and catch different vibes was next level. More shows like this please!", time: "20h", likes: 9 },
+      { name: "Jasmine Ortiz", avatar: "https://i.pravatar.cc/40?img=41", text: "The visuals on the main stage were unreal. Disclosure really brought their A-game 💫", time: "18h", likes: 14 },
+    ],
   },
   {
     id: "post-3",
@@ -48,6 +62,13 @@ const postsData = [
     reactions: { count: "1.8K", like: true, love: true },
     comments: "67",
     shares: "45",
+    commentPreviews: [
+      { name: "Sophie Reed", avatar: "https://i.pravatar.cc/40?img=44", text: "The sunset views from the rooftop are unreal. Best pre-show spot in the city.", time: "5d", likes: 31 },
+      { name: "David Kim", avatar: "https://i.pravatar.cc/40?img=60", text: "What's on the cocktail menu this year? The spicy margarita last summer was 🔥", time: "5d", likes: 12 },
+      { name: "Megan Foster", avatar: "https://i.pravatar.cc/40?img=26", text: "Tried the lavender gin fizz last week — absolutely divine. Pair it with the skyline and chef's kiss 🍸", time: "4d", likes: 19 },
+      { name: "Carlos Rivera", avatar: "https://i.pravatar.cc/40?img=68", text: "Getting there early for rooftop drinks before a show is the move. Such a chill way to start the night.", time: "4d", likes: 7 },
+      { name: "Hannah Wells", avatar: "https://i.pravatar.cc/40?img=16", text: "Do they have non-alcoholic options? Would love to enjoy the vibes without drinking.", time: "3d", likes: 4 },
+    ],
   },
   {
     id: "post-4",
@@ -57,6 +78,14 @@ const postsData = [
     reactions: { count: "2.3K", like: true, love: true },
     comments: "312",
     shares: "67",
+    commentPreviews: [
+      { name: "Ryan O'Neill", avatar: "https://i.pravatar.cc/40?img=15", text: "That ODESZA show in 2018 was genuinely one of the best nights of my life. Bring them back!", time: "6d", likes: 67 },
+      { name: "Aisha Johnson", avatar: "https://i.pravatar.cc/40?img=38", text: "Khruangbin + Terminal 5 was pure magic. I'd love to see Jamie xx or Bonobo next 🙏", time: "6d", likes: 29 },
+      { name: "Leo Martinez", avatar: "https://i.pravatar.cc/40?img=33", text: "LCD Soundsystem at T5 was legendary. The entire venue was bouncing. We need more nights like that.", time: "5d", likes: 41 },
+      { name: "Fiona Walsh", avatar: "https://i.pravatar.cc/40?img=19", text: "Tame Impala or Caribou would be absolutely perfect for this venue. Make it happen! 🎸", time: "5d", likes: 18 },
+      { name: "Andre Williams", avatar: "https://i.pravatar.cc/40?img=62", text: "I've seen over 30 shows here since 2015. Best venue in NYC hands down. Bring back Rüfüs Du Sol!", time: "4d", likes: 24 },
+      { name: "Mei Lin", avatar: "https://i.pravatar.cc/40?img=47", text: "The acoustics in this place are something else. Every show sounds incredible no matter where you stand.", time: "4d", likes: 13 },
+    ],
   },
 ];
 
@@ -118,6 +147,7 @@ export default function Terminal5Profile() {
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [likeSheetReactionCount, setLikeSheetReactionCount] = useState(0);
   const [expandedPosts, setExpandedPosts] = useState({});
+  const [expandedComments, setExpandedComments] = useState({});
   const [activeTab, setActiveTab] = useState("All");
 
   const parseReactionCount = (countStr) => {
@@ -300,6 +330,47 @@ export default function Terminal5Profile() {
                       </div>
                     </div>
                   </div>
+              {/* Comment Previews */}
+              {post.commentPreviews && post.commentPreviews.length > 0 && (() => {
+                const isExpanded = expandedComments[post.id];
+                const visibleComments = isExpanded ? post.commentPreviews : post.commentPreviews.slice(0, 2);
+                return (
+                <div style={{ padding: '0 12px 12px', background: '#fff' }}>
+                  <div style={{ borderTop: '1px solid #e4e6eb', paddingTop: '8px' }}>
+                    {visibleComments.map((comment, cIdx) => (
+                      <div key={cIdx} style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
+                        <img src={comment.avatar} alt="" style={{ width: '32px', height: '32px', borderRadius: '50%', flexShrink: 0, objectFit: 'cover' }} />
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ background: '#f0f2f5', borderRadius: '12px', padding: '8px 12px' }}>
+                            <p style={{ fontSize: '13px', fontWeight: '600', color: '#050505', margin: 0, fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.name}</p>
+                            <p style={{ fontSize: '15px', fontWeight: '400', lineHeight: '20px', color: '#050505', margin: '2px 0 0', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.text}</p>
+                          </div>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '4px 4px 0' }}>
+                            <span style={{ fontSize: '12px', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.time}</span>
+                            <button onClick={() => setShowCommentSheet(true)} style={{ background: 'none', border: 'none', padding: 0, fontSize: '12px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>Like</button>
+                            <button onClick={() => setShowCommentSheet(true)} style={{ background: 'none', border: 'none', padding: 0, fontSize: '12px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>Reply</button>
+                            {comment.likes > 0 && (
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginLeft: 'auto' }}>
+                                <img src="/images/reactions/like_default_40.png" alt="Like" style={{ width: '14px', height: '14px' }} />
+                                <span style={{ fontSize: '12px', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.likes}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                    {!isExpanded && (
+                      <button
+                        onClick={() => setExpandedComments(prev => ({ ...prev, [post.id]: true }))}
+                        style={{ background: 'none', border: 'none', padding: '4px 0 0', fontSize: '15px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}
+                      >
+                        View all comments
+                      </button>
+                    )}
+                  </div>
+                </div>
+                );
+              })()}
                 </div>
 
                 {index === 1 && (

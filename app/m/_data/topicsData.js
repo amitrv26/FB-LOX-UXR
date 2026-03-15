@@ -1012,6 +1012,145 @@ Does anyone know when the final season of Stranger Things is coming out? I've be
       ],
     },
   },
+
+  websterhall: {
+    id: "websterhall",
+    label: "Webster Hall",
+    searchQuery: "Sabrina Carpenter concert tickets",
+    postTitle: "Sabrina Carpenter Live at Webster Hall - NYC",
+    aiOverview: {
+      summary: `Webster Hall is NYC's legendary live music venue in the East Village, hosting concerts and live events since 1886. Sabrina Carpenter's upcoming intimate show on March 28, 2026 is nearly sold out, with VIP Meet & Greet and general admission options still available.`,
+      expandedText: `Located on E 11th St in Manhattan, Webster Hall features multiple performance spaces and has hosted everyone from the Ramones to Billie Eilish. The venue holds approximately 1,500 people, making it one of the most sought-after intimate concert experiences in New York City.`,
+    },
+    groupData: {
+      groupName: "NYC Live Music & Concerts",
+      groupAvatar: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=80&h=80&fit=crop",
+      memberCount: "48K members",
+      postBody: `Hey NYC music lovers! 🎤\n\nAnyone going to the Sabrina Carpenter show at Webster Hall on March 28? Trying to find out if there are still tickets available and what the VIP experience is like. Also, any tips for best spots to stand at Webster Hall?`,
+      postAuthor: {
+        name: "Jessica M.",
+        avatar: "https://i.pravatar.cc/80?img=5",
+      },
+    },
+    searchResults: [
+      {
+        id: "result-1",
+        postId: "post-wh-1",
+        commentsCount: 342,
+        timeAgo: "2 hours ago",
+        title: "Sabrina Carpenter concert tickets - Webster Hall NYC",
+        description: "Looking for Sabrina Carpenter tickets at Webster Hall on March 28th. Anyone know if there are still VIP Meet & Greet passes available?",
+        comments: [
+          { text: "VIP Meet & Greet sold out in minutes! But GA tickets are still available through Webster Hall's website. Doors at 7, show at 8:30.", reactions: 89, isTopComment: true },
+          { text: "I got my tickets through the presale. The venue is pretty small (1,500 cap) so every spot has a great view!", reactions: 67, isTopComment: false },
+          { text: "Check the Webster Hall box office day-of. They sometimes release a few extra tickets at the door.", reactions: 45, isTopComment: false },
+          { text: "Pro tip: get there early for the best spots. The floor fills up fast for shows like this!", reactions: 52, isTopComment: false },
+          { text: "Seeing Sabrina in such an intimate venue is going to be incredible. MSG was great but this is next level.", reactions: 78, isTopComment: false },
+        ],
+      },
+      {
+        id: "result-2",
+        postId: "post-wh-2",
+        commentsCount: 218,
+        timeAgo: "5 hours ago",
+        title: "Upcoming shows at Webster Hall this spring",
+        description: "What's the lineup looking like at Webster Hall for the next few months? Looking for recommendations!",
+        comments: [
+          { text: "March is STACKED. Sabrina Carpenter on the 28th, Chappell Roan just played last week (sold out), and there's an indie showcase every Thursday.", reactions: 56, isTopComment: true },
+          { text: "The spring calendar is insane. They've been booking incredible artists lately. Webster Hall is having a renaissance!", reactions: 34, isTopComment: false },
+          { text: "Don't sleep on the DJ nights either. Friday nights at the Grand Ballroom are legendary.", reactions: 29, isTopComment: false },
+          { text: "They also have comedy shows in the smaller room upstairs. Saw a great one last month!", reactions: 23, isTopComment: false },
+          { text: "Follow their Instagram for last-minute announcements. They sometimes add surprise shows!", reactions: 41, isTopComment: false },
+        ],
+      },
+      {
+        id: "result-3",
+        postId: "post-wh-3",
+        commentsCount: 156,
+        timeAgo: "1 day ago",
+        title: "Best concerts in East Village NYC",
+        description: "New to the East Village and looking for the best live music venues. What's everyone recommend?",
+        comments: [
+          { text: "Webster Hall is THE spot. Historic venue, incredible sound system, and they book amazing artists. Can't beat it!", reactions: 78, isTopComment: true },
+          { text: "Also check out Bowery Ballroom and Mercury Lounge if you want more intimate shows. East Village has the best music scene in NYC.", reactions: 45, isTopComment: false },
+          { text: "Webster Hall just got renovated a few years ago. The sound quality is top notch now. Saw Billie Eilish there - unforgettable!", reactions: 56, isTopComment: false },
+          { text: "The Grand Ballroom at Webster Hall is gorgeous. Great acoustics and the balcony has amazing views of the stage.", reactions: 34, isTopComment: false },
+          { text: "Pro tip: eat at one of the amazing East Village restaurants before the show. Tons of options within walking distance.", reactions: 28, isTopComment: false },
+        ],
+      },
+    ],
+    relatedAnswers: [
+      {
+        id: "qa-1",
+        question: "Are Sabrina Carpenter Webster Hall tickets still available?",
+        answer: "VIP Meet & Greet passes are sold out, but general admission tickets for the March 28 show are still available through Webster Hall's website.",
+        bullets: [
+          "GA tickets available on Webster Hall's website and at the box office",
+          "Doors open at 7:00 PM, show starts at 8:30 PM",
+          "VIP Meet & Greet was at 6:00 PM but is now sold out",
+          "The venue holds approximately 1,500 people for an intimate experience",
+        ],
+      },
+      {
+        id: "qa-2",
+        question: "What upcoming shows are at Webster Hall?",
+        answer: "Webster Hall has a packed spring lineup including Sabrina Carpenter, weekly indie showcases, and DJ nights.",
+        bullets: [
+          "Sabrina Carpenter – March 28, 2026 (Short n' Sweet Tour)",
+          "Weekly indie showcases every Thursday in the smaller room",
+          "Friday DJ nights in the Grand Ballroom",
+          "Follow @WebsterHall on Instagram for surprise show announcements",
+        ],
+      },
+      {
+        id: "qa-3",
+        question: "What is Webster Hall like as a concert venue?",
+        answer: "Webster Hall is NYC's legendary live music venue in the East Village, recently renovated with top-notch sound and a 1,500 person capacity.",
+        bullets: [
+          "Historic venue operating since 1886 in Manhattan's East Village",
+          "Recently renovated with state-of-the-art sound system",
+          "The Grand Ballroom offers a balcony with great stage views",
+          "Intimate setting that's hosted artists from the Ramones to Billie Eilish",
+        ],
+      },
+    ],
+    comments: [
+      {
+        author: { name: "Jessica M.", avatar: "https://i.pravatar.cc/64?img=5" },
+        text: "Just got my Sabrina Carpenter tickets! VIP Meet & Greet here I come 😭🎤 Webster Hall is going to be INSANE for this show.",
+        reactions: 89,
+      },
+      {
+        author: { name: "NYC Concert Fan", avatar: "https://i.pravatar.cc/64?img=12" },
+        text: "Sabrina at Webster Hall is going to be incredible. Such an intimate venue for an artist of her caliber!",
+        reactions: 67,
+      },
+      {
+        author: { name: "East Village Music", avatar: "https://i.pravatar.cc/64?img=35" },
+        text: "This is going to sell out SO fast. Sabrina in a 1,500 cap room? Once in a lifetime experience.",
+        reactions: 52,
+      },
+    ],
+    serp: {
+      entityCard: {
+        name: "Webster Hall",
+        category: "Live music venue · East Village, NYC",
+        followers: "180K followers",
+        profileImage: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=120&h=120&fit=crop",
+        photos: [
+          "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=200&h=200&fit=crop",
+          "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=200&h=200&fit=crop",
+          "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=200&h=200&fit=crop",
+        ],
+      },
+      contentGrid: [
+        { author: "Webster Hall", timeAgo: "2h", reactions: "5.2K", imageUrl: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=400&h=600&fit=crop" },
+        { author: "NYC Concert Fan", timeAgo: "5h", reactions: "1.8K", imageUrl: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&h=600&fit=crop" },
+        { author: "East Village Vibes", timeAgo: "1d", reactions: "3.4K", imageUrl: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=600&fit=crop" },
+        { author: "Live Music NYC", timeAgo: "2d", reactions: "2.1K", imageUrl: "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=400&h=600&fit=crop" },
+      ],
+    },
+  },
 };
 
 // Get topic by ID

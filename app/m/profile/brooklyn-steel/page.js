@@ -30,6 +30,14 @@ const postsData = [
     reactions: { count: "2.1K", like: true, love: true },
     comments: "67",
     shares: "234",
+    commentPreviews: [
+      { name: "Jake M.", avatar: "https://i.pravatar.cc/40?img=5", text: "Just lined up outside! So hyped for tonight.", time: "3h", likes: 18 },
+      { name: "Clara B.", avatar: "https://i.pravatar.cc/40?img=11", text: "Saw them in London last year — you're all in for an incredible show.", time: "2h", likes: 31 },
+      { name: "Mia R.", avatar: "https://i.pravatar.cc/40?img=2", text: "That sound system was BOOMING tonight. Best live audio I've heard anywhere.", time: "1h", likes: 14 },
+      { name: "Tyler K.", avatar: "https://i.pravatar.cc/40?img=13", text: "Front row was absolutely insane. Grian is a force of nature on stage!", time: "1h", likes: 22 },
+      { name: "Ashley P.", avatar: "https://i.pravatar.cc/40?img=20", text: "The venue layout is perfect — every spot in the house has a great view.", time: "45m", likes: 9 },
+      { name: "Kevin D.", avatar: "https://i.pravatar.cc/40?img=27", text: "Third time seeing them but first time at Brooklyn Steel. Venue made it so much better!", time: "30m", likes: 6 },
+    ],
   },
   {
     id: "post-2",
@@ -39,6 +47,13 @@ const postsData = [
     reactions: { count: "3.4K", like: true, love: true },
     comments: "112",
     shares: "89",
+    commentPreviews: [
+      { name: "Nina R.", avatar: "https://i.pravatar.cc/40?img=16", text: "Michelle was absolutely incredible last night! Best show of the year so far.", time: "1d", likes: 42 },
+      { name: "Sam W.", avatar: "https://i.pravatar.cc/40?img=23", text: "The crowd energy was unreal. Thank you Brooklyn Steel for always bringing the best acts!", time: "1d", likes: 19 },
+      { name: "Priya M.", avatar: "https://i.pravatar.cc/40?img=7", text: "When she played Paprika the whole room was singing along. Magical moment.", time: "22h", likes: 28 },
+      { name: "Julian C.", avatar: "https://i.pravatar.cc/40?img=33", text: "The acoustics in this place are unreal. Every note was crystal clear.", time: "20h", likes: 15 },
+      { name: "Rebecca T.", avatar: "https://i.pravatar.cc/40?img=40", text: "Michelle thanked the crowd three times. You could tell she felt the love!", time: "18h", likes: 11 },
+    ],
   },
   {
     id: "post-3",
@@ -48,6 +63,13 @@ const postsData = [
     reactions: { count: "1.2K", like: true, love: true },
     comments: "45",
     shares: "56",
+    commentPreviews: [
+      { name: "Derek F.", avatar: "https://i.pravatar.cc/40?img=31", text: "Could definitely hear the difference at Saturday's show. So crisp!", time: "3d", likes: 15 },
+      { name: "Mia L.", avatar: "https://i.pravatar.cc/40?img=36", text: "L-Acoustics is top tier. This venue just keeps getting better.", time: "2d", likes: 9 },
+      { name: "Andre W.", avatar: "https://i.pravatar.cc/40?img=44", text: "L-Acoustics is the industry gold standard. Smart investment!", time: "2d", likes: 12 },
+      { name: "Jenny S.", avatar: "https://i.pravatar.cc/40?img=50", text: "The low end hits so much harder now without drowning out vocals.", time: "1d", likes: 7 },
+      { name: "Marcus B.", avatar: "https://i.pravatar.cc/40?img=57", text: "Worked on the install crew — wait till you hear it for EDM shows!", time: "1d", likes: 20 },
+    ],
   },
   {
     id: "post-4",
@@ -57,6 +79,13 @@ const postsData = [
     reactions: { count: "876", like: true, love: true },
     comments: "34",
     shares: "67",
+    commentPreviews: [
+      { name: "Tessa K.", avatar: "https://i.pravatar.cc/40?img=42", text: "Just grabbed tickets for three shows this month! My wallet is crying but worth it.", time: "5d", likes: 21 },
+      { name: "Leo P.", avatar: "https://i.pravatar.cc/40?img=48", text: "The variety is amazing — something new every night.", time: "4d", likes: 7 },
+      { name: "Sonia V.", avatar: "https://i.pravatar.cc/40?img=10", text: "Brooklyn Steel is doing what every venue should be doing — diverse bookings. Respect!", time: "3d", likes: 13 },
+      { name: "Rich H.", avatar: "https://i.pravatar.cc/40?img=55", text: "Already got my schedule blocked off. Six shows in April alone!", time: "3d", likes: 9 },
+      { name: "Dana L.", avatar: "https://i.pravatar.cc/40?img=63", text: "Any chance of adding a Sunday brunch show? That would be amazing!", time: "2d", likes: 4 },
+    ],
   },
 ];
 
@@ -118,6 +147,7 @@ export default function BrooklynSteelProfile() {
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [likeSheetReactionCount, setLikeSheetReactionCount] = useState(0);
   const [expandedPosts, setExpandedPosts] = useState({});
+  const [expandedComments, setExpandedComments] = useState({});
   const [activeTab, setActiveTab] = useState("All");
 
   const parseReactionCount = (countStr) => {
@@ -310,6 +340,47 @@ export default function BrooklynSteelProfile() {
                       </div>
                     </div>
                   </div>
+              {/* Comment Previews */}
+              {post.commentPreviews && post.commentPreviews.length > 0 && (() => {
+                const isExpanded = expandedComments[post.id];
+                const visibleComments = isExpanded ? post.commentPreviews : post.commentPreviews.slice(0, 2);
+                return (
+                <div style={{ padding: '0 12px 12px', background: '#fff' }}>
+                  <div style={{ borderTop: '1px solid #e4e6eb', paddingTop: '8px' }}>
+                    {visibleComments.map((comment, cIdx) => (
+                      <div key={cIdx} style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
+                        <img src={comment.avatar} alt="" style={{ width: '32px', height: '32px', borderRadius: '50%', flexShrink: 0, objectFit: 'cover' }} />
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ background: '#f0f2f5', borderRadius: '12px', padding: '8px 12px' }}>
+                            <p style={{ fontSize: '13px', fontWeight: '600', color: '#050505', margin: 0, fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.name}</p>
+                            <p style={{ fontSize: '15px', fontWeight: '400', lineHeight: '20px', color: '#050505', margin: '2px 0 0', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.text}</p>
+                          </div>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '4px 4px 0' }}>
+                            <span style={{ fontSize: '12px', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.time}</span>
+                            <button onClick={() => setShowCommentSheet(true)} style={{ background: 'none', border: 'none', padding: 0, fontSize: '12px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>Like</button>
+                            <button onClick={() => setShowCommentSheet(true)} style={{ background: 'none', border: 'none', padding: 0, fontSize: '12px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>Reply</button>
+                            {comment.likes > 0 && (
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginLeft: 'auto' }}>
+                                <img src="/images/reactions/like_default_40.png" alt="Like" style={{ width: '14px', height: '14px' }} />
+                                <span style={{ fontSize: '12px', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.likes}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                    {!isExpanded && (
+                      <button
+                        onClick={() => setExpandedComments(prev => ({ ...prev, [post.id]: true }))}
+                        style={{ background: 'none', border: 'none', padding: '4px 0 0', fontSize: '15px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}
+                      >
+                        View all comments
+                      </button>
+                    )}
+                  </div>
+                </div>
+                );
+              })()}
                 </div>
 
                 {/* Similar Pages after 2nd post */}

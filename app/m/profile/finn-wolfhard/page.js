@@ -48,6 +48,13 @@ const postsData = [
     reactions: { count: "77.3K", like: true, love: true },
     comments: "2.1K",
     shares: "367",
+    commentPreviews: [
+      { name: "Sarah Chen", avatar: "https://i.pravatar.cc/40?img=5", text: "This album is absolutely incredible. I've had it on repeat since release day 🎶", time: "8h", likes: 24 },
+      { name: "Marcus Rivera", avatar: "https://i.pravatar.cc/40?img=12", text: "2.6M streams already?! Calpurnia fans been waiting for this energy. So worth it.", time: "7h", likes: 18 },
+      { name: "Alyssa Tran", avatar: "https://i.pravatar.cc/40?img=47", text: "Just added the whole album to my playlist. Track 4 is an absolute masterpiece 🔥", time: "6h", likes: 15 },
+      { name: "Jordan Blake", avatar: "https://i.pravatar.cc/40?img=53", text: "Calpurnia nostalgia hitting different right now. So glad you're back making music like this.", time: "5h", likes: 22 },
+      { name: "Nadia Petrov", avatar: "https://i.pravatar.cc/40?img=19", text: "Been streaming nonstop since midnight. My neighbors probably know every lyric by now 😂", time: "4h", likes: 9 },
+    ],
   },
   {
     id: "post-2",
@@ -61,6 +68,13 @@ const postsData = [
     reactions: { count: "45K", like: true, love: true },
     comments: "890",
     shares: "124",
+    commentPreviews: [
+      { name: "Jamie Ortiz", avatar: "https://i.pravatar.cc/40?img=32", text: "Just watched Hell of a Summer and it was SO good. You killed it Finn! 🎬🔥", time: "1d", likes: 41 },
+      { name: "Priya Kapoor", avatar: "https://i.pravatar.cc/40?img=23", text: "So proud of everything you do. From Stranger Things to directing — what a journey.", time: "1d", likes: 33 },
+      { name: "Tyler Nguyen", avatar: "https://i.pravatar.cc/40?img=60", text: "The cinematography in Hell of a Summer was incredible. You've got a real eye for directing 🎥", time: "22h", likes: 27 },
+      { name: "Megan Cross", avatar: "https://i.pravatar.cc/40?img=38", text: "Watched it twice already. The ending had me shook. More movies please!! 🙏", time: "20h", likes: 19 },
+      { name: "Ravi Sharma", avatar: "https://i.pravatar.cc/40?img=14", text: "Finn Wolfhard the actor AND director era. We love to see it 👏", time: "18h", likes: 36 },
+    ],
   },
 ];
 
@@ -110,6 +124,7 @@ export default function FinnWolfhardProfile() {
   const [showMessagePrompt, setShowMessagePrompt] = useState(false);
   const [showCommentSheet, setShowCommentSheet] = useState(false);
   const [activeTab, setActiveTab] = useState("All");
+  const [expandedComments, setExpandedComments] = useState({});
 
   const tabs = ["All", "Photos", "Reels", "Events"];
 
@@ -667,6 +682,48 @@ export default function FinnWolfhardProfile() {
                   </div>
                 </div>
               </div>
+
+              {/* Comment Previews */}
+              {post.commentPreviews && post.commentPreviews.length > 0 && (() => {
+                const isExpanded = expandedComments[post.id];
+                const visibleComments = isExpanded ? post.commentPreviews : post.commentPreviews.slice(0, 2);
+                return (
+                <div style={{ padding: '0 12px 12px', background: '#fff' }}>
+                  <div style={{ borderTop: '1px solid #e4e6eb', paddingTop: '8px' }}>
+                    {visibleComments.map((comment, cIdx) => (
+                      <div key={cIdx} style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
+                        <img src={comment.avatar} alt="" style={{ width: '32px', height: '32px', borderRadius: '50%', flexShrink: 0, objectFit: 'cover' }} />
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ background: '#f0f2f5', borderRadius: '12px', padding: '8px 12px' }}>
+                            <p style={{ fontSize: '13px', fontWeight: '600', color: '#050505', margin: 0, fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.name}</p>
+                            <p style={{ fontSize: '15px', fontWeight: '400', lineHeight: '20px', color: '#050505', margin: '2px 0 0', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.text}</p>
+                          </div>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '4px 4px 0' }}>
+                            <span style={{ fontSize: '12px', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.time}</span>
+                            <button onClick={() => setShowCommentSheet(true)} style={{ background: 'none', border: 'none', padding: 0, fontSize: '12px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>Like</button>
+                            <button onClick={() => setShowCommentSheet(true)} style={{ background: 'none', border: 'none', padding: 0, fontSize: '12px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>Reply</button>
+                            {comment.likes > 0 && (
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginLeft: 'auto' }}>
+                                <img src="/images/reactions/like_default_40.png" alt="Like" style={{ width: '14px', height: '14px' }} />
+                                <span style={{ fontSize: '12px', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.likes}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                    {!isExpanded && (
+                      <button
+                        onClick={() => setExpandedComments(prev => ({ ...prev, [post.id]: true }))}
+                        style={{ background: 'none', border: 'none', padding: '4px 0 0', fontSize: '15px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}
+                      >
+                        View all comments
+                      </button>
+                    )}
+                  </div>
+                </div>
+                );
+              })()}
             </div>
           ))}
           <EndOfFeedUpsell hideWordmark={true} />

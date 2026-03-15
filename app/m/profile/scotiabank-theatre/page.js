@@ -37,6 +37,14 @@ const postsData = [
     reactions: { count: "1.8K", like: true, love: true },
     comments: "89",
     shares: "156",
+    commentPreviews: [
+      { name: "Marcus T.", avatar: "https://i.pravatar.cc/40?img=3", text: "Already got my tickets! IMAX is the only way to watch Avatar.", time: "2h", likes: 24 },
+      { name: "Jessica L.", avatar: "https://i.pravatar.cc/40?img=7", text: "Valentine's Day premiere? Perfect date night idea!", time: "1h", likes: 8 },
+      { name: "Tina K.", avatar: "https://i.pravatar.cc/40?img=1", text: "The IMAX 3D here is unreal. This is going to be incredible!", time: "1h", likes: 15 },
+      { name: "Brandon Y.", avatar: "https://i.pravatar.cc/40?img=4", text: "Booked the D-BOX seats for this one. Full immersion!", time: "45m", likes: 11 },
+      { name: "Lisa M.", avatar: "https://i.pravatar.cc/40?img=6", text: "Anyone know if they're doing a midnight screening too?", time: "30m", likes: 5 },
+      { name: "Owen R.", avatar: "https://i.pravatar.cc/40?img=10", text: "James Cameron never disappoints. Opening night let's go!", time: "20m", likes: 3 },
+    ],
   },
   {
     id: "post-2",
@@ -50,6 +58,13 @@ const postsData = [
     reactions: { count: "234", like: true, love: true },
     comments: "45",
     shares: "23",
+    commentPreviews: [
+      { name: "David K.", avatar: "https://i.pravatar.cc/40?img=12", text: "Just grabbed tickets for the matinee! Can't wait.", time: "18h", likes: 5 },
+      { name: "Priya S.", avatar: "https://i.pravatar.cc/40?img=18", text: "Love the new releases lineup this weekend!", time: "14h", likes: 3 },
+      { name: "Hannah L.", avatar: "https://i.pravatar.cc/40?img=15", text: "Saturday matinees are the best deal in town!", time: "12h", likes: 7 },
+      { name: "Kevin T.", avatar: "https://i.pravatar.cc/40?img=20", text: "Grabbed seats for three movies this weekend. Popcorn budget is out of control.", time: "10h", likes: 4 },
+      { name: "Yuki S.", avatar: "https://i.pravatar.cc/40?img=24", text: "The concession nachos here are seriously underrated.", time: "8h", likes: 2 },
+    ],
   },
   {
     id: "post-3",
@@ -63,6 +78,13 @@ const postsData = [
     reactions: { count: "567", like: true, love: true },
     comments: "78",
     shares: "34",
+    commentPreviews: [
+      { name: "Ryan M.", avatar: "https://i.pravatar.cc/40?img=22", text: "Saw the Dolby Atmos demo last week — absolutely mind-blowing!", time: "1d", likes: 31 },
+      { name: "Anika P.", avatar: "https://i.pravatar.cc/40?img=29", text: "This is why Scotiabank is the best theatre in Vancouver.", time: "1d", likes: 12 },
+      { name: "Carlos G.", avatar: "https://i.pravatar.cc/40?img=26", text: "The bass during the previews alone shook my seat. Incredible upgrade!", time: "22h", likes: 18 },
+      { name: "Petra N.", avatar: "https://i.pravatar.cc/40?img=30", text: "Worth the drive from Surrey just for this sound system.", time: "20h", likes: 9 },
+      { name: "Jason F.", avatar: "https://i.pravatar.cc/40?img=35", text: "Dolby Atmos + IMAX = pure perfection. Best cinema experience in BC.", time: "18h", likes: 6 },
+    ],
   },
   {
     id: "post-4",
@@ -76,6 +98,13 @@ const postsData = [
     reactions: { count: "189", like: true, love: true },
     comments: "34",
     shares: "18",
+    commentPreviews: [
+      { name: "Sarah W.", avatar: "https://i.pravatar.cc/40?img=33", text: "My kids look forward to Saturday mornings here every week!", time: "3d", likes: 14 },
+      { name: "Chris H.", avatar: "https://i.pravatar.cc/40?img=38", text: "Those popcorn combos are such a great deal.", time: "2d", likes: 6 },
+      { name: "Monica D.", avatar: "https://i.pravatar.cc/40?img=34", text: "Love the Saturday morning vibe — it's become our family tradition!", time: "2d", likes: 8 },
+      { name: "James P.", avatar: "https://i.pravatar.cc/40?img=37", text: "The popcorn combo is a lifesaver with three kids. Great value!", time: "2d", likes: 5 },
+      { name: "Amy T.", avatar: "https://i.pravatar.cc/40?img=40", text: "Do you guys have any gluten-free snack options? Asking for my daughter.", time: "1d", likes: 2 },
+    ],
   },
   {
     id: "post-5",
@@ -89,6 +118,13 @@ const postsData = [
     reactions: { count: "423", like: true, love: true },
     comments: "56",
     shares: "29",
+    commentPreviews: [
+      { name: "Tyler B.", avatar: "https://i.pravatar.cc/40?img=41", text: "D-BOX during an action movie is a game-changer!", time: "5d", likes: 19 },
+      { name: "Megan R.", avatar: "https://i.pravatar.cc/40?img=45", text: "Tried these for the first time last month — never going back to regular seats.", time: "4d", likes: 11 },
+      { name: "Raj P.", avatar: "https://i.pravatar.cc/40?img=42", text: "D-BOX during an action movie is absolutely wild!", time: "4d", likes: 14 },
+      { name: "Courtney W.", avatar: "https://i.pravatar.cc/40?img=44", text: "I was skeptical at first but now I can't go back to normal seats.", time: "3d", likes: 8 },
+      { name: "Nathan S.", avatar: "https://i.pravatar.cc/40?img=47", text: "Pro tip: row 5 center D-BOX seats are the sweet spot.", time: "3d", likes: 6 },
+    ],
   },
   {
     id: "post-6",
@@ -102,6 +138,13 @@ const postsData = [
     reactions: { count: "312", like: true, love: true },
     comments: "67",
     shares: "41",
+    commentPreviews: [
+      { name: "Jordan C.", avatar: "https://i.pravatar.cc/40?img=49", text: "Best theatre in the city, hands down!", time: "6d", likes: 27 },
+      { name: "Natalie F.", avatar: "https://i.pravatar.cc/40?img=52", text: "Been coming here since it opened. Wouldn't go anywhere else.", time: "5d", likes: 15 },
+      { name: "Vanessa K.", avatar: "https://i.pravatar.cc/40?img=50", text: "This theatre is a gem. Thank YOU for the amazing experiences!", time: "5d", likes: 20 },
+      { name: "Derek L.", avatar: "https://i.pravatar.cc/40?img=51", text: "Been a member since 2015. The loyalty rewards are awesome too.", time: "4d", likes: 10 },
+      { name: "Samira H.", avatar: "https://i.pravatar.cc/40?img=54", text: "My favorite date night spot. The staff are always so friendly!", time: "4d", likes: 7 },
+    ],
   },
   {
     id: "post-7",
@@ -115,6 +158,13 @@ const postsData = [
     reactions: { count: "156", like: true, love: true },
     comments: "23",
     shares: "12",
+    commentPreviews: [
+      { name: "Alex G.", avatar: "https://i.pravatar.cc/40?img=55", text: "Midnight screenings are the best vibe! Who's going this weekend?", time: "1w", likes: 9 },
+      { name: "Kira N.", avatar: "https://i.pravatar.cc/40?img=58", text: "Nothing beats a horror movie at midnight here.", time: "1w", likes: 4 },
+      { name: "Drew M.", avatar: "https://i.pravatar.cc/40?img=56", text: "The midnight horror marathons are legendary. Who's down this Friday?", time: "6d", likes: 7 },
+      { name: "Jess T.", avatar: "https://i.pravatar.cc/40?img=57", text: "Midnight screenings hit different. The energy in the theatre is unmatched.", time: "6d", likes: 5 },
+      { name: "Paul V.", avatar: "https://i.pravatar.cc/40?img=59", text: "Please bring back the Sci-Fi midnight marathon! That was my favorite.", time: "5d", likes: 3 },
+    ],
   },
   {
     id: "post-8",
@@ -128,6 +178,13 @@ const postsData = [
     reactions: { count: "289", like: true, love: true },
     comments: "92",
     shares: "37",
+    commentPreviews: [
+      { name: "Omar D.", avatar: "https://i.pravatar.cc/40?img=61", text: "The gourmet pizza slices are seriously good!", time: "2w", likes: 22 },
+      { name: "Emily V.", avatar: "https://i.pravatar.cc/40?img=64", text: "Finally! Craft sodas are a great addition.", time: "1w", likes: 7 },
+      { name: "Rachel K.", avatar: "https://i.pravatar.cc/40?img=60", text: "The margherita pizza slice is surprisingly legit. Way better than typical theatre food.", time: "1w", likes: 15 },
+      { name: "Ben C.", avatar: "https://i.pravatar.cc/40?img=63", text: "Craft root beer + gourmet pizza = my new movie combo.", time: "1w", likes: 9 },
+      { name: "Simone A.", avatar: "https://i.pravatar.cc/40?img=66", text: "Any vegan options on the new menu? Would love to see some!", time: "6d", likes: 4 },
+    ],
   },
   {
     id: "post-9",
@@ -141,6 +198,13 @@ const postsData = [
     reactions: { count: "198", like: true, love: true },
     comments: "41",
     shares: "19",
+    commentPreviews: [
+      { name: "Liam J.", avatar: "https://i.pravatar.cc/40?img=67", text: "The laser projection quality is incredible — you can really see the difference.", time: "2w", likes: 16 },
+      { name: "Sophie A.", avatar: "https://i.pravatar.cc/40?img=14", text: "This is why I drive 30 min to come to Scotiabank instead of my local theatre.", time: "2w", likes: 10 },
+      { name: "Trevor B.", avatar: "https://i.pravatar.cc/40?img=68", text: "The colors are so much more vivid now. Night and day difference!", time: "1w", likes: 11 },
+      { name: "Nadia R.", avatar: "https://i.pravatar.cc/40?img=69", text: "I noticed the difference immediately in the dark scenes. So much better!", time: "1w", likes: 7 },
+      { name: "Greg W.", avatar: "https://i.pravatar.cc/40?img=70", text: "Would love a behind-the-scenes tour! Is that something you'd ever offer?", time: "1w", likes: 4 },
+    ],
   },
   {
     id: "post-10",
@@ -154,6 +218,13 @@ const postsData = [
     reactions: { count: "234", like: true, love: true },
     comments: "108",
     shares: "22",
+    commentPreviews: [
+      { name: "Daniel Z.", avatar: "https://i.pravatar.cc/40?img=9", text: "Saw my first IMAX movie here back in 2010 — still my favorite theatre!", time: "3w", likes: 34 },
+      { name: "Rachel Q.", avatar: "https://i.pravatar.cc/40?img=25", text: "So many memories here! Scotiabank is a Vancouver icon.", time: "2w", likes: 18 },
+      { name: "Hannah G.", avatar: "https://i.pravatar.cc/40?img=8", text: "My first date with my husband was here in 2012! We come back every anniversary.", time: "2w", likes: 28 },
+      { name: "Marco P.", avatar: "https://i.pravatar.cc/40?img=11", text: "Midnight premiere of Avengers Endgame. The whole theatre cheered. Unforgettable!", time: "2w", likes: 22 },
+      { name: "Suki L.", avatar: "https://i.pravatar.cc/40?img=13", text: "Grew up coming here as a kid. Now I bring my own kids. Full circle moment!", time: "2w", likes: 14 },
+    ],
   },
 ];
 
@@ -238,6 +309,7 @@ const DotsIcon = () => (
 export default function ScotiabankTheatreProfile() {
   const router = useRouter();
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
+  const [showEventPrompt, setShowEventPrompt] = useState(false);
   const [showFollowPrompt, setShowFollowPrompt] = useState(false);
   const [showMessagePrompt, setShowMessagePrompt] = useState(false);
   const [showReviewsSheet, setShowReviewsSheet] = useState(false);
@@ -247,6 +319,7 @@ export default function ScotiabankTheatreProfile() {
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [likeSheetReactionCount, setLikeSheetReactionCount] = useState(0);
   const [expandedPosts, setExpandedPosts] = useState({});
+  const [expandedComments, setExpandedComments] = useState({});
   const [activeTab, setActiveTab] = useState("All");
 
   // Parse reaction count string (e.g., "2.4K") to number
@@ -805,7 +878,7 @@ export default function ScotiabankTheatreProfile() {
               {eventsData.map((event) => (
                 <div 
                   key={event.id}
-                  onClick={() => setShowLoginPrompt(true)}
+                  onClick={() => setShowEventPrompt(true)}
                   style={{ 
                     display: 'flex',
                     alignItems: 'center',
@@ -1060,6 +1133,47 @@ export default function ScotiabankTheatreProfile() {
                       </div>
                     </div>
                   </div>
+              {/* Comment Previews */}
+              {post.commentPreviews && post.commentPreviews.length > 0 && (() => {
+                const isExpanded = expandedComments[post.id];
+                const visibleComments = isExpanded ? post.commentPreviews : post.commentPreviews.slice(0, 2);
+                return (
+                <div style={{ padding: '0 12px 12px', background: '#fff' }}>
+                  <div style={{ borderTop: '1px solid #e4e6eb', paddingTop: '8px' }}>
+                    {visibleComments.map((comment, cIdx) => (
+                      <div key={cIdx} style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
+                        <img src={comment.avatar} alt="" style={{ width: '32px', height: '32px', borderRadius: '50%', flexShrink: 0, objectFit: 'cover' }} />
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ background: '#f0f2f5', borderRadius: '12px', padding: '8px 12px' }}>
+                            <p style={{ fontSize: '13px', fontWeight: '600', color: '#050505', margin: 0, fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.name}</p>
+                            <p style={{ fontSize: '15px', fontWeight: '400', lineHeight: '20px', color: '#050505', margin: '2px 0 0', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.text}</p>
+                          </div>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '4px 4px 0' }}>
+                            <span style={{ fontSize: '12px', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.time}</span>
+                            <button onClick={() => setShowCommentSheet(true)} style={{ background: 'none', border: 'none', padding: 0, fontSize: '12px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>Like</button>
+                            <button onClick={() => setShowCommentSheet(true)} style={{ background: 'none', border: 'none', padding: 0, fontSize: '12px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>Reply</button>
+                            {comment.likes > 0 && (
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginLeft: 'auto' }}>
+                                <img src="/images/reactions/like_default_40.png" alt="Like" style={{ width: '14px', height: '14px' }} />
+                                <span style={{ fontSize: '12px', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.likes}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                    {!isExpanded && (
+                      <button
+                        onClick={() => setExpandedComments(prev => ({ ...prev, [post.id]: true }))}
+                        style={{ background: 'none', border: 'none', padding: '4px 0 0', fontSize: '15px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}
+                      >
+                        View all comments
+                      </button>
+                    )}
+                  </div>
+                </div>
+                );
+              })()}
                 </div>
                 
                 {/* Events Unit - shown after the 3rd post */}
@@ -1082,7 +1196,7 @@ export default function ScotiabankTheatreProfile() {
                         Upcoming events at Scotiabank Theatre
                       </h2>
                       <button
-                        onClick={() => setShowLoginPrompt(true)}
+                        onClick={() => setShowEventPrompt(true)}
                         style={{
                           background: 'none',
                           border: 'none',
@@ -1103,7 +1217,7 @@ export default function ScotiabankTheatreProfile() {
                       {eventsData.slice(0, 3).map((event) => (
                         <div 
                           key={event.id}
-                          onClick={() => setShowLoginPrompt(true)}
+                          onClick={() => setShowEventPrompt(true)}
                           style={{ 
                             display: 'flex',
                             alignItems: 'center',
@@ -1330,6 +1444,13 @@ export default function ScotiabankTheatreProfile() {
         isOpen={showLoginPrompt}
         onClose={() => setShowLoginPrompt(false)}
         type="generic"
+      />
+
+      {/* Event Prompt Sheet */}
+      <UpsellBottomSheet 
+        isOpen={showEventPrompt}
+        onClose={() => setShowEventPrompt(false)}
+        type="event"
       />
 
       {/* Follow Prompt */}

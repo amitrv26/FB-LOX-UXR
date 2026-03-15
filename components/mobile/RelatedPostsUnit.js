@@ -7,7 +7,7 @@ const defaultRelatedPosts = [
     id: 1,
     author: {
       name: "Sabrina Carpenter",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop",
+      avatar: "/images/sabrina-carpenter-pp.jpg",
       verified: true,
     },
     image: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=400&h=400&fit=crop",

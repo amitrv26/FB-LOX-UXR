@@ -1065,7 +1065,7 @@ export default function MobileLayout({ children }) {
           showCloseButton={(isGroupsPage || isPDPPage) && isFromAggregation}
         />
       )}
-      <main className={mainClassName} style={{ paddingTop: needsHeaderPadding ? '48px' : undefined, opacity: isTransitioning ? 0 : 1, visibility: isTransitioning ? 'hidden' : 'visible' }}>
+      <main className={mainClassName} style={{ paddingTop: needsHeaderPadding ? '48px' : '0px', opacity: isTransitioning ? 0 : 1, visibility: isTransitioning ? 'hidden' : 'visible' }}>
         {children}
       </main>
       {showTabBar && (
@@ -1093,7 +1093,14 @@ export default function MobileLayout({ children }) {
               setSearchExpanded(expanded);
             }}
             onSearch={(query) => {
-              const topicId = typeof window !== 'undefined' ? (localStorage.getItem('selectedTopic') || 'strangerthings') : 'strangerthings';
+              let topicId;
+              if (isProfilePageWithExpandedSearch(pathname)) {
+                topicId = 'websterhall';
+              } else if (isPDPPage) {
+                topicId = 'strangerthings';
+              } else {
+                topicId = typeof window !== 'undefined' ? (localStorage.getItem('selectedTopic') || 'strangerthings') : 'strangerthings';
+              }
               setSearchExpanded(false);
               window.scrollTo(0, 0);
               router.push(`/m/serp?q=${encodeURIComponent(query)}&topic=${topicId}`);

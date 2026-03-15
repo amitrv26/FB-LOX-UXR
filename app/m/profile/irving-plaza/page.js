@@ -30,6 +30,14 @@ const postsData = [
     reactions: { count: "4.7K", like: true, love: true },
     comments: "189",
     shares: "567",
+    commentPreviews: [
+      { name: "Danny O.", avatar: "https://i.pravatar.cc/40?img=8", text: "TURNSTILE AT IRVING?! Setting every alarm I have for that pre-sale.", time: "2h", likes: 47 },
+      { name: "Rae S.", avatar: "https://i.pravatar.cc/40?img=19", text: "This is going to be chaos in the best way possible.", time: "1h", likes: 22 },
+      { name: "Marco V.", avatar: "https://i.pravatar.cc/40?img=3", text: "Turnstile in a room this size is going to be ELECTRIC. Mosh pit of the year incoming!", time: "1h", likes: 38 },
+      { name: "Jas K.", avatar: "https://i.pravatar.cc/40?img=15", text: "Irving Plaza has the perfect capacity for a band like this. Not too big, not too small.", time: "45m", likes: 16 },
+      { name: "Tommy R.", avatar: "https://i.pravatar.cc/40?img=22", text: "Got pre-sale code ready to go. NYC hardcore fans don't play around!", time: "30m", likes: 11 },
+      { name: "Lena W.", avatar: "https://i.pravatar.cc/40?img=30", text: "Flew in from Boston for their last show here. Doing it again. No regrets!", time: "20m", likes: 7 },
+    ],
   },
   {
     id: "post-2",
@@ -39,6 +47,13 @@ const postsData = [
     reactions: { count: "2.8K", like: true, love: true },
     comments: "94",
     shares: "123",
+    commentPreviews: [
+      { name: "Olivia N.", avatar: "https://i.pravatar.cc/40?img=26", text: "Last night was so dreamy. Clairo's voice live is even better than the records.", time: "18h", likes: 35 },
+      { name: "Ethan J.", avatar: "https://i.pravatar.cc/40?img=34", text: "The intimate vibes at Irving Plaza made this show so special.", time: "14h", likes: 13 },
+      { name: "Nadia P.", avatar: "https://i.pravatar.cc/40?img=42", text: "The lighting design was beautiful. Whoever did it deserves a raise!", time: "12h", likes: 19 },
+      { name: "Ben L.", avatar: "https://i.pravatar.cc/40?img=49", text: "I've been to a lot of venues and Irving Plaza just has that special energy. The walls breathe music.", time: "10h", likes: 12 },
+      { name: "Chloe D.", avatar: "https://i.pravatar.cc/40?img=56", text: "Softcult opened and they were incredible too! Great curation on this bill.", time: "8h", likes: 8 },
+    ],
   },
   {
     id: "post-3",
@@ -48,6 +63,14 @@ const postsData = [
     reactions: { count: "1.5K", like: true, love: true },
     comments: "234",
     shares: "78",
+    commentPreviews: [
+      { name: "Mike T.", avatar: "https://i.pravatar.cc/40?img=39", text: "I saw Radiohead here in '97 — still the best show of my life!", time: "3d", likes: 56 },
+      { name: "Lisa C.", avatar: "https://i.pravatar.cc/40?img=46", text: "This place is a New York treasure. So much history in those walls.", time: "2d", likes: 28 },
+      { name: "Steve M.", avatar: "https://i.pravatar.cc/40?img=5", text: "Saw the Ramones here in '96. This place is hallowed ground for punk!", time: "2d", likes: 41 },
+      { name: "Diana K.", avatar: "https://i.pravatar.cc/40?img=12", text: "My parents met at an Irving Plaza show in the '80s. It's in our family DNA!", time: "1d", likes: 33 },
+      { name: "Rashid T.", avatar: "https://i.pravatar.cc/40?img=25", text: "The balcony view here is one of the best in NYC. Legendary for a reason!", time: "1d", likes: 18 },
+      { name: "Kim N.", avatar: "https://i.pravatar.cc/40?img=63", text: "45 years of incredible music. Here's to 45 more!", time: "1d", likes: 12 },
+    ],
   },
   {
     id: "post-4",
@@ -57,6 +80,13 @@ const postsData = [
     reactions: { count: "967", like: true, love: true },
     comments: "56",
     shares: "89",
+    commentPreviews: [
+      { name: "Zoe H.", avatar: "https://i.pravatar.cc/40?img=53", text: "Already got tickets to four shows! This spring is going to be amazing.", time: "5d", likes: 17 },
+      { name: "Carlos M.", avatar: "https://i.pravatar.cc/40?img=60", text: "Love that there's something for every genre. True NYC energy.", time: "4d", likes: 8 },
+      { name: "Alex F.", avatar: "https://i.pravatar.cc/40?img=36", text: "The hip-hop shows here hit different. Sound is always on point.", time: "4d", likes: 14 },
+      { name: "Morgan B.", avatar: "https://i.pravatar.cc/40?img=44", text: "Just grabbed tickets to the indie weekend. Can't wait to discover new bands!", time: "3d", likes: 9 },
+      { name: "Taylor S.", avatar: "https://i.pravatar.cc/40?img=68", text: "Union Square location makes it so easy to grab dinner before the show. Perfect evening!", time: "3d", likes: 5 },
+    ],
   },
 ];
 
@@ -118,6 +148,7 @@ export default function IrvingPlazaProfile() {
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [likeSheetReactionCount, setLikeSheetReactionCount] = useState(0);
   const [expandedPosts, setExpandedPosts] = useState({});
+  const [expandedComments, setExpandedComments] = useState({});
   const [activeTab, setActiveTab] = useState("All");
 
   const parseReactionCount = (countStr) => {
@@ -300,6 +331,47 @@ export default function IrvingPlazaProfile() {
                       </div>
                     </div>
                   </div>
+              {/* Comment Previews */}
+              {post.commentPreviews && post.commentPreviews.length > 0 && (() => {
+                const isExpanded = expandedComments[post.id];
+                const visibleComments = isExpanded ? post.commentPreviews : post.commentPreviews.slice(0, 2);
+                return (
+                <div style={{ padding: '0 12px 12px', background: '#fff' }}>
+                  <div style={{ borderTop: '1px solid #e4e6eb', paddingTop: '8px' }}>
+                    {visibleComments.map((comment, cIdx) => (
+                      <div key={cIdx} style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
+                        <img src={comment.avatar} alt="" style={{ width: '32px', height: '32px', borderRadius: '50%', flexShrink: 0, objectFit: 'cover' }} />
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ background: '#f0f2f5', borderRadius: '12px', padding: '8px 12px' }}>
+                            <p style={{ fontSize: '13px', fontWeight: '600', color: '#050505', margin: 0, fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.name}</p>
+                            <p style={{ fontSize: '15px', fontWeight: '400', lineHeight: '20px', color: '#050505', margin: '2px 0 0', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.text}</p>
+                          </div>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '4px 4px 0' }}>
+                            <span style={{ fontSize: '12px', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.time}</span>
+                            <button onClick={() => setShowCommentSheet(true)} style={{ background: 'none', border: 'none', padding: 0, fontSize: '12px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>Like</button>
+                            <button onClick={() => setShowCommentSheet(true)} style={{ background: 'none', border: 'none', padding: 0, fontSize: '12px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>Reply</button>
+                            {comment.likes > 0 && (
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginLeft: 'auto' }}>
+                                <img src="/images/reactions/like_default_40.png" alt="Like" style={{ width: '14px', height: '14px' }} />
+                                <span style={{ fontSize: '12px', color: '#65686c', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}>{comment.likes}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                    {!isExpanded && (
+                      <button
+                        onClick={() => setExpandedComments(prev => ({ ...prev, [post.id]: true }))}
+                        style={{ background: 'none', border: 'none', padding: '4px 0 0', fontSize: '15px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}
+                      >
+                        View all comments
+                      </button>
+                    )}
+                  </div>
+                </div>
+                );
+              })()}
                 </div>
 
                 {index === 1 && (
