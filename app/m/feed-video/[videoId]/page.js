@@ -1873,10 +1873,6 @@ export default function FeedVideoPage() {
     >
       {/* Page-specific styles: no header padding, scrollbar hiding, bounce animation */}
       <style jsx global>{`
-        /* Feed video page: no header padding */
-        .mobile-main {
-          padding-top: 0 !important;
-        }
         /* White header for this page */
         .mobile-header {
           background: #ffffff !important;

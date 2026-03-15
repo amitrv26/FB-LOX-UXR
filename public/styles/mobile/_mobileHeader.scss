@@ -19,6 +19,11 @@
   padding-top: 0;
 }
 
+// When feed video page, no padding top (page manages its own)
+.mobile-main:has(.feed-video-page) {
+  padding-top: 0;
+}
+
 // Override frame styles for logged-out routes (mobile and desktop)
 .frame--logged-out {
   top: 0 !important;

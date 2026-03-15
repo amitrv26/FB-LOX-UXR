@@ -107,6 +107,8 @@ export default function MobileLayout({ children }) {
   const isFeedVideoPage = pathname?.startsWith('/m/feed-video');
   const isNavComparisonPage = pathname?.startsWith('/m/nav-comparison');
   const isPDPPage = isMarketplacePDP(pathname);
+  const showHeader = !isHomePage && !isLoginPage && !isSearchPage && !isSerpPage && !isReelsPage && !isMessagesSharePage && !isMarketplaceSharePage && !isNavComparisonPage && !isAggregationSerpPage(pathname);
+  const needsHeaderPadding = showHeader && !isFeedVideoPage;
   
   // Check if coming from Google SEO
   const isFromGoogle = searchParams?.get('source') === 'google';
@@ -1058,12 +1060,12 @@ export default function MobileLayout({ children }) {
           animation: shimmer 1.5s ease-in-out infinite;
         }
       `}</style>
-      {!isHomePage && !isLoginPage && !isSearchPage && !isSerpPage && !isReelsPage && !isMessagesSharePage && !isMarketplaceSharePage && !isNavComparisonPage && !isAggregationSerp && (
+      {showHeader && (
         <MobileHeader 
           showCloseButton={(isGroupsPage || isPDPPage) && isFromAggregation}
         />
       )}
-      <main className={mainClassName} style={{ opacity: isTransitioning ? 0 : 1, visibility: isTransitioning ? 'hidden' : 'visible' }}>
+      <main className={mainClassName} style={{ paddingTop: needsHeaderPadding ? '48px' : undefined, opacity: isTransitioning ? 0 : 1, visibility: isTransitioning ? 'hidden' : 'visible' }}>
         {children}
       </main>
       {showTabBar && (
