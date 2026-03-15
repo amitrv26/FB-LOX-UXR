@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import MobileHeader from "../../../../components/mobile/MobileHeader";
 import UpsellBottomSheet from "../../../../components/mobile/UpsellBottomSheet";
 import EndOfFeedUpsell from "../../../../components/mobile/EndOfFeedUpsell";
 import { IconInline } from "../../../../components/Icon";
@@ -121,10 +120,7 @@ export default function FinnWolfhardProfile() {
       maxWidth: '500px',
       margin: '0 auto',
     }}>
-      {/* Header */}
-      <MobileHeader />
-
-      {/* Main content - removed paddingTop to eliminate space above cover */}
+      {/* Main content */}
       <main>
         {/* Cover Photo Container */}
         <div style={{ 

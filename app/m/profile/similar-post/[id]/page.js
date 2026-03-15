@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
-import MobileHeader from "../../../../../components/mobile/MobileHeader";
 import MobileComments from "../../../../../components/mobile/MobileComments";
 import UpsellBottomSheet from "../../../../../components/mobile/UpsellBottomSheet";
 import RelatedPostsUnit from "../../../../../components/mobile/RelatedPostsUnit";
@@ -143,9 +142,6 @@ export default function SimilarPostPage() {
 
   return (
     <div className="mobile-post-page has-floating-tab-bar" style={{ overflowX: 'hidden' }}>
-      {/* Facebook Header */}
-      <MobileHeader />
-
       {/* Post Content */}
       <article className="mobile-post" style={{ background: '#fff' }}>
         {/* Post Header - Profile attribution */}

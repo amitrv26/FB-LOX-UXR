@@ -35,7 +35,7 @@ const UPSELL_CONFIGS = {
     message: "Join the conversation in the app.",
   },
   message: {
-    illustration: "/illustrations/messenger-icon.png",
+    illustration: "/illustrations/messenger.png",
     getTitle: (name) => `Message ${name || ''}`.trim(),
     message: "Log in to contact them directly.",
   },

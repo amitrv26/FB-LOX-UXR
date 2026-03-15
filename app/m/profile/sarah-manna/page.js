@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import MobileHeader from "../../../../components/mobile/MobileHeader";
 import UpsellBottomSheet from "../../../../components/mobile/UpsellBottomSheet";
 import EndOfFeedUpsell from "../../../../components/mobile/EndOfFeedUpsell";
 import FloatingTabBar from "../../../../components/mobile/FloatingTabBar";
@@ -114,9 +113,6 @@ export default function SarahMannaProfile() {
       maxWidth: '500px',
       margin: '0 auto',
     }}>
-      {/* Header */}
-      <MobileHeader />
-
       {/* Main content */}
       <main>
         {/* Cover Photo Container */}

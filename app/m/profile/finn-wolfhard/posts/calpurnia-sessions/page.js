@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef } from "react";
-import MobileHeader from "../../../../../../components/mobile/MobileHeader";
 import MobileComments from "../../../../../../components/mobile/MobileComments";
 import UpsellBottomSheet from "../../../../../../components/mobile/UpsellBottomSheet";
 import ShareSheet from "../../../../../../components/mobile/ShareSheet";
@@ -240,9 +239,6 @@ export default function FinnWolfhardPostPage() {
 
   return (
     <div className="mobile-post-page" style={{ overflowX: 'hidden' }}>
-      {/* Facebook Header */}
-      <MobileHeader />
-
       {/* Post Content */}
       <article className="mobile-post" style={{ background: '#fff' }}>
         {/* Post Header - Profile attribution (no group) */}

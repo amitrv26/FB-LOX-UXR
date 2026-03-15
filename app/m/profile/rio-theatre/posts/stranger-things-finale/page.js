@@ -2,7 +2,6 @@
 
 import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
-import MobileHeader from "../../../../../../components/mobile/MobileHeader";
 import MobileComments from "../../../../../../components/mobile/MobileComments";
 import UpsellBottomSheet from "../../../../../../components/mobile/UpsellBottomSheet";
 import MarketplaceUnit from "../../../../../../components/mobile/MarketplaceUnit";
@@ -512,9 +511,6 @@ export default function RioTheatrePostPage() {
 
   return (
     <div className="mobile-post-page has-floating-tab-bar" style={{ overflowX: 'hidden' }}>
-      {/* Facebook Header */}
-      <MobileHeader />
-
       {/* Post Content */}
       <article className="mobile-post" style={{ background: '#fff' }}>
         {/* Post Header - Profile attribution (single circle avatar) */}
