@@ -92,7 +92,7 @@ import FDSProfilePhoto from './FDSProfilePhoto';
 // Example 10: Square profile photo (for pages)
 <FDSProfilePhoto
   size={40}
-  source="/images/thumbs/page-1.png"
+  source="/images/thumbs/pages.png"
   alt="Tech Company"
   shape="square"
 />
@@ -108,7 +108,7 @@ import FDSProfilePhoto from './FDSProfilePhoto';
 // Example 12: Large rounded rectangle
 <FDSProfilePhoto
   size={60}
-  source="/images/thumbs/group-1.png"
+  source="/images/thumbs/newsfeed-group-1.png"
   alt="Photography Group"
   shape="roundedRectLarge"
 />

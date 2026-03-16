@@ -22,7 +22,7 @@ import { IconInline } from './Icon';
  * @example
  * <FDSComposer
  *   placeholder="Write a comment..."
- *   profilePhotoSrc="/images/profile.jpg"
+ *   profilePhotoSrc="/images/profile-large.jpg"
  *   onSubmit={(text) => console.log(text)}
  * />
  */

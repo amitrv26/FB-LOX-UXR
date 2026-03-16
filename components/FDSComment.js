@@ -19,7 +19,7 @@ import { IconInline } from './Icon';
  * @example
  * <FDSComment
  *   author="John Doe"
- *   authorProfileSrc="/images/profile.jpg"
+ *   authorProfileSrc="/images/profile-large.jpg"
  *   timestamp="2h"
  *   text="This is a comment"
  *   onLike={() => {}}
