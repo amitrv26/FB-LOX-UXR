@@ -317,7 +317,7 @@ export const strangerThingsAggregation = {
   reels: [
     {
       id: "reel-1",
-      thumbnail: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=600&fit=crop",
+      thumbnail: "/images/stranger-things-assets/images/profile/stranger-things-post.png",
       title: "My Stranger Things finale theory 🔮",
       views: "2.1M",
       duration: "0:45",
@@ -325,7 +325,7 @@ export const strangerThingsAggregation = {
     },
     {
       id: "reel-2",
-      thumbnail: "https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=400&h=600&fit=crop",
+      thumbnail: "/images/stranger-things-assets/images/profile/rio-theatre-post.jpg",
       title: "Who will die in S5? My predictions",
       views: "1.8M",
       duration: "1:02",
@@ -333,7 +333,7 @@ export const strangerThingsAggregation = {
     },
     {
       id: "reel-3",
-      thumbnail: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=600&fit=crop",
+      thumbnail: "/images/sabrina-carpenter-live.jpg",
       title: "Eleven vs Vecna - how it ends",
       views: "956K",
       duration: "0:58",
@@ -341,7 +341,7 @@ export const strangerThingsAggregation = {
     },
     {
       id: "reel-4",
-      thumbnail: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=400&h=600&fit=crop",
+      thumbnail: "/images/chappell-roan-live.jpg",
       title: "Will's powers EXPLAINED",
       views: "1.2M",
       duration: "1:15",
@@ -349,7 +349,7 @@ export const strangerThingsAggregation = {
     },
     {
       id: "reel-5",
-      thumbnail: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400&h=600&fit=crop",
+      thumbnail: "/images/millie/millie-1.jpg",
       title: "Time travel theory breakdown",
       views: "845K",
       duration: "1:30",
@@ -357,7 +357,7 @@ export const strangerThingsAggregation = {
     },
     {
       id: "reel-6",
-      thumbnail: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=400&h=600&fit=crop",
+      thumbnail: "/images/millie/millie-2.jpg",
       title: "The REAL meaning of the Upside Down",
       views: "1.5M",
       duration: "0:52",
@@ -369,7 +369,7 @@ export const strangerThingsAggregation = {
   partyReels: [
     {
       id: "party-reel-1",
-      thumbnail: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=600&fit=crop",
+      thumbnail: "/images/millie/millie-3.jpg",
       title: "Ultimate ST watch party setup 🎉",
       views: "567K",
       duration: "0:38",
@@ -377,7 +377,7 @@ export const strangerThingsAggregation = {
     },
     {
       id: "party-reel-2",
-      thumbnail: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400&h=600&fit=crop",
+      thumbnail: "/images/stranger-things-assets/images/profile/stranger-things-post.png",
       title: "Demogorgon cupcakes tutorial 🧁",
       views: "892K",
       duration: "1:05",
@@ -385,7 +385,7 @@ export const strangerThingsAggregation = {
     },
     {
       id: "party-reel-3",
-      thumbnail: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=600&fit=crop",
+      thumbnail: "/images/stranger-things-assets/images/profile/rio-theatre-post.jpg",
       title: "80s playlist for finale night 🎵",
       views: "423K",
       duration: "0:42",
@@ -393,7 +393,7 @@ export const strangerThingsAggregation = {
     },
     {
       id: "party-reel-4",
-      thumbnail: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=600&fit=crop",
+      thumbnail: "/images/sabrina-carpenter-live.jpg",
       title: "Eggo waffle bar ideas 🧇",
       views: "1.1M",
       duration: "0:55",
@@ -473,7 +473,7 @@ export const strangerThingsAggregation = {
           id: "mp-1",
           title: "Stranger Things Party Decorations Kit",
           price: "$24.99",
-          image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400&h=400&fit=crop",
+          image: "/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg",
           location: "Ships nationwide",
           rating: 4.8
         },
@@ -481,7 +481,7 @@ export const strangerThingsAggregation = {
           id: "mp-2",
           title: "Upside Down String Lights",
           price: "$18.99",
-          image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=400&h=400&fit=crop",
+          image: "/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg",
           location: "Ships nationwide",
           rating: 4.9
         },
@@ -490,7 +490,7 @@ export const strangerThingsAggregation = {
           title: "Eggo Waffle Maker - Retro Edition",
           price: "$34.99",
           originalPrice: "$44.99",
-          image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=400&fit=crop",
+          image: "/images/stranger-things-assets/images/marketplace/lego.jpg",
           location: "Ships nationwide",
           rating: 4.7
         },
@@ -498,7 +498,7 @@ export const strangerThingsAggregation = {
           id: "mp-4",
           title: "Demogorgon Piñata",
           price: "$29.99",
-          image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=400&fit=crop",
+          image: "/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg",
           location: "Ships nationwide",
           rating: 5.0
         }
@@ -506,13 +506,13 @@ export const strangerThingsAggregation = {
       reels: [
         {
           id: "bucket-reel-1",
-          thumbnail: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=600&fit=crop",
+          thumbnail: "/images/chappell-roan-live.jpg",
           title: "Ultimate ST watch party setup",
           views: "567K"
         },
         {
           id: "bucket-reel-2",
-          thumbnail: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400&h=600&fit=crop",
+          thumbnail: "/images/millie/millie-1.jpg",
           title: "Demogorgon cupcakes tutorial",
           views: "892K"
         }
@@ -549,7 +549,7 @@ export const strangerThingsAggregation = {
           date: "Dec 31, 2025",
           time: "8:00 PM",
           price: "$15",
-          image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=400&fit=crop",
+          image: "/images/sabrina-carpenter-live.jpg",
           attending: 234
         },
         {
@@ -560,7 +560,7 @@ export const strangerThingsAggregation = {
           date: "Dec 31, 2025",
           time: "6:00 PM",
           price: "$25",
-          image: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400&h=400&fit=crop",
+          image: "/images/chappell-roan-live.jpg",
           attending: 156
         },
         {
@@ -571,7 +571,7 @@ export const strangerThingsAggregation = {
           date: "Dec 31, 2025",
           time: "7:30 PM",
           price: "Free (21+)",
-          image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop",
+          image: "/images/stranger-things-assets/images/profile/stranger-things-in-theatres.jpg",
           attending: 89
         }
       ]
@@ -605,7 +605,7 @@ export const strangerThingsAggregation = {
       id: "st-mp-3",
       title: "Stranger Things Party Kit - Complete",
       price: "$45.99",
-      image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400&h=400&fit=crop",
+      image: "/images/stranger-things-assets/images/marketplace/pez-set.jpg",
       location: "Seattle, WA",
       rating: 4.8,
       reviews: 234
@@ -614,7 +614,7 @@ export const strangerThingsAggregation = {
       id: "st-mp-4",
       title: "Vintage 80s Boombox - Working",
       price: "$85",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=400&fit=crop",
+      image: "/images/stranger-things-assets/images/marketplace/steve-harrington-autographed-card.jpg",
       location: "Seattle, WA",
       rating: 4.7,
       reviews: 45
@@ -624,7 +624,7 @@ export const strangerThingsAggregation = {
       title: "Demogorgon Costume - Adult L",
       price: "$65",
       originalPrice: "$89",
-      image: "https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=400&h=400&fit=crop",
+      image: "/images/stranger-things-assets/images/marketplace/funko-pop.jpg",
       location: "Seattle, WA",
       rating: 4.6,
       reviews: 78
@@ -633,7 +633,7 @@ export const strangerThingsAggregation = {
       id: "st-mp-6",
       title: "Stranger Things Board Game Collection",
       price: "$39.99",
-      image: "https://images.unsplash.com/photo-1611371805429-8b5c1b2c34ba?w=400&h=400&fit=crop",
+      image: "/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg",
       location: "Seattle, WA",
       rating: 4.9,
       reviews: 167
@@ -651,7 +651,7 @@ export const strangerThingsAggregation = {
       date: "Dec 31, 2025",
       time: "8:00 PM",
       price: "$15",
-      image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=400&fit=crop",
+      image: "/images/sabrina-carpenter-live.jpg",
       attending: 234,
       description: "Watch the epic finale on the big screen! Themed drinks and snacks available."
     },
@@ -665,7 +665,7 @@ export const strangerThingsAggregation = {
       date: "Dec 31, 2025",
       time: "6:00 PM",
       price: "$25",
-      image: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400&h=400&fit=crop",
+      image: "/images/chappell-roan-live.jpg",
       attending: 156,
       description: "Full Season 5 marathon leading up to the finale at midnight!"
     },
@@ -679,7 +679,7 @@ export const strangerThingsAggregation = {
       date: "Dec 31, 2025",
       time: "7:30 PM",
       price: "Free (21+)",
-      image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop",
+      image: "/images/stranger-things-assets/images/profile/stranger-things-in-theatres.jpg",
       attending: 89,
       description: "Themed cocktails, costume contest, and the finale on all screens!"
     }
@@ -949,7 +949,7 @@ export const strangerThingsCostumesAggregation = {
   reels: [
     {
       id: "costume-reel-1",
-      thumbnail: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=600&fit=crop",
+      thumbnail: "/images/millie/millie-2.jpg",
       title: "DIY Eleven costume under $20 💕",
       views: "1.8M",
       duration: "0:58",
@@ -957,7 +957,7 @@ export const strangerThingsCostumesAggregation = {
     },
     {
       id: "costume-reel-2",
-      thumbnail: "https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=400&h=600&fit=crop",
+      thumbnail: "/images/millie/millie-3.jpg",
       title: "Making a Demogorgon head 🎃",
       views: "2.3M",
       duration: "1:45",
@@ -965,7 +965,7 @@ export const strangerThingsCostumesAggregation = {
     },
     {
       id: "costume-reel-3",
-      thumbnail: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=600&fit=crop",
+      thumbnail: "/images/stranger-things-assets/images/profile/stranger-things-post.png",
       title: "Steve's hair tutorial 💇‍♂️",
       views: "956K",
       duration: "0:42",
@@ -1025,7 +1025,7 @@ export const strangerThingsCostumesAggregation = {
           id: "mp-1",
           title: "Eleven Pink Dress Costume Set",
           price: "$29.99",
-          image: "https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=400&h=400&fit=crop",
+          image: "/images/stranger-things-assets/images/marketplace/funko-pop-3.jpg",
           location: "Ships nationwide",
           rating: 4.8
         },
@@ -1033,7 +1033,7 @@ export const strangerThingsCostumesAggregation = {
           id: "mp-2",
           title: "Scoops Ahoy Uniform - Adult",
           price: "$34.99",
-          image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400&h=400&fit=crop",
+          image: "/images/stranger-things-assets/images/marketplace/lego.jpg",
           location: "Ships nationwide",
           rating: 4.9
         }
@@ -1046,7 +1046,7 @@ export const strangerThingsCostumesAggregation = {
       id: "st-mp-1",
       title: "Eleven Pink Dress Costume Set",
       price: "$29.99",
-      image: "https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=400&h=400&fit=crop",
+      image: "/images/stranger-things-assets/images/marketplace/lego-creel-house.jpg",
       location: "Ships nationwide",
       rating: 4.8,
       reviews: 234
@@ -1055,7 +1055,7 @@ export const strangerThingsCostumesAggregation = {
       id: "st-mp-2",
       title: "Scoops Ahoy Uniform - Steve",
       price: "$34.99",
-      image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400&h=400&fit=crop",
+      image: "/images/stranger-things-assets/images/marketplace/pez-set.jpg",
       location: "Ships nationwide",
       rating: 4.9,
       reviews: 156

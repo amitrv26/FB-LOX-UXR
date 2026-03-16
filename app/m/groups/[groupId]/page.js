@@ -11,8 +11,8 @@ import ShareSheet from "../../../../components/mobile/ShareSheet";
 const groupData = {
   "nyc-funko-pop-buy-sell-trade": {
     name: "NYC Funko Pop Buy Sell Trade",
-    avatar: "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=80&h=80&fit=crop",
-    cover: "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=800&h=300&fit=crop",
+    avatar: "/images/stranger-things-assets/images/marketplace/funko-pop.jpg",
+    cover: "/images/stranger-things-assets/images/marketplace/funko-pop.jpg",
     memberCount: "28.4K members",
     postsPerDay: "50+ listings a day",
     description: "Buy, sell, and trade Funko Pops in the NYC area. Meet-ups welcome!",
@@ -22,7 +22,7 @@ const groupData = {
         group: {
           id: "nyc-funko-pop-buy-sell-trade",
           name: "NYC Funko Pop Buy Sell Trade",
-          avatar: "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=80&h=80&fit=crop",
+          avatar: "/images/stranger-things-assets/images/marketplace/funko-pop.jpg",
           memberCount: "28.4K members",
           isPublic: true,
         },
@@ -60,7 +60,7 @@ const groupData = {
         group: {
           id: "nyc-funko-pop-buy-sell-trade",
           name: "NYC Funko Pop Buy Sell Trade",
-          avatar: "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=80&h=80&fit=crop",
+          avatar: "/images/stranger-things-assets/images/marketplace/funko-pop.jpg",
           memberCount: "28.4K members",
           isPublic: true,
         },
@@ -98,7 +98,7 @@ const groupData = {
         group: {
           id: "nyc-funko-pop-buy-sell-trade",
           name: "NYC Funko Pop Buy Sell Trade",
-          avatar: "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=80&h=80&fit=crop",
+          avatar: "/images/stranger-things-assets/images/marketplace/funko-pop.jpg",
           memberCount: "28.4K members",
           isPublic: true,
         },
@@ -135,8 +135,8 @@ const groupData = {
   },
   "nyc-collectibles-marketplace": {
     name: "NYC Collectibles Marketplace",
-    avatar: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=80&h=80&fit=crop",
-    cover: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=300&fit=crop",
+    avatar: "/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg",
+    cover: "/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg",
     memberCount: "52.1K members",
     postsPerDay: "120+ listings a day",
     description: "NYC's largest online collectibles marketplace. Toys, cards, memorabilia & more.",
@@ -146,7 +146,7 @@ const groupData = {
         group: {
           id: "nyc-collectibles-marketplace",
           name: "NYC Collectibles Marketplace",
-          avatar: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=80&h=80&fit=crop",
+          avatar: "/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg",
           memberCount: "52.1K members",
           isPublic: true,
         },
@@ -184,7 +184,7 @@ const groupData = {
         group: {
           id: "nyc-collectibles-marketplace",
           name: "NYC Collectibles Marketplace",
-          avatar: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=80&h=80&fit=crop",
+          avatar: "/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg",
           memberCount: "52.1K members",
           isPublic: true,
         },
@@ -222,7 +222,7 @@ const groupData = {
         group: {
           id: "nyc-collectibles-marketplace",
           name: "NYC Collectibles Marketplace",
-          avatar: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=80&h=80&fit=crop",
+          avatar: "/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg",
           memberCount: "52.1K members",
           isPublic: true,
         },
@@ -259,8 +259,8 @@ const groupData = {
   },
   "lego-buy-sell-trade-nyc": {
     name: "LEGO Buy Sell Trade NYC",
-    avatar: "https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=80&h=80&fit=crop",
-    cover: "https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=800&h=300&fit=crop",
+    avatar: "/images/stranger-things-assets/images/marketplace/lego.jpg",
+    cover: "/images/stranger-things-assets/images/marketplace/lego.jpg",
     memberCount: "15.7K members",
     postsPerDay: "35+ listings a day",
     description: "Buy, sell, and trade LEGO sets in New York City. New and used sets welcome!",
@@ -270,7 +270,7 @@ const groupData = {
         group: {
           id: "lego-buy-sell-trade-nyc",
           name: "LEGO Buy Sell Trade NYC",
-          avatar: "https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=80&h=80&fit=crop",
+          avatar: "/images/stranger-things-assets/images/marketplace/lego.jpg",
           memberCount: "15.7K members",
           isPublic: true,
         },
@@ -308,7 +308,7 @@ const groupData = {
         group: {
           id: "lego-buy-sell-trade-nyc",
           name: "LEGO Buy Sell Trade NYC",
-          avatar: "https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=80&h=80&fit=crop",
+          avatar: "/images/stranger-things-assets/images/marketplace/lego.jpg",
           memberCount: "15.7K members",
           isPublic: true,
         },
@@ -346,7 +346,7 @@ const groupData = {
         group: {
           id: "lego-buy-sell-trade-nyc",
           name: "LEGO Buy Sell Trade NYC",
-          avatar: "https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=80&h=80&fit=crop",
+          avatar: "/images/stranger-things-assets/images/marketplace/lego.jpg",
           memberCount: "15.7K members",
           isPublic: true,
         },
@@ -383,8 +383,8 @@ const groupData = {
   },
   "toys-games-resellers-ny": {
     name: "Toys & Games Resellers NY",
-    avatar: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=80&h=80&fit=crop",
-    cover: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=800&h=300&fit=crop",
+    avatar: "/images/stranger-things-assets/images/marketplace/pez-set.jpg",
+    cover: "/images/stranger-things-assets/images/marketplace/pez-set.jpg",
     memberCount: "41.3K members",
     postsPerDay: "80+ listings a day",
     description: "New York's top reseller group for toys, games, and collectibles. Tips, finds & deals!",
@@ -394,7 +394,7 @@ const groupData = {
         group: {
           id: "toys-games-resellers-ny",
           name: "Toys & Games Resellers NY",
-          avatar: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=80&h=80&fit=crop",
+          avatar: "/images/stranger-things-assets/images/marketplace/pez-set.jpg",
           memberCount: "41.3K members",
           isPublic: true,
         },
@@ -432,7 +432,7 @@ const groupData = {
         group: {
           id: "toys-games-resellers-ny",
           name: "Toys & Games Resellers NY",
-          avatar: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=80&h=80&fit=crop",
+          avatar: "/images/stranger-things-assets/images/marketplace/pez-set.jpg",
           memberCount: "41.3K members",
           isPublic: true,
         },
@@ -470,7 +470,7 @@ const groupData = {
         group: {
           id: "toys-games-resellers-ny",
           name: "Toys & Games Resellers NY",
-          avatar: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=80&h=80&fit=crop",
+          avatar: "/images/stranger-things-assets/images/marketplace/pez-set.jpg",
           memberCount: "41.3K members",
           isPublic: true,
         },

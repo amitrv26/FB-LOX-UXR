@@ -161,7 +161,7 @@ const postsData = [
       date: "2w",
     },
     text: "Pre-show vibes at Webster Hall! 🍸 Our bars are fully stocked and the energy is building. Doors open at 7 - come early and soak it in!",
-    image: "https://images.unsplash.com/photo-1575444758702-4a6b9222c016?w=800&h=450&fit=crop",
+    image: "/images/chappell-roan-live.jpg",
     reactions: { count: "456", like: true, love: true },
     comments: "32",
     shares: "15",

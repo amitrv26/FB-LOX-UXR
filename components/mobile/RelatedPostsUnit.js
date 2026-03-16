@@ -10,7 +10,7 @@ const defaultRelatedPosts = [
       avatar: "/images/sabrina-carpenter-pp.jpg",
       verified: true,
     },
-    image: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=400&h=400&fit=crop",
+    image: "/images/sabrina-carpenter-show.png",
     text: "New York!! 🎤 Can't wait to be back at Webster Hall this summer. The Short n' Sweet Tour is coming to the East Village and I'm SO ready. See you there! 💕",
     reactions: { count: 24513 },
     comments: 3842,

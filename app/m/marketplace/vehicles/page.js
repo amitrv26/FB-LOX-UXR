@@ -48,10 +48,10 @@ const marketplaceSuggestions = [
 
 // Groups with similar listings data
 const suggestedGroups = [
-  { id: 'g1', slug: 'nyc-funko-pop-buy-sell-trade', name: 'NYC Funko Pop Buy Sell Trade', listingsPerDay: '50+', image: 'https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=400&h=400&fit=crop' },
-  { id: 'g2', slug: 'nyc-collectibles-marketplace', name: 'NYC Collectibles Marketplace', listingsPerDay: '120+', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=400&fit=crop' },
-  { id: 'g3', slug: 'lego-buy-sell-trade-nyc', name: 'LEGO Buy Sell Trade NYC', listingsPerDay: '35+', image: 'https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=400&h=400&fit=crop' },
-  { id: 'g4', slug: 'toys-games-resellers-ny', name: 'Toys & Games Resellers NY', listingsPerDay: '80+', image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&h=400&fit=crop' },
+  { id: 'g1', slug: 'nyc-funko-pop-buy-sell-trade', name: 'NYC Funko Pop Buy Sell Trade', listingsPerDay: '50+', image: '/images/stranger-things-assets/images/marketplace/funko-pop.jpg' },
+  { id: 'g2', slug: 'nyc-collectibles-marketplace', name: 'NYC Collectibles Marketplace', listingsPerDay: '120+', image: '/images/stranger-things-assets/images/marketplace/funko-pop-2.jpg' },
+  { id: 'g3', slug: 'lego-buy-sell-trade-nyc', name: 'LEGO Buy Sell Trade NYC', listingsPerDay: '35+', image: '/images/stranger-things-assets/images/marketplace/lego.jpg' },
+  { id: 'g4', slug: 'toys-games-resellers-ny', name: 'Toys & Games Resellers NY', listingsPerDay: '80+', image: '/images/stranger-things-assets/images/marketplace/pez-set.jpg' },
 ];
 
 export default function MarketplaceToysPage() {
