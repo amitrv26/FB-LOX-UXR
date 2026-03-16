@@ -48,7 +48,7 @@ const postsData = [
     text: "🎤 SABRINA CARPENTER LIVE AT WEBSTER HALL - NYC! 🎤\n\nWe're thrilled to announce a special intimate show with Sabrina Carpenter at NYC's legendary Webster Hall!\n\n📅 Date: March 28, 2026\n🎟️ Doors open: 7:00 PM\n🎤 Show starts: 8:30 PM\n✨ VIP Meet & Greet: 6:00 PM",
     image: "/images/sabrina-carpenter-live.jpg",
     reactions: { count: "5.2K", like: true, love: true },
-    comments: "48",
+    comments: "6",
     shares: "1.2K",
     commentPreviews: [
       { name: "Jessica M.", avatar: "https://i.pravatar.cc/40?img=5", text: "OMG I just got my tickets!! VIP Meet & Greet here I come 😭🎤", time: "1h", likes: 24 },
@@ -69,7 +69,7 @@ const postsData = [
     text: "Last night was ELECTRIC! 🔥 Thank you NYC for making Chappell Roan's show a SOLD OUT success! The energy in the room was unreal.\n\nNext up: Sabrina Carpenter on March 28th. Don't sleep on tickets!",
     image: "/images/chappell-roan-live.jpg",
     reactions: { count: "1.8K", like: true, love: true },
-    comments: "67",
+    comments: "5",
     shares: "234",
     commentPreviews: [
       { name: "Alex Rivera", avatar: "https://i.pravatar.cc/40?img=15", text: "I was there and it was the best show of my life!! Chappell absolutely killed it 🔥", time: "22h", likes: 45 },
@@ -89,7 +89,7 @@ const postsData = [
     text: "Behind the scenes at our legendary Grand Ballroom! 🎸 From the Ramones to Billie Eilish, this stage has seen it all. Who do you want to see here next?",
     image: "https://images.unsplash.com/photo-1504680177321-2e6a879aac86?w=800&h=450&fit=crop",
     reactions: { count: "892", like: true, love: true },
-    comments: "156",
+    comments: "6",
     shares: "45",
     commentPreviews: [
       { name: "Matt K.", avatar: "https://i.pravatar.cc/40?img=33", text: "Bring Hozier to this stage!! He would sound incredible in the Grand Ballroom 🙏", time: "2d", likes: 67 },
@@ -110,7 +110,7 @@ const postsData = [
     text: "Concert night essentials: good vibes, great music, and your crew! 🎶 What's your go-to pre-show ritual? Drop it in the comments!",
     image: "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=800&h=450&fit=crop",
     reactions: { count: "567", like: true, love: true },
-    comments: "89",
+    comments: "5",
     shares: "34",
     commentPreviews: [
       { name: "Sarah J.", avatar: "https://i.pravatar.cc/40?img=9", text: "Dinner at Veselka then walking over to Webster Hall. Best pre-show combo in the East Village! 🥟", time: "4d", likes: 28 },
@@ -130,7 +130,7 @@ const postsData = [
     text: "Throwback to last week's sold-out show! 📸 Thank you to everyone who came out to make it unforgettable. NYC, you never disappoint!",
     image: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=800&h=450&fit=crop",
     reactions: { count: "1.1K", like: true, love: true },
-    comments: "78",
+    comments: "2",
     shares: "56",
     commentPreviews: [
       { name: "DanielNYC", avatar: "https://i.pravatar.cc/40?img=51", text: "Best night out in ages. The sound quality in this venue is absolutely top tier 🔊", time: "6d", likes: 33 },
@@ -147,7 +147,7 @@ const postsData = [
     text: "Our iconic marquee lit up for another legendary night in the East Village! ✨ There's nothing like live music at Webster Hall.",
     image: "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&h=450&fit=crop",
     reactions: { count: "743", like: true, love: true },
-    comments: "45",
+    comments: "1",
     shares: "28",
     commentPreviews: [
       { name: "PhotographerMike", avatar: "https://i.pravatar.cc/40?img=60", text: "That marquee is the most iconic thing on 11th Street. Always makes me smile when I walk by!", time: "6d", likes: 22 },
@@ -163,7 +163,7 @@ const postsData = [
     text: "Pre-show vibes at Webster Hall! 🍸 Our bars are fully stocked and the energy is building. Doors open at 7 - come early and soak it in!",
     image: "/images/chappell-roan-live.jpg",
     reactions: { count: "456", like: true, love: true },
-    comments: "32",
+    comments: "1",
     shares: "15",
     commentPreviews: [
       { name: "DrinkExpert", avatar: "https://i.pravatar.cc/40?img=14", text: "The cocktails at Webster Hall are underrated! That espresso martini hits different before a show 🍸", time: "1w", likes: 17 },
@@ -179,7 +179,7 @@ const postsData = [
     text: "Music lovers unite! 🎵 We're so grateful for this incredible community. Every show at Webster Hall feels like a family reunion.",
     image: "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=800&h=450&fit=crop",
     reactions: { count: "623", like: true, love: true },
-    comments: "67",
+    comments: "2",
     shares: "41",
     commentPreviews: [
       { name: "MusicIsLife", avatar: "https://i.pravatar.cc/40?img=32", text: "This venue has the best community. Everyone is there for the love of music ❤️", time: "1w", likes: 29 },
@@ -196,7 +196,7 @@ const postsData = [
     text: "Another packed house! 🙌 New York, you always bring the energy. Thank you for keeping live music alive!",
     image: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&h=450&fit=crop",
     reactions: { count: "934", like: true, love: true },
-    comments: "112",
+    comments: "2",
     shares: "67",
     commentPreviews: [
       { name: "CrowdSurfer", avatar: "https://i.pravatar.cc/40?img=41", text: "The energy in this place is unmatched!! Every single person was on their feet all night 🙌", time: "2w", likes: 38 },
@@ -213,7 +213,7 @@ const postsData = [
     text: "Webster Hall: Where legends are made and music comes alive. 🌟 What's your favorite Webster Hall memory? Share in the comments!",
     image: "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=800&h=450&fit=crop",
     reactions: { count: "512", like: true, love: true },
-    comments: "189",
+    comments: "2",
     shares: "38",
     commentPreviews: [
       { name: "OG Webster Fan", avatar: "https://i.pravatar.cc/40?img=47", text: "Seeing The Strokes here in 2006 changed my life. This venue is pure magic ✨", time: "2w", likes: 56 },
@@ -1253,12 +1253,12 @@ export default function RioTheatreProfile() {
                         </div>
                       </div>
                     ))}
-                    {!isExpanded && (
+                    {!isExpanded && post.commentPreviews.length > 2 && (
                       <button
                         onClick={() => setExpandedComments(prev => ({ ...prev, [post.id]: true }))}
-                        style={{ background: 'none', border: 'none', padding: '4px 0 0', fontSize: '15px', fontWeight: '600', color: '#65686c', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}
+                        style={{ background: 'none', border: 'none', padding: '8px 12px', fontSize: '13px', fontWeight: '600', lineHeight: '16px', color: '#080809', cursor: 'pointer', fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif' }}
                       >
-                        View all comments
+                        View {post.commentPreviews.length} {post.commentPreviews.length === 1 ? 'comment' : 'comments'}
                       </button>
                     )}
                   </div>
