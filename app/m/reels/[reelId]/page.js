@@ -20,25 +20,20 @@ import "../../../../public/styles/mobile/aggregation.scss";
 const ENABLE_GROUPS_DISCOVERY_UNIT = false;
 const ENABLE_MARKETPLACE_DISCOVERY_UNIT = false;
 
-// Preload video utility - creates a hidden video element to buffer the video
+// Preload video utility - uses link preload only (no hidden video elements)
+// Mobile browsers have strict limits on concurrent media elements (~4-8).
+// Creating hidden <video> elements exhausts this budget and causes visible
+// videos to go blank, so we only use <link rel="preload"> hints here.
 const preloadedVideos = new Set();
 const preloadVideo = (src) => {
   if (!src || preloadedVideos.has(src)) return;
   preloadedVideos.add(src);
   
-  // Use link preload for high priority
   const link = document.createElement('link');
   link.rel = 'preload';
   link.as = 'video';
   link.href = src;
   document.head.appendChild(link);
-  
-  // Also create a video element to actually buffer
-  const video = document.createElement('video');
-  video.preload = 'auto';
-  video.muted = true;
-  video.src = src;
-  video.load();
 };
 
 const groupsYouMightLikeData = [
@@ -1648,17 +1643,24 @@ export default function VideoPlayerPage() {
     setShowMarketplaceUnit(false);
   }, [currentIndex]);
 
-  // Play/pause video based on state
+  // Play/pause video based on state, with retry for when ref isn't ready
   useEffect(() => {
     const currentVideo = videos[currentIndex];
-    const currentVideoEl = currentVideo ? videoRefs.current[currentVideo.id] : null;
-    if (currentVideoEl && !isDragging && !isAnimating) {
-      if (isPlaying) {
-        currentVideoEl.play().catch(() => {});
-      } else {
-        currentVideoEl.pause();
+    if (!currentVideo || currentVideo.type === 'interstitial' || isDragging || isAnimating) return;
+
+    const tryPlay = (attempts = 0) => {
+      const el = videoRefs.current[currentVideo.id];
+      if (el) {
+        if (isPlaying) {
+          el.play().catch(() => {});
+        } else {
+          el.pause();
+        }
+      } else if (isPlaying && attempts < 10) {
+        setTimeout(() => tryPlay(attempts + 1), 50);
       }
-    }
+    };
+    tryPlay();
   }, [isPlaying, currentIndex, isDragging, isAnimating, videos]);
 
   // Get container height
@@ -1697,13 +1699,18 @@ export default function VideoPlayerPage() {
           setDisableTransition(false);
           setIsAnimating(false);
           isAnimatingRef.current = false;
-          // Start playing the new video
+          // Start playing the new video, with retry in case ref isn't mounted yet
           const newVideo = videos[newIndex];
-          const newVideoEl = newVideo ? videoRefs.current[newVideo.id] : null;
-          if (newVideoEl) {
-            newVideoEl.currentTime = 0;
-            newVideoEl.play().catch(() => {});
-          }
+          const tryPlay = (attempts = 0) => {
+            const el = newVideo ? videoRefs.current[newVideo.id] : null;
+            if (el) {
+              el.currentTime = 0;
+              el.play().catch(() => {});
+            } else if (newVideo?.type !== 'interstitial' && attempts < 10) {
+              setTimeout(() => tryPlay(attempts + 1), 50);
+            }
+          };
+          tryPlay();
         });
       });
     }, 300);
@@ -1932,7 +1939,7 @@ export default function VideoPlayerPage() {
                     showTabBar={cameFromGroups || index >= 1}
                     isShrunk={isCurrentVideo && showCommentsPanel}
                     shouldPreload={index <= currentIndex + 1}
-                    videoRef={el => { if (el) videoRefs.current[v.id] = el; }}
+                    videoRef={el => { if (el) { videoRefs.current[v.id] = el; } else { delete videoRefs.current[v.id]; } }}
                     onPlayPause={isCurrentVideo ? handleVideoClick : () => {}}
                     onLike={handleLike}
                     onComment={handleComment}
@@ -2077,18 +2084,8 @@ export default function VideoPlayerPage() {
               left: 0,
               right: 0,
               height: `${containerHeight}px`,
-            }}>
-              <video
-                src={nextVideo.videoSrc}
-                muted
-                playsInline
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                }}
-              />
-            </div>
+              background: nextVideo.accentColor || '#1c1c1e',
+            }} />
           </div>
           
           <div style={{
