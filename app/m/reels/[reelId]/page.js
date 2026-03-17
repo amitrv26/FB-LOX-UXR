@@ -740,7 +740,10 @@ function GroupsYouMightLikeInterstitial({ groups, onGroupDismiss, onGroupAction,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
-      padding: '0 12px 12px',
+      paddingTop: 'calc(env(safe-area-inset-top, 0px) + 44px)',
+      paddingLeft: '12px',
+      paddingRight: '12px',
+      paddingBottom: '12px',
     }}>
       <h2 style={{
         color: '#E4E6EB',
