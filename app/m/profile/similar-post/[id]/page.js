@@ -46,27 +46,38 @@ const formatCount = (num) => {
 
 // Generate comments based on the post
 const generateComments = (post) => {
-  const commentTemplates = [
-    { name: "Sarah Mitchell", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=64&h=64&fit=crop&crop=faces" },
-    { name: "Marcus Chen", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop&crop=faces" },
-    { name: "Emily Rodriguez", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=faces" },
-    { name: "David Thompson", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=64&h=64&fit=crop&crop=faces" },
-    { name: "Jessica Park", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=64&h=64&fit=crop&crop=faces" },
-    { name: "Alex Kim", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=faces" },
+  const commentSets = [
+    [
+      { name: "Sarah Mitchell", avatar: "https://i.pravatar.cc/64?img=1", text: "Wait, when was this?? I live three blocks away and had no idea 😭", time: "1h", likes: 24 },
+      { name: "Marcus Chen", avatar: "https://i.pravatar.cc/64?img=7", text: "I was there! Bumped into like five people I know. Small world honestly.", time: "2h", likes: 89 },
+      { name: "Emily Rodriguez", avatar: "https://i.pravatar.cc/64?img=20", text: "@Marcus Chen lol were you the guy in the denim jacket near the front? I think we were standing next to each other", time: "2h", likes: 45 },
+      { name: "David Park", avatar: "https://i.pravatar.cc/64?img=11", text: "Anyone know if they're doing this again soon? Trying to plan around my work schedule", time: "3h", likes: 12 },
+      { name: "Jessica Lam", avatar: "https://i.pravatar.cc/64?img=32", text: "The vibe in this photo alone is making me regret not going. Next time for sure.", time: "4h", likes: 67 },
+      { name: "Alex Kim", avatar: "https://i.pravatar.cc/64?img=53", text: "@David Park follow their page, they usually announce stuff a week or two in advance. That's how I found out about this one.", time: "5h", likes: 33 },
+    ],
+    [
+      { name: "Nora Betts", avatar: "https://i.pravatar.cc/64?img=9", text: "This is why I love this city. You can just stumble into something like this on a random Tuesday.", time: "45m", likes: 42 },
+      { name: "Jay Morales", avatar: "https://i.pravatar.cc/64?img=14", text: "Shoutout to whoever was handing out water bottles near the back, you saved my life", time: "1h", likes: 71 },
+      { name: "Chloe Warren", avatar: "https://i.pravatar.cc/64?img=25", text: "My friend dragged me to this and I'm so glad she did. Already looking at what's next.", time: "2h", likes: 38 },
+      { name: "Omar Hassan", avatar: "https://i.pravatar.cc/64?img=51", text: "Not me zooming into this photo trying to find myself in the crowd 😂", time: "3h", likes: 56 },
+      { name: "Lily Tran", avatar: "https://i.pravatar.cc/64?img=34", text: "@Omar Hassan SAME I think that's the back of my head near the left side??", time: "3h", likes: 19 },
+      { name: "Ravi Patel", avatar: "https://i.pravatar.cc/64?img=58", text: "Been following this page for months and this is the post that's finally convincing me to go to one of these.", time: "4h", likes: 27 },
+    ],
   ];
 
-  const reactions = [24, 89, 45, 12, 67, 33];
+  const setIndex = post.id ? (post.id.toString().length % commentSets.length) : 0;
+  const comments = commentSets[setIndex];
 
-  return commentTemplates.map((template, idx) => ({
+  return comments.map((c, idx) => ({
     id: `comment-${idx + 1}`,
     author: {
       id: `user-${idx + 1}`,
-      name: template.name,
-      avatar: template.avatar,
+      name: c.name,
+      avatar: c.avatar,
     },
-    text: `This is amazing! ${post.author.name} always delivers great content. Can't wait to see more! 🔥`,
-    time: `${idx + 1}h`,
-    reactions: { like: reactions[idx] },
+    text: c.text,
+    time: c.time,
+    reactions: { like: c.likes },
     replies: [],
     replyCount: 0,
   }));

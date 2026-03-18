@@ -51,12 +51,12 @@ const postsData = [
     comments: "6",
     shares: "1.2K",
     commentPreviews: [
-      { name: "Jessica M.", avatar: "https://i.pravatar.cc/40?img=5", text: "OMG I just got my tickets!! VIP Meet & Greet here I come 😭🎤", time: "1h", likes: 24 },
-      { name: "NYC Concert Fan", avatar: "https://i.pravatar.cc/40?img=12", text: "Sabrina at Webster Hall is going to be INSANE. Such an intimate venue for her!", time: "45m", likes: 18 },
-      { name: "Rachel K.", avatar: "https://i.pravatar.cc/40?img=23", text: "Does anyone know if there's an age limit? Want to bring my daughter!", time: "30m", likes: 5 },
-      { name: "East Village Music", avatar: "https://i.pravatar.cc/40?img=35", text: "This is going to sell out SO fast. Sabrina in a 1,500 cap room? Unreal.", time: "25m", likes: 31 },
-      { name: "Tom B.", avatar: "https://i.pravatar.cc/40?img=42", text: "Just secured 2 tickets! Best birthday present ever 🎂", time: "20m", likes: 12 },
-      { name: "ConcertQueenNYC", avatar: "https://i.pravatar.cc/40?img=48", text: "I saw her last year at MSG but Webster Hall will hit different. So much more intimate!", time: "15m", likes: 27 },
+      { name: "Jessica M.", avatar: "https://i.pravatar.cc/40?img=1", text: "just got two VIP Meet & Greet tix and my hands are literally shaking rn 😭", time: "1h", likes: 24 },
+      { name: "Dan Ortiz", avatar: "https://i.pravatar.cc/40?img=3", text: "1,500 cap for Sabrina?? I saw her at MSG and it was great but this is going to be on another level. Scrambling for tickets.", time: "45m", likes: 18 },
+      { name: "Rachel K.", avatar: "https://i.pravatar.cc/40?img=9", text: "Quick question - is there an age limit for this show? My 12-year-old is obsessed and I'd love to surprise her", time: "30m", likes: 5 },
+      { name: "Nate V.", avatar: "https://i.pravatar.cc/40?img=11", text: "@Rachel K. I brought my niece to the last all-ages show here, no issues at all! There's a balcony section that's way less crowded too", time: "25m", likes: 31 },
+      { name: "Tom B.", avatar: "https://i.pravatar.cc/40?img=13", text: "Birthday is the 28th. Girlfriend just handed me an envelope with two tickets in it. I am not okay 🥲", time: "20m", likes: 12 },
+      { name: "Allie Tran", avatar: "https://i.pravatar.cc/40?img=16", text: "Anyone know what time the line usually starts forming for GA? Trying to get barrier and willing to camp out lol", time: "15m", likes: 27 },
     ],
   },
   {
@@ -72,11 +72,11 @@ const postsData = [
     comments: "5",
     shares: "234",
     commentPreviews: [
-      { name: "Alex Rivera", avatar: "https://i.pravatar.cc/40?img=15", text: "I was there and it was the best show of my life!! Chappell absolutely killed it 🔥", time: "22h", likes: 45 },
-      { name: "LiveMusicNYC", avatar: "https://i.pravatar.cc/40?img=22", text: "The crowd singing along to every word was incredible. This is why live music matters.", time: "20h", likes: 31 },
-      { name: "Megan T.", avatar: "https://i.pravatar.cc/40?img=29", text: "Pink Pony Club live had me in tears. Chappell's voice is even better in person 😭", time: "18h", likes: 52 },
-      { name: "IndieVibes", avatar: "https://i.pravatar.cc/40?img=36", text: "The way she connected with the audience was magical. True performer.", time: "16h", likes: 19 },
-      { name: "David L.", avatar: "https://i.pravatar.cc/40?img=50", text: "Already counting down to Sabrina on the 28th! Webster Hall is on a ROLL 🔥", time: "14h", likes: 28 },
+      { name: "Alex Rivera", avatar: "https://i.pravatar.cc/40?img=7", text: "Somehow ended up third row and she pointed at me during Good Luck, Babe! I have not recovered and it's been 14 hours", time: "22h", likes: 45 },
+      { name: "Sam Okeke", avatar: "https://i.pravatar.cc/40?img=8", text: "Not exaggerating when I say the entire floor was singing every word to Pink Pony Club. The balcony was shaking.", time: "20h", likes: 31 },
+      { name: "Megan T.", avatar: "https://i.pravatar.cc/40?img=20", text: "I was fully sobbing during Naked in Manhattan and the girl next to me handed me a tissue 😂 we're friends now", time: "18h", likes: 52 },
+      { name: "Jordan Reyes", avatar: "https://i.pravatar.cc/40?img=26", text: "Did anyone grab the setlist? She played something I didn't recognize and I can't stop thinking about it", time: "16h", likes: 19 },
+      { name: "David L.", avatar: "https://i.pravatar.cc/40?img=14", text: "@Jordan Reyes pretty sure it was an unreleased track! she teased it on TikTok last week. Sounded like a slower ballad?", time: "14h", likes: 28 },
     ],
   },
   {
@@ -92,12 +92,12 @@ const postsData = [
     comments: "6",
     shares: "45",
     commentPreviews: [
-      { name: "Matt K.", avatar: "https://i.pravatar.cc/40?img=33", text: "Bring Hozier to this stage!! He would sound incredible in the Grand Ballroom 🙏", time: "2d", likes: 67 },
-      { name: "EastVillageLocal", avatar: "https://i.pravatar.cc/40?img=25", text: "The history of this venue is unmatched. Saw my first concert here in 2003!", time: "2d", likes: 42 },
-      { name: "Amy C.", avatar: "https://i.pravatar.cc/40?img=44", text: "PLEASE book Mitski here. The Grand Ballroom would be perfect for her shows!", time: "2d", likes: 55 },
-      { name: "NYCMusicBlog", avatar: "https://i.pravatar.cc/40?img=53", text: "From The Ramones to Billie Eilish — that's an incredible legacy. What a room.", time: "1d", likes: 33 },
-      { name: "Jake R.", avatar: "https://i.pravatar.cc/40?img=61", text: "Phoebe Bridgers at Webster Hall would be a dream 🌙", time: "1d", likes: 48 },
-      { name: "SoundEngineer", avatar: "https://i.pravatar.cc/40?img=17", text: "The acoustics in the Grand Ballroom are genuinely world-class. Few rooms like it.", time: "1d", likes: 21 },
+      { name: "Matt K.", avatar: "https://i.pravatar.cc/40?img=33", text: "Hozier in this room would be life-changing. The ceiling alone would add so much to the vibe 🙏", time: "2d", likes: 67 },
+      { name: "Priya Nair", avatar: "https://i.pravatar.cc/40?img=52", text: "My mom saw the Ramones here in '96 and now I'm seeing Sabrina Carpenter. Honestly both iconic in their own way.", time: "2d", likes: 42 },
+      { name: "Amy C.", avatar: "https://i.pravatar.cc/40?img=25", text: "OK hear me out — Mitski, solo spotlight, Grand Ballroom, nothing else. Just her and that stage. BOOK IT.", time: "2d", likes: 55 },
+      { name: "Leo Huang", avatar: "https://i.pravatar.cc/40?img=56", text: "Fun fact: the chandeliers in the ballroom are original from the 1920s. They've survived renovations, closures, everything. They just don't build things like this anymore.", time: "1d", likes: 33 },
+      { name: "Jake R.", avatar: "https://i.pravatar.cc/40?img=58", text: "@Amy C. add Phoebe Bridgers to that list and you've got my dream double bill", time: "1d", likes: 48 },
+      { name: "Nina Ferris", avatar: "https://i.pravatar.cc/40?img=59", text: "I work in live sound and the room mix here is genuinely one of the best in the city. Wherever you stand, it sounds balanced.", time: "1d", likes: 21 },
     ],
   },
   {
@@ -113,11 +113,11 @@ const postsData = [
     comments: "5",
     shares: "34",
     commentPreviews: [
-      { name: "Sarah J.", avatar: "https://i.pravatar.cc/40?img=9", text: "Dinner at Veselka then walking over to Webster Hall. Best pre-show combo in the East Village! 🥟", time: "4d", likes: 28 },
-      { name: "ConcertVibes", avatar: "https://i.pravatar.cc/40?img=18", text: "Getting there early to grab a spot at the front of the Grand Ballroom. No substitutes!", time: "4d", likes: 15 },
-      { name: "Priya S.", avatar: "https://i.pravatar.cc/40?img=27", text: "My ritual: matching outfit with my concert buddy, always! 🎶✨", time: "3d", likes: 22 },
-      { name: "Carlos M.", avatar: "https://i.pravatar.cc/40?img=55", text: "Pregame at St. Marks Place then head over. Never fails.", time: "3d", likes: 11 },
-      { name: "NightOwlNYC", avatar: "https://i.pravatar.cc/40?img=63", text: "Honestly the energy walking into Webster Hall is already the best part", time: "3d", likes: 17 },
+      { name: "Sarah J.", avatar: "https://i.pravatar.cc/40?img=32", text: "Veselka → Webster Hall pipeline is undefeated. Pierogies, then crying to live music. Peak NYC honestly.", time: "4d", likes: 28 },
+      { name: "Marco Diaz", avatar: "https://i.pravatar.cc/40?img=12", text: "Controversial take: I actually prefer the balcony. You can see everything and there's room to dance without getting elbowed in the ribs", time: "4d", likes: 15 },
+      { name: "Priya S.", avatar: "https://i.pravatar.cc/40?img=34", text: "My friend and I always coordinate outfits for shows here. Last time we went full sparkle and got so many compliments in line 😂✨", time: "3d", likes: 22 },
+      { name: "Carlos M.", avatar: "https://i.pravatar.cc/40?img=53", text: "@Marco Diaz respectfully, GA floor when it's packed and everyone's jumping > everything else. The balcony is for recovering afterward", time: "3d", likes: 11 },
+      { name: "Kai Bennett", avatar: "https://i.pravatar.cc/40?img=60", text: "There's something about walking down E 11th and seeing the marquee lit up with whoever you're about to see. Gets me hyped before I even walk in.", time: "3d", likes: 17 },
     ],
   },
   {
@@ -133,8 +133,8 @@ const postsData = [
     comments: "2",
     shares: "56",
     commentPreviews: [
-      { name: "DanielNYC", avatar: "https://i.pravatar.cc/40?img=51", text: "Best night out in ages. The sound quality in this venue is absolutely top tier 🔊", time: "6d", likes: 33 },
-      { name: "Emma W.", avatar: "https://i.pravatar.cc/40?img=44", text: "Already counting down to the next one! When are tickets for April shows dropping?", time: "5d", likes: 19 },
+      { name: "Daniel Kwon", avatar: "https://i.pravatar.cc/40?img=51", text: "Haven't been out in months but this dragged me off my couch and honestly? Needed that. Sound was crisp even from the back.", time: "6d", likes: 33 },
+      { name: "Emma W.", avatar: "https://i.pravatar.cc/40?img=39", text: "Any word on the April lineup? My friend's visiting from Chicago and I'm trying to plan something before she books flights", time: "5d", likes: 19 },
     ],
   },
   {
@@ -150,7 +150,7 @@ const postsData = [
     comments: "1",
     shares: "28",
     commentPreviews: [
-      { name: "PhotographerMike", avatar: "https://i.pravatar.cc/40?img=60", text: "That marquee is the most iconic thing on 11th Street. Always makes me smile when I walk by!", time: "6d", likes: 22 },
+      { name: "Mike Adler", avatar: "https://i.pravatar.cc/40?img=62", text: "I photograph venues all over NYC for a living and this marquee is hands down the most photogenic. Something about the neon against those old bricks.", time: "6d", likes: 22 },
     ],
   },
   {
@@ -166,7 +166,7 @@ const postsData = [
     comments: "1",
     shares: "15",
     commentPreviews: [
-      { name: "DrinkExpert", avatar: "https://i.pravatar.cc/40?img=14", text: "The cocktails at Webster Hall are underrated! That espresso martini hits different before a show 🍸", time: "1w", likes: 17 },
+      { name: "Layla Ross", avatar: "https://i.pravatar.cc/40?img=68", text: "Pro tip: get the espresso martini at the upstairs bar, the line's way shorter and the bartender up there doesn't skimp on the espresso 🍸", time: "1w", likes: 17 },
     ],
   },
   {
@@ -182,8 +182,8 @@ const postsData = [
     comments: "2",
     shares: "41",
     commentPreviews: [
-      { name: "MusicIsLife", avatar: "https://i.pravatar.cc/40?img=32", text: "This venue has the best community. Everyone is there for the love of music ❤️", time: "1w", likes: 29 },
-      { name: "TommyNYC", avatar: "https://i.pravatar.cc/40?img=57", text: "Been a regular here for 10 years. Webster Hall is home.", time: "1w", likes: 21 },
+      { name: "Ava Torres", avatar: "https://i.pravatar.cc/40?img=50", text: "Went alone for the first time last Friday because none of my friends were free. Made three new friends in the crowd by the second song. This place just does that.", time: "1w", likes: 29 },
+      { name: "Tommy Cheng", avatar: "https://i.pravatar.cc/40?img=57", text: "@Ava Torres that's the Webster Hall way! Went to my first show here in 2016, now I'm a regular. Some of my best friendships started in that GA line.", time: "1w", likes: 21 },
     ],
   },
   {
@@ -199,8 +199,8 @@ const postsData = [
     comments: "2",
     shares: "67",
     commentPreviews: [
-      { name: "CrowdSurfer", avatar: "https://i.pravatar.cc/40?img=41", text: "The energy in this place is unmatched!! Every single person was on their feet all night 🙌", time: "2w", likes: 38 },
-      { name: "LiveNation Fan", avatar: "https://i.pravatar.cc/40?img=28", text: "NYC keeps live music alive and Webster Hall is at the heart of it. Legend.", time: "2w", likes: 25 },
+      { name: "Zoe Nakamura", avatar: "https://i.pravatar.cc/40?img=65", text: "Not a single person sitting down the entire night. Even the couple who looked like they accidentally wandered in were moshing by the end 😂", time: "2w", likes: 38 },
+      { name: "Chris Okafor", avatar: "https://i.pravatar.cc/40?img=29", text: "Moved here from Atlanta two years ago and was worried I wouldn't find a live music scene that hit the same. Then I found Webster Hall. Worry over.", time: "2w", likes: 25 },
     ],
   },
   {
@@ -216,8 +216,8 @@ const postsData = [
     comments: "2",
     shares: "38",
     commentPreviews: [
-      { name: "OG Webster Fan", avatar: "https://i.pravatar.cc/40?img=47", text: "Seeing The Strokes here in 2006 changed my life. This venue is pure magic ✨", time: "2w", likes: 56 },
-      { name: "Jennifer L.", avatar: "https://i.pravatar.cc/40?img=38", text: "My favorite memory is the NYE show last year. Confetti everywhere and the best crowd ever!", time: "2w", likes: 34 },
+      { name: "Ryan Sato", avatar: "https://i.pravatar.cc/40?img=47", text: "Saw The Strokes here in '06. Barely got in, fake ID, snuck past security. Absolutely life-changing. Don't do what I did but the show was worth it lol", time: "2w", likes: 56 },
+      { name: "Jennifer L.", avatar: "https://i.pravatar.cc/40?img=43", text: "NYE here last year was genuinely one of the best nights of my life. Confetti falling, strangers hugging at midnight, and the band played an extra 30 min encore. Nothing tops it.", time: "2w", likes: 34 },
     ],
   },
 ];
